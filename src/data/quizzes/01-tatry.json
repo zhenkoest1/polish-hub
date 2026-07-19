@@ -1,0 +1,121 @@
+{
+  "title": "Quiz — Tatry",
+  "subtitle": "Ćwiczenia z lekcji w wersji interaktywnej. 6 rund, punkty na końcu. Powodzenia!",
+  "sections": [
+    {
+      "emoji": "❓",
+      "title": "Prawda czy fałsz?",
+      "type": "tf",
+      "questions": [
+        { "q": "Tatry są najwyższymi górami w Polsce.", "answer": true },
+        { "q": "Giewont jest wyższy niż Rysy.", "answer": false, "explain": "Rysy są wyższe niż Giewont (2499 m > 1894 m)." },
+        { "q": "Morskie Oko jest najgłębszym jeziorem w Tatrach.", "answer": false, "explain": "Najgłębszy jest Wielki Staw Polski (79 m)." },
+        { "q": "Świstak śpi zimą prawie 7 miesięcy.", "answer": true },
+        { "q": "Niedźwiedź brunatny biega wolniej niż człowiek.", "answer": false, "explain": "Niedźwiedź biega szybciej niż człowiek — 50 km/h!" },
+        { "q": "Tatrzański Park Narodowy istnieje od 1954 roku.", "answer": true }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Stopień wyższy",
+      "type": "typein",
+      "questions": [
+        { "q": "Giewont jest __________ niż Rysy.", "hint": "niski", "answer": "niższy" },
+        { "q": "Kolejka linowa jest __________ niż wędrówka pieszo.", "hint": "łatwy", "answer": "łatwiejsza" },
+        { "q": "Wielki Staw Polski jest __________ niż Morskie Oko.", "hint": "głęboki", "answer": "głębszy" },
+        { "q": "Niedźwiedź jest __________ niż kozica.", "hint": "duży", "answer": "większy" },
+        { "q": "Świstak jest __________ niż niedźwiedź.", "hint": "mały", "answer": "mniejszy" }
+      ]
+    },
+    {
+      "emoji": "🏔️",
+      "title": "Stopień najwyższy",
+      "type": "typein",
+      "questions": [
+        { "q": "Tatry to __________ góry w Polsce.", "hint": "wysoki", "answer": "najwyższe" },
+        { "q": "Morskie Oko to __________ jezioro w Tatrach.", "hint": "słynny", "answer": "najsłynniejsze" },
+        { "q": "Niedźwiedź to __________ zwierzę w Tatrach.", "hint": "duży", "answer": "największe" },
+        { "q": "Tatrzański Park Narodowy to __________ park w Polsce.", "hint": "popularny", "answer": "najpopularniejszy" },
+        { "q": "Wielki Staw Polski to __________ jezioro w Tatrach.", "hint": "głęboki", "answer": "najgłębsze" }
+      ]
+    },
+    {
+      "emoji": "🔗",
+      "title": "Dopasuj słowo do definicji",
+      "type": "mc",
+      "questions": [
+        {
+          "q": "szczyt — co to jest?",
+          "options": ["najwyższy punkt góry", "transport w górach na linie", "zwierzę, które śpi 7 miesięcy", "prawie pionowa skała"],
+          "answer": "najwyższy punkt góry"
+        },
+        {
+          "q": "przejrzysty — co to znaczy?",
+          "options": ["taki, że widzisz przez coś (np. wodę)", "bardzo zimny", "bardzo głęboki", "zielony"],
+          "answer": "taki, że widzisz przez coś (np. wodę)"
+        },
+        {
+          "q": "świstak — co to jest?",
+          "options": ["zwierzę, które śpi zimą 7 miesięcy", "najwyższy punkt góry", "duże drapieżne zwierzę", "górskie jezioro"],
+          "answer": "zwierzę, które śpi zimą 7 miesięcy"
+        },
+        {
+          "q": "kolejka linowa — co to jest?",
+          "options": ["transport w górach na linie", "wąska górska ścieżka", "kolej między miastami", "wyciąg dla narciarzy pod ziemią"],
+          "answer": "transport w górach na linie"
+        },
+        {
+          "q": "stromy — co to znaczy?",
+          "options": ["prawie pionowy, bardzo trudny do wejścia", "płaski i łatwy", "mokry po deszczu", "kamienisty"],
+          "answer": "prawie pionowy, bardzo trudny do wejścia"
+        }
+      ]
+    },
+    {
+      "emoji": "🧩",
+      "title": "Uzupełnij tekst słowami",
+      "type": "tap_fill",
+      "questions": [
+        {
+          "text": "Tatry mają około 200 {0}. Najwyższy {1} po polskiej stronie to Rysy. Morskie Oko ma {2} ponad 50 metrów, ale Wielki Staw Polski jest głębszy {3} Morskie Oko. Park Narodowy chroni {4} Tatr. Co roku odwiedza go 4 miliony {5}.",
+          "answers": ["jezior", "szczyt", "głębokość", "niż", "przyrodę", "turystów"]
+        }
+      ]
+    },
+    {
+      "emoji": "🎯",
+      "title": "Podsumowanie — szybki finał",
+      "type": "mc",
+      "questions": [
+        {
+          "q": "Jak nazywa się najwyższy szczyt w polskich Tatrach?",
+          "options": ["Rysy", "Giewont", "Gerlach", "Kasprowy Wierch"],
+          "answer": "Rysy",
+          "explain": "2499 m n.p.m. Gerlach (2655 m) jest po stronie słowackiej."
+        },
+        {
+          "q": "Stopień najwyższy od „piękny” to…",
+          "options": ["najpiękniejszy", "piękniejszy", "najpiękny", "najbardziej piękny"],
+          "answer": "najpiękniejszy"
+        },
+        {
+          "q": "Stopień wyższy od „duży” to…",
+          "options": ["większy", "duższy", "najwięcej", "wielki"],
+          "answer": "większy",
+          "explain": "Forma nieregularna: duży → większy → największy."
+        },
+        {
+          "q": "Jakie zwierzę jest symbolem Tatr?",
+          "options": ["kozica", "świstak", "niedźwiedź brunatny", "orzeł"],
+          "answer": "kozica"
+        },
+        {
+          "q": "Morskie Oko jest __________ jeziorem w Tatrach. (słynny)",
+          "options": ["najsłynniejszym", "najsłynniejsze", "słynniejszym", "najsłynniejszy"],
+          "answer": "najsłynniejszym",
+          "explain": "Naj- + przymiotnik w narzędniku: jest najsłynniejszym jeziorem."
+        }
+      ]
+    }
+  ]
+}

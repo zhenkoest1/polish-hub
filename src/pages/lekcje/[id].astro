@@ -1,0 +1,95 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const lekcje = await getCollection('lekcje');
+  return lekcje.map((l) => ({ params: { id: l.id }, props: { lekcja: l } }));
+}
+
+const { lekcja } = Astro.props;
+const { Content } = await render(lekcja);
+const base = import.meta.env.BASE_URL;
+
+let quizData = null;
+if (lekcja.data.quiz) {
+  quizData = (await import(`../../data/quizzes/${lekcja.data.quiz}.json`)).default;
+}
+---
+<Base title={`Lekcja ${lekcja.data.numer}: ${lekcja.data.tytul} — Polski Klub`}>
+  <article>
+    <header class="lesson-head">
+      <a class="back" href={base}>← wszystkie lekcje</a>
+      <p class="lesson-kicker">
+        Lekcja {String(lekcja.data.numer).padStart(2, '0')} · {lekcja.data.gramatyka}
+      </p>
+      <h1 class="lesson-h1">{lekcja.data.emoji} {lekcja.data.tytul}</h1>
+      {lekcja.data.opis && <p class="lesson-opis">{lekcja.data.opis}</p>}
+    </header>
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    {quizData && (
+      <section class="quiz-zone" id="quiz">
+        <div class="quiz-splash" id="quiz-splash">
+          <h2>🎯 {quizData.title}</h2>
+          <p>{quizData.subtitle}</p>
+          <button class="btn btn-big" id="quiz-start">Zaczynamy!</button>
+        </div>
+        <div id="quiz-root" hidden></div>
+        <script type="application/json" id="quiz-data" set:html={JSON.stringify(quizData)} />
+      </section>
+    )}
+  </article>
+
+  <script>
+    import '../../scripts/quiz-engine.js';
+  </script>
+</Base>
+
+<style>
+  .lesson-head { padding-top: 26px; }
+  .back {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  .back:hover { color: var(--amber); }
+  .lesson-kicker {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 0.75rem;
+    color: var(--mak);
+    font-weight: 700;
+    margin: 22px 0 6px;
+  }
+  .lesson-h1 {
+    font-size: clamp(1.9rem, 6vw, 3rem);
+    font-weight: 800;
+    margin: 0 0 8px;
+  }
+  .lesson-opis { color: var(--text-dim); max-width: 56ch; margin: 0; }
+
+  .quiz-zone {
+    margin-top: 56px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: calc(var(--radius) + 6px);
+    padding: 26px 22px;
+    position: relative;
+    overflow: hidden;
+  }
+  .quiz-zone::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto;
+    height: 5px;
+    background: linear-gradient(90deg, var(--mak), var(--amber));
+  }
+  .quiz-splash { text-align: center; padding: 18px 0; }
+  .quiz-splash h2 { font-size: 1.6rem; margin: 0 0 6px; }
+  .quiz-splash p { color: var(--text-dim); margin: 0 0 22px; }
+</style>

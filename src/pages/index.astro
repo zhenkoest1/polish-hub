@@ -1,0 +1,173 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const base = import.meta.env.BASE_URL;
+const lekcje = (await getCollection('lekcje')).sort((a, b) => a.data.numer - b.data.numer);
+
+// Lekcje z planu kursu, które jeszcze nie mają strony
+const wDrodze = [
+  { numer: 2, emoji: '😴', tytul: 'Społeczeństwo zmęczenia', gramatyka: 'Biernik' },
+  { numer: 3, emoji: '⚖️', tytul: 'Żelazne prawo oligarchii', gramatyka: 'Narzędnik' },
+  { numer: 4, emoji: '🤝', tytul: 'Sztuka kompromisu', gramatyka: 'Czasowniki modalne + Celownik' },
+  { numer: 5, emoji: '🔄', tytul: 'Wielkie powtórzenie', gramatyka: 'Wszystko z lekcji 1–4' },
+  { numer: 6, emoji: '🔍', tytul: 'Niewidzialne wzorce', gramatyka: 'Dopełniacz cz. 1' },
+  { numer: 7, emoji: '🎯', tytul: 'Dylemat więźnia', gramatyka: 'Dopełniacz cz. 2' },
+  { numer: 8, emoji: '🚋', tytul: 'Dylemat wagonika', gramatyka: 'Miejscownik' },
+  { numer: 9, emoji: '🌡️', tytul: 'Fala upałów 2026', gramatyka: 'Aspekt czasowników' },
+].filter((p) => !lekcje.some((l) => l.data.numer === p.numer));
+---
+<Base title="Polski Klub — Oleg, Lena i Żenia">
+  <section class="hero">
+    <p class="hero-kicker">kurs polskiego · A2 → B1</p>
+    <h1 class="hero-title">
+      <span class="line-1">UCZYMY SIĘ</span>
+      <span class="line-2">PO POLSKU<span class="dot">.</span></span>
+    </h1>
+    <p class="hero-sub">
+      Co tydzień: <strong>tekst</strong> → <strong>reguła</strong> → <strong>słowa</strong> → <strong>quiz</strong>.
+      Trzy osoby, jeden cel — certyfikat B1 w listopadzie.
+    </p>
+    <svg class="hero-mountains" viewBox="0 0 880 120" preserveAspectRatio="none" aria-hidden="true">
+      <polygon points="0,120 140,34 260,120" fill="var(--panel-2)" />
+      <polygon points="180,120 350,10 520,120" fill="var(--mak)" opacity="0.85" />
+      <polygon points="430,120 600,42 760,120" fill="var(--amber)" opacity="0.9" />
+      <polygon points="640,120 800,58 880,120" fill="var(--panel-2)" />
+    </svg>
+  </section>
+
+  <section class="lessons">
+    <h2 class="section-title">Lekcje</h2>
+    <ol class="lesson-list">
+      {lekcje.map((l, i) => (
+        <li class="lesson-card" style={`animation-delay: ${i * 90}ms`}>
+          <a href={`${base}lekcje/${l.id}/`}>
+            <span class="lesson-num">{String(l.data.numer).padStart(2, '0')}</span>
+            <span class="lesson-body">
+              <span class="lesson-title">{l.data.emoji} {l.data.tytul}</span>
+              <span class="lesson-meta">{l.data.gramatyka}</span>
+            </span>
+            <span class="lesson-go" aria-hidden="true">→</span>
+          </a>
+        </li>
+      ))}
+    </ol>
+
+    {wDrodze.length > 0 && (
+      <>
+        <h2 class="section-title dim">W drodze na stronę</h2>
+        <ol class="lesson-list muted">
+          {wDrodze.map((l) => (
+            <li class="lesson-card ghost">
+              <span class="lesson-num">{String(l.numer).padStart(2, '0')}</span>
+              <span class="lesson-body">
+                <span class="lesson-title">{l.emoji} {l.tytul}</span>
+                <span class="lesson-meta">{l.gramatyka}</span>
+              </span>
+              <span class="lesson-soon">wkrótce</span>
+            </li>
+          ))}
+        </ol>
+      </>
+    )}
+  </section>
+</Base>
+
+<style>
+  .hero { position: relative; padding: 48px 0 0; overflow: hidden; }
+  .hero-kicker {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    font-size: 0.78rem;
+    color: var(--mak);
+    font-weight: 700;
+    margin: 0 0 10px;
+    animation: rise 0.6s both;
+  }
+  .hero-title {
+    font-size: clamp(2.6rem, 9vw, 5.2rem);
+    font-weight: 800;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+  }
+  .hero-title span { display: block; }
+  .line-1 { color: var(--text); animation: rise 0.6s 0.08s both; }
+  .line-2 { color: var(--amber); animation: rise 0.6s 0.18s both; }
+  .dot { display: inline !important; color: var(--mak); }
+  .hero-sub {
+    max-width: 46ch;
+    color: var(--text-dim);
+    margin: 18px 0 0;
+    animation: rise 0.6s 0.3s both;
+  }
+  .hero-sub strong { color: var(--text); }
+  .hero-mountains {
+    display: block;
+    width: 100%;
+    height: 90px;
+    margin-top: 34px;
+    animation: rise 0.7s 0.4s both;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--amber);
+    margin: 44px 0 16px;
+  }
+  .section-title.dim { color: var(--text-dim); }
+
+  .lesson-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  .lesson-card { animation: rise 0.5s both; }
+  .lesson-card a,
+  .lesson-card.ghost {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+  }
+  .lesson-card a:hover {
+    transform: translateX(6px);
+    border-color: var(--amber);
+    background: var(--panel-2);
+  }
+  .lesson-card a:hover .lesson-go { transform: translateX(4px); color: var(--amber); }
+  .lesson-num {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.9rem;
+    color: var(--mak);
+    min-width: 52px;
+    line-height: 1;
+  }
+  .ghost .lesson-num { color: var(--line); }
+  .lesson-body { flex: 1; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .lesson-title { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; }
+  .lesson-meta { color: var(--text-dim); font-size: 0.85rem; }
+  .lesson-go { font-size: 1.3rem; color: var(--text-dim); transition: transform 0.18s ease, color 0.18s ease; }
+  .lesson-soon {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+    border: 1px dashed var(--line);
+    border-radius: 99px;
+    padding: 3px 10px;
+    white-space: nowrap;
+  }
+  .muted .lesson-card { opacity: 0.6; }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
