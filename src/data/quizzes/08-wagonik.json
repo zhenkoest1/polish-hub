@@ -1,0 +1,106 @@
+{
+  "title": "Quiz — Dylemat wagonika",
+  "subtitle": "Foot, Thomson, Kant i Mercedes. Plus konstrukcje bezosobowe i wielkie powtórzenie przypadków z lekcji 2–6. 8 rund.",
+  "sections": [
+    {
+      "emoji": "❓",
+      "title": "Prawda czy fałsz? — czy uważaliście na tekst",
+      "type": "tf",
+      "questions": [
+        { "q": "Klasyczny dylemat wagonika zaproponowała Philippa Foot w 1967 roku.", "answer": true },
+        { "q": "Wersję z grubym człowiekiem na moście dodała Judith Jarvis Thomson.", "answer": true, "explain": "W 1985 roku — osiemnaście lat po Foot." },
+        { "q": "W obu wersjach dylematu ludzie odpowiadają mniej więcej tak samo.", "answer": false, "explain": "Około 90% pociągnęłoby dźwignię, ale około 80% nie zepchnęłoby grubasa — choć arytmetyka jest identyczna." },
+        { "q": "Według Kanta wolno użyć człowieka jako środka, jeśli uratuje to więcej osób.", "answer": false, "explain": "Odwrotnie: nigdy nie traktuj człowieka tylko jako środek — zawsze także jako cel." },
+        { "q": "Mercedes ostatecznie podtrzymał deklarację, że auta zawsze chronią pasażera.", "answer": false, "explain": "Po fali krytyki firma wycofała to oświadczenie." },
+        { "q": "Eksperyment „Moral Machine” pokazał, że wszystkie kultury odpowiadają podobnie.", "answer": false, "explain": "Przeciwnie — kraje zachodnie chroniły młodszych, wschodnie starszych." },
+        { "q": "U Greene’a wersja z grubasem aktywowała obszary emocjonalne mózgu.", "answer": true, "explain": "A wersja z dźwignią — logiczne obszary kory przedczołowej." },
+        { "q": "Po konstrukcji „trzeba by” stawiamy bezokolicznik.", "answer": true, "explain": "Trzeba by zapytać — nie: trzeba by zapytał." }
+      ]
+    },
+    {
+      "emoji": "🔧",
+      "title": "Runda 1 — rozgrzewka: formy z -by-",
+      "type": "typein",
+      "questions": [
+        { "q": "Ja __________ dźwignię bez wahania. *(pociągnąć, mężczyzna)*", "hint": "-łbym", "answer": "pociągnąłbym" },
+        { "q": "Ja __________ go z mostu? Nigdy. *(zepchnąć, kobieta)*", "hint": "-łabym", "answer": "zepchnęłabym" },
+        { "q": "__________ porozmawiać z Foot. *(chcieć, kobieta)*", "hint": "życzenie", "answer": "Chciałabym" },
+        { "q": "Gdybym __________ Kantem, nie zepchnąłbym grubego.", "hint": "być — po „gdybym” bez -by-!", "answer": "był" },
+        { "q": "Gdybym __________ wybór, wybrałabym inaczej.", "hint": "mieć, kobieta — po „gdybym” bez -by-", "answer": "miała" },
+        { "q": "Mercedes __________ to wytłumaczyć opinii publicznej.", "hint": "musieć, 3. osoba", "answer": "musiałby" },
+        { "q": "Gdyby Greene nie __________ skanu, nie wiedzielibyśmy o roli emocji.", "hint": "zrobić — po „gdyby” bez -by-", "answer": "zrobił" }
+      ]
+    },
+    {
+      "emoji": "🎭",
+      "title": "Runda 2 — nowość: konstrukcje bezosobowe",
+      "type": "typein",
+      "questions": [
+        { "q": "Powinieneś przeczytać Kanta. → __________ przeczytać Kanta.", "hint": "formalna rada — jedno słowo", "answer": "Należałoby" },
+        { "q": "Musimy zapytać inżyniera. → __________ zapytać inżyniera.", "hint": "miękka propozycja — dwa słowa", "answer": "Trzeba by" },
+        { "q": "Możemy zaprogramować to inaczej. → __________ zaprogramować to inaczej.", "hint": "możliwość — dwa słowa", "answer": "Można by" },
+        { "q": "Nie wolno traktować człowieka jak narzędzia. → __________ traktować człowieka jak narzędzia.", "hint": "norma moralna z przeczeniem — trzy słowa", "answer": "Nie powinno się" },
+        { "q": "Powinniśmy chronić słabszych. → __________ chronić słabszych.", "hint": "norma moralna — dwa słowa", "answer": "Powinno się" }
+      ]
+    },
+    {
+      "emoji": "🤔",
+      "title": "Runda 3 — „Co byś zrobił, gdyby…”",
+      "type": "typein",
+      "questions": [
+        { "q": "Gdybym był utylitarystą, __________ dźwignię.", "hint": "pociągnąć, mężczyzna", "answer": "pociągnąłbym" },
+        { "q": "Gdyby algorytm Mercedesa zabił dziecko, firma __________ zaufanie.", "hint": "stracić, rodzaj żeński", "answer": "straciłaby" },
+        { "q": "Gdyby Greene nie zrobił badania, __________ o roli emocji. *(my, m-os., z przeczeniem — dwa słowa)*", "hint": "nie + wiedzieć", "answer": "nie wiedzielibyśmy" },
+        { "q": "Gdyby Foot urodziła się sto lat wcześniej, utylitaryzm __________ się inaczej.", "hint": "rozwinąć, rodzaj męski", "answer": "rozwinąłby" },
+        { "q": "Gdybyśmy żyli w społeczeństwie konfucjańskim, __________ starszych priorytetowo.", "hint": "chronić, my — m-os.", "answer": "chronilibyśmy" },
+        { "q": "Co by __________, gdyby Foot nie wymyśliła wagonika?", "hint": "być — konstrukcja „co by … , gdyby”", "answer": "było" }
+      ]
+    },
+    {
+      "emoji": "🔁",
+      "title": "Runda 4 — MIX: powtórzenie przypadków z lekcji 2–6",
+      "type": "typein",
+      "questions": [
+        { "q": "Gdybym był __________, nie miałbym dylematu.", "hint": "utylitarysta — narzędnik (L3)", "answer": "utylitarystą" },
+        { "q": "Bez __________ nie byłoby moralności.", "hint": "wybór — dopełniacz (L6)", "answer": "wyboru" },
+        { "q": "Powinniśmy pomagać __________, nie tylko większości.", "hint": "każdy człowiek — celownik (L4)", "answer": "każdemu człowiekowi" },
+        { "q": "Widzę tu __________ niż arytmetyka.", "hint": "głębszy problem — biernik (L2)", "answer": "głębszy problem" },
+        { "q": "Foot była __________.", "hint": "brytyjska filozofka — narzędnik (L3)", "answer": "brytyjską filozofką" },
+        { "q": "Pięć __________ ginie zamiast jednej.", "hint": "osoba — dopełniacz l.mn. po liczebniku 5+ (L6)", "answer": "osób" },
+        { "q": "Trzeba by zaufać __________, nie tylko logice.", "hint": "własne sumienie — celownik (L4)", "answer": "własnemu sumieniu" },
+        { "q": "Czy zepchnąłbyś __________ z mostu?", "hint": "gruby nieznajomy — biernik, męski żywotny (L2)", "answer": "grubego nieznajomego" }
+      ]
+    },
+    {
+      "emoji": "🧠",
+      "title": "Runda 5 — połącz pojęcie z wyjaśnieniem",
+      "type": "match",
+      "questions": [
+        { "q": "Dopasuj pojęcie do wyjaśnienia.", "pairs": [["utylitaryzm", "moralność jako arytmetyka: największe dobro dla największej liczby"], ["dźwignia", "to, co pociągasz, żeby wagonik skręcił na boczny tor"], ["ofiara", "ten, kto ginie, żeby inni ocaleli"], ["środek", "coś, czego się używa, żeby osiągnąć cel"], ["ochotnik", "człowiek, który zgłosił się do badania dobrowolnie"], ["wstręt", "silna reakcja obrzydzenia — u Greene’a obszar emocjonalny"], ["bezstronny", "taki, który nie faworyzuje nikogo bliskiego"]] }
+      ]
+    },
+    {
+      "emoji": "🧩",
+      "title": "Runda 6 — uzupełnij tekst",
+      "type": "tap_fill",
+      "questions": [
+        { "text": "Gdyby świat działał według utylitaryzmu, decyzje moralne {0} proste — wystarczyłby kalkulator. Ale gdybyś {1} grubego z mostu, {2} go do roli przedmiotu, a Kant {3}: niedopuszczalne. Dlatego {4} zapytać, kto w ogóle ma prawo pisać taki kod. Zdaniem wielu {5} chronić słabszych — tylko nikt nie wie, jak to {6}.", "answers": ["byłyby", "zepchnął", "sprowadziłbyś", "powiedziałby", "trzeba by", "powinno się", "zaprogramować"] }
+      ]
+    },
+    {
+      "emoji": "🏁",
+      "title": "Finał — znajdź błąd i przetłumacz",
+      "type": "mc",
+      "questions": [
+        { "q": "Popraw błąd: „Gdybym byłbym filozofem, napisałbym o tym książkę.”", "options": ["Gdybym był filozofem, napisałbym o tym książkę.", "Gdyby byłbym filozofem, napisałbym o tym książkę.", "Gdybym byłbym filozofem, napisałem o tym książkę.", "Gdybym był filozofem, napisałem bym o tym książkę."], "answer": "Gdybym był filozofem, napisałbym o tym książkę.", "explain": "Po „gdyby” zwykły czas przeszły — cząstka -by- jest już w samym „gdyby”." },
+        { "q": "Popraw błąd: „Powinno chronić słabszych.”", "options": ["Powinno się chronić słabszych.", "Powinno by chronić słabszych.", "Powinno chronić się słabszych.", "Powinien się chronić słabszych."], "answer": "Powinno się chronić słabszych.", "explain": "W konstrukcji bezosobowej cząstka „się” jest obowiązkowa." },
+        { "q": "Popraw błąd: „Trzeba by zapytał inżyniera.”", "options": ["Trzeba by zapytać inżyniera.", "Trzeba by zapytałby inżyniera.", "Trzeba zapytałby inżyniera.", "Trzeba by zapytali inżyniera."], "answer": "Trzeba by zapytać inżyniera.", "explain": "Po „trzeba by” zawsze bezokolicznik, nigdy forma osobowa." },
+        { "q": "Popraw błąd: „Foot była brytyjski filozof.”", "options": ["Foot była brytyjską filozofką.", "Foot była brytyjska filozofka.", "Foot była brytyjskiej filozofki.", "Foot była brytyjskim filozofem."], "answer": "Foot była brytyjską filozofką.", "explain": "Po „być” narzędnik — i forma żeńska, bo Foot to kobieta." },
+        { "q": "Popraw błąd: „Bez wybór nie ma moralności.”", "options": ["Bez wyboru nie ma moralności.", "Bez wyborem nie ma moralności.", "Bez wyboru nie ma moralność.", "Bez wybór nie ma moralność."], "answer": "Bez wyboru nie ma moralności.", "explain": "Po „bez” dopełniacz — powtórka z lekcji 6." },
+        { "q": "Przetłumacz: «Не следует относиться к человеку как к средству.»", "options": ["Nie powinno się traktować człowieka jak narzędzia.", "Nie powinno traktować człowieka jak narzędzie.", "Nie powinien się traktować człowieka jak narzędzia.", "Nie powinno się traktowałby człowieka jak narzędzia."], "answer": "Nie powinno się traktować człowieka jak narzędzia.", "explain": "Konstrukcja bezosobowa + bezokolicznik + dopełniacz po przeczeniu." },
+        { "q": "Przetłumacz: «Можно было бы запрограммировать это иначе, если бы у нас было время.»", "options": ["Można by zaprogramować to inaczej, gdybyśmy mieli czas.", "Można by zaprogramować to inaczej, gdybyśmy mielibyśmy czas.", "Można zaprogramowałoby to inaczej, gdybyśmy mieli czas.", "Można by zaprogramowali to inaczej, gdybyśmy mieli czas."], "answer": "Można by zaprogramować to inaczej, gdybyśmy mieli czas.", "explain": "Dwa razy ta sama zasada: po „można by” bezokolicznik, po „gdybyśmy” zwykły czas przeszły." },
+        { "q": "Przetłumacz: «Если бы Кант жил сегодня, что бы он сказал о беспилотных машинах?»", "options": ["Gdyby Kant żył dziś, co by powiedział o samochodach autonomicznych?", "Gdyby Kant żyłby dziś, co by powiedział o samochodach autonomicznych?", "Gdyby Kant żył dziś, co powiedział o samochodach autonomicznych?", "Gdyby Kant żył dziś, co by powiedziałby o samochodach autonomicznych?"], "answer": "Gdyby Kant żył dziś, co by powiedział o samochodach autonomicznych?", "explain": "Cząstka -by- tylko raz: albo przy „gdyby”, albo w drugiej części — nigdy dwa razy." }
+      ]
+    }
+  ]
+}
