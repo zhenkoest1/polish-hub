@@ -1,0 +1,127 @@
+{
+  "title": "Quiz — Żelazne prawo oligarchii",
+  "subtitle": "Ćwiczenia z lekcji w wersji interaktywnej. 6 rund, punkty na końcu. Powodzenia!",
+  "sections": [
+    {
+      "emoji": "❓",
+      "title": "Prawda czy fałsz?",
+      "type": "tf",
+      "questions": [
+        { "q": "Michels studiował z Maksem Weberem.", "answer": true },
+        { "q": "Michels od początku był przeciwnikiem socjalizmu.", "answer": false, "explain": "Był młodym socjalistą i idealistą. Rozczarował się dopiero, kiedy zobaczył partię od środka." },
+        { "q": "Oligarchia to rządy nielicznych — małej grupy.", "answer": true },
+        { "q": "Zdaniem Michelsa tylko złe organizacje kończą jako oligarchie.", "answer": false, "explain": "Michels mówi: każda duża organizacja — nawet z najlepszymi intencjami." },
+        { "q": "Jednym z powodów oligarchii jest wiedza lidera, której nie ma zwykły członek.", "answer": true },
+        { "q": "Według Michelsa organizacja przestaje być środkiem i staje się celem.", "answer": true, "explain": "To najważniejszy moment jego tezy: zamiana środka w cel." },
+        { "q": "Lipset potwierdził tezę Michelsa na przykładzie związku drukarzy.", "answer": false, "explain": "Odwrotnie — to był kontrprzykład. Związek ITU miał realną opozycję i liderzy tracili wybory." },
+        { "q": "Wielu dzisiejszych socjologów mówi o tendencji, a nie o żelaznym prawie.", "answer": true }
+      ]
+    },
+    {
+      "emoji": "👤",
+      "title": "BYĆ / ZOSTAĆ + narzędnik",
+      "type": "typein",
+      "questions": [
+        { "q": "Michels był __________.", "hint": "socjolog", "answer": "socjologiem" },
+        { "q": "Weber był wielkim __________.", "hint": "socjolog", "answer": "socjologiem" },
+        { "q": "Lider z czasem staje się __________.", "hint": "ekspert", "answer": "ekspertem" },
+        { "q": "Rewolucjonista zostaje nowym __________.", "hint": "pan", "answer": "panem" },
+        { "q": "Wcześniej pracował i był __________.", "hint": "robotnik — uwaga na k!", "answer": "robotnikiem" },
+        { "q": "Liderzy stali się nową __________.", "hint": "klasa", "answer": "klasą" }
+      ]
+    },
+    {
+      "emoji": "🔧",
+      "title": "Narzędnik po Z, NAD, przy narzędziu",
+      "type": "typein",
+      "questions": [
+        { "q": "Michels studiował z __________ __________.", "hint": "Maks Weber", "answer": "Maksem Weberem" },
+        { "q": "Lider rozmawia z __________.", "hint": "dziennikarze — liczba mnoga", "answer": "dziennikarzami" },
+        { "q": "Nie mogą głosować nad każdą __________.", "hint": "sprawa", "answer": "sprawą" },
+        { "q": "Ktoś musi zarządzać __________.", "hint": "pieniądze — wyjątek!", "answer": "pieniędzmi" },
+        { "q": "Podpisuje dokumenty __________.", "hint": "długopis", "answer": "długopisem" },
+        { "q": "Jadę do pracy __________.", "hint": "samochód", "answer": "samochodem" }
+      ]
+    },
+    {
+      "emoji": "⚠️",
+      "title": "Pułapka — narzędnik czy mianownik?",
+      "type": "mc",
+      "questions": [
+        {
+          "q": "Jestem __________. (inżynier)",
+          "options": ["inżynierem", "inżynier", "inżyniera", "inżynierze"],
+          "answer": "inżynierem",
+          "explain": "Zawód po „być” → narzędnik."
+        },
+        {
+          "q": "Jestem bardzo __________. (zmęczony)",
+          "options": ["zmęczony", "zmęczonym", "zmęczonego", "zmęczeniem"],
+          "answer": "zmęczony",
+          "explain": "Sam przymiotnik po „być” → mianownik, nie narzędnik!"
+        },
+        {
+          "q": "To jest __________. (dobra książka)",
+          "options": ["dobra książka", "dobrą książką", "dobrej książki", "dobrą książkę"],
+          "answer": "dobra książka",
+          "explain": "Po „to jest” zostaje mianownik. Ale: „Ta książka jest dobrym przykładem”."
+        },
+        {
+          "q": "Michels był __________, kiedy pisał tę książkę. (młody)",
+          "options": ["młody", "młodym", "młodego", "młodością"],
+          "answer": "młody",
+          "explain": "Znowu sam przymiotnik → mianownik."
+        },
+        {
+          "q": "Organizacja jest tylko __________. (narzędzie)",
+          "options": ["narzędziem", "narzędzie", "narzędzia", "narzędziu"],
+          "answer": "narzędziem",
+          "explain": "Rzeczownik nijaki po „być” → narzędnik: -em."
+        }
+      ]
+    },
+    {
+      "emoji": "🔗",
+      "title": "Dopasuj słowo do definicji",
+      "type": "mc",
+      "questions": [
+        {
+          "q": "oligarchia — co to jest?",
+          "options": ["rządy małej grupy ludzi", "rządy wszystkich obywateli", "organizacja robotników", "przykład przeciwko tezie"],
+          "answer": "rządy małej grupy ludzi"
+        },
+        {
+          "q": "narzędzie — co to jest?",
+          "options": ["środek, którym coś robisz", "cel, do którego idziesz", "decyzja małej grupy", "człowiek, który rządzi"],
+          "answer": "środek, którym coś robisz"
+        },
+        {
+          "q": "związek zawodowy — co to jest?",
+          "options": ["organizacja, która broni praw pracowników", "partia polityczna w parlamencie", "grupa liderów w firmie", "wybory w organizacji"],
+          "answer": "organizacja, która broni praw pracowników"
+        },
+        {
+          "q": "kontrprzykład — co to jest?",
+          "options": ["przykład, który pokazuje, że teza nie zawsze działa", "przykład, który potwierdza tezę", "mocne zdanie na początku książki", "silna tendencja w dużych grupach"],
+          "answer": "przykład, który pokazuje, że teza nie zawsze działa"
+        },
+        {
+          "q": "żelazny (np. żelazne prawo) — co to znaczy?",
+          "options": ["twardy, którego nie można złamać", "stary i nieaktualny", "zimny i nieprzyjemny", "drogi i rzadki"],
+          "answer": "twardy, którego nie można złamać"
+        }
+      ]
+    },
+    {
+      "emoji": "🧩",
+      "title": "Uzupełnij tekst słowami",
+      "type": "tap_fill",
+      "questions": [
+        {
+          "text": "Michels był {0} i badał niemiecką partię. Zobaczył, że partią rządzi mała grupa — to jest {1}. Organizacja jest tylko {2}, ale z czasem staje się {3}. Liderzy stają się nową {4}. Lipset pokazał jednak {5}: związek drukarzy miał prawdziwą opozycję.",
+          "answers": ["socjologiem", "oligarchia", "narzędziem", "celem", "klasą", "kontrprzykład"]
+        }
+      ]
+    }
+  ]
+}

@@ -41,33 +41,19 @@
     },
     {
       "emoji": "🔗",
-      "title": "Dopasuj słowo do definicji",
-      "type": "mc",
+      "title": "Połącz w pary",
+      "type": "match",
       "questions": [
         {
-          "q": "szczyt — co to jest?",
-          "options": ["najwyższy punkt góry", "transport w górach na linie", "zwierzę, które śpi 7 miesięcy", "prawie pionowa skała"],
-          "answer": "najwyższy punkt góry"
-        },
-        {
-          "q": "przejrzysty — co to znaczy?",
-          "options": ["taki, że widzisz przez coś (np. wodę)", "bardzo zimny", "bardzo głęboki", "zielony"],
-          "answer": "taki, że widzisz przez coś (np. wodę)"
-        },
-        {
-          "q": "świstak — co to jest?",
-          "options": ["zwierzę, które śpi zimą 7 miesięcy", "najwyższy punkt góry", "duże drapieżne zwierzę", "górskie jezioro"],
-          "answer": "zwierzę, które śpi zimą 7 miesięcy"
-        },
-        {
-          "q": "kolejka linowa — co to jest?",
-          "options": ["transport w górach na linie", "wąska górska ścieżka", "kolej między miastami", "wyciąg dla narciarzy pod ziemią"],
-          "answer": "transport w górach na linie"
-        },
-        {
-          "q": "stromy — co to znaczy?",
-          "options": ["prawie pionowy, bardzo trudny do wejścia", "płaski i łatwy", "mokry po deszczu", "kamienisty"],
-          "answer": "prawie pionowy, bardzo trudny do wejścia"
+          "q": "Dopasuj słowo do definicji.",
+          "pairs": [
+            ["szczyt", "najwyższy punkt góry"],
+            ["przejrzysty", "taki, że widać przez niego (np. woda)"],
+            ["świstak", "zwierzę, które śpi zimą 7 miesięcy"],
+            ["kolejka linowa", "transport w górach na linie"],
+            ["stromy", "prawie pionowy, trudny do wejścia"],
+            ["kozica", "symbol Tatr, skacze po skałach"]
+          ]
         }
       ]
     },

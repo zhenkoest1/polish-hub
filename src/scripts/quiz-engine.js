@@ -1,6 +1,7 @@
 // Polski Klub — quiz engine
-// Typy pytań: tf | mc | typein | tap_fill
+// Typy pytań: tf | mc | typein | tap_fill | match
 import '../styles/quiz.css';
+import { confetti, confettiFrom } from './confetti.js';
 
 const dataEl = document.getElementById('quiz-data');
 const root = document.getElementById('quiz-root');
@@ -113,6 +114,7 @@ class QuizRun {
     else if (t === 'mc') this.renderMC(item);
     else if (t === 'typein') this.renderTypein(item);
     else if (t === 'tap_fill') this.renderTapFill(item);
+    else if (t === 'match') this.renderMatch(item);
   }
 
   /* ── prawda / fałsz ── */
@@ -282,6 +284,93 @@ class QuizRun {
     });
   }
 
+  /* ── soedini pary: dwie kolumny ── */
+  renderMatch(item) {
+    const { q } = item;
+    const pairs = q.pairs.map(([l, r], pi) => ({ l, r, pi }));
+    const colL = shuffle(pairs);
+    const colR = shuffle(pairs);
+    const cell = (p, side) =>
+      `<button class="q-match-item" data-side="${side}" data-pi="${p.pi}">${esc(side === 'l' ? p.l : p.r)}</button>`;
+
+    this.frame(item, `
+      <p class="q-tap-help">👆 Kliknij słowo z lewej, potem pasujące z prawej.</p>
+      ${q.q ? `<p class="q-question">${esc(q.q)}</p>` : ''}
+      <div class="q-match">
+        <div class="q-match-col">${colL.map((p) => cell(p, 'l')).join('')}</div>
+        <div class="q-match-col">${colR.map((p) => cell(p, 'r')).join('')}</div>
+      </div>
+    `);
+
+    const items = [...this.root.querySelectorAll('.q-match-item')];
+    const sel = { l: null, r: null };
+    const missed = new Set(); // pary, przy których był błąd — nie liczą się do punktów
+    let solved = 0;
+    let busy = false;
+
+    const clearSel = () => {
+      items.forEach((x) => x.classList.remove('selected'));
+      sel.l = null;
+      sel.r = null;
+    };
+
+    const resolve = () => {
+      const a = sel.l;
+      const b = sel.r;
+      if (a.dataset.pi === b.dataset.pi) {
+        [a, b].forEach((x) => {
+          x.classList.remove('selected');
+          x.classList.add('matched', 'pop');
+          x.disabled = true;
+        });
+        clearSel();
+        solved += 1;
+        if (solved === pairs.length) finish();
+        return;
+      }
+
+      // pudło: para z lewej idzie na listę „nie liczy się"
+      missed.add(a.dataset.pi);
+      busy = true;
+      [a, b].forEach((x) => x.classList.add('incorrect', 'shake'));
+      setTimeout(() => {
+        [a, b].forEach((x) => x.classList.remove('incorrect', 'shake'));
+        clearSel();
+        busy = false;
+      }, 600);
+    };
+
+    const finish = () => {
+      const got = pairs.length - missed.size;
+      this.addScore(item.si, got, pairs.length);
+      const all = got === pairs.length;
+      if (all) confettiFrom(this.root.querySelector('.q-match'), { count: 55 });
+      this.feedback(all,
+        all
+          ? `<strong>Perfekcyjnie!</strong> Wszystkie ${pairs.length} par za pierwszym razem.`
+          : `<strong>${got} / ${pairs.length}.</strong> Wszystko połączone, ale przy ${missed.size === 1 ? 'jednej parze' : `${missed.size} parach`} było pudło.`);
+    };
+
+    items.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        if (busy || btn.disabled) return;
+        const side = btn.dataset.side;
+
+        // ponowne kliknięcie = odznaczenie
+        if (sel[side] === btn) {
+          btn.classList.remove('selected');
+          sel[side] = null;
+          return;
+        }
+        if (sel[side]) sel[side].classList.remove('selected');
+        sel[side] = btn;
+        btn.classList.add('selected');
+
+        if (sel.l && sel.r) resolve();
+      });
+    });
+  }
+
   /* ── wyniki ── */
   renderResults() {
     const got = this.scores.reduce((s, x) => s + x.got, 0);
@@ -311,5 +400,11 @@ class QuizRun {
       new QuizRun(this.quiz, this.root).start();
     });
     this.root.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    if (pct >= 70) {
+      const big = pct >= 90;
+      setTimeout(() => confetti({ count: big ? 140 : 90, power: big ? 15 : 12 }), 350);
+      if (big) setTimeout(() => confetti({ count: 90, origin: { x: 0.2, y: 0.45 }, power: 13 }), 750);
+    }
   }
 }
