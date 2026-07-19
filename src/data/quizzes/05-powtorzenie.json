@@ -1,0 +1,97 @@
+{
+  "title": "Quiz — Wielkie powtórzenie",
+  "subtitle": "Wszystko z lekcji 1–4 w jednym quizie. 8 rund, punkty na końcu. Powodzenia!",
+  "sections": [
+    {
+      "emoji": "❓",
+      "title": "Prawda czy fałsz? — z czterech lekcji",
+      "type": "tf",
+      "questions": [
+        { "q": "Rysy są najwyższym szczytem po polskiej stronie Tatr.", "answer": true },
+        { "q": "Według Hana dawniej ludzie słyszeli „możesz”, a dzisiaj słyszą „musisz”.", "answer": false, "explain": "Odwrotnie. Społeczeństwo dyscypliny mówiło „musisz”, społeczeństwo osiągnięć mówi „możesz” — i to jest pułapka." },
+        { "q": "Michels twierdził, że każda duża organizacja dąży do oligarchii.", "answer": true, "explain": "Nawet ta z najlepszymi intencjami — dlatego nazwał to żelaznym prawem." },
+        { "q": "Kant uważał, że wolno skłamać, jeśli chodzi o życie przyjaciela.", "answer": false, "explain": "Kant mówił: nie wolno kłamać nigdy — nawet mordercy przy drzwiach." },
+        { "q": "Po przeczeniu „nie” biernik zmienia się w dopełniacz.", "answer": true, "explain": "Mam czas → Nie mam czasu." },
+        { "q": "Czasownik „ufać” wymaga biernika.", "answer": false, "explain": "Wymaga celownika: ufam bratu, ufam ci." }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Blok 1 — stopniowanie przymiotników",
+      "type": "typein",
+      "questions": [
+        { "q": "Giewont jest __________ niż Rysy.", "hint": "niski — stopień wyższy", "answer": "niższy" },
+        { "q": "To jest __________ kompromis w historii Polski.", "hint": "dobry — stopień najwyższy", "answer": "najlepszy" },
+        { "q": "Stopień wyższy od „zły” to __________.", "hint": "forma nieregularna", "answer": "gorszy" },
+        { "q": "Stopień najwyższy od „mały” to __________.", "hint": "forma nieregularna", "answer": "najmniejszy" },
+        { "q": "Świstak to __________ zwierzę z trzech.", "hint": "mały — stopień najwyższy, rodzaj nijaki", "answer": "najmniejsze" }
+      ]
+    },
+    {
+      "emoji": "🎯",
+      "title": "Blok 2 — biernik i przeczenie",
+      "type": "typein",
+      "questions": [
+        { "q": "Codziennie sprawdzam __________.", "hint": "nowa wiadomość", "answer": "nową wiadomość" },
+        { "q": "Han widzi __________ inaczej.", "hint": "nowoczesny świat", "answer": "nowoczesny świat" },
+        { "q": "Michels opisał __________ SPD.", "hint": "surowy lider — męski żywotny!", "answer": "surowego lidera" },
+        { "q": "Możesz otworzyć __________.", "hint": "własna firma", "answer": "własną firmę" },
+        { "q": "Mam czas. → Nie mam __________.", "hint": "po przeczeniu — dopełniacz", "answer": "czasu" },
+        { "q": "Widzę nadzieję. → Nie widzę __________.", "hint": "po przeczeniu — dopełniacz", "answer": "nadziei" }
+      ]
+    },
+    {
+      "emoji": "🛠️",
+      "title": "Blok 3 — narzędnik",
+      "type": "typein",
+      "questions": [
+        { "q": "Demokracja jest __________, nie stanem.", "hint": "proces", "answer": "procesem" },
+        { "q": "Rozmawiam z __________.", "hint": "mój brat", "answer": "moim bratem" },
+        { "q": "Rewolucjoniści stają się __________.", "hint": "konserwatyści — liczba mnoga", "answer": "konserwatystami" },
+        { "q": "Michels był __________ SPD.", "hint": "członek — uwaga na k!", "answer": "członkiem" },
+        { "q": "Kompromis jest __________.", "hint": "sztuka", "answer": "sztuką" }
+      ]
+    },
+    {
+      "emoji": "🤲",
+      "title": "Bloki 4 i 5 — modalne i celownik",
+      "type": "typein",
+      "questions": [
+        { "q": "Ja __________ iść do pracy — szef czeka.", "hint": "musieć", "answer": "muszę" },
+        { "q": "Ona __________ wybaczyć bratu.", "hint": "powinien", "answer": "powinna" },
+        { "q": "Pomagam __________.", "hint": "mama", "answer": "mamie" },
+        { "q": "Ufam __________.", "hint": "przyjaciel", "answer": "przyjacielowi" },
+        { "q": "Dziękuję nauczycielce. → Dziękuję __________.", "hint": "zaimek", "answer": "jej" },
+        { "q": "Mówię prawdę bratu. → Mówię __________ prawdę.", "hint": "zaimek", "answer": "mu" }
+      ]
+    },
+    {
+      "emoji": "🔗",
+      "title": "Połącz w pary — słowa z czterech lekcji",
+      "type": "match",
+      "questions": [
+        { "q": "Dopasuj słowo do wyjaśnienia.", "pairs": [["kozica", "symbol Tatr, skacze po skałach"], ["wypalenie", "koniec siły po zbyt długiej grze w „możesz więcej”"], ["samoeksploatacja", "więzienie bez krat, które nosisz w głowie"], ["oligarchia", "rządy nielicznych, małej grupy"], ["upór", "trzymanie się swojego zdania mimo wszystko"], ["liberum veto", "zasada, przez którą jeden głos blokował cały sejm"]] }
+      ]
+    },
+    {
+      "emoji": "🧩",
+      "title": "Uzupełnij tekst — cztery lekcje w pięciu zdaniach",
+      "type": "tap_fill",
+      "questions": [
+        { "text": "Rysy to {0} szczyt w polskich Tatrach. Han pisze, że człowiek sprawdza {1} sto razy dziennie. Michels twierdził, że każda duża organizacja staje się {2}. Kant powtarzał: nie {3} kłamać. Przy Okrągłym Stole wszyscy {4}, dlatego Polska odzyskała {5} bez wojny domowej.", "answers": ["najwyższy", "telefon", "oligarchią", "wolno", "ustąpili", "wolność"] }
+      ]
+    },
+    {
+      "emoji": "🏁",
+      "title": "Popraw błąd i przetłumacz — finał",
+      "type": "mc",
+      "questions": [
+        { "q": "Popraw błąd: „Niedźwiedź jest najduży zwierzę w Tatrach.”", "options": ["Niedźwiedź jest największym zwierzęciem w Tatrach.", "Niedźwiedź jest największy zwierzę w Tatrach.", "Niedźwiedź jest najduższym zwierzęciem w Tatrach.", "Niedźwiedź jest większym zwierzęciem w Tatrach."], "answer": "Niedźwiedź jest największym zwierzęciem w Tatrach.", "explain": "Dwa błędy naraz: „najduży” → „największym” (forma nieregularna) i „zwierzę” → „zwierzęciem” (narzędnik po być)." },
+        { "q": "Popraw błąd: „Nie mam czas na odpoczynek.”", "options": ["Nie mam czasu na odpoczynek.", "Nie mam czasem na odpoczynek.", "Nie mam czasowi na odpoczynek.", "Nie mam czas na odpoczynku."], "answer": "Nie mam czasu na odpoczynek.", "explain": "Po przeczeniu biernik przechodzi w dopełniacz: czas → czasu." },
+        { "q": "Popraw błąd: „Pomagam mój brat i ufam moja żona.”", "options": ["Pomagam mojemu bratu i ufam mojej żonie.", "Pomagam mojego brata i ufam moją żonę.", "Pomagam moim bratem i ufam moją żoną.", "Pomagam mój bratu i ufam moja żonie."], "answer": "Pomagam mojemu bratu i ufam mojej żonie.", "explain": "Pomagać i ufać wymagają celownika — razem z przymiotnikiem: mojemu bratu, mojej żonie." },
+        { "q": "Przetłumacz: «Мне жаль, но я не могу помочь.»", "options": ["Przykro mi, ale nie mogę pomóc.", "Przykro mnie, ale nie mogę pomóc.", "Smutno mi, ale nie muszę pomóc.", "Przykro mi, ale nie wolno pomagać."], "answer": "Przykro mi, ale nie mogę pomóc.", "explain": "Konstrukcja bezosobowa z celownikiem: przykro mi (krótka forma zaimka)." },
+        { "q": "Przetłumacz: «Лидер становится спасителем.»", "options": ["Lider staje się zbawicielem.", "Lider staje się zbawiciela.", "Lider staje się zbawicielowi.", "Lider stanie zbawiciel."], "answer": "Lider staje się zbawicielem.", "explain": "Stać się + narzędnik: zbawiciel → zbawicielem." }
+      ]
+    }
+  ]
+}
