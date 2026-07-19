@@ -1,0 +1,73 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const lekcje = await getCollection('lekcje');
+  return lekcje
+    .filter((l) => l.data.quiz)
+    .map((l) => ({ params: { id: l.data.quiz! }, props: { lekcja: l } }));
+}
+
+const { lekcja } = Astro.props;
+const b = import.meta.env.BASE_URL.replace(/\/$/, '');
+const href = (p: string) => `${b}/${p.replace(/^\//, '')}`;
+const quizData = (await import(`../../data/quizzes/${lekcja.data.quiz}.json`)).default;
+---
+<Base title={`${quizData.title} — Polski Klub`} active="quizy">
+  <article>
+    <header class="quiz-head">
+      <a class="back" href={href('quizy/')}>← wszystkie quizy</a>
+      <p class="kicker" style="color: var(--zielony)">
+        quiz {String(lekcja.data.numer).padStart(2, '0')} · {lekcja.data.gramatyka}
+      </p>
+      <h1 class="quiz-h1">{lekcja.data.emoji} {quizData.title}</h1>
+      <p class="quiz-lead">
+        Materiał z lekcji: <a href={href(`lekcje/${lekcja.id}/`)}>{lekcja.data.tytul}</a>
+      </p>
+    </header>
+
+    <section class="quiz-zone" id="quiz">
+      <div class="quiz-splash" id="quiz-splash">
+        <h2>🎯 Gotowi?</h2>
+        <p>{quizData.subtitle}</p>
+        <button class="btn btn-big" id="quiz-start">Zaczynamy!</button>
+      </div>
+      <div id="quiz-root" hidden></div>
+      <script type="application/json" id="quiz-data" set:html={JSON.stringify(quizData)} />
+    </section>
+  </article>
+
+  <script>
+    import '../../scripts/quiz-engine.js';
+  </script>
+</Base>
+
+<style>
+  .quiz-head { padding-top: 26px; }
+  .back { color: var(--text-dim); text-decoration: none; font-size: 0.9rem; }
+  .back:hover { color: var(--zielony); }
+  .quiz-head .kicker { margin-top: 20px; }
+  .quiz-h1 { font-size: clamp(1.8rem, 6vw, 2.8rem); font-weight: 800; margin: 0 0 6px; }
+  .quiz-lead { color: var(--text-dim); margin: 0; }
+
+  .quiz-zone {
+    margin-top: 30px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: calc(var(--radius) + 6px);
+    padding: 26px 22px;
+    position: relative;
+    overflow: hidden;
+  }
+  .quiz-zone::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto;
+    height: 5px;
+    background: linear-gradient(90deg, var(--zielony), var(--amber));
+  }
+  .quiz-splash { text-align: center; padding: 18px 0; }
+  .quiz-splash h2 { font-size: 1.6rem; margin: 0 0 6px; }
+  .quiz-splash p { color: var(--text-dim); margin: 0 0 22px; }
+</style>

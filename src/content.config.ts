@@ -14,4 +14,14 @@ const lekcje = defineCollection({
   }),
 });
 
-export const collections = { lekcje };
+const reguly = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/reguly' }),
+  schema: z.object({
+    tytul: z.string(),
+    emoji: z.string(),
+    lekcja: z.number().optional(), // numer lekcji, w której reguła się pojawia
+    pytania: z.string().optional(), // np. "kogo? co?"
+  }),
+});
+
+export const collections = { lekcje, reguly };

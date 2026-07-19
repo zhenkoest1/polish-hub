@@ -1,0 +1,36 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const reguly = await getCollection('reguly');
+  return reguly.map((r) => ({ params: { id: r.id }, props: { regula: r } }));
+}
+
+const { regula } = Astro.props;
+const { Content } = await render(regula);
+const b = import.meta.env.BASE_URL.replace(/\/$/, '');
+const href = (p: string) => `${b}/${p.replace(/^\//, '')}`;
+---
+<Base title={`${regula.data.tytul} — Polski Klub`} active="reguly">
+  <article>
+    <header class="rule-head">
+      <a class="back" href={href('reguly/')}>← wszystkie reguły</a>
+      <p class="kicker" style="color: var(--mak)">
+        reguła{regula.data.lekcja ? ` · z lekcji ${regula.data.lekcja}` : ''}{regula.data.pytania ? ` · ${regula.data.pytania}` : ''}
+      </p>
+      <h1 class="rule-h1">{regula.data.emoji} {regula.data.tytul}</h1>
+    </header>
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+</Base>
+
+<style>
+  .rule-head { padding-top: 26px; }
+  .back { color: var(--text-dim); text-decoration: none; font-size: 0.9rem; }
+  .back:hover { color: var(--mak); }
+  .rule-head .kicker { margin-top: 20px; }
+  .rule-h1 { font-size: clamp(1.8rem, 6vw, 2.8rem); font-weight: 800; margin: 0 0 10px; }
+</style>

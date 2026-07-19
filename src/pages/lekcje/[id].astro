@@ -9,17 +9,18 @@ export async function getStaticPaths() {
 
 const { lekcja } = Astro.props;
 const { Content } = await render(lekcja);
-const base = import.meta.env.BASE_URL;
+const b = import.meta.env.BASE_URL.replace(/\/$/, '');
+const href = (p: string) => `${b}/${p.replace(/^\//, '')}`;
 
 let quizData = null;
 if (lekcja.data.quiz) {
   quizData = (await import(`../../data/quizzes/${lekcja.data.quiz}.json`)).default;
 }
 ---
-<Base title={`Lekcja ${lekcja.data.numer}: ${lekcja.data.tytul} — Polski Klub`}>
+<Base title={`Lekcja ${lekcja.data.numer}: ${lekcja.data.tytul} — Polski Klub`} active="lekcje">
   <article>
     <header class="lesson-head">
-      <a class="back" href={base}>← wszystkie lekcje</a>
+      <a class="back" href={href('lekcje/')}>← wszystkie lekcje</a>
       <p class="lesson-kicker">
         Lekcja {String(lekcja.data.numer).padStart(2, '0')} · {lekcja.data.gramatyka}
       </p>

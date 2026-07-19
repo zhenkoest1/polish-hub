@@ -1,0 +1,120 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const b = import.meta.env.BASE_URL.replace(/\/$/, '');
+const href = (p: string) => `${b}/${p.replace(/^\//, '')}`;
+
+const lekcje = (await getCollection('lekcje')).sort((a, c) => a.data.numer - c.data.numer);
+
+const wDrodze = [
+  { numer: 2, emoji: '😴', tytul: 'Społeczeństwo zmęczenia', gramatyka: 'Biernik' },
+  { numer: 3, emoji: '⚖️', tytul: 'Żelazne prawo oligarchii', gramatyka: 'Narzędnik' },
+  { numer: 4, emoji: '🤝', tytul: 'Sztuka kompromisu', gramatyka: 'Czasowniki modalne + Celownik' },
+  { numer: 5, emoji: '🔄', tytul: 'Wielkie powtórzenie', gramatyka: 'Wszystko z lekcji 1–4' },
+  { numer: 6, emoji: '🔍', tytul: 'Niewidzialne wzorce', gramatyka: 'Dopełniacz cz. 1' },
+  { numer: 7, emoji: '🎯', tytul: 'Dylemat więźnia', gramatyka: 'Dopełniacz cz. 2' },
+  { numer: 8, emoji: '🚋', tytul: 'Dylemat wagonika', gramatyka: 'Miejscownik' },
+  { numer: 9, emoji: '🌡️', tytul: 'Fala upałów 2026', gramatyka: 'Aspekt czasowników' },
+].filter((p) => !lekcje.some((l) => l.data.numer === p.numer));
+---
+<Base title="Lekcje — Polski Klub" active="lekcje">
+  <header class="page-head">
+    <p class="kicker" style="color: var(--amber)">tekst → reguła → słowa → quiz</p>
+    <h1 class="page-h1">Lekcje</h1>
+  </header>
+
+  <ol class="lesson-list">
+    {lekcje.map((l, i) => (
+      <li class="lesson-card" style={`animation-delay: ${i * 70}ms`}>
+        <a href={href(`lekcje/${l.id}/`)}>
+          <span class="lesson-num">{String(l.data.numer).padStart(2, '0')}</span>
+          <span class="lesson-body">
+            <span class="lesson-title">{l.data.emoji} {l.data.tytul}</span>
+            <span class="lesson-meta">{l.data.gramatyka}{l.data.data ? ` · ${l.data.data}` : ''}</span>
+          </span>
+          <span class="lesson-go" aria-hidden="true">→</span>
+        </a>
+      </li>
+    ))}
+  </ol>
+
+  {wDrodze.length > 0 && (
+    <>
+      <h2 class="section-title dim">W drodze na stronę</h2>
+      <ol class="lesson-list muted">
+        {wDrodze.map((l) => (
+          <li class="lesson-card ghost-card">
+            <span class="ghost">
+              <span class="lesson-num ghost-num">{String(l.numer).padStart(2, '0')}</span>
+              <span class="lesson-body">
+                <span class="lesson-title">{l.emoji} {l.tytul}</span>
+                <span class="lesson-meta">{l.gramatyka}</span>
+              </span>
+              <span class="lesson-soon">wkrótce</span>
+            </span>
+          </li>
+        ))}
+      </ol>
+    </>
+  )}
+</Base>
+
+<style>
+  .page-head { padding-top: 30px; }
+  .page-h1 { font-size: clamp(2.2rem, 7vw, 3.4rem); font-weight: 800; margin: 0 0 22px; text-transform: uppercase; }
+
+  .section-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin: 40px 0 14px;
+  }
+  .section-title.dim { color: var(--text-dim); }
+
+  .lesson-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  .lesson-card { animation: rise 0.45s both; }
+  .lesson-card a, .ghost {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 15px 18px;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+  }
+  .lesson-card a:hover { transform: translateX(6px); border-color: var(--amber); background: var(--panel-2); }
+  .lesson-card a:hover .lesson-go { transform: translateX(4px); color: var(--amber); }
+  .lesson-num {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: var(--mak);
+    min-width: 50px;
+    line-height: 1;
+  }
+  .ghost-num { color: var(--line); }
+  .lesson-body { flex: 1; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .lesson-title { font-family: var(--font-display); font-weight: 700; font-size: 1.02rem; }
+  .lesson-meta { color: var(--text-dim); font-size: 0.85rem; }
+  .lesson-go { font-size: 1.3rem; color: var(--text-dim); transition: transform 0.18s ease, color 0.18s ease; }
+  .lesson-soon {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+    border: 1px dashed var(--line);
+    border-radius: 99px;
+    padding: 3px 10px;
+    white-space: nowrap;
+  }
+  .muted .ghost { opacity: 0.55; }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>

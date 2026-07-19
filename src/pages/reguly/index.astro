@@ -1,0 +1,80 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const b = import.meta.env.BASE_URL.replace(/\/$/, '');
+const href = (p: string) => `${b}/${p.replace(/^\//, '')}`;
+
+const reguly = (await getCollection('reguly')).sort((a, c) => (a.data.lekcja ?? 99) - (c.data.lekcja ?? 99));
+---
+<Base title="Reguły — Polski Klub" active="reguly">
+  <header class="page-head">
+    <p class="kicker" style="color: var(--mak)">gramatyka w pigułce — ściągi na spotkania</p>
+    <h1 class="page-h1">Reguły</h1>
+  </header>
+
+  <div class="rule-grid">
+    {reguly.map((r, i) => (
+      <a class="rule-card" href={href(`reguly/${r.id}/`)} style={`animation-delay: ${i * 70}ms`}>
+        <span class="rule-emoji">{r.data.emoji}</span>
+        <span class="rule-title">{r.data.tytul}</span>
+        {r.data.pytania && <span class="rule-pytania">{r.data.pytania}</span>}
+        {r.data.lekcja && <span class="rule-lekcja">Lekcja {r.data.lekcja}</span>}
+      </a>
+    ))}
+  </div>
+</Base>
+
+<style>
+  .page-head { padding-top: 30px; }
+  .page-h1 { font-size: clamp(2.2rem, 7vw, 3.4rem); font-weight: 800; margin: 0 0 22px; text-transform: uppercase; }
+
+  .rule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 14px;
+  }
+  .rule-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 20px 18px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: calc(var(--radius) + 2px);
+    text-decoration: none;
+    color: var(--text);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.18s ease, border-color 0.18s ease;
+    animation: rise 0.45s both;
+  }
+  .rule-card::after {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto;
+    height: 4px;
+    background: var(--mak);
+    opacity: 0.85;
+  }
+  .rule-card:hover { transform: translateY(-4px); border-color: var(--mak); }
+  .rule-emoji { font-size: 1.9rem; line-height: 1; }
+  .rule-title { font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; }
+  .rule-pytania { color: var(--amber); font-style: italic; font-size: 0.92rem; }
+  .rule-lekcja {
+    margin-top: 6px;
+    align-self: flex-start;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+    border: 1px solid var(--line);
+    border-radius: 99px;
+    padding: 2px 10px;
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
