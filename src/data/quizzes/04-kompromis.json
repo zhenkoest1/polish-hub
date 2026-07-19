@@ -1,0 +1,73 @@
+{
+  "title": "Quiz — Sztuka kompromisu",
+  "subtitle": "Ćwiczenia z lekcji w wersji interaktywnej. 6 rund, punkty na końcu. Powodzenia!",
+  "sections": [
+    {
+      "emoji": "❓",
+      "title": "Prawda czy fałsz?",
+      "type": "tf",
+      "questions": [
+        { "q": "Według Arystotelesa cnota leży pomiędzy dwiema skrajnościami.", "answer": true },
+        { "q": "Arystoteles uważał, że każda rzecz ma swój złoty środek.", "answer": false, "explain": "Odwrotnie — mówił, że niektóre rzeczy nie mają środka. Nie ma „zdrowej miary” zdrady ani „rozsądnej ilości” okrucieństwa." },
+        { "q": "Kant twierdził, że nie wolno kłamać nawet mordercy przy drzwiach.", "answer": true, "explain": "To jego najsłynniejszy i najbardziej kontrowersyjny przykład. Wielu ludzi się oburzało." },
+        { "q": "Hume mówił, że ludzie służą zasadom.", "answer": false, "explain": "Dokładnie odwrotnie: zasady służą ludziom, a nie ludzie zasadom." },
+        { "q": "„Liberum veto” pozwalało jednemu szlachcicowi zablokować cały sejm.", "answer": true },
+        { "q": "Przy Okrągłym Stole jedna strona dostała wszystko, czego chciała.", "answer": false, "explain": "Nikt nie dostał wszystkiego — wszyscy ustąpili. Dlatego Polska odzyskała wolność bez wojny domowej." }
+      ]
+    },
+    {
+      "emoji": "💪",
+      "title": "Czasowniki modalne — wstaw formę",
+      "type": "typein",
+      "questions": [
+        { "q": "Ja __________ czasem ustąpić.", "hint": "musieć", "answer": "muszę" },
+        { "q": "Ty __________ powiedzieć „nie”.", "hint": "móc", "answer": "możesz" },
+        { "q": "My __________ porozmawiać o tym spokojnie.", "hint": "chcieć", "answer": "chcemy" },
+        { "q": "Ona __________ wybaczyć bratu.", "hint": "powinien", "answer": "powinna" },
+        { "q": "Oni __________ negocjować dwa miesiące.", "hint": "musieć", "answer": "muszą" },
+        { "q": "Ja — mężczyzna — __________ częściej pomagać mamie.", "hint": "powinien", "answer": "powinienem" }
+      ]
+    },
+    {
+      "emoji": "🤲",
+      "title": "Celownik — komu? czemu?",
+      "type": "typein",
+      "questions": [
+        { "q": "Ufam __________.", "hint": "mój brat", "answer": "mojemu bratu" },
+        { "q": "Pomagam __________.", "hint": "mama", "answer": "mamie" },
+        { "q": "Dziękujemy __________.", "hint": "nauczycielka", "answer": "nauczycielce" },
+        { "q": "Nie przeszkadzaj __________!", "hint": "siostra", "answer": "siostrze" },
+        { "q": "Wybaczyłem __________ wszystko.", "hint": "kolega — uwaga, męski na -a!", "answer": "koledze" },
+        { "q": "Daję prezent __________.", "hint": "przyjaciel", "answer": "przyjacielowi" }
+      ]
+    },
+    {
+      "emoji": "🔗",
+      "title": "Połącz w pary",
+      "type": "match",
+      "questions": [
+        { "q": "Dopasuj słowo do wyjaśnienia.", "pairs": [["tchórz", "osoba, która boi się i unika trudnych sytuacji"], ["hojność", "chęć dzielenia się pieniędzmi, czasem, pomocą"], ["upór", "trzymanie się swojego zdania i brak chęci zmiany"], ["sejm", "parlament w Polsce, gdzie posłowie tworzą ustawy"], ["fanatyzm", "ślepe przywiązanie do idei, brak tolerancji"], ["rezygnacja", "decyzja, że czegoś nie robimy; odpuszczenie"]] }
+      ]
+    },
+    {
+      "emoji": "🧩",
+      "title": "Uzupełnij tekst słowami",
+      "type": "tap_fill",
+      "questions": [
+        { "text": "Kant mówił, że nie {0} kłamać — nigdy. Hume odpowiadał: zasady {1} ludziom, a nie ludzie zasadom. W polskim sejmie każdy szlachcic mógł krzyknąć „Nie {2}!”. Przy Okrągłym Stole wszyscy {3}. Zgoda buduje, {4} rujnuje.", "answers": ["wolno", "służą", "pozwalam", "ustąpili", "niezgoda"] }
+      ]
+    },
+    {
+      "emoji": "🎯",
+      "title": "Podsumowanie — szybki finał",
+      "type": "mc",
+      "questions": [
+        { "q": "Gdzie — według Arystotelesa — leży cnota?", "options": ["Pomiędzy dwiema skrajnościami", "W jednej ze skrajności", "Poza etyką", "W tradycji"], "answer": "Pomiędzy dwiema skrajnościami", "explain": "Odwaga leży pomiędzy tchórzostwem a brakiem strachu, hojność — pomiędzy skąpstwem a rozrzutnością." },
+        { "q": "Która forma jest poprawna, kiedy mówi kobieta?", "options": ["Powinnam ustąpić.", "Powinienem ustąpić.", "Powinien ustąpić.", "Powinni ustąpić."], "answer": "Powinnam ustąpić.", "explain": "Główna para: powinienem (mężczyzna) — powinnam (kobieta)." },
+        { "q": "Ustępuję __________ — która forma jest poprawna?", "options": ["bratu", "brata", "bratem", "brat"], "answer": "bratu", "explain": "Czasownik ustępować wymaga celownika: komu? — bratu." },
+        { "q": "Zdanie „Muszę iść do pracy” znaczy…", "options": ["Nie mam wyboru — inaczej mnie zwolnią", "Byłoby dobrze, gdybym poszedł", "Mam ochotę iść do pracy", "Wolno mi iść do pracy"], "answer": "Nie mam wyboru — inaczej mnie zwolnią", "explain": "Musieć = przymus. Powinien = rekomendacja, wybór jednak jest." },
+        { "q": "Co oznaczało „liberum veto”?", "options": ["Jeden szlachcic mógł unieważnić obrady całego sejmu", "Król mógł rozwiązać sejm", "Sejm głosował większością głosów", "Szlachta nie mogła głosować"], "answer": "Jeden szlachcic mógł unieważnić obrady całego sejmu", "explain": "Absolutna sztywność: wystarczyło krzyknąć „Nie pozwalam!”. Ta zasada osłabiała państwo przez dwa wieki." }
+      ]
+    }
+  ]
+}
