@@ -11,6 +11,10 @@ const { regula } = Astro.props;
 const { Content } = await render(regula);
 const b = import.meta.env.BASE_URL.replace(/\/$/, '');
 const href = (p: string) => `${b}/${p.replace(/^\//, '')}`;
+
+// lekcja, w której reguła się pojawia
+const lekcje = await getCollection('lekcje');
+const lekcja = regula.data.lekcja ? lekcje.find((l) => l.data.numer === regula.data.lekcja) : null;
 ---
 <Base title={`${regula.data.tytul} — Polski Klub`} active="reguly">
   <article>
@@ -20,6 +24,12 @@ const href = (p: string) => `${b}/${p.replace(/^\//, '')}`;
         reguła{regula.data.lekcja ? ` · z lekcji ${regula.data.lekcja}` : ''}{regula.data.pytania ? ` · ${regula.data.pytania}` : ''}
       </p>
       <h1 class="rule-h1">{regula.data.emoji} {regula.data.tytul}</h1>
+      {lekcja && (
+        <p class="rule-lesson-link">
+          Z lekcji: <a href={href(`lekcje/${lekcja.id}/`)}>{lekcja.data.emoji} {lekcja.data.tytul}</a>
+          {lekcja.data.quiz && <> · <a href={href(`quizy/${lekcja.data.quiz}/`)}>🎯 przećwicz w quizie</a></>}
+        </p>
+      )}
     </header>
     <div class="prose">
       <Content />
@@ -33,4 +43,5 @@ const href = (p: string) => `${b}/${p.replace(/^\//, '')}`;
   .back:hover { color: var(--mak); }
   .rule-head .kicker { margin-top: 20px; }
   .rule-h1 { font-size: clamp(1.8rem, 6vw, 2.8rem); font-weight: 800; margin: 0 0 10px; }
+  .rule-lesson-link { color: var(--text-dim); margin: 0; font-size: 0.95rem; }
 </style>

@@ -16,21 +16,49 @@ let quizData = null;
 if (lekcja.data.quiz) {
   quizData = (await import(`../../data/quizzes/${lekcja.data.quiz}.json`)).default;
 }
+
+// powiązane reguły (po numerze lekcji)
+const reguly = (await getCollection('reguly')).filter((r) => r.data.lekcja === lekcja.data.numer);
+
+// prev / next
+const all = (await getCollection('lekcje')).sort((a, c) => a.data.numer - c.data.numer);
+const idx = all.findIndex((l) => l.id === lekcja.id);
+const prev = idx > 0 ? all[idx - 1] : null;
+const next = idx < all.length - 1 ? all[idx + 1] : null;
+const nn = String(lekcja.data.numer).padStart(2, '0');
 ---
 <Base title={`Lekcja ${lekcja.data.numer}: ${lekcja.data.tytul} — Polski Klub`} active="lekcje">
   <article>
     <header class="lesson-head">
+      <span class="ghost-num" aria-hidden="true">{nn}</span>
       <a class="back" href={href('lekcje/')}>← wszystkie lekcje</a>
-      <p class="lesson-kicker">
-        Lekcja {String(lekcja.data.numer).padStart(2, '0')} · {lekcja.data.gramatyka}
+      <p class="kicker" style="color: var(--mak)">
+        Lekcja {nn} · {lekcja.data.gramatyka}
       </p>
       <h1 class="lesson-h1">{lekcja.data.emoji} {lekcja.data.tytul}</h1>
       {lekcja.data.opis && <p class="lesson-opis">{lekcja.data.opis}</p>}
+      <div class="lesson-chips">
+        {reguly.map((r) => (
+          <a class="chip chip-regula" href={href(`reguly/${r.id}/`)}>
+            📐 Reguła: {r.data.tytul}
+          </a>
+        ))}
+        {quizData && <a class="chip chip-quiz" href="#quiz">🎯 Do quizu ↓</a>}
+      </div>
     </header>
 
     <div class="prose">
       <Content />
     </div>
+
+    {reguly.length > 0 && (
+      <aside class="rule-banner">
+        <span class="rule-banner-label">📐 Ściąga do tej lekcji:</span>
+        {reguly.map((r) => (
+          <a class="rule-banner-link" href={href(`reguly/${r.id}/`)}>{r.data.emoji} {r.data.tytul} →</a>
+        ))}
+      </aside>
+    )}
 
     {quizData && (
       <section class="quiz-zone" id="quiz">
@@ -43,6 +71,21 @@ if (lekcja.data.quiz) {
         <script type="application/json" id="quiz-data" set:html={JSON.stringify(quizData)} />
       </section>
     )}
+
+    <nav class="lesson-nav">
+      {prev ? (
+        <a class="lnav lnav-prev" href={href(`lekcje/${prev.id}/`)}>
+          <span class="lnav-dir">← poprzednia</span>
+          <span class="lnav-title">{prev.data.emoji} {prev.data.tytul}</span>
+        </a>
+      ) : <span />}
+      {next ? (
+        <a class="lnav lnav-next" href={href(`lekcje/${next.id}/`)}>
+          <span class="lnav-dir">następna →</span>
+          <span class="lnav-title">{next.data.emoji} {next.data.tytul}</span>
+        </a>
+      ) : <span />}
+    </nav>
   </article>
 
   <script>
@@ -51,31 +94,67 @@ if (lekcja.data.quiz) {
 </Base>
 
 <style>
-  .lesson-head { padding-top: 26px; }
-  .back {
-    color: var(--text-dim);
-    text-decoration: none;
-    font-size: 0.9rem;
-  }
-  .back:hover { color: var(--amber); }
-  .lesson-kicker {
+  .lesson-head { position: relative; padding-top: 26px; }
+  .ghost-num {
+    position: absolute;
+    top: -30px;
+    right: -20px;
     font-family: var(--font-display);
-    text-transform: uppercase;
-    letter-spacing: 0.22em;
-    font-size: 0.75rem;
-    color: var(--mak);
-    font-weight: 700;
-    margin: 22px 0 6px;
-  }
-  .lesson-h1 {
-    font-size: clamp(1.9rem, 6vw, 3rem);
     font-weight: 800;
-    margin: 0 0 8px;
+    font-size: clamp(9rem, 26vw, 17rem);
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(253, 203, 110, 0.13);
+    pointer-events: none;
+    user-select: none;
+    z-index: -1;
   }
-  .lesson-opis { color: var(--text-dim); max-width: 56ch; margin: 0; }
+  .back { color: var(--text-dim); text-decoration: none; font-size: 0.9rem; }
+  .back:hover { color: var(--amber); }
+  .lesson-head .kicker { margin-top: 22px; }
+  .lesson-h1 { font-size: clamp(1.9rem, 6vw, 3.1rem); font-weight: 800; margin: 0 0 8px; }
+  .lesson-opis { color: var(--text-dim); max-width: 58ch; margin: 0 0 14px; }
+
+  .lesson-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .chip {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 99px;
+    border: 1px solid var(--line);
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .chip:hover { transform: translateY(-2px); }
+  .chip-regula { color: var(--mak); }
+  .chip-regula:hover { border-color: var(--mak); }
+  .chip-quiz { color: var(--zielony); }
+  .chip-quiz:hover { border-color: var(--zielony); }
+
+  .rule-banner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 16px;
+    margin-top: 40px;
+    padding: 16px 20px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--mak);
+    border-radius: var(--radius);
+  }
+  .rule-banner-label { font-family: var(--font-display); font-weight: 700; }
+  .rule-banner-link {
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--mak);
+    text-decoration: none;
+  }
+  .rule-banner-link:hover { text-decoration: underline; }
 
   .quiz-zone {
-    margin-top: 56px;
+    margin-top: 40px;
     background: var(--panel);
     border: 1px solid var(--line);
     border-radius: calc(var(--radius) + 6px);
@@ -93,4 +172,32 @@ if (lekcja.data.quiz) {
   .quiz-splash { text-align: center; padding: 18px 0; }
   .quiz-splash h2 { font-size: 1.6rem; margin: 0 0 6px; }
   .quiz-splash p { color: var(--text-dim); margin: 0 0 22px; }
+
+  .lesson-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 34px;
+  }
+  .lnav {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 14px 16px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .lnav:hover { border-color: var(--amber); transform: translateY(-2px); }
+  .lnav-next { text-align: right; }
+  .lnav-dir { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-dim); }
+  .lnav-title { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; }
+
+  @media (max-width: 640px) {
+    .lesson-nav { grid-template-columns: 1fr; }
+    .lnav-next { text-align: left; }
+  }
 </style>

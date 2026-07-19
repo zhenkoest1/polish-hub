@@ -73,6 +73,9 @@ const wDrodze = [
   .section-title.dim { color: var(--text-dim); }
 
   .lesson-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  @media (min-width: 860px) {
+    .lesson-list { grid-template-columns: 1fr 1fr; }
+  }
   .lesson-card { animation: rise 0.45s both; }
   .lesson-card a, .ghost {
     display: flex;

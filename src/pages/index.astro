@@ -8,6 +8,9 @@ const href = (p: string) => `${b}/${p.replace(/^\//, '')}`;
 const lekcje = (await getCollection('lekcje')).sort((a, c) => a.data.numer - c.data.numer);
 const reguly = await getCollection('reguly');
 const quizy = lekcje.filter((l) => l.data.quiz);
+const KURS_TOTAL = 9;
+const pct = Math.round((lekcje.length / KURS_TOTAL) * 100);
+const slowa = ['cześć', 'dziękuję', 'góra', 'jezioro', 'zmęczenie', 'władza', 'kompromis', 'przyroda', 'najlepszy', 'więcej', 'szczyt', 'wolność'];
 ---
 <Base title="Polski Klub — Oleg, Lena i Żenia" active="">
   <section class="hero">
@@ -20,6 +23,11 @@ const quizy = lekcje.filter((l) => l.data.quiz);
       Co tydzień spotkanie: <strong>tekst</strong> → <strong>reguła</strong> → <strong>słowa</strong> → <strong>quiz</strong>.
       Trzy osoby, jeden cel — certyfikat B1 w listopadzie.
     </p>
+    <div class="kurs-progress" title={`${lekcje.length} z ${KURS_TOTAL} lekcji na stronie`}>
+      <span class="kp-label">postęp kursu</span>
+      <span class="kp-bar"><span class="kp-fill" style={`width:${pct}%`}></span></span>
+      <span class="kp-num">{lekcje.length}/{KURS_TOTAL}</span>
+    </div>
     <svg class="hero-mountains" viewBox="0 0 880 120" preserveAspectRatio="none" aria-hidden="true">
       <polygon points="0,120 140,34 260,120" fill="var(--panel-2)" />
       <polygon points="180,120 350,10 520,120" fill="var(--mak)" opacity="0.85" />
@@ -27,6 +35,12 @@ const quizy = lekcje.filter((l) => l.data.quiz);
       <polygon points="640,120 800,58 880,120" fill="var(--panel-2)" />
     </svg>
   </section>
+
+  <div class="word-strip" aria-hidden="true">
+    <div class="word-track">
+      {[...slowa, ...slowa].map((w) => <span class="word">{w}</span>)}
+    </div>
+  </div>
 
   <section class="portals">
     <a class="portal p-lekcje" href={href('lekcje/')}>
@@ -89,7 +103,67 @@ const quizy = lekcje.filter((l) => l.data.quiz);
     animation: rise 0.6s 0.28s both;
   }
   .hero-sub strong { color: var(--text); }
-  .hero-mountains { display: block; width: 100%; height: 84px; margin-top: 30px; animation: rise 0.7s 0.38s both; }
+  .hero-mountains { display: block; width: 100%; height: 84px; margin-top: 18px; animation: rise 0.7s 0.38s both; }
+
+  .kurs-progress {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 22px;
+    max-width: 420px;
+    animation: rise 0.6s 0.34s both;
+  }
+  .kp-label {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--text-dim);
+    white-space: nowrap;
+  }
+  .kp-bar {
+    flex: 1;
+    height: 8px;
+    background: var(--panel-2);
+    border-radius: 99px;
+    overflow: hidden;
+  }
+  .kp-fill {
+    display: block;
+    height: 100%;
+    border-radius: 99px;
+    background: linear-gradient(90deg, var(--mak), var(--amber));
+  }
+  .kp-num { font-family: var(--font-display); font-weight: 800; color: var(--amber); font-size: 0.9rem; }
+
+  /* przewijająca się taśma słów — plakat żyje */
+  .word-strip {
+    overflow: hidden;
+    margin: 26px -18px 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  }
+  .word-track {
+    display: flex;
+    gap: 34px;
+    width: max-content;
+    animation: slide 36s linear infinite;
+  }
+  .word {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-dim);
+    white-space: nowrap;
+  }
+  .word:nth-child(3n) { color: var(--amber); opacity: 0.85; }
+  .word:nth-child(5n) { color: var(--mak); opacity: 0.85; }
+  @keyframes slide {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
 
   /* trzy portale */
   .portals {
