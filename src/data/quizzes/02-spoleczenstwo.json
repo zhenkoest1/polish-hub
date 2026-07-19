@@ -1,0 +1,102 @@
+{
+  "title": "Quiz — Społeczeństwo zmęczenia",
+  "subtitle": "Ćwiczenia z lekcji w wersji interaktywnej. 6 rund, punkty na końcu. Powodzenia!",
+  "sections": [
+    {
+      "emoji": "❓",
+      "title": "Prawda czy fałsz?",
+      "type": "tf",
+      "questions": [
+        { "q": "Han urodził się w Niemczech i pisze po koreańsku.", "answer": false, "explain": "Han urodził się w Korei i wyjechał do Niemiec. Pisze po niemiecku." },
+        { "q": "W społeczeństwie dyscypliny ludzie mogli walczyć o swoje prawa.", "answer": true, "explain": "Widzieli wroga — szefa, system, państwo — i mogli protestować." },
+        { "q": "W społeczeństwie osiągnięć nikt nie mówi „musisz”.", "answer": true, "explain": "Wszyscy mówią „możesz” — i to jest właśnie pułapka." },
+        { "q": "Han uważa, że „Yes, we can” to formuła prawdziwej wolności.", "answer": false, "explain": "Han uważa, że to formuła samoeksploatacji, nie wolności." },
+        { "q": "Samoeksploatacja znaczy, że szef zmusza człowieka do pracy.", "answer": false, "explain": "Samoeksploatacja = człowiek sam się zmusza. Nie szef." },
+        { "q": "Wypalenie to choroba systemu, nie słabość człowieka.", "answer": true },
+        { "q": "Han mówi, że odpoczynek dla produktywności to też samoeksploatacja.", "answer": true, "explain": "Odpoczynek z celem „być produktywnym” to nadal praca." },
+        { "q": "Kontemplacja to myślenie z jasnym celem i wynikiem.", "answer": false, "explain": "Kontemplacja to myślenie bez celu i bez wyniku." }
+      ]
+    },
+    {
+      "emoji": "📥",
+      "title": "Wstaw poprawną formę biernika",
+      "type": "typein",
+      "questions": [
+        { "q": "Codziennie sprawdzam __________.", "hint": "telefon", "answer": "telefon" },
+        { "q": "Han napisał ważną __________.", "hint": "książka", "answer": "książkę" },
+        { "q": "Możesz otworzyć __________.", "hint": "firma", "answer": "firmę" },
+        { "q": "Ludzie widzieli __________.", "hint": "wróg — uwaga, żywotny!", "answer": "wroga" },
+        { "q": "Kupuję nową __________.", "hint": "aplikacja", "answer": "aplikację" },
+        { "q": "Czuję wielkie __________.", "hint": "zmęczenie", "answer": "zmęczenie" },
+        { "q": "Han proponuje __________.", "hint": "rozwiązanie", "answer": "rozwiązanie" }
+      ]
+    },
+    {
+      "emoji": "🎨",
+      "title": "Biernik z przymiotnikiem",
+      "type": "typein",
+      "questions": [
+        { "q": "Mam __________ __________.", "hint": "surowy szef", "answer": "surowego szefa" },
+        { "q": "Robię __________ __________.", "hint": "kolejny trening", "answer": "kolejny trening" },
+        { "q": "Kupuję __________ __________.", "hint": "nowa aplikacja", "answer": "nową aplikację" },
+        { "q": "Proponuję __________ __________.", "hint": "proste rozwiązanie", "answer": "proste rozwiązanie" }
+      ]
+    },
+    {
+      "emoji": "🚫",
+      "title": "Negacja — biernik zmienia się w dopełniacz",
+      "type": "typein",
+      "questions": [
+        { "q": "Widzę problem. → Nie widzę __________.", "hint": "problem", "answer": "problemu" },
+        { "q": "Mam czas. → Nie mam __________.", "hint": "czas", "answer": "czasu" },
+        { "q": "Czuję radość. → Nie czuję __________.", "hint": "radość", "answer": "radości" },
+        { "q": "Mam sukces. → Nie mam __________.", "hint": "sukces", "answer": "sukcesu" },
+        { "q": "Widzę rozwiązanie. → Nie widzę __________.", "hint": "rozwiązanie", "answer": "rozwiązania" }
+      ]
+    },
+    {
+      "emoji": "🔗",
+      "title": "Dopasuj słowo do definicji",
+      "type": "mc",
+      "questions": [
+        {
+          "q": "wypalenie — co to jest?",
+          "options": ["choroba od zbyt dużo pracy — „nie mogę już więcej”", "kiedy ktoś mówi „nie wolno”", "spokojne myślenie bez celu i wyniku", "gotowość do trudnych decyzji"],
+          "answer": "choroba od zbyt dużo pracy — „nie mogę już więcej”"
+        },
+        {
+          "q": "samoeksploatacja — co to jest?",
+          "options": ["sytuacja, gdy sam się zmuszasz do pracy", "sytuacja, gdy szef zmusza cię do pracy", "miejsce, z którego nie możesz wyjść", "coś, co wygląda dobrze, ale jest niebezpieczne"],
+          "answer": "sytuacja, gdy sam się zmuszasz do pracy"
+        },
+        {
+          "q": "zakaz — co to jest?",
+          "options": ["kiedy ktoś mówi „nie wolno”", "kiedy ktoś mówi „możesz wszystko”", "spokojne myślenie bez celu", "koniec siły po długiej pracy"],
+          "answer": "kiedy ktoś mówi „nie wolno”"
+        },
+        {
+          "q": "kontemplacja — co to jest?",
+          "options": ["spokojne myślenie bez celu i wyniku", "planowanie kolejnego projektu", "gotowość do trudnych decyzji", "miejsce, z którego nie możesz wyjść"],
+          "answer": "spokojne myślenie bez celu i wyniku"
+        },
+        {
+          "q": "pułapka — co to jest?",
+          "options": ["coś, co wygląda dobrze, ale jest niebezpieczne", "gotowość do trudnych decyzji", "miejsce, z którego nie możesz wyjść", "choroba od zbyt dużo pracy"],
+          "answer": "coś, co wygląda dobrze, ale jest niebezpieczne",
+          "explain": "Uwaga: „miejsce, z którego nie możesz wyjść” to więzienie, a „gotowość do trudnych decyzji” to odwaga."
+        }
+      ]
+    },
+    {
+      "emoji": "🧩",
+      "title": "Uzupełnij tekst słowami",
+      "type": "tap_fill",
+      "questions": [
+        {
+          "text": "Nowoczesny człowiek czuje {0}. Codziennie sprawdza {1} sto razy. {2} mówi: „Możesz więcej!”. Możesz otworzyć {3}. Ale efekt to {4} — choroba od zbyt dużo pracy. Han proponuje prawdziwy {5}.",
+          "answers": ["zmęczenie", "telefon", "Reklama", "firmę", "wypalenie", "odpoczynek"]
+        }
+      ]
+    }
+  ]
+}
