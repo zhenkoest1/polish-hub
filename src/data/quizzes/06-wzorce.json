@@ -1,0 +1,112 @@
+{
+  "title": "Quiz — Niewidzialne wzorce",
+  "subtitle": "Dalio, Klein i dopełniacz. 7 rund, punkty na końcu. Uwaga na imperium — ono lubi zaskakiwać!",
+  "sections": [
+    {
+      "emoji": "❓",
+      "title": "Prawda czy fałsz? — czy uważaliście na tekst",
+      "type": "tf",
+      "questions": [
+        { "q": "Według tekstu wzorzec trudniej sfałszować niż pojedynczy fakt.", "answer": true, "explain": "Kontrola relacji między setkami faktów wymagałaby kontroli nad całym systemem." },
+        { "q": "Ray Dalio jest historykiem specjalizującym się w upadku imperiów.", "answer": false, "explain": "Dalio to inwestor, założyciel funduszu Bridgewater. Właśnie dlatego krytycy zarzucają mu nadmierne uproszczenie." },
+        { "q": "Wielki Cykl Dalio składa się z sześciu etapów.", "answer": true },
+        { "q": "Dalio twierdzi, że ważne imperia trwały zwykle około stu lat.", "answer": false, "explain": "Około 250 lat." },
+        { "q": "Naomi Klein opisała wzorzec: kryzys → szok → koncentracja władzy → nowa norma.", "answer": true },
+        { "q": "Milton Friedman radził, żeby czekać na kryzys i wtedy natychmiast wdrażać przygotowane reformy.", "answer": true, "explain": "To cytat opublikowany otwarcie — nie teoria spiskowa." },
+        { "q": "Badanie Gilensa i Page’a wykazało silny wpływ przeciętnego obywatela na politykę USA.", "answer": false, "explain": "Odwrotnie — wpływ „bliski zeru”." },
+        { "q": "Rzeczownik „imperium” nie zmienia się w dopełniaczu liczby pojedynczej.", "answer": true, "explain": "Upadek imperium. Ale w liczbie mnogiej już tak: historia imperiów." }
+      ]
+    },
+    {
+      "emoji": "🔗",
+      "title": "Runda 1 — dopełniacz po przyimkach",
+      "type": "typein",
+      "questions": [
+        { "q": "Bez __________ nie ma zmian.", "hint": "kryzys", "answer": "kryzysu" },
+        { "q": "Podczas __________ miliarderzy się wzbogacili.", "hint": "pandemia", "answer": "pandemii" },
+        { "q": "Dla __________ cykl wygląda tak samo.", "hint": "każde imperium — uwaga na -um!", "answer": "każdego imperium" },
+        { "q": "Z __________ można ułożyć mapę sprzeczności.", "hint": "różne źródła — liczba mnoga", "answer": "różnych źródeł" },
+        { "q": "Bez __________ nie ma demokracji.", "hint": "wolność", "answer": "wolności" },
+        { "q": "Podczas __________ zmienia się cały porządek.", "hint": "rewolucja", "answer": "rewolucji" },
+        { "q": "Dla __________ kryzys jest szczególnie niebezpieczny.", "hint": "mała firma", "answer": "małej firmy" },
+        { "q": "Z __________ pochodzi najwięcej danych.", "hint": "ten fundusz", "answer": "tego funduszu" }
+      ]
+    },
+    {
+      "emoji": "🏛️",
+      "title": "Runda 2 — przynależność (czego?)",
+      "type": "typein",
+      "questions": [
+        { "q": "Падение империи → upadek __________", "hint": "-um bez zmian", "answer": "imperium" },
+        { "q": "Ценность валюты → wartość __________", "hint": "waluta", "answer": "waluty" },
+        { "q": "Потеря доверия → utrata __________", "hint": "zaufanie", "answer": "zaufania" },
+        { "q": "Основатель фонда → założyciel __________", "hint": "fundusz", "answer": "funduszu" },
+        { "q": "Контроль власти → kontrola __________", "hint": "władza", "answer": "władzy" },
+        { "q": "Свобода мышления → wolność __________", "hint": "myślenie", "answer": "myślenia" },
+        { "q": "Цепочка выгод → łańcuch __________", "hint": "korzyści — liczba mnoga", "answer": "korzyści" },
+        { "q": "История империй → historia __________", "hint": "imperia — tu już się zmienia!", "answer": "imperiów" }
+      ]
+    },
+    {
+      "emoji": "🚫",
+      "title": "Runda 3 — nie ma / brak / dużo",
+      "type": "typein",
+      "questions": [
+        { "q": "Są reformy. → Nie ma __________.", "hint": "końcówka zerowa", "answer": "reform" },
+        { "q": "Są pieniądze. → Nie ma __________.", "hint": "forma nieregularna", "answer": "pieniędzy" },
+        { "q": "Jest wzorzec. → Nie ma __________.", "hint": "uwaga: wypada „e”", "answer": "wzorca" },
+        { "q": "Są narracje. → Nie ma __________.", "hint": "żeńskie miękkie", "answer": "narracji" },
+        { "q": "Jest porządek. → Nie ma __________.", "hint": "też bez „e”", "answer": "porządku" },
+        { "q": "Są fakty. → Nie ma __________.", "hint": "męskie l.mn.", "answer": "faktów" },
+        { "q": "Jest nadzieja. → Nie ma __________.", "hint": "-ja", "answer": "nadziei" },
+        { "q": "Ile jest wolności w systemie autorytarnym? → Mało __________.", "hint": "wolność", "answer": "wolności" },
+        { "q": "Ile jest etapów w cyklu Dalio? → Sześć __________.", "hint": "etapy", "answer": "etapów" }
+      ]
+    },
+    {
+      "emoji": "✍️",
+      "title": "Runda 4 — dopełniacz w zdaniach z tekstu",
+      "type": "typein",
+      "questions": [
+        { "q": "Klein opisała wzorzec __________ władzy.", "hint": "koncentracja", "answer": "koncentracji" },
+        { "q": "Bez __________ nie ma dowodów.", "hint": "badanie", "answer": "badania" },
+        { "q": "Gilens i Page są autorami __________.", "hint": "to badanie", "answer": "tego badania" },
+        { "q": "Historia __________ pokazuje ten sam cykl.", "hint": "Wielka Brytania", "answer": "Wielkiej Brytanii" },
+        { "q": "Udział __________ najbogatszego 1% wynosił 22%.", "hint": "dochody", "answer": "dochodów" },
+        { "q": "To jest początek __________.", "hint": "nowy porządek", "answer": "nowego porządku" },
+        { "q": "Potok __________ jest chaotyczny.", "hint": "wydarzenia", "answer": "wydarzeń" },
+        { "q": "Brak __________ osłabia imperium.", "hint": "edukacja", "answer": "edukacji" }
+      ]
+    },
+    {
+      "emoji": "🧠",
+      "title": "Runda 5 — połącz słowo z definicją",
+      "type": "match",
+      "questions": [
+        { "q": "Dopasuj słowo do wyjaśnienia.", "pairs": [["wzorzec", "powtarzająca się struktura w potoku wydarzeń"], ["kryzys", "trudna sytuacja, moment załamania"], ["dług", "pieniądze, które ktoś jest winien"], ["narracja", "opowieść, którą ktoś snuje — często w konkretnym celu"], ["inwigilacja", "obserwowanie czyjegoś życia bez pozwolenia"], ["zaufanie", "wiara, że ktoś mówi prawdę"], ["cui bono", "pytanie: komu to się opłaca?"]] }
+      ]
+    },
+    {
+      "emoji": "🧩",
+      "title": "Runda 6 — uzupełnij tekst",
+      "type": "tap_fill",
+      "questions": [
+        { "text": "Dalio przeanalizował pięćset lat historii {0} i odkrył cykl sześciu {1}. Bez {2} nie ma zmian — twierdzi Klein, opisując koncentrację {3} po każdym szoku. Podczas {4} miliarderzy się wzbogacili, a przeciętny człowiek stracił resztki {5}. Dlatego umiejętność czytania {6} daje wolność {7}.", "answers": ["imperiów", "etapów", "kryzysu", "władzy", "pandemii", "zaufania", "wzorców", "myślenia"] }
+      ]
+    },
+    {
+      "emoji": "🏁",
+      "title": "Finał — popraw błąd i przetłumacz",
+      "type": "mc",
+      "questions": [
+        { "q": "Popraw błąd: „Nie ma kryzys bez wolność.”", "options": ["Nie ma kryzysu bez wolności.", "Nie ma kryzysa bez wolnością.", "Nie ma kryzysu bez wolność.", "Nie ma kryzysem bez wolności."], "answer": "Nie ma kryzysu bez wolności.", "explain": "Dwa razy dopełniacz: po „nie ma” i po „bez”. Męskie abstrakcyjne → -u, żeńskie na -ść → -ści." },
+        { "q": "Popraw błąd: „To jest początek upadku imperia.”", "options": ["To jest początek upadku imperium.", "To jest początek upadka imperium.", "To jest początek upadku imperii.", "To jest początek upadek imperium."], "answer": "To jest początek upadku imperium.", "explain": "Rzeczowniki na -um nie zmieniają się w liczbie pojedynczej. Zmieniłyby się dopiero w mnogiej: imperiów." },
+        { "q": "Popraw błąd: „Dużo pieniądze, ale mało wolność.”", "options": ["Dużo pieniędzy, ale mało wolności.", "Dużo pieniędzy, ale mało wolność.", "Dużo pieniądzy, ale mało wolności.", "Dużo pieniądze, ale mało wolności."], "answer": "Dużo pieniędzy, ale mało wolności.", "explain": "Po „dużo” i „mało” zawsze dopełniacz. „Pieniądze → pieniędzy” to forma nieregularna — na pamięć." },
+        { "q": "Przetłumacz: «Во время пандемии малый бизнес страдал.»", "options": ["Podczas pandemii mały biznes cierpiał.", "Podczas pandemia mały biznes cierpiał.", "Podczas pandemią mały biznes cierpiał.", "Podczas pandemię mały biznes cierpiał."], "answer": "Podczas pandemii mały biznes cierpiał.", "explain": "„Podczas” wymaga dopełniacza: pandemia → pandemii." },
+        { "q": "Przetłumacz: «У нас нет доверия к институтам.»", "options": ["Nie mamy zaufania do instytucji.", "Nie mamy zaufanie do instytucji.", "Nie mamy zaufaniem do instytucjom.", "Nie mamy zaufania do instytucje."], "answer": "Nie mamy zaufania do instytucji.", "explain": "Podwójny dopełniacz: po przeczeniu (zaufanie → zaufania) i po „do” (instytucje → instytucji)." },
+        { "q": "Przetłumacz: «Для миллиардеров кризис — это возможность.»", "options": ["Dla miliarderów kryzys to możliwość.", "Dla miliarderzy kryzys to możliwość.", "Dla miliarderami kryzys to możliwość.", "Dla miliarderom kryzys to możliwość."], "answer": "Dla miliarderów kryzys to możliwość.", "explain": "„Dla” + dopełniacz liczby mnogiej: miliarderzy → miliarderów." },
+        { "q": "Które zdanie jest w pełni poprawne?", "options": ["Nie widzę wzorca w tych danych.", "Nie widzę wzorzec w tych danych.", "Nie widzę wzorcem w tych danych.", "Nie widzę wzorcu w tych danych."], "answer": "Nie widzę wzorca w tych danych.", "explain": "Po przeczeniu biernik przechodzi w dopełniacz: widzę wzorzec → nie widzę wzorca." }
+      ]
+    }
+  ]
+}
