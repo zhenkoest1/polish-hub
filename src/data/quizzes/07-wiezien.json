@@ -1,0 +1,105 @@
+{
+  "title": "Quiz — Dylemat więźnia",
+  "subtitle": "Flood, Dresher, Axelrod i cała rodzina form z -by-. 8 rund, punkty na końcu. Uwaga na „gdyby” — ono już zawiera „by”!",
+  "sections": [
+    {
+      "emoji": "❓",
+      "title": "Prawda czy fałsz? — czy uważaliście na tekst",
+      "type": "tf",
+      "questions": [
+        { "q": "Dylemat więźnia wymyślili Merrill Flood i Melvin Dresher w RAND Corporation.", "answer": true, "explain": "W 1950 roku." },
+        { "q": "Gdyby obaj więźniowie milczeli, dostaliby po pięć lat.", "answer": false, "explain": "Po roku. Pięć lat dostają wtedy, gdy obaj się zdradzą." },
+        { "q": "Więzień, który zdradzi milczącego kolegę, wychodzi na wolność.", "answer": true, "explain": "A kolega dostaje dziesięć lat — na tym polega pokusa." },
+        { "q": "Reagan i Gorbaczow spotkali się w Reykjaviku w 1986 roku.", "answer": true },
+        { "q": "W Reykjaviku udało się podpisać pełne porozumienie o rozbrojeniu.", "answer": false, "explain": "Nie udało się — Reagan nie chciał rezygnować z „gwiezdnych wojen”. Ale lody zostały przełamane." },
+        { "q": "Turniej Axelroda wygrał bardzo skomplikowany algorytm.", "answer": false, "explain": "Odwrotnie — wygrała Tit-for-Tat, strategia o czterech linijkach kodu." },
+        { "q": "Tit-for-Tat zdradza w pierwszym ruchu, żeby sprawdzić przeciwnika.", "answer": false, "explain": "Nigdy nie zdradza pierwsza — to jej cecha „życzliwość”." },
+        { "q": "Po „gdybym” czasownik stoi w zwykłym czasie przeszłym, bez -by-.", "answer": true, "explain": "Gdybym był, nie: gdybym byłbym. Cząstka -by- jest już w „gdyby”." }
+      ]
+    },
+    {
+      "emoji": "🔧",
+      "title": "Runda 1 — utwórz formę z -by-",
+      "type": "typein",
+      "questions": [
+        { "q": "zrobić, ja *(mężczyzna)* → __________", "hint": "-łbym", "answer": "zrobiłbym" },
+        { "q": "zrobić, ja *(kobieta)* → __________", "hint": "-łabym", "answer": "zrobiłabym" },
+        { "q": "chcieć, ja *(kobieta)* → __________ porozmawiać.", "hint": "życzenie", "answer": "chciałabym" },
+        { "q": "móc, ty *(kobieta)* → Czy __________ powtórzyć?", "hint": "grzeczna prośba", "answer": "mogłabyś" },
+        { "q": "milczeć, on → Na moim miejscu __________.", "hint": "3. osoba, rodzaj męski", "answer": "milczałby" },
+        { "q": "zdradzić, oni → Oni __________, gdyby mieli okazję.", "hint": "męskoosobowy, l.mn.", "answer": "zdradziliby" },
+        { "q": "woleć, my *(grupa z mężczyzną)* → __________ współpracować.", "hint": "m-os., -libyśmy", "answer": "wolelibyśmy" },
+        { "q": "móc, wy *(grupa z mężczyzną)* → Czy __________ mi pomóc?", "hint": "m-os., -libyście", "answer": "moglibyście" }
+      ]
+    },
+    {
+      "emoji": "🔗",
+      "title": "Runda 2 — konstrukcja „Gdyby… to…”",
+      "type": "typein",
+      "questions": [
+        { "q": "Gdybym __________ więźniem, milczałbym.", "hint": "być — po „gdybym” zwykły czas przeszły!", "answer": "był" },
+        { "q": "Gdyby więźniowie zaufali sobie, __________ po roku.", "hint": "dostać — m-os. l.mn.", "answer": "dostaliby" },
+        { "q": "Gdyby Gorbaczow nie zaryzykował, zimna wojna __________ dalej.", "hint": "trwać — rodzaj żeński", "answer": "trwałaby" },
+        { "q": "Gdyby wszystkie kraje redukowały emisje, __________ planetę.", "hint": "uratować — nm-os. l.mn.", "answer": "uratowałyby" },
+        { "q": "Gdyby nikt nie oszukiwał, system __________ dobrze.", "hint": "działać", "answer": "działałby" },
+        { "q": "Gdyby Axelrod nie zrobił turnieju, nikt nie __________ Tit-for-Tat.", "hint": "odkryć", "answer": "odkryłby" },
+        { "q": "__________ się rozbroili, żylibyśmy bezpieczniej.", "hint": "gdyby + my", "answer": "Gdybyśmy" },
+        { "q": "__________ wybaczył pierwszy, związek by się uratował.", "hint": "gdyby + ty", "answer": "Gdybyś" }
+      ]
+    },
+    {
+      "emoji": "🙏",
+      "title": "Runda 3 — powiedz to grzeczniej",
+      "type": "typein",
+      "questions": [
+        { "q": "Chcę zobaczyć ten film. → __________ zobaczyć ten film. *(mężczyzna)*", "hint": "chcieć", "answer": "Chciałbym" },
+        { "q": "Wolę inną opcję. → __________ inną opcję. *(kobieta)*", "hint": "woleć", "answer": "Wolałabym" },
+        { "q": "Pomożecie mi? → Czy __________ mi pomóc?", "hint": "móc, wy — m-os.", "answer": "moglibyście" },
+        { "q": "Chcemy porozmawiać. → __________ porozmawiać. *(grupa z mężczyzną)*", "hint": "chcieć, my — m-os.", "answer": "Chcielibyśmy" },
+        { "q": "Mów ciszej. → Czy __________ mówić ciszej? *(do mężczyzny)*", "hint": "móc, ty", "answer": "mógłbyś" }
+      ]
+    },
+    {
+      "emoji": "🇷🇺",
+      "title": "Runda 4 — przetłumacz na polski",
+      "type": "typein",
+      "questions": [
+        { "q": "Что бы ты сделал на моём месте? → Co __________ na moim miejscu? *(do mężczyzny)*", "hint": "zrobić, ty", "answer": "byś zrobił" },
+        { "q": "Если бы я знал раньше… → Gdybym __________ wcześniej… *(mężczyzna)*", "hint": "wiedzieć — po „gdybym” bez -by-", "answer": "wiedział" },
+        { "q": "…я бы поступил иначе. → …__________ się inaczej. *(mężczyzna)*", "hint": "zachować się", "answer": "zachowałbym" },
+        { "q": "Если бы все платили налоги честно, у нас были бы лучшие дороги. → Gdyby wszyscy płacili podatki uczciwie, __________ lepsze drogi.", "hint": "mieć, my — m-os.", "answer": "mielibyśmy" },
+        { "q": "На твоём месте я бы простил первым. → Na twoim miejscu __________ pierwszy. *(mężczyzna)*", "hint": "wybaczyć", "answer": "wybaczyłbym" }
+      ]
+    },
+    {
+      "emoji": "🧠",
+      "title": "Runda 5 — połącz słowo z definicją",
+      "type": "match",
+      "questions": [
+        { "q": "Dopasuj słowo do wyjaśnienia.", "pairs": [["zaufanie", "wiara, że ktoś inny postąpi uczciwie"], ["zdrada", "złamanie umowy, lojalności lub obietnicy"], ["przebaczenie", "odpuszczenie czyjejś winy i powrót do współpracy"], ["wykorzystywać", "nadużywać czyjejś dobroci dla własnej korzyści"], ["przełom", "moment zwrotny w długotrwałym konflikcie"], ["przejrzystość", "jasność intencji, przewidywalność"], ["pętla", "sytuacja, która powtarza się w kółko i sama nie pęka"]] }
+      ]
+    },
+    {
+      "emoji": "🧩",
+      "title": "Runda 6 — uzupełnij tekst",
+      "type": "tap_fill",
+      "questions": [
+        { "text": "Gdyby więźniowie {0} sobie i milczeli, {1} po roku. Ale obaj myśleli „racjonalnie” — i obaj {2} pięć lat. Gdyby Gorbaczow nie {3}, zimna wojna {4} dalej. Axelrod pokazał, że w długiej grze {5} ten, kto umie i ukarać, i wybaczyć. Na ich miejscu {6} tak samo?", "answers": ["zaufali", "dostaliby", "dostali", "zaryzykował", "trwałaby", "wygrywa", "zrobilibyście"] }
+      ]
+    },
+    {
+      "emoji": "🏁",
+      "title": "Finał — znajdź błąd",
+      "type": "mc",
+      "questions": [
+        { "q": "Popraw błąd: „Gdybym byłbym więźniem, milczałbym.”", "options": ["Gdybym był więźniem, milczałbym.", "Gdyby byłbym więźniem, milczałbym.", "Gdybym byłbym więźniem, milczałem.", "Gdybym był więźniem, milczałem bym."], "answer": "Gdybym był więźniem, milczałbym.", "explain": "„Gdyby” już zawiera -by-, więc po nim idzie zwykły czas przeszły: gdybym był." },
+        { "q": "Popraw błąd: „Ona zrobiłby to inaczej.”", "options": ["Ona zrobiłaby to inaczej.", "Ona zrobiłyby to inaczej.", "Ona zrobiłabym to inaczej.", "Ona by zrobiłaby to inaczej."], "answer": "Ona zrobiłaby to inaczej.", "explain": "Rodzaj żeński, 3. osoba: -łaby." },
+        { "q": "Popraw błąd: „Gdyby oni zaufali sobie, dostalibyśmy po roku.”", "options": ["Gdyby oni zaufali sobie, dostaliby po roku.", "Gdyby oni zaufali sobie, dostałyby po roku.", "Gdybyśmy oni zaufali sobie, dostaliby po roku.", "Gdyby oni zaufaliby sobie, dostaliby po roku."], "answer": "Gdyby oni zaufali sobie, dostaliby po roku.", "explain": "Podmiotem są „oni”, nie „my” — więc dostaliby, a nie dostalibyśmy." },
+        { "q": "Popraw błąd: „Gdyby ja był więźniem, milczałbym.”", "options": ["Gdybym był więźniem, milczałbym.", "Gdyby ja byłbym więźniem, milczałbym.", "Gdyby ja był więźniem, milczałem.", "Gdybyś ja był więźniem, milczałbym."], "answer": "Gdybym był więźniem, milczałbym.", "explain": "Końcówka osobowa dokleja się do „gdyby”: ja → gdybym. Nie mówi się „gdyby ja”." },
+        { "q": "Popraw błąd: „Gdyby kobiety zaufali sobie, dostały by po roku.”", "options": ["Gdyby kobiety zaufały sobie, dostałyby po roku.", "Gdyby kobiety zaufali sobie, dostaliby po roku.", "Gdyby kobiety zaufały sobie, dostały by po roku.", "Gdyby kobiety zaufałyby sobie, dostałyby po roku."], "answer": "Gdyby kobiety zaufały sobie, dostałyby po roku.", "explain": "Dwa błędy: „kobiety” to forma niemęskoosobowa (zaufały, dostałyby), a -by- pisze się łącznie z czasownikiem." },
+        { "q": "Popraw błąd: „Gdybyśmy mielibyśmy więcej czasu, przyszli.”", "options": ["Gdybyśmy mieli więcej czasu, przyszlibyśmy.", "Gdybyśmy mielibyśmy więcej czasu, przyszlibyśmy.", "Gdyby mieliśmy więcej czasu, przyszli.", "Gdybyśmy mieli więcej czasu, przyszli."], "answer": "Gdybyśmy mieli więcej czasu, przyszlibyśmy.", "explain": "Znów odwrotnie niż intuicja: -by- w drugiej części, nie w pierwszej." },
+        { "q": "Która cecha Tit-for-Tat oznacza „po odpowiedzi wróć do współpracy”?", "options": ["Przebaczenie", "Życzliwość", "Reakcja", "Przejrzystość"], "answer": "Przebaczenie", "explain": "Życzliwość = nie zdradzaj pierwszy. Reakcja = odpowiadaj na zdradę. Przejrzystość = bądź przewidywalny." }
+      ]
+    }
+  ]
+}
