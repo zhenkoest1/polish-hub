@@ -1,0 +1,75 @@
+{
+  "title": "Wielki Mix — wszystko naraz",
+  "subtitle": "Stopniowanie, biernik, narzędnik, celownik, modalne i dopełniacz — pomieszane, bez podziału na bloki. Dokładnie tak jak w prawdziwej rozmowie. 5 rund, 34 pytania.",
+  "sections": [
+    {
+      "emoji": "🧭",
+      "title": "Runda 1 — który przypadek?",
+      "type": "mc",
+      "questions": [
+        { "q": "Rozmawiam z __________ o pracy. — jakiego przypadka potrzebujesz?", "options": ["narzędnik (kim? czym?)", "dopełniacz (kogo? czego?)", "celownik (komu? czemu?)", "biernik (kogo? co?)"], "answer": "narzędnik (kim? czym?)", "explain": "Przyimek „z” w znaczeniu „razem z” zawsze łączy się z narzędnikiem: z bratem, z koleżanką." },
+        { "q": "Nie widzę tu __________. — jakiego przypadka potrzebujesz?", "options": ["dopełniacz (kogo? czego?)", "biernik (kogo? co?)", "narzędnik (kim? czym?)", "celownik (komu? czemu?)"], "answer": "dopełniacz (kogo? czego?)", "explain": "Bez przeczenia byłby biernik („widzę wzorzec”), ale po „nie” biernik przechodzi w dopełniacz: „nie widzę wzorca”." },
+        { "q": "Wybaczam __________ ten błąd. — jakiego przypadka potrzebujesz?", "options": ["celownik (komu? czemu?)", "biernik (kogo? co?)", "dopełniacz (kogo? czego?)", "narzędnik (kim? czym?)"], "answer": "celownik (komu? czemu?)", "explain": "Wybaczać — jak ufać, pomagać i dziękować — wymaga celownika: wybaczam bratu, wybaczam ci." },
+        { "q": "Codziennie czytam ciekawą __________. — jakiego przypadka potrzebujesz?", "options": ["biernik (kogo? co?)", "dopełniacz (kogo? czego?)", "celownik (komu? czemu?)", "narzędnik (kim? czym?)"], "answer": "biernik (kogo? co?)", "explain": "Czytać to czasownik działania bez przeczenia — dopełnienie bliższe stoi w bierniku: czytam książkę." },
+        { "q": "Mój brat został __________. — jakiego przypadka potrzebujesz?", "options": ["narzędnik (kim? czym?)", "biernik (kogo? co?)", "celownik (komu? czemu?)", "dopełniacz (kogo? czego?)"], "answer": "narzędnik (kim? czym?)", "explain": "Po „zostać”, „stać się” i „być” zawód czy rola idą w narzędniku: został lekarzem, nie: został lekarz." },
+        { "q": "Podczas __________ wszyscy siedzieli w domu. — jakiego przypadka potrzebujesz?", "options": ["dopełniacz (kogo? czego?)", "narzędnik (kim? czym?)", "biernik (kogo? co?)", "celownik (komu? czemu?)"], "answer": "dopełniacz (kogo? czego?)", "explain": "Przyimek „podczas” — jak „bez”, „dla” i „od…do” — rządzi dopełniaczem: podczas pandemii." },
+        { "q": "Przeszkadzasz __________ w pracy. — jakiego przypadka potrzebujesz?", "options": ["celownik (komu? czemu?)", "dopełniacz (kogo? czego?)", "biernik (kogo? co?)", "narzędnik (kim? czym?)"], "answer": "celownik (komu? czemu?)", "explain": "Przeszkadzać komu? czemu? — celownik: przeszkadzasz mi, przeszkadzasz mamie." },
+        { "q": "Bardzo lubię polską __________. — jakiego przypadka potrzebujesz?", "options": ["biernik (kogo? co?)", "narzędnik (kim? czym?)", "dopełniacz (kogo? czego?)", "celownik (komu? czemu?)"], "answer": "biernik (kogo? co?)", "explain": "Lubić kogo? co? — biernik. Uwaga: rodzaj żeński zmienia i przymiotnik, i rzeczownik: polską kuchnię." }
+      ]
+    },
+    {
+      "emoji": "❓",
+      "title": "Runda 2 — prawda czy fałsz: same reguły",
+      "type": "tf",
+      "questions": [
+        { "q": "Po przyimku „bez” zawsze stoi dopełniacz.", "answer": true, "explain": "Bez wolności, bez kryzysu, bez zaufania — zawsze dopełniacz." },
+        { "q": "Czasownik „pomagać” łączy się z biernikiem.", "answer": false, "explain": "Z celownikiem: pomagam bratu, pomagam siostrze. „Pomagam brata” to błąd." },
+        { "q": "Po czasowniku „być” nazwa zawodu stoi w narzędniku.", "answer": true, "explain": "On jest lekarzem — nie: on jest lekarz. W polskim narzędnik jest tu obowiązkowy, inaczej niż w rosyjskim." },
+        { "q": "Stopień najwyższy tworzymy, dodając „naj-” do stopnia wyższego.", "answer": true, "explain": "wyższy → najwyższy, lepszy → najlepszy, trudniejszy → najtrudniejszy." },
+        { "q": "Rzeczowniki nijakie na -um zmieniają końcówkę w dopełniaczu.", "answer": false, "explain": "Nie zmieniają się: upadek imperium, nie „imperia”. Dopiero liczba mnoga daje „imperiów”." },
+        { "q": "Po czasowniku modalnym stawiamy bezokolicznik.", "answer": true, "explain": "Muszę iść, mogę pomóc, powinnam zadzwonić — zawsze forma na -ć." },
+        { "q": "Rzeczownik męski żywotny w bierniku wygląda tak samo jak w mianowniku.", "answer": false, "explain": "Wygląda jak dopełniacz: widzę lidera, znam tego człowieka. Tak samo jak mianownik zachowuje się tylko męski nieżywotny: mam telefon." },
+        { "q": "W liczbie mnogiej narzędnik prawie zawsze kończy się na -ami.", "answer": true, "explain": "Liderami, kobietami, miastami. Wyjątki są rzadkie: ludźmi, dziećmi." }
+      ]
+    },
+    {
+      "emoji": "✍️",
+      "title": "Runda 3 — wstaw poprawną formę",
+      "type": "typein",
+      "questions": [
+        { "q": "Warszawa jest __________ miastem w Polsce.", "hint": "duży — stopień najwyższy, narzędnik", "answer": "największym", "explain": "Forma nieregularna: duży → większy → największy. Po „jest” narzędnik, więc „największym”." },
+        { "q": "Bez __________ nie zdasz egzaminu.", "hint": "praktyka — dopełniacz", "answer": "praktyki", "explain": "Żeński rzeczownik po k przyjmuje -i: praktyka → praktyki." },
+        { "q": "Pomagam __________ w nauce polskiego.", "hint": "siostra — celownik", "answer": "siostrze", "explain": "Celownik żeński z częstą wymianą spółgłoski r→rz: siostra → siostrze." },
+        { "q": "Codziennie czytam __________.", "hint": "polska gazeta — biernik", "answer": "polską gazetę", "explain": "Biernik żeński: przymiotnik -a → -ą, rzeczownik -a → -ę." },
+        { "q": "On został __________ w dużej firmie.", "hint": "dyrektor — narzędnik", "answer": "dyrektorem", "explain": "Po „zostać” narzędnik: dyrektor → dyrektorem." },
+        { "q": "Ta lekcja jest __________ niż poprzednia.", "hint": "trudny — stopień wyższy, rodzaj żeński", "answer": "trudniejsza", "explain": "trudny → trudniejszy, a w rodzaju żeńskim trudniejsza. Nie: „bardziej trudna”." },
+        { "q": "Nie znam __________ tej piosenki.", "hint": "tytuł — dopełniacz po przeczeniu", "answer": "tytułu", "explain": "Znam tytuł (biernik) → nie znam tytułu (dopełniacz). Męski nieżywotny bierze -u." },
+        { "q": "__________ się uczyć każdego dnia.", "hint": "konstrukcja bezosobowa — „нужно”, jedno słowo", "answer": "Trzeba", "explain": "Trzeba + bezokolicznik. To forma bezosobowa — nie odmienia się przez osoby." },
+        { "q": "Dziękuję __________ za pomoc.", "hint": "pan — celownik", "answer": "panu", "explain": "„Pan” to jeden z wyjątków biorących -u zamiast -owi: pan → panu, brat → bratu." },
+        { "q": "Piszę __________, bo nie mam długopisu.", "hint": "ołówek — narzędnik", "answer": "ołówkiem", "explain": "Narzędnik narzędzia — dosłownie. Ruchome e wypada: ołówek → ołówkiem." }
+      ]
+    },
+    {
+      "emoji": "🧩",
+      "title": "Runda 4 — uzupełnij tekst: przypadki wymieszane",
+      "type": "tap_fill",
+      "questions": [
+        { "text": "Kiedy Oleg był {0}, nie miał {1} na hobby. Teraz pomaga {2} w firmie i jest {3} niż kiedyś. Mówi, że bez {4} nie da się niczego zbudować, i że {5} zaczynać od małych kroków.", "answers": ["studentem", "czasu", "bratu", "spokojniejszy", "zaufania", "trzeba"] },
+        { "text": "Lena kupiła {0} i pojechała do Krakowa. Mówi, że to {1} miasto w Polsce — na pewno {2} niż Warszawa. W hotelu podziękowała {3} za pomoc, a wieczorem rozmawiała z {4} o planach na lato. Bez {5} nie wróciłaby do domu tak szybko.", "answers": ["walizkę", "najpiękniejsze", "starsze", "kelnerce", "koleżanką", "biletu"] }
+      ]
+    },
+    {
+      "emoji": "🏁",
+      "title": "Finał — znajdź błąd i przetłumacz",
+      "type": "mc",
+      "questions": [
+        { "q": "Popraw błąd: „Nie mam pomysł na ten projekt.”", "options": ["Nie mam pomysłu na ten projekt.", "Nie mam pomysłem na ten projekt.", "Nie mam pomysłowi na ten projekt.", "Nie mam pomysła na ten projekt."], "answer": "Nie mam pomysłu na ten projekt.", "explain": "Po „nie mam” dopełniacz. Pomysł jest nieżywotny, więc końcówka -u." },
+        { "q": "Popraw błąd: „Ona jest najlepsza nauczycielka w szkole.”", "options": ["Ona jest najlepszą nauczycielką w szkole.", "Ona jest najlepszej nauczycielki w szkole.", "Ona jest najlepszym nauczycielem w szkole.", "Ona jest najlepsza nauczycielką w szkole."], "answer": "Ona jest najlepszą nauczycielką w szkole.", "explain": "Po „być” narzędnik — i to w obu wyrazach naraz: najlepszą nauczycielką." },
+        { "q": "Popraw błąd: „Ufam mojego brata.”", "options": ["Ufam mojemu bratu.", "Ufam moim bratem.", "Ufam mój brat.", "Ufam mojego bratu."], "answer": "Ufam mojemu bratu.", "explain": "Ufać wymaga celownika — razem z zaimkiem: mojemu bratu. „Brat” to wyjątek z końcówką -u." },
+        { "q": "Popraw błąd: „Ten problem jest bardziej trudny niż tamten.”", "options": ["Ten problem jest trudniejszy niż tamten.", "Ten problem jest więcej trudny niż tamten.", "Ten problem jest najtrudniejszy niż tamten.", "Ten problem jest trudniej niż tamten."], "answer": "Ten problem jest trudniejszy niż tamten.", "explain": "Krótkie przymiotniki stopniujemy przyrostkiem, nie słowem „bardziej”: trudny → trudniejszy." },
+        { "q": "Przetłumacz: «Я должен помочь сестре, но у меня нет времени.»", "options": ["Muszę pomóc siostrze, ale nie mam czasu.", "Muszę pomóc siostrę, ale nie mam czas.", "Muszę pomagać siostry, ale nie mam czasu.", "Powinienem pomóc siostrą, ale nie mam czasu."], "answer": "Muszę pomóc siostrze, ale nie mam czasu.", "explain": "Trzy zasady naraz: modalny + bezokolicznik, „pomóc” + celownik, „nie mam” + dopełniacz." },
+        { "q": "Przetłumacz: «Без власти нет ответственности.»", "options": ["Bez władzy nie ma odpowiedzialności.", "Bez władza nie ma odpowiedzialność.", "Bez władzą nie ma odpowiedzialnością.", "Bez władzy nie ma odpowiedzialność."], "answer": "Bez władzy nie ma odpowiedzialności.", "explain": "Dwa dopełniacze w jednym zdaniu: po „bez” i po „nie ma”. Rzeczowniki na -ść dają -ści." }
+      ]
+    }
+  ]
+}

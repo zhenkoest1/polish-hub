@@ -81,6 +81,19 @@ const slowa = ['cześć', 'dziękuję', 'góra', 'jezioro', 'zmęczenie', 'wład
     </ol>
     <p class="latest-all"><a href={href('lekcje/')}>wszystkie lekcje →</a></p>
   </section>
+
+  <a class="mix-card" href={href('mix/')}>
+    <span class="mix-bolt" aria-hidden="true">⚡</span>
+    <span class="mix-body">
+      <span class="mix-kicker">quiz specjalny</span>
+      <span class="mix-title">Wielki Mix — wszystko naraz</span>
+      <span class="mix-desc">
+        Sześć tematów z całego kursu, wymieszanych bez podziału na bloki: stopniowanie, biernik,
+        narzędnik, celownik, modalne i dopełniacz. Najpierw rozpoznaj przypadek — potem odpowiedz.
+      </span>
+    </span>
+    <span class="mix-go" aria-hidden="true">→</span>
+  </a>
 </Base>
 
 <style>
@@ -253,9 +266,51 @@ const slowa = ['cześć', 'dziękuję', 'góra', 'jezioro', 'zmęczenie', 'wład
   .latest-all { margin: 14px 2px 0; }
   .latest-all a { font-family: var(--font-display); font-weight: 700; text-decoration: none; }
 
+  /* karta-skrót do quizu-skrzyżowania */
+  .mix-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 40px;
+    padding: 22px 22px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: calc(var(--radius) + 4px);
+    text-decoration: none;
+    color: var(--text);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+  }
+  .mix-card::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto;
+    height: 5px;
+    background: linear-gradient(90deg, var(--mak), var(--amber), var(--zielony));
+  }
+  .mix-card:hover { transform: translateY(-4px); border-color: var(--zielony); background: var(--panel-2); }
+  .mix-card:hover .mix-go { transform: translateX(4px); color: var(--zielony); }
+  .mix-bolt { font-size: 2.4rem; line-height: 1; }
+  .mix-body { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+  .mix-kicker {
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--zielony);
+  }
+  .mix-title { font-family: var(--font-display); font-weight: 800; font-size: 1.25rem; }
+  .mix-desc { color: var(--text-dim); font-size: 0.88rem; }
+  .mix-go { font-size: 1.4rem; color: var(--text-dim); transition: transform 0.18s ease, color 0.18s ease; }
+
   @media (max-width: 640px) {
     .portals { grid-template-columns: 1fr; }
     .portal-desc { min-height: 0; }
+    .mix-card { gap: 14px; padding: 20px 18px; }
+    .mix-bolt { font-size: 1.9rem; align-self: flex-start; }
+    .mix-go { display: none; }
   }
 
   @keyframes rise {

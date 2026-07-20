@@ -1,0 +1,91 @@
+---
+import Base from '../layouts/Base.astro';
+import quizData from '../data/quizzes/mix.json';
+
+const b = import.meta.env.BASE_URL.replace(/\/$/, '');
+const href = (p: string) => `${b}/${p.replace(/^\//, '')}`;
+
+const tematy = ['stopniowanie', 'biernik', 'narzędnik', 'celownik', 'modalne', 'dopełniacz'];
+---
+<Base
+  title="Wielki Mix — Polski Klub"
+  description="Quiz-skrzyżowanie: sześć tematów gramatycznych z całego kursu, wymieszanych bez podziału na bloki."
+  active="quizy"
+>
+  <article>
+    <header class="quiz-head">
+      <a class="back" href={href('quizy/')}>← wszystkie quizy</a>
+      <p class="kicker" style="color: var(--zielony)">quiz specjalny · bez lekcji · same przypadki</p>
+      <h1 class="quiz-h1">⚡ Wielki Mix — wszystko naraz</h1>
+      <p class="quiz-lead">
+        Tu nie ma tekstu do czytania i nie ma bloków „teraz biernik, teraz narzędnik”.
+        Każde pytanie zaczyna się od zera — najpierw musicie rozpoznać, o który przypadek chodzi.
+      </p>
+      <ul class="tagi">
+        {tematy.map((t) => <li class="tag">{t}</li>)}
+      </ul>
+    </header>
+
+    <section class="quiz-zone" id="quiz">
+      <div class="quiz-splash" id="quiz-splash">
+        <h2>⚡ Gotowi na mix?</h2>
+        <p>{quizData.subtitle}</p>
+        <button class="btn btn-big" id="quiz-start">Zaczynamy!</button>
+      </div>
+      <div id="quiz-root" hidden></div>
+      <script type="application/json" id="quiz-data" set:html={JSON.stringify(quizData)} />
+    </section>
+
+    <p class="quiz-after">
+      Coś nie zagrało? Wróć do <a href={href('reguly/')}>ściąg z regułami</a> — każdy przypadek ma tam własną stronę.
+    </p>
+  </article>
+
+  <script>
+    import '../scripts/quiz-engine.js';
+  </script>
+</Base>
+
+<style>
+  .quiz-head { padding-top: 26px; }
+  .back { color: var(--text-dim); text-decoration: none; font-size: 0.9rem; }
+  .back:hover { color: var(--zielony); }
+  .quiz-head .kicker { margin-top: 20px; }
+  .quiz-h1 { font-size: clamp(1.8rem, 6vw, 2.8rem); font-weight: 800; margin: 0 0 6px; }
+  .quiz-lead { color: var(--text-dim); margin: 0; max-width: 60ch; }
+
+  .tagi { list-style: none; display: flex; flex-wrap: wrap; gap: 7px; margin: 16px 0 0; padding: 0; }
+  .tag {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    border: 1px solid var(--line);
+    border-radius: 99px;
+    padding: 3px 11px;
+  }
+  .tag:nth-child(3n) { color: var(--amber); border-color: var(--amber); }
+  .tag:nth-child(3n + 2) { color: var(--mak); border-color: var(--mak); }
+
+  .quiz-zone {
+    margin-top: 30px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: calc(var(--radius) + 6px);
+    padding: 26px 22px;
+    position: relative;
+    overflow: hidden;
+  }
+  .quiz-zone::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto;
+    height: 5px;
+    background: linear-gradient(90deg, var(--mak), var(--amber), var(--zielony));
+  }
+  .quiz-splash { text-align: center; padding: 18px 0; }
+  .quiz-splash h2 { font-size: 1.6rem; margin: 0 0 6px; }
+  .quiz-splash p { color: var(--text-dim); margin: 0 auto 22px; max-width: 46ch; }
+
+  .quiz-after { color: var(--text-dim); font-size: 0.92rem; margin-top: 24px; }
+</style>
