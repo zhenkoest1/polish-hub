@@ -1,0 +1,134 @@
+{
+  "title": "Quiz — Fala upałów",
+  "subtitle": "Wielka powtórka: fakty z tekstu, miejscownik i wszystkie przypadki naraz. 6 rund. Powodzenia!",
+  "sections": [
+    {
+      "emoji": "❓",
+      "title": "Prawda czy fałsz?",
+      "type": "tf",
+      "questions": [
+        { "q": "We Francji termometr pokazał 44°C — najwyższą temperaturę w historii pomiarów w tym kraju.", "answer": true },
+        { "q": "W Wielkiej Brytanii prawie każdy dom ma klimatyzację.", "answer": false, "explain": "Klimatyzacja jest tam rzadkością — dlatego szpitale przyjmowały setki osób z udarem cieplnym." },
+        { "q": "Od 1990 roku średnia temperatura w Polsce wzrosła o 1,5°C — więcej niż globalna średnia.", "answer": true },
+        { "q": "W 2003 roku we Francji podczas fali gorąca zmarli głównie młodzi ludzie.", "answer": false, "explain": "Zmarło 15 tysięcy osób — w większości powyżej 75. roku życia." },
+        { "q": "Kraje, które emitują najmniej, cierpią najwięcej.", "answer": true, "explain": "To paradoks klimatyczny: Bangladesz i Somalia cierpią bardziej niż USA czy UE." },
+        { "q": "Bjørn Lomborg uważa, że adaptacja jest droższa niż zapobieganie.", "answer": false, "explain": "Odwrotnie — twierdzi, że adaptacja jest tańsza. Krytycy: nie działa dla najbiedniejszych." }
+      ]
+    },
+    {
+      "emoji": "★",
+      "title": "Miejscownik — nowa reguła",
+      "type": "typein",
+      "questions": [
+        { "q": "Termometr pokazał 44°C we __________.", "hint": "Francja", "answer": "Francji" },
+        { "q": "W __________ temperatura sięgnęła 38°C.", "hint": "Warszawa", "answer": "Warszawie" },
+        { "q": "Cała Europa mówi o __________.", "hint": "klimat", "answer": "klimacie" },
+        { "q": "Ludzie spali na balkonach w gorących __________.", "hint": "miasta", "answer": "miastach" },
+        { "q": "Nastolatki szukały ochłody w __________.", "hint": "woda", "answer": "wodzie" },
+        { "q": "W __________ jest chłodniej niż na ulicy.", "hint": "park", "answer": "parku" }
+      ]
+    },
+    {
+      "emoji": "🧠",
+      "title": "Który przypadek?",
+      "type": "mc",
+      "questions": [
+        {
+          "q": "„Nie mam czasu” — słowo „czasu” stoi w…",
+          "options": ["dopełniaczu (przeczenie!)", "bierniku", "miejscowniku", "celowniku"],
+          "answer": "dopełniaczu (przeczenie!)",
+          "explain": "Przeczenie zamienia biernik w dopełniacz: mam czas → nie mam czasu."
+        },
+        {
+          "q": "„Guterres jest sekretarzem ONZ” — „sekretarzem” to…",
+          "options": ["narzędnik", "dopełniacz", "biernik", "miejscownik"],
+          "answer": "narzędnik",
+          "explain": "Po „być” — narzędnik: jestem lekarzem, jest sekretarzem."
+        },
+        {
+          "q": "„Widzę falę upałów” — „falę” to…",
+          "options": ["biernik", "dopełniacz", "narzędnik", "celownik"],
+          "answer": "biernik",
+          "explain": "Po „widzieć” — biernik (kogo? co?)."
+        },
+        {
+          "q": "„Powinniśmy pomagać starszym” — „starszym” to…",
+          "options": ["celownik", "narzędnik", "miejscownik", "dopełniacz"],
+          "answer": "celownik",
+          "explain": "Pomagać komu? czemu? — celownik."
+        },
+        {
+          "q": "„Mieszkamy w Krakowie” — „Krakowie” to…",
+          "options": ["miejscownik", "narzędnik", "dopełniacz", "biernik"],
+          "answer": "miejscownik",
+          "explain": "Po „w” — miejscownik. Zawsze po: w, o, na, po, przy."
+        }
+      ]
+    },
+    {
+      "emoji": "🔗",
+      "title": "Połącz w pary",
+      "type": "match",
+      "questions": [
+        {
+          "q": "Dopasuj słowo do definicji.",
+          "pairs": [
+            ["susza", "długi okres bez deszczu"],
+            ["udar cieplny", "nagła choroba od gorąca"],
+            ["kopuła cieplna", "masa gorącego powietrza nad kontynentem"],
+            ["spalarnia", "zakład, w którym pali się śmieci"],
+            ["rolnik", "człowiek, który pracuje na polu"],
+            ["zapobieganie", "działanie, żeby coś się NIE stało"]
+          ]
+        }
+      ]
+    },
+    {
+      "emoji": "🧩",
+      "title": "Uzupełnij tekst — wszystkie przypadki",
+      "type": "tap_fill",
+      "questions": [
+        {
+          "text": "Latem 2026 w {0} było 38°C. Nastolatki szukały {1} w rzekach. Bez {2} nie da się przeżyć upału. Guterres jest {3} generalnym ONZ. Gdybyśmy {4} dwadzieścia lat temu, dziś byłoby inaczej. Musimy pomagać {5}.",
+          "answers": ["Warszawie", "ochłody", "wody", "sekretarzem", "działali", "starszym"]
+        }
+      ]
+    },
+    {
+      "emoji": "🎯",
+      "title": "Finał — pięć pułapek",
+      "type": "mc",
+      "questions": [
+        {
+          "q": "Które zdanie jest poprawne?",
+          "options": ["Gdybym miał czas, pomógłbym ci.", "Gdybym miałbym czas, pomógłbym ci.", "Gdyby miałbym czas, pomogę ci.", "Gdybym będę miał czas, pomógłbym ci."],
+          "answer": "Gdybym miał czas, pomógłbym ci.",
+          "explain": "Po „gdyby” — zwykły czas przeszły, bez drugiego „-by-”."
+        },
+        {
+          "q": "__ Ukrainie, __ Słowacji — jaki przyimek?",
+          "options": ["na", "w", "we", "przy"],
+          "answer": "na",
+          "explain": "Wyjątki do zapamiętania: na Ukrainie, na Słowacji, na Litwie, na Węgrzech."
+        },
+        {
+          "q": "Po „bez” używamy…",
+          "options": ["dopełniacza", "biernika", "narzędnika", "miejscownika"],
+          "answer": "dopełniacza",
+          "explain": "Bez wody, bez planu, bez pomocy — zawsze dopełniacz."
+        },
+        {
+          "q": "Nie mam __________ na siłownię. (czas)",
+          "options": ["czasu", "czas", "czasem", "czasie"],
+          "answer": "czasu"
+        },
+        {
+          "q": "To było __________ lato od dwudziestu lat. (zły)",
+          "options": ["najgorsze", "najzlejsze", "gorsze", "najbardziej złe"],
+          "answer": "najgorsze",
+          "explain": "Forma nieregularna: zły → gorszy → najgorszy."
+        }
+      ]
+    }
+  ]
+}
