@@ -127,6 +127,8 @@ const quizy = [
     .p-osoba:hover { transform: translateY(-3px); }
     .p-osoba.on { border-color: var(--blekit); }
     #p-form { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+    /* display:flex wygrywalby z atrybutem hidden — przywracamy jego moc */
+    #p-form[hidden] { display: none; }
     .p-kim { width: 100%; margin: 0 0 4px; color: var(--text-dim); }
     .p-pin {
       width: 110px; text-align: center; letter-spacing: 0.4em; font-size: 1.3rem;
