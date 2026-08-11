@@ -10,6 +10,7 @@
     "test": "node test/srs.test.mjs && node test/tresc.test.mjs"
   },
   "dependencies": {
-    "astro": "^5.12.0"
+    "astro": "^5.12.0",
+    "firebase": "^12.17.1"
   }
 }
