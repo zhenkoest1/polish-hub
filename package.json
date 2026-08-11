@@ -7,7 +7,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "test": "node test/srs.test.mjs && node test/tresc.test.mjs && node test/konto.test.mjs && node test/wyniki.test.mjs"
+    "test": "node test/srs.test.mjs && node test/tresc.test.mjs && node test/konto.test.mjs && node test/wyniki.test.mjs && node test/tekst.test.mjs"
   },
   "dependencies": {
     "astro": "^5.12.0",

@@ -3,6 +3,7 @@
 import '../styles/quiz.css';
 import { confetti, confettiFrom } from './confetti.js';
 import { procent } from './wyniki.js';
+import { stripDiacritics, norm } from './tekst.js';
 
 const dataEl = document.getElementById('quiz-data');
 const root = document.getElementById('quiz-root');
@@ -28,17 +29,6 @@ function shuffle(arr) {
   return a;
 }
 
-function stripDiacritics(s) {
-  return s
-    .toLowerCase()
-    .replaceAll('ą', 'a').replaceAll('ć', 'c').replaceAll('ę', 'e')
-    .replaceAll('ł', 'l').replaceAll('ń', 'n').replaceAll('ó', 'o')
-    .replaceAll('ś', 's').replaceAll('ż', 'z').replaceAll('ź', 'z');
-}
-
-function norm(s) {
-  return s.trim().toLowerCase().replace(/\s+/g, ' ');
-}
 
 function esc(s) {
   const d = document.createElement('div');
