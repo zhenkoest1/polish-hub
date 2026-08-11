@@ -69,9 +69,9 @@ Mianownik — исходная, словарная форма. Это то, чт
 
 | Окончание | Когда | Примеры |
 |-----------|-------|---------|
-| **-i** (с чередованием) | после твёрдой согласной | *student → studenci, Szwed → Szwedzi, Hiszpan → Hiszpanie* |
+| **-i** (с чередованием) | после твёрдой согласной | *student → studenci, Szwed → Szwedzi, sąsiad → sąsiedzi* |
 | **-y** | после отвердевших *c, dz, rz* (в том числе возникших из чередования) | *Polak → Polacy, chłopiec → chłopcy, aktor → aktorzy* |
-| **-e** | после мягкой согласной и в словах на *-arz, -erz, -el, -j* | *lekarz → lekarze, nauczyciel → nauczyciele, gość → goście, złodziej → złodzieje* |
+| **-e** | после мягкой согласной, а также в словах на *-arz, -erz, -el, -j, -an* | *lekarz → lekarze, nauczyciel → nauczyciele, gość → goście, złodziej → złodzieje, Hiszpan → Hiszpanie* |
 | **-owie** | титулы, родство, уважение | *pan → panowie, syn → synowie, ojciec → ojcowie* |
 
 ### Męskorzeczowy / -zwierzęcy (мужской неличный: вещи и животные)

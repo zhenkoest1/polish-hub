@@ -178,7 +178,7 @@ kolejnosc: 0
 | 6 | Msc | *Myślę o **moim bracie**.* |
 | 7 | W | ***Mój bracie**, posłuchaj!* |
 
-> *bracie* в Miejscowniku и Wołaczu — чередование *t → ci*. У мужского рода Wołacz почти всегда совпадает с Miejscownikiem: *studencie, panie, bracie*.
+> *bracie* в Miejscowniku и Wołaczu — чередование *t → ci*. У мужского рода Wołacz почти всегда совпадает с Miejscownikiem: *studencie, profesorze, bracie*. Главное исключение — *pan*: Miejscownik *o panu*, но Wołacz *panie!*
 
 ---
 

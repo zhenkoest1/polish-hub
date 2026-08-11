@@ -44,7 +44,7 @@ export function stanSlowa(stan, id) {
 /** Czy słowo czeka na powtórkę teraz? */
 export function czyDoPowtorki(stan, id, teraz = Date.now()) {
   const s = stanSlowa(stan, id);
-  return s.pudelko < MAX_PUDELKO && s.termin <= teraz;
+  return s.termin <= teraz;
 }
 
 /**
@@ -101,9 +101,11 @@ export function statystyki(slowa, stan, teraz = Date.now()) {
   for (const s of slowa) {
     const st = stanSlowa(stan, s.id);
     if (st.pudelko === 0) nowe++;
-    else if (st.pudelko >= MAX_PUDELKO) umiane++;
+    else if (st.pudelko >= MAX_PUDELKO && st.termin > teraz) umiane++;
     else wTrakcie++;
-    if (st.pudelko > 0 && st.pudelko < MAX_PUDELKO && st.termin <= teraz) zalegle++;
+    // Zaległe = wszystko poza nowymi, czemu minął termin — także słowa
+    // z pudełka 5, bo po 21 dniach wracają na jedno sprawdzenie.
+    if (st.pudelko > 0 && st.termin <= teraz) zalegle++;
   }
 
   const razem = slowa.length;

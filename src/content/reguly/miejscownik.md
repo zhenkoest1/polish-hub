@@ -89,11 +89,11 @@ Miejscownik — падеж места и темы разговора. Главн
 | *n* | *ni* | *okno → w oknie*, *ściana → na ścianie*, *telefon → w telefonie* |
 | *s* | *si* (= *ś*) | *autobus → w autobusie*, *kasa → w kasie* |
 | *z* | *zi* (= *ź*) | *obraz → na obrazie*, *koza → o kozie*, *wóz → w wozie* |
-| *t* | *ci* (= *ć*) | *kot → o kocie*, *brat → o bracie*, *gazeta → w gazecie*, *internet → w internecie* |
+| *t* | *ci* (= *ć*) | *kot → o kocie*, *brat → o bracie*, *gazeta → w gazecie*, *internet → w internecie*, *poczta → na poczcie* |
 | *d* | *dzi* (= *dź*) | *ogród → w ogrodzie*, *woda → w wodzie*, *samochód → w samochodzie* |
 | *r* | *rz* | *biuro → w biurze*, *rower → na rowerze*, *siostra → o siostrze*, *piętro → na piętrze* |
 | *ł* | *l* | *stół → na stole*, *szkoła → w szkole*, *kanał → na kanale* |
-| *st* | *ści* | *miasto → w mieście*, *most → na moście*, *lista → na liście*, *poczta → na poczcie* |
+| *st* | *ści* | *miasto → w mieście*, *most → na moście*, *lista → na liście*, *kapusta → w kapuście* |
 | *zd* | *ździ* | *gniazdo → w gnieździe*, *jazda → o jeździe*, *pojazd → w pojeździe* |
 | *sł* | *śl* | *krzesło → na krześle*, *masło → w maśle*, *Wisła → w Wiśle* |
 | *sm* | *śmi* | *pismo → w piśmie* |
@@ -241,7 +241,7 @@ Miejscownik — падеж места и темы разговора. Главн
 | *Myślę o ty.* | *Myślę o tobie.* | нужна форма miejscownika |
 | *Mówię o jej.* | *Mówię o niej.* | после предлога — форма на *n-* |
 | *w parkie* | *w parku* | *k* в муж. роде НЕ чередуется, берёт *-u* |
-| *o matce → o matke* | *o matce* | *k → c*, окончание *-e* |
+| *o matke* | *o matce* | *k → c*, окончание *-e* |
 | *w muzeu* | *w muzeum* | слова на *-um* в ед.ч. не склоняются |
 
 > **Подсказка для русскоговорящих:** русский Предложный тоже требует предлога, и это помогает. Но не переносите русское *-е* автоматически: «в парке» → *w parku*, «в банке» → *w banku*, «о сыне» → *o synu*. Зато «в магазине» → *w sklepie* и «в городе» → *w mieście* работают по русской логике — с окончанием *-e* и смягчением.
