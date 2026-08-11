@@ -12,7 +12,10 @@ const quizy = lekcje.filter((l) => l.data.quiz);
 // Słówka: sumujemy wszystkie talie, żeby na kafelku pokazać realną liczbę.
 const talieSlowek = import.meta.glob<{ slowa: unknown[] }>('../data/slowka/*.json', { eager: true });
 const slowekRazem = Object.values(talieSlowek).reduce((s, t) => s + t.slowa.length, 0);
-const KURS_TOTAL = 9;
+// Cały kurs do egzaminu B1 = 17 lekcji (plan w 00-Plan-kursu).
+// Math.max pilnuje, żeby pasek nigdy nie przekroczył 100%, gdyby lekcji
+// przybyło szybciej niż ktoś zaktualizuje tę liczbę.
+const KURS_TOTAL = Math.max(17, lekcje.length);
 const pct = Math.round((lekcje.length / KURS_TOTAL) * 100);
 const slowa = ['cześć', 'dziękuję', 'góra', 'jezioro', 'zmęczenie', 'władza', 'kompromis', 'przyroda', 'najlepszy', 'więcej', 'szczyt', 'wolność'];
 ---
