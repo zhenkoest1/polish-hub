@@ -105,7 +105,10 @@ for (const f of pliki('src/data/quizzes', '.json')) {
       }
 
       if (s.type === 'typein') {
-        sprawdz(`${pe}: ma answer`, typeof p.answer === 'string' && p.answer.trim().length > 0);
+        // Silnik przyjmuje answer jako string LUB tablicę dopuszczalnych odpowiedzi
+        // (Array.isArray w quiz-engine.js) — walidator musi znać obie formy
+        const odpTypein = Array.isArray(p.answer) ? p.answer : [p.answer];
+        sprawdz(`${pe}: ma answer`, odpTypein.length > 0 && odpTypein.every((a) => typeof a === 'string' && a.trim().length > 0));
         sprawdz(`${pe}: ma lukę "__"`, typeof p.q === 'string' && p.q.includes('__'));
       }
 
