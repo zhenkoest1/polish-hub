@@ -124,11 +124,15 @@ const slowa = ['cześć', 'dziękuję', 'góra', 'jezioro', 'zmęczenie', 'wład
   </a>
 
   <script>
-    import { gotowyUzytkownik, pobierzProfile } from '../scripts/chmura.js';
-
+    // Firebase ladujemy tylko gdy ktos prawdopodobnie ma sesje —
+    // chip-cache pk_kto_v1 to tani sygnal bez SDK (uwaga z final review)
     const quizy: { id: string; tytul: string }[] = JSON.parse(document.getElementById('klub-quizy')!.textContent!);
 
-    gotowyUzytkownik().then(async (user) => {
+    let maSesje = false;
+    try { maSesje = !!localStorage.getItem('pk_kto_v1'); } catch {}
+
+    if (maSesje) import('../scripts/chmura.js').then(async ({ gotowyUzytkownik, pobierzProfile }) => {
+      const user = await gotowyUzytkownik();
       if (!user) return; // zostaje zacheta do logowania
       let profile;
       try {

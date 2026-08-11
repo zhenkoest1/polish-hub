@@ -1,17 +1,20 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Profile: czytac moze kazdy zalogowany (dashboard trojki),
-    // pisac — tylko wlasciciel do swojego dokumentu.
+    // Tylko trojka klubu — publiczny config pozwala kazdemu zalozyc konto,
+    // ale reguly nie wpuszczaja obcych do danych.
+    function jestSwoj() {
+      return request.auth != null
+        && request.auth.token.email in
+           ['oleg@polskiklub.local', 'lena@polskiklub.local', 'zenia@polskiklub.local'];
+    }
     match /users/{uid} {
-      allow read: if request.auth != null;
-      allow create, update: if request.auth != null && request.auth.uid == uid;
+      allow read: if jestSwoj();
+      allow create, update: if jestSwoj() && request.auth.uid == uid;
       allow delete: if false;
-
-      // Historia prob: dopisywanie tylko u siebie, bez edycji i kasowania.
       match /attempts/{attemptId} {
-        allow read: if request.auth != null;
-        allow create: if request.auth != null && request.auth.uid == uid;
+        allow read: if jestSwoj();
+        allow create: if jestSwoj() && request.auth.uid == uid;
         allow update, delete: if false;
       }
     }

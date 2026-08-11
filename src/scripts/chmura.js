@@ -76,11 +76,16 @@ export function wyloguj() {
 
 // Zwraca true gdy zapisano, false gdy nikt nie jest zalogowany.
 export async function zapiszWynik(quizId, wynik) {
-  const user = auth.currentUser;
+  // Nie ufaj currentUser tuz po zaladowaniu modulu: sesja wstaje z IndexedDB
+  // asynchronicznie (quiz laduje chmura.js dopiero przy wynikach)
+  const user = auth.currentUser ?? await gotowyUzytkownik();
   if (!user) return false;
   const ref = doc(db, 'users', user.uid);
-  const snap = await getDoc(ref);
-  const best = (snap.exists() && snap.data().best) || {};
+  let best = {};
+  try {
+    const snap = await getDoc(ref);
+    best = (snap.exists() && snap.data().best) || {};
+  } catch { /* zimny cache offline — piszemy sam nowy wynik, waski merge to udzwignie */ }
   // ts: Date.now() — lepszyWynik porownuje ts po stronie klienta; serverTimestamp to sentinel az do potwierdzenia
   const nowy = { ...wynik, ts: Date.now() };
   best[quizId] = lepszyWynik(best[quizId], nowy);
