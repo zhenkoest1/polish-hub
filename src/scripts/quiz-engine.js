@@ -2,6 +2,7 @@
 // Typy pytań: tf | mc | typein | tap_fill | match
 import '../styles/quiz.css';
 import { confetti, confettiFrom } from './confetti.js';
+import { procent } from './wyniki.js';
 
 const dataEl = document.getElementById('quiz-data');
 const root = document.getElementById('quiz-root');
@@ -375,7 +376,7 @@ class QuizRun {
   renderResults() {
     const got = this.scores.reduce((s, x) => s + x.got, 0);
     const max = this.scores.reduce((s, x) => s + x.max, 0);
-    const pct = max ? Math.round((got / max) * 100) : 0;
+    const pct = procent(got, max);
     const verdict = pct >= 90 ? '🏆 Mistrzostwo!'
       : pct >= 70 ? '🌟 Bardzo dobrze!'
       : pct >= 50 ? '💪 Nieźle — ale zrób powtórkę.'
@@ -400,6 +401,33 @@ class QuizRun {
       new QuizRun(this.quiz, this.root).start();
     });
     this.root.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    // zapis wyniku do chmury (jesli ktos jest zalogowany)
+    if (this.quiz.id) {
+      const status = document.createElement('p');
+      status.className = 'q-save-status';
+      status.textContent = '⏳ zapisuję…';
+      this.root.querySelector('.q-results').appendChild(status);
+      const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+      // Firestore offline: promise wisi do powrotu sieci — po 4 s uznajemy
+      // "zapisze sie pozniej" (persistentLocalCache dowiezie).
+      // .catch na wewnetrznym promise: gdy timeout wygra wyscig, pozniejszy
+      // reject nie moze zostac unhandled rejection (uwaga z code review).
+      const zapis = import('./chmura.js')
+        .then(({ zapiszWynik }) => zapiszWynik(this.quiz.id, { got, max, pct, almost: this.almost }));
+      const wyscig = Promise.race([
+        zapis,
+        new Promise((res) => setTimeout(() => res('timeout'), 4000)),
+      ]);
+      zapis.catch(() => {});
+      wyscig
+        .then((r) => {
+          if (r === true) status.textContent = '✓ Wynik zapisany';
+          else if (r === 'timeout') status.textContent = '✓ Zapisze się, gdy wróci internet';
+          else status.innerHTML = `<a href="${base}/profil/">Zaloguj się</a>, żeby zapisywać wyniki`;
+        })
+        .catch(() => { status.textContent = '⚠️ Nie udało się zapisać wyniku'; });
+    }
 
     if (pct >= 70) {
       const big = pct >= 90;

@@ -256,3 +256,6 @@
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+.q-save-status { margin: 14px 0 0; font-size: 0.9rem; color: var(--text-dim); }
+.q-save-status a { color: var(--amber); }

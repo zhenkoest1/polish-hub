@@ -33,7 +33,7 @@ const tematy = ['stopniowanie', 'biernik', 'narzędnik', 'celownik', 'modalne', 
         <button class="btn btn-big" id="quiz-start">Zaczynamy!</button>
       </div>
       <div id="quiz-root" hidden></div>
-      <script type="application/json" id="quiz-data" set:html={JSON.stringify(quizData)} />
+      <script type="application/json" id="quiz-data" set:html={JSON.stringify({ id: 'mix', ...quizData })} />
     </section>
 
     <p class="quiz-after">

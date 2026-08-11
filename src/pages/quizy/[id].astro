@@ -42,7 +42,7 @@ const quizData = (await import(`../../data/quizzes/${lekcja.data.quiz}.json`)).d
         <button class="btn btn-big" id="quiz-start">Zaczynamy!</button>
       </div>
       <div id="quiz-root" hidden></div>
-      <script type="application/json" id="quiz-data" set:html={JSON.stringify(quizData)} />
+      <script type="application/json" id="quiz-data" set:html={JSON.stringify({ id: lekcja.data.quiz, ...quizData })} />
     </section>
   </article>
 
