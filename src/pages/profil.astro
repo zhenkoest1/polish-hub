@@ -111,7 +111,9 @@ const quizy = [
     });
   </script>
 
-  <style>
+  <!-- is:global: przyciski osob i wiersze tabeli powstaja przez innerHTML,
+       wiec nie dostaja atrybutu scopingu Astro — scoped CSS by ich nie widzial -->
+  <style is:global>
     .profil { padding-top: 26px; }
     .p-osoby { display: flex; gap: 12px; flex-wrap: wrap; margin: 18px 0; }
     .p-osoba {

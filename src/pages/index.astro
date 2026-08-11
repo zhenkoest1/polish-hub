@@ -379,6 +379,10 @@ const slowa = ['cześć', 'dziękuję', 'góra', 'jezioro', 'zmęczenie', 'wład
     to { opacity: 1; transform: translateY(0); }
   }
 
+</style>
+
+<!-- is:global: wiersze tabeli klubu powstaja przez innerHTML — scoped CSS by ich nie widzial -->
+<style is:global>
   .klub-zacheta { color: var(--text-dim); }
   .klub-tabela-wrap { overflow-x: auto; }
   .klub-tabela { border-collapse: collapse; width: 100%; }
