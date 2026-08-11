@@ -259,3 +259,34 @@
 
 .q-save-status { margin: 14px 0 0; font-size: 0.9rem; color: var(--text-dim); }
 .q-save-status a { color: var(--amber); }
+
+/* ── silnik cwiczen w lekcjach ── */
+.cw-box {
+  margin: 1.4em 0; padding: 18px 20px; background: var(--panel);
+  border: 1px solid var(--line); border-radius: var(--radius); position: relative; overflow: hidden;
+}
+.cw-box::before { content: ''; position: absolute; inset: 0 0 auto; height: 4px; background: linear-gradient(90deg, var(--blekit), var(--zielony)); }
+.cw-tytul { font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; margin: 4px 0 2px; }
+.cw-instrukcja { color: var(--text-dim); font-size: 0.92rem; margin: 0 0 10px; }
+.cw-lista { margin: 0 0 14px; padding-left: 22px; display: grid; gap: 10px; }
+.cw-zdanie { line-height: 2; }
+.cw-opcja {
+  font: inherit; font-size: 0.95em; padding: 3px 12px; margin: 0 3px; cursor: pointer;
+  background: var(--panel-2); color: var(--text); border: 1.5px solid var(--line); border-radius: 99px;
+}
+.cw-opcja.on { border-color: var(--blekit); color: var(--blekit); }
+.cw-opcja.dobra { border-color: var(--correct); color: var(--correct); background: var(--correct-bg); }
+.cw-opcja.zla { border-color: var(--incorrect); color: var(--incorrect); background: var(--incorrect-bg); }
+.cw-opcja:disabled { cursor: default; opacity: 0.85; }
+.cw-input {
+  font: inherit; width: 150px; padding: 3px 10px; margin: 0 3px;
+  background: var(--bg-deep); color: var(--text); border: 1.5px solid var(--line); border-radius: 8px;
+}
+.cw-input:focus { outline: none; border-color: var(--blekit); }
+.cw-input.cw-dobrze { border-color: var(--correct); }
+.cw-input.cw-zle { border-color: var(--incorrect); }
+.cw-wynik { display: block; font-size: 0.88rem; color: var(--text-dim); }
+.cw-zdanie.cw-dobrze .cw-wynik { color: var(--correct); }
+.cw-zdanie.cw-prawie .cw-wynik { color: var(--amber); }
+.cw-zdanie.cw-zle .cw-wynik { color: var(--incorrect); }
+.cw-sprawdz:disabled { opacity: 0.5; cursor: default; }
