@@ -1,0 +1,343 @@
+{
+  "lekcja": 1,
+  "temat": "Tatry",
+  "slowa": [
+    {
+      "id": "l01-gora",
+      "pl": "góra",
+      "ru": "гора",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Tatry to najwyższe góry w Polsce.",
+      "przyklad_ru": "Татры — самые высокие горы в Польше."
+    },
+    {
+      "id": "l01-szczyt",
+      "pl": "szczyt",
+      "ru": "вершина, пик",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Najwyższy szczyt po polskiej stronie to Rysy.",
+      "przyklad_ru": "Самая высокая вершина с польской стороны — Рысы."
+    },
+    {
+      "id": "l01-granica",
+      "pl": "granica",
+      "ru": "граница",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Tatry znajdują się na granicy Polski i Słowacji.",
+      "przyklad_ru": "Татры находятся на границе Польши и Словакии."
+    },
+    {
+      "id": "l01-jezioro",
+      "pl": "jezioro",
+      "ru": "озеро",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "W Tatrach jest około 200 jezior.",
+      "przyklad_ru": "В Татрах около 200 озёр."
+    },
+    {
+      "id": "l01-staw",
+      "pl": "staw",
+      "ru": "пруд, горное озеро",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Najgłębsze jezioro w Tatrach to Wielki Staw Polski.",
+      "przyklad_ru": "Самое глубокое озеро в Татрах — Вельки-Став-Польски."
+    },
+    {
+      "id": "l01-glebokosc",
+      "pl": "głębokość",
+      "ru": "глубина",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Morskie Oko ma głębokość ponad 50 metrów.",
+      "przyklad_ru": "Морское Око имеет глубину более 50 метров."
+    },
+    {
+      "id": "l01-wysokosc",
+      "pl": "wysokość",
+      "ru": "высота",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Morskie Oko leży na wysokości 1395 metrów.",
+      "przyklad_ru": "Морское Око лежит на высоте 1395 метров."
+    },
+    {
+      "id": "l01-powierzchnia",
+      "pl": "powierzchnia",
+      "ru": "площадь, поверхность",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Polskie Tatry mają powierzchnię 175 km².",
+      "przyklad_ru": "Польские Татры имеют площадь 175 км²."
+    },
+    {
+      "id": "l01-przejrzysty",
+      "pl": "przejrzysty",
+      "ru": "прозрачный",
+      "czesc": "przymiotnik",
+      "przyklad": "Woda jest przejrzysta i ma piękny zielony kolor.",
+      "przyklad_ru": "Вода прозрачная и имеет красивый зелёный цвет."
+    },
+    {
+      "id": "l01-kolejka-linowa",
+      "pl": "kolejka linowa",
+      "ru": "канатная дорога",
+      "czesc": "wyrażenie",
+      "przyklad": "Na Kasprowy Wierch można wjechać kolejką linową.",
+      "przyklad_ru": "На Каспровы Верх можно подняться по канатной дороге."
+    },
+    {
+      "id": "l01-stromy",
+      "pl": "stromy",
+      "ru": "крутой",
+      "czesc": "przymiotnik",
+      "przyklad": "Kozica żyje na stromych skałach.",
+      "przyklad_ru": "Серна живёт на крутых скалах."
+    },
+    {
+      "id": "l01-skala",
+      "pl": "skała",
+      "ru": "скала",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Świstak i kozica żyją wśród skał.",
+      "przyklad_ru": "Сурок и серна живут среди скал."
+    },
+    {
+      "id": "l01-gryzon",
+      "pl": "gryzoń",
+      "ru": "грызун",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Świstak to sympatyczny gryzoń.",
+      "przyklad_ru": "Сурок — симпатичный грызун."
+    },
+    {
+      "id": "l01-dziki",
+      "pl": "dziki",
+      "ru": "дикий",
+      "czesc": "przymiotnik",
+      "przyklad": "W Tatrach żyją dzikie zwierzęta.",
+      "przyklad_ru": "В Татрах живут дикие животные."
+    },
+    {
+      "id": "l01-zwierze",
+      "pl": "zwierzę",
+      "ru": "животное",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Świstak to małe zwierzę, które śpi zimą prawie siedem miesięcy.",
+      "przyklad_ru": "Сурок — маленькое животное, которое спит зимой почти семь месяцев."
+    },
+    {
+      "id": "l01-kozica",
+      "pl": "kozica",
+      "ru": "серна",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Kozica jest symbolem Tatr.",
+      "przyklad_ru": "Серна — символ Татр."
+    },
+    {
+      "id": "l01-swistak",
+      "pl": "świstak",
+      "ru": "сурок",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Świstak jest mniejszy niż kozica.",
+      "przyklad_ru": "Сурок меньше, чем серна."
+    },
+    {
+      "id": "l01-jelen",
+      "pl": "jeleń",
+      "ru": "олень",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Kozica to mniejsze zwierzę niż jeleń.",
+      "przyklad_ru": "Серна — животное меньше, чем олень."
+    },
+    {
+      "id": "l01-niedzwiedz",
+      "pl": "niedźwiedź",
+      "ru": "медведь",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Niedźwiedź brunatny jest największym zwierzęciem w Tatrach.",
+      "przyklad_ru": "Бурый медведь — самое крупное животное в Татрах."
+    },
+    {
+      "id": "l01-przyroda",
+      "pl": "przyroda",
+      "ru": "природа",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Park chroni przyrodę Tatr.",
+      "przyklad_ru": "Парк охраняет природу Татр."
+    },
+    {
+      "id": "l01-turysta",
+      "pl": "turysta",
+      "ru": "турист",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Tatrzański Park Narodowy odwiedzają miliony turystów.",
+      "przyklad_ru": "Татранский национальный парк посещают миллионы туристов."
+    },
+    {
+      "id": "l01-park-narodowy",
+      "pl": "park narodowy",
+      "ru": "национальный парк",
+      "czesc": "wyrażenie",
+      "przyklad": "To najpopularniejszy park narodowy w Polsce.",
+      "przyklad_ru": "Это самый популярный национальный парк в Польше."
+    },
+    {
+      "id": "l01-wedrowka",
+      "pl": "wędrówka",
+      "ru": "поход, пеший переход",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Kolejka linowa to łatwiejszy sposób niż wędrówka pieszo.",
+      "przyklad_ru": "Канатная дорога — более лёгкий способ, чем поход пешком."
+    },
+    {
+      "id": "l01-sposob",
+      "pl": "sposób",
+      "ru": "способ",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "To łatwiejszy sposób niż wędrówka pieszo.",
+      "przyklad_ru": "Это более лёгкий способ, чем поход пешком."
+    },
+    {
+      "id": "l01-pieszo",
+      "pl": "pieszo",
+      "ru": "пешком",
+      "czesc": "przysłówek",
+      "przyklad": "Na Giewont idziemy pieszo.",
+      "przyklad_ru": "На Гевонт мы идём пешком."
+    },
+    {
+      "id": "l01-rycerz",
+      "pl": "rycerz",
+      "ru": "рыцарь",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Giewont wygląda jak śpiący rycerz.",
+      "przyklad_ru": "Гевонт выглядит как спящий рыцарь."
+    },
+    {
+      "id": "l01-slynny",
+      "pl": "słynny",
+      "ru": "знаменитый",
+      "czesc": "przymiotnik",
+      "przyklad": "Najsłynniejsze jezioro w Tatrach to Morskie Oko.",
+      "przyklad_ru": "Самое знаменитое озеро в Татрах — Морское Око."
+    },
+    {
+      "id": "l01-symbol",
+      "pl": "symbol",
+      "ru": "символ",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Giewont jest symbolem Zakopanego.",
+      "przyklad_ru": "Гевонт — символ Закопане."
+    },
+    {
+      "id": "l01-kraj",
+      "pl": "kraj",
+      "ru": "страна",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Tatry znajdują się na południu kraju.",
+      "przyklad_ru": "Татры находятся на юге страны."
+    },
+    {
+      "id": "l01-poludnie",
+      "pl": "południe",
+      "ru": "юг; полдень",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Tatry leżą na południu Polski.",
+      "przyklad_ru": "Татры лежат на юге Польши."
+    },
+    {
+      "id": "l01-wysoki",
+      "pl": "wysoki",
+      "ru": "высокий",
+      "czesc": "przymiotnik",
+      "przyklad": "Rysy to wyższy szczyt niż Giewont.",
+      "przyklad_ru": "Рысы — более высокая вершина, чем Гевонт."
+    },
+    {
+      "id": "l01-chronic",
+      "pl": "chronić",
+      "ru": "охранять, защищать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "ochronić",
+      "przyklad": "Tatrzański Park Narodowy chroni przyrodę od 1954 roku.",
+      "przyklad_ru": "Татранский национальный парк охраняет природу с 1954 года."
+    },
+    {
+      "id": "l01-wazyc",
+      "pl": "ważyć",
+      "ru": "весить",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "przyklad": "Niedźwiedź waży ponad 200 kilogramów.",
+      "przyklad_ru": "Медведь весит более 200 килограммов."
+    },
+    {
+      "id": "l01-biegac",
+      "pl": "biegać",
+      "ru": "бегать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "przyklad": "Niedźwiedź biega szybciej niż człowiek.",
+      "przyklad_ru": "Медведь бегает быстрее, чем человек."
+    },
+    {
+      "id": "l01-odwiedzac",
+      "pl": "odwiedzać",
+      "ru": "посещать, навещать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "odwiedzić",
+      "przyklad": "Co roku odwiedza go ponad 4 miliony turystów.",
+      "przyklad_ru": "Каждый год его посещают более 4 миллионов туристов."
+    },
+    {
+      "id": "l01-wierzyc",
+      "pl": "wierzyć",
+      "ru": "верить",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "uwierzyć",
+      "przyklad": "Dawniej ludzie wierzyli, że tatrzańskie jeziora są połączone z morzem.",
+      "przyklad_ru": "Раньше люди верили, что татранские озёра соединены с морем."
+    },
+    {
+      "id": "l01-wjechac",
+      "pl": "wjechać",
+      "ru": "въехать, подняться (на транспорте)",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "wjeżdżać",
+      "przyklad": "Można wjechać na szczyt kolejką linową.",
+      "przyklad_ru": "Можно подняться на вершину по канатной дороге."
+    },
+    {
+      "id": "l01-dawniej",
+      "pl": "dawniej",
+      "ru": "раньше, в прошлом",
+      "czesc": "przysłówek",
+      "przyklad": "Dawniej ludzie nazywali te jeziora morskimi oczami.",
+      "przyklad_ru": "Раньше люди называли эти озёра морскими очами."
+    }
+  ]
+}

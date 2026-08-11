@@ -3,6 +3,8 @@ tytul: "Dopełniacz (Genitive)"
 emoji: "🧩"
 lekcja: 6
 pytania: "kogo? czego?"
+kategoria: "przypadki"
+kolejnosc: 3
 ---
 
 ## Вопросы: Kogo? Czego?

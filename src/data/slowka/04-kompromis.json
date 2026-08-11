@@ -1,0 +1,374 @@
+{
+  "lekcja": 4,
+  "temat": "Sztuka kompromisu",
+  "slowa": [
+    {
+      "id": "l04-kompromis",
+      "pl": "kompromis",
+      "ru": "компромисс",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Sztuka kompromisu jest trudna.",
+      "przyklad_ru": "Искусство компромисса — трудное дело."
+    },
+    {
+      "id": "l04-cnota",
+      "pl": "cnota",
+      "ru": "добродетель",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Cnota leży pomiędzy dwiema skrajnościami.",
+      "przyklad_ru": "Добродетель лежит между двумя крайностями."
+    },
+    {
+      "id": "l04-skrajnosc",
+      "pl": "skrajność",
+      "ru": "крайность",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Niektóre rzeczy nie mają środka między skrajnościami.",
+      "przyklad_ru": "У некоторых вещей нет середины между крайностями."
+    },
+    {
+      "id": "l04-odwaga",
+      "pl": "odwaga",
+      "ru": "смелость, мужество",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Odwaga leży pomiędzy głupotą a strachem.",
+      "przyklad_ru": "Смелость лежит между глупостью и страхом."
+    },
+    {
+      "id": "l04-tchorz",
+      "pl": "tchórz",
+      "ru": "трус",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Człowiek, który boi się wszystkiego, jest tchórzem.",
+      "przyklad_ru": "Человек, который боится всего, — трус."
+    },
+    {
+      "id": "l04-hojnosc",
+      "pl": "hojność",
+      "ru": "щедрость",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Hojność leży pomiędzy skąpstwem a rozrzutnością.",
+      "przyklad_ru": "Щедрость лежит между скупостью и расточительностью."
+    },
+    {
+      "id": "l04-skapstwo",
+      "pl": "skąpstwo",
+      "ru": "скупость",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Skąpstwo to jedna ze skrajności.",
+      "przyklad_ru": "Скупость — это одна из крайностей."
+    },
+    {
+      "id": "l04-rozrzutnosc",
+      "pl": "rozrzutność",
+      "ru": "расточительность",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Rozrzutność jest przeciwieństwem skąpstwa.",
+      "przyklad_ru": "Расточительность — противоположность скупости."
+    },
+    {
+      "id": "l04-upor",
+      "pl": "upór",
+      "ru": "упрямство",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Upór nie jest cnotą.",
+      "przyklad_ru": "Упрямство — не добродетель."
+    },
+    {
+      "id": "l04-uleglosc",
+      "pl": "uległość",
+      "ru": "покорность, уступчивость",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Zgoda nie znaczy uległość.",
+      "przyklad_ru": "Согласие не значит покорность."
+    },
+    {
+      "id": "l04-zdrada",
+      "pl": "zdrada",
+      "ru": "предательство, измена",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Nie ma zdrowej miary zdrady.",
+      "przyklad_ru": "Не существует здоровой меры предательства."
+    },
+    {
+      "id": "l04-okrucienstwo",
+      "pl": "okrucieństwo",
+      "ru": "жестокость",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Nie ma rozsądnej ilości okrucieństwa.",
+      "przyklad_ru": "Не существует разумного количества жестокости."
+    },
+    {
+      "id": "l04-negocjowac",
+      "pl": "negocjować",
+      "ru": "вести переговоры, договариваться",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "wynegocjować",
+      "przyklad": "Musimy wiedzieć, co możemy negocjować, a czego nie.",
+      "przyklad_ru": "Мы должны знать, что можем обсуждать, а что нет."
+    },
+    {
+      "id": "l04-zasada",
+      "pl": "zasada",
+      "ru": "принцип, правило",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Kant wierzył, że są zasady absolutne.",
+      "przyklad_ru": "Кант верил, что существуют абсолютные принципы."
+    },
+    {
+      "id": "l04-klamac",
+      "pl": "kłamać",
+      "ru": "лгать, врать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "skłamać",
+      "przyklad": "Nie wolno kłamać. Nigdy.",
+      "przyklad_ru": "Лгать нельзя. Никогда."
+    },
+    {
+      "id": "l04-klamstwo",
+      "pl": "kłamstwo",
+      "ru": "ложь",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Kant chroni nas przed wygodnym kłamstwem.",
+      "przyklad_ru": "Кант защищает нас от удобной лжи."
+    },
+    {
+      "id": "l04-morderca",
+      "pl": "morderca",
+      "ru": "убийца",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Morderca puka do twoich drzwi.",
+      "przyklad_ru": "Убийца стучит в твою дверь."
+    },
+    {
+      "id": "l04-oburzac-sie",
+      "pl": "oburzać się",
+      "ru": "возмущаться",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "oburzyć się",
+      "przyklad": "Wielu ludzi się oburzało.",
+      "przyklad_ru": "Многие люди возмущались."
+    },
+    {
+      "id": "l04-uczucie",
+      "pl": "uczucie",
+      "ru": "чувство",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Etyka rośnie z uczuć i z konkretnej sytuacji.",
+      "przyklad_ru": "Этика растёт из чувств и из конкретной ситуации."
+    },
+    {
+      "id": "l04-ustapic",
+      "pl": "ustąpić",
+      "ru": "уступить",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "ustępować",
+      "przyklad": "Czasem trzeba ustąpić.",
+      "przyklad_ru": "Иногда нужно уступить."
+    },
+    {
+      "id": "l04-chronic",
+      "pl": "chronić",
+      "ru": "защищать, оберегать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "ochronić",
+      "przyklad": "Zasady chronią nas przed wygodnym kłamstwem.",
+      "przyklad_ru": "Принципы защищают нас от удобной лжи."
+    },
+    {
+      "id": "l04-fanatyzm",
+      "pl": "fanatyzm",
+      "ru": "фанатизм",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Hume chroni nas przed zimnym fanatyzmem.",
+      "przyklad_ru": "Юм защищает нас от холодного фанатизма."
+    },
+    {
+      "id": "l04-sejm",
+      "pl": "sejm",
+      "ru": "сейм (польский парламент)",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "W polskim sejmie obowiązywała zasada liberum veto.",
+      "przyklad_ru": "В польском сейме действовало правило либерум вето."
+    },
+    {
+      "id": "l04-szlachcic",
+      "pl": "szlachcic",
+      "ru": "шляхтич, дворянин",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Każdy szlachcic mógł krzyknąć: Nie pozwalam!",
+      "przyklad_ru": "Каждый шляхтич мог крикнуть: Не позволяю!"
+    },
+    {
+      "id": "l04-obowiazywac",
+      "pl": "obowiązywać",
+      "ru": "действовать, быть в силе (о правиле)",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "przyklad": "Od XVI wieku obowiązywała zasada liberum veto.",
+      "przyklad_ru": "С XVI века действовало правило либерум вето."
+    },
+    {
+      "id": "l04-sztywnosc",
+      "pl": "sztywność",
+      "ru": "жёсткость, негибкость",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "To była absolutna sztywność.",
+      "przyklad_ru": "Это была абсолютная негибкость."
+    },
+    {
+      "id": "l04-oslabiac",
+      "pl": "osłabiać",
+      "ru": "ослаблять",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "osłabić",
+      "przyklad": "Ta zasada osłabiała państwo przez dwa wieki.",
+      "przyklad_ru": "Это правило ослабляло государство два века."
+    },
+    {
+      "id": "l04-opozycja",
+      "pl": "opozycja",
+      "ru": "оппозиция",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Komuniści i opozycja usiedli przy jednym stole.",
+      "przyklad_ru": "Коммунисты и оппозиция сели за один стол."
+    },
+    {
+      "id": "l04-odzyskac",
+      "pl": "odzyskać",
+      "ru": "вернуть себе, обрести вновь",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "odzyskiwać",
+      "przyklad": "Polska odzyskała wolność w 1989 roku.",
+      "przyklad_ru": "Польша вернула себе свободу в 1989 году."
+    },
+    {
+      "id": "l04-wojna-domowa",
+      "pl": "wojna domowa",
+      "ru": "гражданская война",
+      "czesc": "wyrażenie",
+      "przyklad": "Polska odzyskała wolność bez wojny domowej.",
+      "przyklad_ru": "Польша обрела свободу без гражданской войны."
+    },
+    {
+      "id": "l04-zgoda",
+      "pl": "zgoda",
+      "ru": "согласие",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Zgoda buduje, niezgoda rujnuje.",
+      "przyklad_ru": "Согласие строит, раздор разрушает."
+    },
+    {
+      "id": "l04-niezgoda",
+      "pl": "niezgoda",
+      "ru": "раздор, несогласие",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Czy niezgoda też czasem buduje?",
+      "przyklad_ru": "А раздор тоже иногда строит?"
+    },
+    {
+      "id": "l04-rujnowac",
+      "pl": "rujnować",
+      "ru": "разрушать, губить",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "zrujnować",
+      "przyklad": "Niezgoda rujnuje wspólne plany.",
+      "przyklad_ru": "Раздор разрушает общие планы."
+    },
+    {
+      "id": "l04-rezygnacja",
+      "pl": "rezygnacja",
+      "ru": "отказ (от чего-л.)",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Zgoda to nie rezygnacja z własnego zdania.",
+      "przyklad_ru": "Согласие — это не отказ от собственного мнения."
+    },
+    {
+      "id": "l04-musiec",
+      "pl": "musieć",
+      "ru": "быть вынужденным, быть должным",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "przyklad": "Muszę ustąpić, bo okoliczności nie dają wyboru.",
+      "przyklad_ru": "Я вынужден уступить, потому что обстоятельства не оставляют выбора."
+    },
+    {
+      "id": "l04-moc",
+      "pl": "móc",
+      "ru": "мочь",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "przyklad": "Mogę odmówić.",
+      "przyklad_ru": "Я могу отказаться."
+    },
+    {
+      "id": "l04-chciec",
+      "pl": "chcieć",
+      "ru": "хотеть",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "przyklad": "Chcę negocjować.",
+      "przyklad_ru": "Я хочу вести переговоры."
+    },
+    {
+      "id": "l04-trzeba",
+      "pl": "trzeba",
+      "ru": "нужно, надо",
+      "czesc": "wyrażenie",
+      "przyklad": "Trzeba pomóc bratu.",
+      "przyklad_ru": "Нужно помочь брату."
+    },
+    {
+      "id": "l04-ufac",
+      "pl": "ufać",
+      "ru": "доверять (кому-л.)",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "zaufać",
+      "przyklad": "Ufam ci.",
+      "przyklad_ru": "Я тебе доверяю."
+    },
+    {
+      "id": "l04-wybaczac",
+      "pl": "wybaczać",
+      "ru": "прощать (кому-л.)",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "wybaczyć",
+      "przyklad": "Wybaczam mu.",
+      "przyklad_ru": "Я его прощаю."
+    }
+  ]
+}

@@ -3,6 +3,8 @@ tytul: "Czasowniki modalne"
 emoji: "💪"
 lekcja: 4
 pytania: "musieć · móc · chcieć · powinien"
+kategoria: "czasownik"
+kolejnosc: 15
 ---
 
 ## Что это такое

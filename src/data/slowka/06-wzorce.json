@@ -1,0 +1,356 @@
+{
+  "lekcja": 6,
+  "temat": "Niewidzialne wzorce — jak czytać chaos",
+  "slowa": [
+    {
+      "id": "l06-wzorzec",
+      "pl": "wzorzec",
+      "ru": "паттерн, образец",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Wzorzec to powtarzająca się struktura w potoku wydarzeń.",
+      "przyklad_ru": "Паттерн — это повторяющаяся структура в потоке событий."
+    },
+    {
+      "id": "l06-wydarzenie",
+      "pl": "wydarzenie",
+      "ru": "событие",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Wzorzec to relacja między wieloma wydarzeniami.",
+      "przyklad_ru": "Паттерн — это связь между многими событиями."
+    },
+    {
+      "id": "l06-relacja",
+      "pl": "relacja",
+      "ru": "отношение, связь",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Relacje między setkami faktów trudno sfałszować.",
+      "przyklad_ru": "Связи между сотнями фактов подделать трудно."
+    },
+    {
+      "id": "l06-sfalszowac",
+      "pl": "sfałszować",
+      "ru": "подделать, сфальсифицировать",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "fałszować",
+      "przyklad": "Jeden fakt można sfałszować.",
+      "przyklad_ru": "Один факт можно подделать."
+    },
+    {
+      "id": "l06-wladza",
+      "pl": "władza",
+      "ru": "власть",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Władza może kontrolować fakty i narracje.",
+      "przyklad_ru": "Власть может контролировать факты и нарративы."
+    },
+    {
+      "id": "l06-narracja",
+      "pl": "narracja",
+      "ru": "нарратив, версия событий",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Porównuj narracje z różnych krajów.",
+      "przyklad_ru": "Сравнивай нарративы из разных стран."
+    },
+    {
+      "id": "l06-umiejetnosc",
+      "pl": "umiejętność",
+      "ru": "умение, навык",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Umiejętność czytania wzorców daje wolność myślenia.",
+      "przyklad_ru": "Умение читать паттерны даёт свободу мышления."
+    },
+    {
+      "id": "l06-wolnosc",
+      "pl": "wolność",
+      "ru": "свобода",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Czytanie wzorców daje wolność myślenia.",
+      "przyklad_ru": "Чтение паттернов даёт свободу мышления."
+    },
+    {
+      "id": "l06-upadek",
+      "pl": "upadek",
+      "ru": "упадок, падение",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Etap czwarty to początek upadku.",
+      "przyklad_ru": "Четвёртый этап — начало упадка."
+    },
+    {
+      "id": "l06-wartosc",
+      "pl": "wartość",
+      "ru": "ценность, стоимость",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Wartość waluty spada.",
+      "przyklad_ru": "Стоимость валюты падает."
+    },
+    {
+      "id": "l06-fundusz",
+      "pl": "fundusz",
+      "ru": "фонд",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Ray Dalio jest założycielem największego funduszu hedgingowego na świecie.",
+      "przyklad_ru": "Рэй Далио — основатель крупнейшего хедж-фонда в мире."
+    },
+    {
+      "id": "l06-imperium",
+      "pl": "imperium",
+      "ru": "империя",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Każde imperium przechodzi sześć etapów.",
+      "przyklad_ru": "Каждая империя проходит шесть этапов."
+    },
+    {
+      "id": "l06-etap",
+      "pl": "etap",
+      "ru": "этап",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Wzrost to drugi etap Wielkiego Cyklu.",
+      "przyklad_ru": "Рост — второй этап Большого Цикла."
+    },
+    {
+      "id": "l06-porzadek",
+      "pl": "porządek",
+      "ru": "порядок",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Po okresie chaosu pojawia się nowy porządek.",
+      "przyklad_ru": "После периода хаоса появляется новый порядок."
+    },
+    {
+      "id": "l06-dlug",
+      "pl": "dług",
+      "ru": "долг",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Zaczyna się gromadzenie długu.",
+      "przyklad_ru": "Начинается накопление долга."
+    },
+    {
+      "id": "l06-nierownosc",
+      "pl": "nierówność",
+      "ru": "неравенство",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Rosną długi i nierówności.",
+      "przyklad_ru": "Растут долги и неравенство."
+    },
+    {
+      "id": "l06-bogactwo",
+      "pl": "bogactwo",
+      "ru": "богатство",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Po każdym kryzysie władza i bogactwo koncentrują się w rękach nielicznych.",
+      "przyklad_ru": "После каждого кризиса власть и богатство концентрируются в руках немногих."
+    },
+    {
+      "id": "l06-zaufanie",
+      "pl": "zaufanie",
+      "ru": "доверие",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Piąty etap to utrata zaufania do instytucji.",
+      "przyklad_ru": "Пятый этап — утрата доверия к институтам."
+    },
+    {
+      "id": "l06-rewolucja",
+      "pl": "rewolucja",
+      "ru": "революция",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Wojna i rewolucja zaczynają cykl od nowa.",
+      "przyklad_ru": "Война и революция начинают цикл заново."
+    },
+    {
+      "id": "l06-waluta",
+      "pl": "waluta",
+      "ru": "валюта",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "W drugim etapie waluta jest silna.",
+      "przyklad_ru": "На втором этапе валюта сильная."
+    },
+    {
+      "id": "l06-kryzys",
+      "pl": "kryzys",
+      "ru": "кризис",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Przygotuj reformy i czekaj na kryzys.",
+      "przyklad_ru": "Подготовь реформы и жди кризиса."
+    },
+    {
+      "id": "l06-zamach-stanu",
+      "pl": "zamach stanu",
+      "ru": "государственный переворот",
+      "czesc": "wyrażenie",
+      "przyklad": "W 1973 roku w Chile doszło do zamachu stanu.",
+      "przyklad_ru": "В 1973 году в Чили произошёл государственный переворот."
+    },
+    {
+      "id": "l06-prywatyzacja",
+      "pl": "prywatyzacja",
+      "ru": "приватизация",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Prywatyzacja doprowadziła do oligarchii.",
+      "przyklad_ru": "Приватизация привела к олигархии."
+    },
+    {
+      "id": "l06-inwigilacja",
+      "pl": "inwigilacja",
+      "ru": "слежка",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Patriot Act zwiększył inwigilację obywateli.",
+      "przyklad_ru": "Патриотический акт усилил слежку за гражданами."
+    },
+    {
+      "id": "l06-pandemia",
+      "pl": "pandemia",
+      "ru": "пандемия",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Podczas pandemii nierówności jeszcze wzrosły.",
+      "przyklad_ru": "Во время пандемии неравенство ещё выросло."
+    },
+    {
+      "id": "l06-miliarder",
+      "pl": "miliarder",
+      "ru": "миллиардер",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Miliarderzy jeszcze bardziej się wzbogacili.",
+      "przyklad_ru": "Миллиардеры обогатились ещё больше."
+    },
+    {
+      "id": "l06-udzial",
+      "pl": "udział",
+      "ru": "доля, участие",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Udział dochodów najbogatszego procenta wzrósł z 11% do 22%.",
+      "przyklad_ru": "Доля доходов самого богатого процента выросла с 11% до 22%."
+    },
+    {
+      "id": "l06-dochod",
+      "pl": "dochód",
+      "ru": "доход",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Dochody najbogatszych rosną szybciej.",
+      "przyklad_ru": "Доходы самых богатых растут быстрее."
+    },
+    {
+      "id": "l06-reforma",
+      "pl": "reforma",
+      "ru": "реформа",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Przygotuj reformy, czekaj na kryzys, wdrażaj natychmiast.",
+      "przyklad_ru": "Подготовь реформы, жди кризиса, внедряй немедленно."
+    },
+    {
+      "id": "l06-teoria-spiskowa",
+      "pl": "teoria spiskowa",
+      "ru": "теория заговора",
+      "czesc": "wyrażenie",
+      "przyklad": "To nie teoria spiskowa — to opublikowana strategia.",
+      "przyklad_ru": "Это не теория заговора — это опубликованная стратегия."
+    },
+    {
+      "id": "l06-narzedzie",
+      "pl": "narzędzie",
+      "ru": "инструмент",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Poznajemy sześć narzędzi czytania wzorców.",
+      "przyklad_ru": "Мы знакомимся с шестью инструментами чтения паттернов."
+    },
+    {
+      "id": "l06-korzysc",
+      "pl": "korzyść",
+      "ru": "выгода, польза",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Prześledź łańcuch korzyści.",
+      "przyklad_ru": "Проследи цепочку выгод."
+    },
+    {
+      "id": "l06-sygnal",
+      "pl": "sygnał",
+      "ru": "сигнал",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Pieniądze to najuczciwszy sygnał.",
+      "przyklad_ru": "Деньги — самый честный сигнал."
+    },
+    {
+      "id": "l06-zrodlo",
+      "pl": "źródło",
+      "ru": "источник",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Jedno źródło to bańka informacyjna.",
+      "przyklad_ru": "Один источник — это информационный пузырь."
+    },
+    {
+      "id": "l06-sprzecznosc",
+      "pl": "sprzeczność",
+      "ru": "противоречие",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Dziesięć źródeł z różnych krajów to mapa sprzeczności.",
+      "przyklad_ru": "Десять источников из разных стран — это карта противоречий."
+    },
+    {
+      "id": "l06-cisza",
+      "pl": "cisza",
+      "ru": "тишина, молчание",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Szukaj ciszy — czego media nie mówią?",
+      "przyklad_ru": "Ищи тишину — о чём медиа не говорят?"
+    },
+    {
+      "id": "l06-badanie",
+      "pl": "badanie",
+      "ru": "исследование",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Badanie z Princeton wykazało coś zaskakującego.",
+      "przyklad_ru": "Исследование из Принстона показало нечто удивительное."
+    },
+    {
+      "id": "l06-wplyw",
+      "pl": "wpływ",
+      "ru": "влияние",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Preferencje przeciętnego Amerykanina mają bliski zeru wpływ na politykę.",
+      "przyklad_ru": "Предпочтения среднего американца имеют близкое к нулю влияние на политику."
+    },
+    {
+      "id": "l06-gospodarka",
+      "pl": "gospodarka",
+      "ru": "экономика, хозяйство",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Realna gospodarka jest w recesji.",
+      "przyklad_ru": "Реальная экономика находится в рецессии."
+    }
+  ]
+}

@@ -1,0 +1,380 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const b = import.meta.env.BASE_URL.replace(/\/$/, '');
+const href = (p: string) => `${b}/${p.replace(/^\//, '')}`;
+
+export async function getStaticPaths() {
+  const pliki = import.meta.glob<{ lekcja: number; temat: string; slowa: any[] }>(
+    '../../data/slowka/*.json',
+    { eager: true }
+  );
+
+  const talie = Object.entries(pliki)
+    .map(([sciezka, dane]) => ({
+      id: sciezka.split('/').pop()!.replace('.json', ''),
+      ...dane,
+    }))
+    .sort((a, c) => a.lekcja - c.lekcja);
+
+  const strony = talie.map((t) => ({
+    params: { talia: t.id },
+    props: { temat: t.temat, lekcja: t.lekcja, slowa: t.slowa, mieszane: false },
+  }));
+
+  // Talia specjalna: wszystko, co czeka na powtórkę dziś, ze wszystkich lekcji.
+  strony.push({
+    params: { talia: 'dzis' },
+    props: {
+      temat: 'Dzisiejsza powtórka',
+      lekcja: 0,
+      slowa: talie.flatMap((t) => t.slowa),
+      mieszane: true,
+    },
+  });
+
+  return strony;
+}
+
+const { temat, lekcja, slowa, mieszane } = Astro.props;
+---
+<Base title={`${temat} — Słówka`} active="slowka">
+  <header class="drill-head">
+    <a class="wroc" href={href('slowka/')}>← Słówka</a>
+    <h1 class="drill-h1">{temat}</h1>
+    <p class="drill-meta">
+      {mieszane ? 'wszystkie lekcje' : `Lekcja ${lekcja}`} · {slowa.length} słów w talii
+    </p>
+  </header>
+
+  <!-- Ustawienia sesji -->
+  <section class="ustawienia" id="ustawienia">
+    <div class="ust-grupa">
+      <span class="ust-label">Kierunek</span>
+      <div class="ust-btny" role="group">
+        <button class="ust-btn on" data-kierunek="pl-ru" type="button">PL → RU</button>
+        <button class="ust-btn" data-kierunek="ru-pl" type="button">RU → PL</button>
+      </div>
+    </div>
+    <div class="ust-grupa">
+      <span class="ust-label">Ile słów</span>
+      <div class="ust-btny" role="group">
+        <button class="ust-btn" data-limit="10" type="button">10</button>
+        <button class="ust-btn on" data-limit="20" type="button">20</button>
+        <button class="ust-btn" data-limit="40" type="button">40</button>
+      </div>
+    </div>
+    <button class="start-btn" id="start-btn" type="button">Zaczynamy →</button>
+    <p class="ust-info" id="ust-info"></p>
+  </section>
+
+  <!-- Sesja -->
+  <section class="sesja" id="sesja" hidden>
+    <div class="pasek">
+      <span class="pasek-fill" id="pasek-fill"></span>
+    </div>
+    <p class="licznik"><span id="licznik-teraz">1</span> / <span id="licznik-ile">20</span></p>
+
+    <div class="fiszka" id="fiszka">
+      <div class="fiszka-gora">
+        <span class="fiszka-pudelko" id="fiszka-pudelko"></span>
+        <span class="fiszka-czesc" id="fiszka-czesc"></span>
+      </div>
+
+      <p class="fiszka-pytanie" id="fiszka-pytanie"></p>
+
+      <div class="fiszka-tyl" id="fiszka-tyl" hidden>
+        <p class="fiszka-odp" id="fiszka-odp"></p>
+        <p class="fiszka-przyklad" id="fiszka-przyklad"></p>
+        <p class="fiszka-przyklad-ru" id="fiszka-przyklad-ru"></p>
+      </div>
+
+      <button class="pokaz-btn" id="pokaz-btn" type="button">Pokaż odpowiedź <kbd>spacja</kbd></button>
+
+      <div class="oceny" id="oceny" hidden>
+        <button class="ocena o-nie" data-ocena="nie-wiem" type="button">Nie wiem <kbd>1</kbd></button>
+        <button class="ocena o-prawie" data-ocena="prawie" type="button">Prawie <kbd>2</kbd></button>
+        <button class="ocena o-wiem" data-ocena="wiem" type="button">Wiem <kbd>3</kbd></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Koniec -->
+  <section class="koniec" id="koniec" hidden>
+    <h2 class="koniec-h2" id="koniec-h2">Koniec sesji!</h2>
+    <p class="koniec-wynik" id="koniec-wynik"></p>
+    <p class="koniec-nastepne" id="koniec-nastepne"></p>
+    <div class="koniec-btny">
+      <button class="start-btn" id="jeszcze-btn" type="button">Jeszcze raz</button>
+      <a class="wroc-btn" href={href('slowka/')}>Wróć do talii</a>
+    </div>
+  </section>
+
+  <script type="application/json" id="dane-slowka" set:html={JSON.stringify(slowa)}></script>
+</Base>
+
+<script>
+  import { wczytajStan, oceń, zbudujKolejke, potasuj, stanSlowa, MAX_PUDELKO } from '../../scripts/flashcards.js';
+  import { confetti } from '../../scripts/confetti.js';
+
+  const slowa = JSON.parse(document.getElementById('dane-slowka').textContent);
+  const stan = wczytajStan();
+
+  let kierunek = 'pl-ru';
+  let limit = 20;
+  let kolejka = [];
+  let idx = 0;
+  let wyniki = { wiem: 0, prawie: 0, 'nie-wiem': 0 };
+
+  const $ = (id) => document.getElementById(id);
+
+  // ————— ustawienia —————
+  document.querySelectorAll('[data-kierunek]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      kierunek = btn.dataset.kierunek;
+      document.querySelectorAll('[data-kierunek]').forEach((b) => b.classList.toggle('on', b === btn));
+    });
+  });
+  document.querySelectorAll('[data-limit]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      limit = Number(btn.dataset.limit);
+      document.querySelectorAll('[data-limit]').forEach((b) => b.classList.toggle('on', b === btn));
+      pokazInfo();
+    });
+  });
+
+  function pokazInfo() {
+    const ile = zbudujKolejke(slowa, stan, limit).length;
+    $('ust-info').textContent =
+      ile === 0
+        ? 'Wszystkie słowa z tej talii są powtórzone — wróć jutro albo wyzeruj postęp.'
+        : `W tej sesji: ${ile} słów.`;
+    $('start-btn').disabled = ile === 0;
+  }
+  pokazInfo();
+
+  // ————— sesja —————
+  $('start-btn').addEventListener('click', start);
+  $('jeszcze-btn').addEventListener('click', start);
+
+  function start() {
+    kolejka = potasuj(zbudujKolejke(slowa, stan, limit));
+    if (kolejka.length === 0) return;
+    idx = 0;
+    wyniki = { wiem: 0, prawie: 0, 'nie-wiem': 0 };
+    $('ustawienia').hidden = true;
+    $('koniec').hidden = true;
+    $('sesja').hidden = false;
+    $('licznik-ile').textContent = kolejka.length;
+    pokazFiszke();
+  }
+
+  function pokazFiszke() {
+    const s = kolejka[idx];
+    const st = stanSlowa(stan, s.id);
+
+    $('licznik-teraz').textContent = idx + 1;
+    $('pasek-fill').style.width = `${(idx / kolejka.length) * 100}%`;
+
+    $('fiszka-pudelko').textContent = st.pudelko === 0 ? 'nowe' : `pudełko ${st.pudelko}/${MAX_PUDELKO}`;
+    $('fiszka-czesc').textContent = [s.czesc, s.rodzaj, s.aspekt].filter(Boolean).join(' · ');
+
+    // Pytanie zależy od kierunku nauki
+    $('fiszka-pytanie').textContent = kierunek === 'pl-ru' ? s.pl : s.ru;
+    $('fiszka-odp').textContent = kierunek === 'pl-ru' ? s.ru : s.pl;
+    $('fiszka-przyklad').textContent = s.przyklad ?? '';
+    $('fiszka-przyklad-ru').textContent = s.przyklad_ru ?? '';
+
+    $('fiszka-tyl').hidden = true;
+    $('oceny').hidden = true;
+    $('pokaz-btn').hidden = false;
+  }
+
+  function odkryj() {
+    $('fiszka-tyl').hidden = false;
+    $('oceny').hidden = false;
+    $('pokaz-btn').hidden = true;
+  }
+
+  $('pokaz-btn').addEventListener('click', odkryj);
+
+  document.querySelectorAll('[data-ocena]').forEach((btn) => {
+    btn.addEventListener('click', () => odpowiedz(btn.dataset.ocena));
+  });
+
+  function odpowiedz(ocena) {
+    if ($('oceny').hidden) return; // najpierw trzeba odkryć
+    oceń(stan, kolejka[idx].id, ocena);
+    wyniki[ocena]++;
+    idx++;
+    if (idx >= kolejka.length) koniec();
+    else pokazFiszke();
+  }
+
+  function koniec() {
+    $('pasek-fill').style.width = '100%';
+    $('sesja').hidden = true;
+    $('koniec').hidden = false;
+
+    const ile = kolejka.length;
+    const proc = Math.round((wyniki.wiem / ile) * 100);
+    $('koniec-wynik').textContent =
+      `Umiane: ${wyniki.wiem} · Prawie: ${wyniki.prawie} · Do powtórki: ${wyniki['nie-wiem']} — ${proc}% pewnych.`;
+
+    // Ile słów wraca jutro
+    const jutro = kolejka.filter((s) => {
+      const st = stanSlowa(stan, s.id);
+      return st.termin <= Date.now() + 24 * 60 * 60 * 1000 && st.pudelko < MAX_PUDELKO;
+    }).length;
+    $('koniec-nastepne').textContent =
+      jutro > 0 ? `Jutro wróci ${jutro} z nich.` : 'Nic z tej sesji nie wraca jutro — dobra robota.';
+
+    if (proc >= 90) {
+      $('koniec-h2').textContent = 'Świetnie! 🎉';
+      confetti();
+    } else if (proc >= 60) {
+      $('koniec-h2').textContent = 'Dobra sesja 👍';
+    } else {
+      $('koniec-h2').textContent = 'Powtarzamy dalej 💪';
+    }
+  }
+
+  // ————— klawiatura —————
+  document.addEventListener('keydown', (e) => {
+    if ($('sesja').hidden) return;
+    if (e.code === 'Space' || e.key === 'Enter') {
+      e.preventDefault();
+      if ($('oceny').hidden) odkryj();
+      return;
+    }
+    if (e.key === '1') odpowiedz('nie-wiem');
+    if (e.key === '2') odpowiedz('prawie');
+    if (e.key === '3') odpowiedz('wiem');
+  });
+</script>
+
+<style>
+  .drill-head { padding-top: 26px; margin-bottom: 22px; }
+  .wroc { color: var(--text-dim); text-decoration: none; font-size: 0.88rem; }
+  .wroc:hover { color: var(--blekit); }
+  .drill-h1 { font-size: clamp(1.8rem, 5.5vw, 2.6rem); font-weight: 800; margin: 8px 0 4px; text-transform: uppercase; }
+  .drill-meta { color: var(--text-dim); font-size: 0.9rem; margin: 0; }
+
+  /* ——— ustawienia ——— */
+  .ustawienia {
+    display: flex; flex-direction: column; gap: 18px;
+    padding: 24px; background: var(--panel);
+    border: 1px solid var(--line); border-radius: calc(var(--radius) + 2px);
+  }
+  .ust-grupa { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .ust-label {
+    font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--text-dim); min-width: 8ch;
+  }
+  .ust-btny { display: flex; gap: 8px; }
+  .ust-btn {
+    background: var(--panel-2); border: 1px solid var(--line); color: var(--text-dim);
+    padding: 8px 16px; border-radius: 99px; cursor: pointer;
+    font-family: var(--font-body); font-size: 0.9rem; font-weight: 600;
+    transition: all 0.16s ease;
+  }
+  .ust-btn:hover { border-color: var(--blekit); color: var(--text); }
+  .ust-btn.on { background: var(--blekit); border-color: var(--blekit); color: #0a1e3d; }
+
+  .start-btn {
+    align-self: flex-start;
+    background: var(--blekit); border: none; color: #0a1e3d;
+    padding: 12px 26px; border-radius: 99px; cursor: pointer;
+    font-family: var(--font-display); font-size: 1.05rem; font-weight: 800;
+    transition: transform 0.16s ease, opacity 0.16s ease;
+  }
+  .start-btn:hover:not(:disabled) { transform: translateY(-2px); }
+  .start-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+  .ust-info { color: var(--text-dim); font-size: 0.88rem; margin: 0; }
+
+  /* ——— sesja ——— */
+  .pasek { height: 6px; background: var(--panel-2); border-radius: 99px; overflow: hidden; margin-bottom: 8px; }
+  .pasek-fill { display: block; height: 100%; width: 0; background: var(--blekit); transition: width 0.3s ease; }
+  .licznik {
+    text-align: right; color: var(--text-dim); font-size: 0.82rem;
+    font-variant-numeric: tabular-nums; margin: 0 0 16px;
+  }
+
+  .fiszka {
+    display: flex; flex-direction: column; align-items: center; gap: 14px;
+    min-height: 340px; padding: 28px 24px;
+    background: var(--panel); border: 1px solid var(--line);
+    border-radius: calc(var(--radius) + 4px);
+    text-align: center;
+  }
+  .fiszka-gora { display: flex; justify-content: space-between; width: 100%; gap: 10px; }
+  .fiszka-pudelko, .fiszka-czesc {
+    font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim);
+  }
+  .fiszka-pytanie {
+    font-family: var(--font-display); font-size: clamp(1.9rem, 6vw, 2.8rem);
+    font-weight: 800; margin: 22px 0 6px; line-height: 1.2;
+  }
+
+  .fiszka-tyl { width: 100%; animation: odkryj 0.25s ease both; }
+  .fiszka-odp {
+    font-size: clamp(1.3rem, 4vw, 1.7rem); font-weight: 700;
+    color: var(--blekit); margin: 0 0 14px;
+  }
+  .fiszka-przyklad {
+    font-style: italic; color: var(--text); margin: 0 0 4px; line-height: 1.5;
+    padding-top: 14px; border-top: 1px solid var(--line);
+  }
+  .fiszka-przyklad-ru { color: var(--text-dim); font-size: 0.9rem; margin: 0; line-height: 1.5; }
+
+  .pokaz-btn {
+    margin-top: auto;
+    background: var(--panel-2); border: 1px solid var(--line); color: var(--text);
+    padding: 12px 26px; border-radius: 99px; cursor: pointer;
+    font-family: var(--font-body); font-size: 1rem; font-weight: 600;
+    transition: border-color 0.16s ease;
+  }
+  .pokaz-btn:hover { border-color: var(--blekit); }
+
+  .oceny { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 100%; margin-top: auto; }
+  .ocena {
+    padding: 14px 8px; border-radius: var(--radius); cursor: pointer;
+    font-family: var(--font-body); font-weight: 700; font-size: 0.95rem;
+    border: 1px solid var(--line); background: var(--panel-2); color: var(--text);
+    display: flex; flex-direction: column; gap: 4px; align-items: center;
+    transition: transform 0.14s ease, border-color 0.14s ease;
+  }
+  .ocena:hover { transform: translateY(-2px); }
+  .o-nie:hover { border-color: var(--mak); color: var(--mak); }
+  .o-prawie:hover { border-color: var(--amber); color: var(--amber); }
+  .o-wiem:hover { border-color: var(--blekit); color: var(--blekit); }
+
+  kbd {
+    font-family: var(--font-body); font-size: 0.68rem; opacity: 0.55;
+    border: 1px solid currentColor; border-radius: 4px; padding: 0 5px;
+  }
+
+  /* ——— koniec ——— */
+  .koniec {
+    padding: 34px 24px; text-align: center;
+    background: var(--panel); border: 1px solid var(--line);
+    border-radius: calc(var(--radius) + 4px);
+  }
+  .koniec-h2 { font-size: 2rem; margin: 0 0 12px; }
+  .koniec-wynik { font-size: 1.05rem; margin: 0 0 6px; }
+  .koniec-nastepne { color: var(--text-dim); margin: 0 0 24px; }
+  .koniec-btny { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .wroc-btn {
+    padding: 12px 26px; border-radius: 99px;
+    border: 1px solid var(--line); color: var(--text); text-decoration: none;
+    font-weight: 600;
+  }
+  .wroc-btn:hover { border-color: var(--blekit); }
+
+  @keyframes odkryj { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+  @media (max-width: 560px) {
+    .oceny { grid-template-columns: 1fr; }
+    .ust-grupa { align-items: flex-start; flex-direction: column; gap: 8px; }
+  }
+</style>

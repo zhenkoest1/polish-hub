@@ -3,6 +3,8 @@ tytul: "Narzędnik (Instrumental)"
 emoji: "🛠️"
 lekcja: 3
 pytania: "kim? czym?"
+kategoria: "przypadki"
+kolejnosc: 5
 ---
 
 ## Вопросы: Kim? Czym?

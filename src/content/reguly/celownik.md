@@ -3,6 +3,8 @@ tytul: "Celownik (Dative)"
 emoji: "🤲"
 lekcja: 4
 pytania: "komu? czemu?"
+kategoria: "przypadki"
+kolejnosc: 4
 ---
 
 ## Вопросы: Komu? Czemu?

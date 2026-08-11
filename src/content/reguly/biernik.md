@@ -3,6 +3,8 @@ tytul: "Biernik (Accusative)"
 emoji: "🎯"
 lekcja: 2
 pytania: "kogo? co?"
+kategoria: "przypadki"
+kolejnosc: 2
 ---
 
 ## Вопросы: Kogo? Co?

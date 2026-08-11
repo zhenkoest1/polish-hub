@@ -1,0 +1,372 @@
+{
+  "lekcja": 7,
+  "temat": "Dylemat więźnia",
+  "slowa": [
+    {
+      "id": "l07-wiezien",
+      "pl": "więzień",
+      "ru": "заключённый",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Obaj więźniowie siedzą w osobnych celach.",
+      "przyklad_ru": "Оба заключённых сидят в отдельных камерах."
+    },
+    {
+      "id": "l07-podejrzany",
+      "pl": "podejrzany",
+      "ru": "подозреваемый",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Policja zatrzymała dwóch podejrzanych.",
+      "przyklad_ru": "Полиция задержала двоих подозреваемых."
+    },
+    {
+      "id": "l07-dowod",
+      "pl": "dowód",
+      "ru": "доказательство",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Nie ma wystarczających dowodów, żeby ich skazać.",
+      "przyklad_ru": "Нет достаточных доказательств, чтобы их осудить."
+    },
+    {
+      "id": "l07-cela",
+      "pl": "cela",
+      "ru": "камера (тюремная)",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Prokurator umieszcza każdego w osobnej celi.",
+      "przyklad_ru": "Прокурор помещает каждого в отдельную камеру."
+    },
+    {
+      "id": "l07-prokurator",
+      "pl": "prokurator",
+      "ru": "прокурор",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Prokurator proponuje każdemu taką samą umowę.",
+      "przyklad_ru": "Прокурор предлагает каждому одну и ту же сделку."
+    },
+    {
+      "id": "l07-zdradzic",
+      "pl": "zdradzić",
+      "ru": "предать",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "zdradzać",
+      "przyklad": "Jeśli zdradzisz kolegę, wyjdziesz na wolność.",
+      "przyklad_ru": "Если ты предашь товарища, выйдешь на свободу."
+    },
+    {
+      "id": "l07-zdrada",
+      "pl": "zdrada",
+      "ru": "предательство",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Odpowiadaj na zdradę, ale potem wracaj do współpracy.",
+      "przyklad_ru": "Отвечай на предательство, но потом возвращайся к сотрудничеству."
+    },
+    {
+      "id": "l07-milczec",
+      "pl": "milczeć",
+      "ru": "молчать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "przyklad": "Jeśli obaj będziecie milczeć, dostaniecie po roku.",
+      "przyklad_ru": "Если вы оба будете молчать, получите по году."
+    },
+    {
+      "id": "l07-zaufanie",
+      "pl": "zaufanie",
+      "ru": "доверие",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Dylemat więźnia rozwiązuje się zaufaniem.",
+      "przyklad_ru": "Дилемма заключённого решается доверием."
+    },
+    {
+      "id": "l07-zaufac",
+      "pl": "zaufać",
+      "ru": "довериться, доверять",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "ufać",
+      "przyklad": "Gdyby więźniowie zaufali sobie, dostaliby po roku.",
+      "przyklad_ru": "Если бы заключённые доверились друг другу, они получили бы по году."
+    },
+    {
+      "id": "l07-wspolpraca",
+      "pl": "współpraca",
+      "ru": "сотрудничество",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "W pierwszym ruchu wybierz współpracę.",
+      "przyklad_ru": "Первым ходом выбери сотрудничество."
+    },
+    {
+      "id": "l07-wynik",
+      "pl": "wynik",
+      "ru": "результат",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Racjonalny wybór doprowadził obu do gorszego wyniku.",
+      "przyklad_ru": "Рациональный выбор привёл обоих к худшему результату."
+    },
+    {
+      "id": "l07-paradoks",
+      "pl": "paradoks",
+      "ru": "парадокс",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "I właśnie tu kryje się paradoks.",
+      "przyklad_ru": "И именно здесь кроется парадокс."
+    },
+    {
+      "id": "l07-zimna-wojna",
+      "pl": "zimna wojna",
+      "ru": "холодная война",
+      "czesc": "wyrażenie",
+      "przyklad": "Zimna wojna była dylematem więźnia w skali planetarnej.",
+      "przyklad_ru": "Холодная война была дилеммой заключённого в планетарном масштабе."
+    },
+    {
+      "id": "l07-wyscig-zbrojen",
+      "pl": "wyścig zbrojeń",
+      "ru": "гонка вооружений",
+      "czesc": "wyrażenie",
+      "przyklad": "Wyścig zbrojeń kosztował oba kraje ogromne pieniądze.",
+      "przyklad_ru": "Гонка вооружений стоила обеим странам огромных денег."
+    },
+    {
+      "id": "l07-zelazna-kurtyna",
+      "pl": "żelazna kurtyna",
+      "ru": "железный занавес",
+      "czesc": "wyrażenie",
+      "przyklad": "USA i ZSRR były po dwóch stronach żelaznej kurtyny.",
+      "przyklad_ru": "США и СССР находились по две стороны железного занавеса."
+    },
+    {
+      "id": "l07-bron",
+      "pl": "broń",
+      "ru": "оружие",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Obie strony miały tyle broni, żeby zniszczyć świat.",
+      "przyklad_ru": "У обеих сторон было столько оружия, чтобы уничтожить мир."
+    },
+    {
+      "id": "l07-rozbroic-sie",
+      "pl": "rozbroić się",
+      "ru": "разоружиться",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "rozbrajać się",
+      "przyklad": "Gdybyśmy się rozbroili, a oni nie, zniszczyliby nas.",
+      "przyklad_ru": "Если бы мы разоружились, а они нет, они бы нас уничтожили."
+    },
+    {
+      "id": "l07-rozbrojenie",
+      "pl": "rozbrojenie",
+      "ru": "разоружение",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Po raz pierwszy poważnie rozmawiali o realnym rozbrojeniu.",
+      "przyklad_ru": "Впервые они всерьёз говорили о реальном разоружении."
+    },
+    {
+      "id": "l07-brak",
+      "pl": "brak",
+      "ru": "нехватка, отсутствие",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Szkoły i szpitale cierpiały z powodu braku pieniędzy.",
+      "przyklad_ru": "Школы и больницы страдали из-за нехватки денег."
+    },
+    {
+      "id": "l07-zaryzykowac",
+      "pl": "zaryzykować",
+      "ru": "рискнуть",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "ryzykować",
+      "przyklad": "Gdyby Gorbaczow nie zaryzykował, zimna wojna trwałaby dalej.",
+      "przyklad_ru": "Если бы Горбачёв не рискнул, холодная война продолжалась бы дальше."
+    },
+    {
+      "id": "l07-przelom",
+      "pl": "przełom",
+      "ru": "прорыв, перелом",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Pierwszy przełom nastąpił w Reykjaviku w 1986 roku.",
+      "przyklad_ru": "Первый прорыв произошёл в Рейкьявике в 1986 году."
+    },
+    {
+      "id": "l07-turniej",
+      "pl": "turniej",
+      "ru": "турнир",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Robert Axelrod zorganizował niezwykły turniej.",
+      "przyklad_ru": "Роберт Аксельрод организовал необычный турнир."
+    },
+    {
+      "id": "l07-strategia",
+      "pl": "strategia",
+      "ru": "стратегия",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Wygrała strategia o czterech linijkach kodu.",
+      "przyklad_ru": "Победила стратегия из четырёх строк кода."
+    },
+    {
+      "id": "l07-ruch",
+      "pl": "ruch",
+      "ru": "ход, движение",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Potem powtarzaj ostatni ruch przeciwnika.",
+      "przyklad_ru": "Потом повторяй последний ход противника."
+    },
+    {
+      "id": "l07-przeciwnik",
+      "pl": "przeciwnik",
+      "ru": "противник",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Czasem nie widzimy dokładnie ruchu przeciwnika.",
+      "przyklad_ru": "Иногда мы не видим точно хода противника."
+    },
+    {
+      "id": "l07-zyczliwosc",
+      "pl": "życzliwość",
+      "ru": "доброжелательность",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Życzliwość znaczy: nigdy nie zdradzaj pierwszy.",
+      "przyklad_ru": "Доброжелательность значит: никогда не предавай первым."
+    },
+    {
+      "id": "l07-przebaczenie",
+      "pl": "przebaczenie",
+      "ru": "прощение",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Kiedy przebaczenie staje się naiwnością?",
+      "przyklad_ru": "Когда прощение становится наивностью?"
+    },
+    {
+      "id": "l07-przebaczac",
+      "pl": "przebaczać",
+      "ru": "прощать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "przebaczyć",
+      "przyklad": "Po odpowiedzi trzeba przebaczać i wracać do współpracy.",
+      "przyklad_ru": "После ответа нужно прощать и возвращаться к сотрудничеству."
+    },
+    {
+      "id": "l07-przejrzystosc",
+      "pl": "przejrzystość",
+      "ru": "прозрачность",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Przejrzystość znaczy: bądź przewidywalny.",
+      "przyklad_ru": "Прозрачность значит: будь предсказуем."
+    },
+    {
+      "id": "l07-chowac-uraze",
+      "pl": "chować urazę",
+      "ru": "держать обиду",
+      "czesc": "wyrażenie",
+      "przyklad": "Nie chowaj urazy po odpowiedzi.",
+      "przyklad_ru": "Не держи обиду после ответа."
+    },
+    {
+      "id": "l07-wykorzystywac",
+      "pl": "wykorzystywać",
+      "ru": "использовать (в своих целях)",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "wykorzystać",
+      "przyklad": "Nie pozwalaj się wykorzystywać.",
+      "przyklad_ru": "Не позволяй себя использовать."
+    },
+    {
+      "id": "l07-emisja",
+      "pl": "emisja",
+      "ru": "выброс (вредных веществ)",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Każdemu krajowi opłaca się nie redukować emisji.",
+      "przyklad_ru": "Каждой стране выгодно не сокращать выбросы."
+    },
+    {
+      "id": "l07-podatek",
+      "pl": "podatek",
+      "ru": "налог",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Jeśli wszyscy płacą podatki uczciwie, system działa.",
+      "przyklad_ru": "Если все платят налоги честно, система работает."
+    },
+    {
+      "id": "l07-oszukiwac",
+      "pl": "oszukiwać",
+      "ru": "обманывать, жульничать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "oszukać",
+      "przyklad": "Jeśli wystarczająco dużo ludzi zacznie oszukiwać, opłaca się oszukiwać.",
+      "przyklad_ru": "Если достаточно много людей начнёт обманывать, обманывать становится выгодно."
+    },
+    {
+      "id": "l07-podkopywac",
+      "pl": "podkopywać",
+      "ru": "подсиживать, подрывать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "podkopać",
+      "przyklad": "Podkopywać kolegę czy mu pomóc?",
+      "przyklad_ru": "Подсиживать коллегу или помочь ему?"
+    },
+    {
+      "id": "l07-obrazic-sie",
+      "pl": "obrazić się",
+      "ru": "обидеться",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "obrażać się",
+      "przyklad": "On się obraził, a ona odpowiedziała milczeniem.",
+      "przyklad_ru": "Он обиделся, а она ответила молчанием."
+    },
+    {
+      "id": "l07-petla",
+      "pl": "pętla",
+      "ru": "петля, цикл",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Bez tego pętla się nie przerwie.",
+      "przyklad_ru": "Без этого петля не разорвётся."
+    },
+    {
+      "id": "l07-wydluzac",
+      "pl": "wydłużać",
+      "ru": "удлинять",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "wydłużyć",
+      "przyklad": "Axelrod odpowiada: trzeba wydłużać grę.",
+      "przyklad_ru": "Аксельрод отвечает: нужно удлинять игру."
+    },
+    {
+      "id": "l07-konsekwencja",
+      "pl": "konsekwencja",
+      "ru": "последствие",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Im bardziej widzimy konsekwencje swoich ruchów, tym więcej współpracy.",
+      "przyklad_ru": "Чем больше мы видим последствия своих ходов, тем больше сотрудничества."
+    }
+  ]
+}

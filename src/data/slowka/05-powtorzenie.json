@@ -1,0 +1,230 @@
+{
+  "lekcja": 5,
+  "temat": "Wielkie powtórzenie — lekcje 1–4",
+  "slowa": [
+    {
+      "id": "l05-powtorzenie",
+      "pl": "powtórzenie",
+      "ru": "повторение",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Wielkie powtórzenie: cztery lekcje w jeden wieczór.",
+      "przyklad_ru": "Большое повторение: четыре урока за один вечер."
+    },
+    {
+      "id": "l05-stopniowanie",
+      "pl": "stopniowanie",
+      "ru": "степени сравнения",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Pierwszy blok to stopniowanie przymiotników.",
+      "przyklad_ru": "Первый блок — степени сравнения прилагательных."
+    },
+    {
+      "id": "l05-przymiotnik",
+      "pl": "przymiotnik",
+      "ru": "прилагательное",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Polskie przymiotniki mają trzy stopnie.",
+      "przyklad_ru": "Польские прилагательные имеют три степени."
+    },
+    {
+      "id": "l05-mianownik",
+      "pl": "mianownik",
+      "ru": "именительный падеж",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Męski nieżywotny biernik jest równy mianownikowi.",
+      "przyklad_ru": "Винительный падеж мужского неодушевлённого совпадает с именительным."
+    },
+    {
+      "id": "l05-biernik",
+      "pl": "biernik",
+      "ru": "винительный падеж",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Biernik odpowiada na pytania kogo? co?",
+      "przyklad_ru": "Винительный падеж отвечает на вопросы кого? что?"
+    },
+    {
+      "id": "l05-narzednik",
+      "pl": "narzędnik",
+      "ru": "творительный падеж",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Narzędnik odpowiada na pytania kim? czym?",
+      "przyklad_ru": "Творительный падеж отвечает на вопросы кем? чем?"
+    },
+    {
+      "id": "l05-celownik",
+      "pl": "celownik",
+      "ru": "дательный падеж",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Celownik odpowiada na pytania komu? czemu?",
+      "przyklad_ru": "Дательный падеж отвечает на вопросы кому? чему?"
+    },
+    {
+      "id": "l05-rodzaj",
+      "pl": "rodzaj",
+      "ru": "род",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Czasownik powinien zmienia się przez rodzaje.",
+      "przyklad_ru": "Глагол powinien изменяется по родам."
+    },
+    {
+      "id": "l05-koncowka",
+      "pl": "końcówka",
+      "ru": "окончание",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Cała trudność leży w końcówkach.",
+      "przyklad_ru": "Вся трудность — в окончаниях."
+    },
+    {
+      "id": "l05-wyjatek",
+      "pl": "wyjątek",
+      "ru": "исключение",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "W rodzaju męskim jest końcówka -owi, ale są wyjątki na -u.",
+      "przyklad_ru": "В мужском роде окончание -owi, но есть исключения на -u."
+    },
+    {
+      "id": "l05-porownanie",
+      "pl": "porównanie",
+      "ru": "сравнение",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Porównanie: Rysy są wyższe niż Giewont.",
+      "przyklad_ru": "Сравнение: Рысы выше, чем Гевонт."
+    },
+    {
+      "id": "l05-koniecznosc",
+      "pl": "konieczność",
+      "ru": "необходимость",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Słowo trzeba wyraża konieczność.",
+      "przyklad_ru": "Слово trzeba выражает необходимость."
+    },
+    {
+      "id": "l05-mozliwosc",
+      "pl": "możliwość",
+      "ru": "возможность",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Słowo można wyraża możliwość.",
+      "przyklad_ru": "Слово można выражает возможность."
+    },
+    {
+      "id": "l05-pozwolenie",
+      "pl": "pozwolenie",
+      "ru": "разрешение",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Słowo wolno wyraża pozwolenie.",
+      "przyklad_ru": "Слово wolno выражает разрешение."
+    },
+    {
+      "id": "l05-szczyt",
+      "pl": "szczyt",
+      "ru": "вершина",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Rysy to najwyższy szczyt w polskich Tatrach.",
+      "przyklad_ru": "Рысы — самая высокая вершина в польских Татрах."
+    },
+    {
+      "id": "l05-wypalenie",
+      "pl": "wypalenie",
+      "ru": "выгорание",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Wypalenie jest poważniejsze niż zwykłe zmęczenie.",
+      "przyklad_ru": "Выгорание серьёзнее, чем обычная усталость."
+    },
+    {
+      "id": "l05-zmeczenie",
+      "pl": "zmęczenie",
+      "ru": "усталость",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Samoeksploatacja to najgroźniejszy rodzaj zmęczenia.",
+      "przyklad_ru": "Самоэксплуатация — самый опасный вид усталости."
+    },
+    {
+      "id": "l05-kolejka-linowa",
+      "pl": "kolejka linowa",
+      "ru": "канатная дорога",
+      "czesc": "wyrażenie",
+      "przyklad": "Kolejka linowa jest łatwiejsza niż wędrówka pieszo.",
+      "przyklad_ru": "Канатная дорога легче, чем поход пешком."
+    },
+    {
+      "id": "l05-wedrowka",
+      "pl": "wędrówka",
+      "ru": "поход, пеший переход",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Wędrówka pieszo jest trudniejsza niż kolejka linowa.",
+      "przyklad_ru": "Поход пешком труднее, чем канатная дорога."
+    },
+    {
+      "id": "l05-niedzwiedz",
+      "pl": "niedźwiedź",
+      "ru": "медведь",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Niedźwiedź jest cięższy niż kozica.",
+      "przyklad_ru": "Медведь тяжелее, чем серна."
+    },
+    {
+      "id": "l05-kozica",
+      "pl": "kozica",
+      "ru": "серна",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Kozica jest mniejsza niż niedźwiedź.",
+      "przyklad_ru": "Серна меньше, чем медведь."
+    },
+    {
+      "id": "l05-swistak",
+      "pl": "świstak",
+      "ru": "сурок",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Świstak to najmniejsze zwierzę z tych trzech.",
+      "przyklad_ru": "Сурок — самое маленькое животное из этих трёх."
+    },
+    {
+      "id": "l05-samoeksploatacja",
+      "pl": "samoeksploatacja",
+      "ru": "самоэксплуатация",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Samoeksploatacja jest gorsza niż eksploatacja przez szefa.",
+      "przyklad_ru": "Самоэксплуатация хуже, чем эксплуатация начальником."
+    },
+    {
+      "id": "l05-pulapka",
+      "pl": "pułapka",
+      "ru": "ловушка",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Czy oba zjawiska to pułapki bez wroga?",
+      "przyklad_ru": "Оба ли эти явления — ловушки без врага?"
+    },
+    {
+      "id": "l05-odpoczynek",
+      "pl": "odpoczynek",
+      "ru": "отдых",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Czy odpoczynek to kompromis z samym sobą?",
+      "przyklad_ru": "Является ли отдых компромиссом с самим собой?"
+    }
+  ]
+}

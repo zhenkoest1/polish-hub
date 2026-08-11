@@ -5,29 +5,87 @@ import { getCollection } from 'astro:content';
 const b = import.meta.env.BASE_URL.replace(/\/$/, '');
 const href = (p: string) => `${b}/${p.replace(/^\//, '')}`;
 
-const reguly = (await getCollection('reguly')).sort((a, c) => (a.data.lekcja ?? 99) - (c.data.lekcja ?? 99));
+const wszystkie = (await getCollection('reguly')).sort(
+  (a, c) => (a.data.kolejnosc ?? 99) - (c.data.kolejnosc ?? 99)
+);
+
+const GRUPY = [
+  { id: 'przypadki', nazwa: 'Przypadki', opis: 'siedem przypadków — kto? kogo? komu?', kolor: 'var(--mak)' },
+  { id: 'czasownik', nazwa: 'Czasownik', opis: 'aspekt, czasy i tryby', kolor: 'var(--amber)' },
+  { id: 'inne', nazwa: 'Reszta gramatyki', opis: 'zaimki, liczebniki, przyimki, spójniki', kolor: 'var(--zielony)' },
+] as const;
+
+const grupy = GRUPY.map((g) => ({
+  ...g,
+  reguly: wszystkie.filter((r) => (r.data.kategoria ?? 'inne') === g.id),
+})).filter((g) => g.reguly.length > 0);
 ---
 <Base title="Reguły — Polski Klub" active="reguly">
   <header class="page-head">
     <p class="kicker" style="color: var(--mak)">gramatyka w pigułce — ściągi na spotkania</p>
     <h1 class="page-h1">Reguły</h1>
+    <p class="page-sub">{wszystkie.length} ściąg w trzech blokach. Każda to jedna strona — otwierasz na spotkaniu i masz wszystko przed oczami.</p>
   </header>
 
-  <div class="rule-grid">
-    {reguly.map((r, i) => (
-      <a class="rule-card" href={href(`reguly/${r.id}/`)} style={`animation-delay: ${i * 70}ms`}>
-        <span class="rule-emoji">{r.data.emoji}</span>
-        <span class="rule-title">{r.data.tytul}</span>
-        {r.data.pytania && <span class="rule-pytania">{r.data.pytania}</span>}
-        {r.data.lekcja && <span class="rule-lekcja">Lekcja {r.data.lekcja}</span>}
-      </a>
-    ))}
-  </div>
+  {grupy.map((g) => (
+    <section class="rule-group">
+      <div class="group-head" style={`--akcent: ${g.kolor}`}>
+        <h2 class="group-name">{g.nazwa}</h2>
+        <span class="group-opis">{g.opis}</span>
+        <span class="group-count">{g.reguly.length}</span>
+      </div>
+      <div class="rule-grid">
+        {g.reguly.map((r, i) => (
+          <a
+            class="rule-card"
+            href={href(`reguly/${r.id}/`)}
+            style={`animation-delay: ${i * 55}ms; --akcent: ${g.kolor}`}
+          >
+            <span class="rule-emoji">{r.data.emoji}</span>
+            <span class="rule-title">{r.data.tytul}</span>
+            {r.data.pytania && <span class="rule-pytania">{r.data.pytania}</span>}
+            {r.data.lekcja && <span class="rule-lekcja">Lekcja {r.data.lekcja}</span>}
+          </a>
+        ))}
+      </div>
+    </section>
+  ))}
 </Base>
 
 <style>
   .page-head { padding-top: 30px; }
-  .page-h1 { font-size: clamp(2.2rem, 7vw, 3.4rem); font-weight: 800; margin: 0 0 22px; text-transform: uppercase; }
+  .page-h1 { font-size: clamp(2.2rem, 7vw, 3.4rem); font-weight: 800; margin: 0 0 10px; text-transform: uppercase; }
+  .page-sub { color: var(--text-dim); max-width: 56ch; margin: 0 0 30px; line-height: 1.55; }
+
+  .rule-group { margin-bottom: 40px; }
+  .group-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--akcent);
+  }
+  .group-name {
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin: 0;
+    color: var(--akcent);
+  }
+  .group-opis { color: var(--text-dim); font-size: 0.92rem; flex: 1; }
+  .group-count {
+    font-variant-numeric: tabular-nums;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    border: 1px solid var(--line);
+    border-radius: 99px;
+    padding: 2px 10px;
+  }
 
   .rule-grid {
     display: grid;
@@ -54,10 +112,10 @@ const reguly = (await getCollection('reguly')).sort((a, c) => (a.data.lekcja ?? 
     position: absolute;
     inset: 0 0 auto;
     height: 4px;
-    background: var(--mak);
+    background: var(--akcent, var(--mak));
     opacity: 0.85;
   }
-  .rule-card:hover { transform: translateY(-4px); border-color: var(--mak); }
+  .rule-card:hover { transform: translateY(-4px); border-color: var(--akcent, var(--mak)); }
   .rule-emoji { font-size: 1.9rem; line-height: 1; }
   .rule-title { font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; }
   .rule-pytania { color: var(--amber); font-style: italic; font-size: 0.92rem; }

@@ -1,0 +1,360 @@
+{
+  "lekcja": 3,
+  "temat": "Żelazne prawo oligarchii",
+  "slowa": [
+    {
+      "id": "l03-prawo",
+      "pl": "prawo",
+      "ru": "закон; право",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Michels nazywa to żelaznym prawem oligarchii.",
+      "przyklad_ru": "Михельс называет это железным законом олигархии."
+    },
+    {
+      "id": "l03-zelazny",
+      "pl": "żelazny",
+      "ru": "железный",
+      "czesc": "przymiotnik",
+      "przyklad": "To prawo jest żelazne, czyli twarde.",
+      "przyklad_ru": "Этот закон железный, то есть твёрдый."
+    },
+    {
+      "id": "l03-zlamac",
+      "pl": "złamać",
+      "ru": "сломать, нарушить",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "łamać",
+      "przyklad": "Żelaznego prawa nie można złamać.",
+      "przyklad_ru": "Железный закон нельзя нарушить."
+    },
+    {
+      "id": "l03-wladza",
+      "pl": "władza",
+      "ru": "власть",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Kto naprawdę ma władzę w organizacji?",
+      "przyklad_ru": "У кого на самом деле власть в организации?"
+    },
+    {
+      "id": "l03-rzadzic",
+      "pl": "rządzić",
+      "ru": "править, управлять (кем/чем)",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "przyklad": "Partią rządziła mała grupa liderów.",
+      "przyklad_ru": "Партией правила маленькая группа лидеров."
+    },
+    {
+      "id": "l03-oligarchia",
+      "pl": "oligarchia",
+      "ru": "олигархия",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Każda duża organizacja kończy jako oligarchia.",
+      "przyklad_ru": "Каждая большая организация заканчивает как олигархия."
+    },
+    {
+      "id": "l03-nieliczny",
+      "pl": "nieliczny",
+      "ru": "немногочисленный (nieliczni — немногие)",
+      "czesc": "przymiotnik",
+      "przyklad": "Oligarchia to rządy nielicznych.",
+      "przyklad_ru": "Олигархия — это правление немногих."
+    },
+    {
+      "id": "l03-organizacja",
+      "pl": "organizacja",
+      "ru": "организация",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Kto mówi organizacja, mówi oligarchia.",
+      "przyklad_ru": "Кто говорит «организация», говорит «олигархия»."
+    },
+    {
+      "id": "l03-czlonek",
+      "pl": "członek",
+      "ru": "член (организации), участник",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Zwykły członek głosuje rzadko.",
+      "przyklad_ru": "Рядовой член голосует редко."
+    },
+    {
+      "id": "l03-zwykly",
+      "pl": "zwykły",
+      "ru": "обычный, рядовой",
+      "czesc": "przymiotnik",
+      "przyklad": "Zwykły członek nie może kontrolować lidera.",
+      "przyklad_ru": "Рядовой член не может контролировать лидера."
+    },
+    {
+      "id": "l03-lider",
+      "pl": "lider",
+      "ru": "лидер",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Lider z czasem staje się ekspertem.",
+      "przyklad_ru": "Лидер со временем становится экспертом."
+    },
+    {
+      "id": "l03-wodz",
+      "pl": "wódz",
+      "ru": "вождь",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Ludzie lubią mieć wodza.",
+      "przyklad_ru": "Люди любят иметь вождя."
+    },
+    {
+      "id": "l03-ekspert",
+      "pl": "ekspert",
+      "ru": "эксперт",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Ekspert zna prawo, procedury i ludzi.",
+      "przyklad_ru": "Эксперт знает закон, процедуры и людей."
+    },
+    {
+      "id": "l03-wiedza",
+      "pl": "wiedza",
+      "ru": "знание, знания",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Zwykły członek nie ma tej wiedzy.",
+      "przyklad_ru": "У рядового члена нет этого знания."
+    },
+    {
+      "id": "l03-zwiazek-zawodowy",
+      "pl": "związek zawodowy",
+      "ru": "профсоюз",
+      "czesc": "wyrażenie",
+      "przyklad": "Partia, związek zawodowy, kościół, firma — wszystko jedno.",
+      "przyklad_ru": "Партия, профсоюз, церковь, фирма — всё равно."
+    },
+    {
+      "id": "l03-glosowac",
+      "pl": "głosować",
+      "ru": "голосовать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "zagłosować",
+      "przyklad": "Duża organizacja nie może głosować nad każdą sprawą.",
+      "przyklad_ru": "Большая организация не может голосовать по каждому вопросу."
+    },
+    {
+      "id": "l03-decyzja",
+      "pl": "decyzja",
+      "ru": "решение",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Decyzje zapadały na górze.",
+      "przyklad_ru": "Решения принимались наверху."
+    },
+    {
+      "id": "l03-narzedzie",
+      "pl": "narzędzie",
+      "ru": "инструмент, орудие",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Organizacja jest tylko narzędziem.",
+      "przyklad_ru": "Организация — только инструмент."
+    },
+    {
+      "id": "l03-cel",
+      "pl": "cel",
+      "ru": "цель",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Organizacja przestaje być środkiem, a staje się celem.",
+      "przyklad_ru": "Организация перестаёт быть средством и становится целью."
+    },
+    {
+      "id": "l03-srodek",
+      "pl": "środek",
+      "ru": "средство",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Partia robotnicza jest środkiem do celu.",
+      "przyklad_ru": "Рабочая партия — это средство для достижения цели."
+    },
+    {
+      "id": "l03-zarzadzac",
+      "pl": "zarządzać",
+      "ru": "управлять, руководить (кем/чем)",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "przyklad": "Ktoś musi zarządzać pieniędzmi.",
+      "przyklad_ru": "Кто-то должен управлять деньгами."
+    },
+    {
+      "id": "l03-podpisywac",
+      "pl": "podpisywać",
+      "ru": "подписывать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "podpisać",
+      "przyklad": "Ktoś musi podpisywać dokumenty.",
+      "przyklad_ru": "Кто-то должен подписывать документы."
+    },
+    {
+      "id": "l03-dziennikarz",
+      "pl": "dziennikarz",
+      "ru": "журналист",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Ktoś musi rozmawiać z dziennikarzami.",
+      "przyklad_ru": "Кто-то должен разговаривать с журналистами."
+    },
+    {
+      "id": "l03-teza",
+      "pl": "teza",
+      "ru": "тезис, утверждение",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Michels formułuje krótką i mocną tezę.",
+      "przyklad_ru": "Михельс формулирует короткий и сильный тезис."
+    },
+    {
+      "id": "l03-kontrprzyklad",
+      "pl": "kontrprzykład",
+      "ru": "контрпример",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "To jest kontrprzykład: oligarchia nie zwyciężyła.",
+      "przyklad_ru": "Это контрпример: олигархия не победила."
+    },
+    {
+      "id": "l03-tendencja",
+      "pl": "tendencja",
+      "ru": "тенденция",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "To nie jest żelazne prawo, to jest silna tendencja.",
+      "przyklad_ru": "Это не железный закон, это сильная тенденция."
+    },
+    {
+      "id": "l03-socjolog",
+      "pl": "socjolog",
+      "ru": "социолог",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Michels był socjologiem i politologiem.",
+      "przyklad_ru": "Михельс был социологом и политологом."
+    },
+    {
+      "id": "l03-partia",
+      "pl": "partia",
+      "ru": "партия",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Partia mówiła o demokracji.",
+      "przyklad_ru": "Партия говорила о демократии."
+    },
+    {
+      "id": "l03-robotnik",
+      "pl": "robotnik",
+      "ru": "рабочий",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Partia robotników miała być demokratyczną organizacją.",
+      "przyklad_ru": "Партия рабочих должна была быть демократической организацией."
+    },
+    {
+      "id": "l03-dzielo",
+      "pl": "dzieło",
+      "ru": "произведение, труд",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "To jest jego najsłynniejsze dzieło.",
+      "przyklad_ru": "Это его самое знаменитое произведение."
+    },
+    {
+      "id": "l03-pensja",
+      "pl": "pensja",
+      "ru": "зарплата (не «пенсия»!)",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Liderzy mają biuro, pensję, status i kontakty.",
+      "przyklad_ru": "У лидеров есть офис, зарплата, статус и контакты."
+    },
+    {
+      "id": "l03-stracic",
+      "pl": "stracić",
+      "ru": "потерять, утратить",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "tracić",
+      "przyklad": "Liderzy nie chcą tego stracić.",
+      "przyklad_ru": "Лидеры не хотят это потерять."
+    },
+    {
+      "id": "l03-utrata",
+      "pl": "utrata",
+      "ru": "потеря, утрата",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Liderzy nie boją się utraty pracy.",
+      "przyklad_ru": "Лидеры не боятся потери работы."
+    },
+    {
+      "id": "l03-wygrywac",
+      "pl": "wygrywać",
+      "ru": "выигрывать, побеждать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "wygrać",
+      "przyklad": "Rewolucjonista, który wygrywa, zostaje nowym panem.",
+      "przyklad_ru": "Революционер, который выигрывает, становится новым господином."
+    },
+    {
+      "id": "l03-nazwisko",
+      "pl": "nazwisko",
+      "ru": "фамилия",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Zmieniają się nazwiska, nie zmienia się struktura.",
+      "przyklad_ru": "Меняются фамилии, структура не меняется."
+    },
+    {
+      "id": "l03-badac",
+      "pl": "badać",
+      "ru": "исследовать, изучать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "zbadać",
+      "przyklad": "Lipset badał amerykański związek zawodowy drukarzy.",
+      "przyklad_ru": "Липсет исследовал американский профсоюз печатников."
+    },
+    {
+      "id": "l03-opozycja",
+      "pl": "opozycja",
+      "ru": "оппозиция",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Ten związek funkcjonował z prawdziwą opozycją.",
+      "przyklad_ru": "Этот профсоюз функционировал с настоящей оппозицией."
+    },
+    {
+      "id": "l03-warunek",
+      "pl": "warunek",
+      "ru": "условие",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Lipset pokazał, jakie warunki pomagają demokracji.",
+      "przyklad_ru": "Липсет показал, какие условия помогают демократии."
+    },
+    {
+      "id": "l03-poprzec",
+      "pl": "poprzeć",
+      "ru": "поддержать",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "popierać",
+      "przyklad": "Rozczarowany demokracją, Michels poparł włoski faszyzm.",
+      "przyklad_ru": "Разочарованный демократией, Михельс поддержал итальянский фашизм."
+    }
+  ]
+}

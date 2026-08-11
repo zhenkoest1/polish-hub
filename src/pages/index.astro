@@ -8,6 +8,10 @@ const href = (p: string) => `${b}/${p.replace(/^\//, '')}`;
 const lekcje = (await getCollection('lekcje')).sort((a, c) => a.data.numer - c.data.numer);
 const reguly = await getCollection('reguly');
 const quizy = lekcje.filter((l) => l.data.quiz);
+
+// Słówka: sumujemy wszystkie talie, żeby na kafelku pokazać realną liczbę.
+const talieSlowek = import.meta.glob<{ slowa: unknown[] }>('../data/slowka/*.json', { eager: true });
+const slowekRazem = Object.values(talieSlowek).reduce((s, t) => s + t.slowa.length, 0);
 const KURS_TOTAL = 9;
 const pct = Math.round((lekcje.length / KURS_TOTAL) * 100);
 const slowa = ['cześć', 'dziękuję', 'góra', 'jezioro', 'zmęczenie', 'władza', 'kompromis', 'przyroda', 'najlepszy', 'więcej', 'szczyt', 'wolność'];
@@ -55,8 +59,14 @@ const slowa = ['cześć', 'dziękuję', 'góra', 'jezioro', 'zmęczenie', 'wład
       <span class="portal-desc">gramatyka w pigułce — {reguly.length} ściąg</span>
       <span class="portal-go">wchodzę →</span>
     </a>
-    <a class="portal p-quizy" href={href('quizy/')}>
+    <a class="portal p-slowka" href={href('slowka/')}>
       <span class="portal-num">03</span>
+      <span class="portal-name">Słówka</span>
+      <span class="portal-desc">fiszki z powtórkami — {slowekRazem} słów z lekcji</span>
+      <span class="portal-go">powtarzam →</span>
+    </a>
+    <a class="portal p-quizy" href={href('quizy/')}>
+      <span class="portal-num">04</span>
       <span class="portal-name">Quizy</span>
       <span class="portal-desc">sprawdź się — {quizy.length} quizów z konfetti</span>
       <span class="portal-go">gram! →</span>
@@ -209,6 +219,7 @@ const slowa = ['cześć', 'dziękuję', 'góra', 'jezioro', 'zmęczenie', 'wład
   }
   .p-lekcje { --pc: var(--amber); }
   .p-reguly { --pc: var(--mak); }
+  .p-slowka { --pc: var(--blekit); }
   .p-quizy { --pc: var(--zielony); }
   .portal:hover { transform: translateY(-4px); border-color: var(--pc); }
   .portal-num {

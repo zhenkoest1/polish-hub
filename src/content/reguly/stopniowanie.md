@@ -3,6 +3,8 @@ tytul: "Stopniowanie przymiotników"
 emoji: "📈"
 lekcja: 1
 pytania: "wyższy · najwyższy"
+kategoria: "inne"
+kolejnosc: 20
 ---
 
 ## Три степени сравнения

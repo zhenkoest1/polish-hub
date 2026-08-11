@@ -1,0 +1,363 @@
+{
+  "lekcja": 9,
+  "temat": "Fala upałów",
+  "slowa": [
+    {
+      "id": "l09-fala-upalow",
+      "pl": "fala upałów",
+      "ru": "волна жары",
+      "czesc": "wyrażenie",
+      "przyklad": "Fala upałów nie dotyka wszystkich tak samo.",
+      "przyklad_ru": "Волна жары затрагивает не всех одинаково."
+    },
+    {
+      "id": "l09-upal",
+      "pl": "upał",
+      "ru": "зной, сильная жара",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "W czerwcu 2026 roku Europa cierpiała z powodu upałów.",
+      "przyklad_ru": "В июне 2026 года Европа страдала от жары."
+    },
+    {
+      "id": "l09-stopien",
+      "pl": "stopień",
+      "ru": "градус, степень",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Dla nich nawet jeden stopień to katastrofa.",
+      "przyklad_ru": "Для них даже один градус — катастрофа."
+    },
+    {
+      "id": "l09-pomiar",
+      "pl": "pomiar",
+      "ru": "измерение",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "To najwyższa temperatura w historii pomiarów.",
+      "przyklad_ru": "Это самая высокая температура в истории измерений."
+    },
+    {
+      "id": "l09-kopula-cieplna",
+      "pl": "kopuła cieplna",
+      "ru": "тепловой купол",
+      "czesc": "wyrażenie",
+      "przyklad": "Nad kontynentem zawisła kopuła cieplna.",
+      "przyklad_ru": "Над континентом повис тепловой купол."
+    },
+    {
+      "id": "l09-utonac",
+      "pl": "utonąć",
+      "ru": "утонуть",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "tonąć",
+      "przyklad": "We Francji utonęło ponad czterdzieści osób.",
+      "przyklad_ru": "Во Франции утонуло более сорока человек."
+    },
+    {
+      "id": "l09-nastolatek",
+      "pl": "nastolatek",
+      "ru": "подросток",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Wśród ofiar było wielu nastolatków.",
+      "przyklad_ru": "Среди жертв было много подростков."
+    },
+    {
+      "id": "l09-ochloda",
+      "pl": "ochłoda",
+      "ru": "прохлада",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Szukali ochłody w rzekach i jeziorach.",
+      "przyklad_ru": "Они искали прохлады в реках и озёрах."
+    },
+    {
+      "id": "l09-splonac",
+      "pl": "spłonąć",
+      "ru": "сгореть",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "płonąć",
+      "przyklad": "W Grecji spłonęło 30 tysięcy hektarów lasu.",
+      "przyklad_ru": "В Греции сгорело 30 тысяч гектаров леса."
+    },
+    {
+      "id": "l09-udar-cieplny",
+      "pl": "udar cieplny",
+      "ru": "тепловой удар",
+      "czesc": "wyrażenie",
+      "przyklad": "Szpitale przyjmowały setki osób z udarem cieplnym.",
+      "przyklad_ru": "Больницы принимали сотни людей с тепловым ударом."
+    },
+    {
+      "id": "l09-cierpiec",
+      "pl": "cierpieć",
+      "ru": "страдать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "przyklad": "Polska też cierpiała z powodu upałów.",
+      "przyklad_ru": "Польша тоже страдала от жары."
+    },
+    {
+      "id": "l09-poziom",
+      "pl": "poziom",
+      "ru": "уровень",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Wisła miała rekordowo niski poziom.",
+      "przyklad_ru": "У Вислы был рекордно низкий уровень."
+    },
+    {
+      "id": "l09-rolnik",
+      "pl": "rolnik",
+      "ru": "фермер, земледелец",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Rolnicy w Wielkopolsce mówili o najgorszym lecie od dwudziestu lat.",
+      "przyklad_ru": "Фермеры в Великопольше говорили о худшем лете за двадцать лет."
+    },
+    {
+      "id": "l09-stres-cieplny",
+      "pl": "stres cieplny",
+      "ru": "тепловой стресс",
+      "czesc": "wyrażenie",
+      "przyklad": "Miliard ludzi więcej doświadcza ekstremalnego stresu cieplnego.",
+      "przyklad_ru": "На миллиард человек больше испытывает экстремальный тепловой стресс."
+    },
+    {
+      "id": "l09-slaby",
+      "pl": "słaby",
+      "ru": "слабый",
+      "czesc": "przymiotnik",
+      "przyklad": "Najbardziej cierpią najsłabsi.",
+      "przyklad_ru": "Больше всего страдают самые слабые."
+    },
+    {
+      "id": "l09-ubogi",
+      "pl": "ubogi",
+      "ru": "бедный, неимущий",
+      "czesc": "przymiotnik",
+      "przyklad": "Najbardziej cierpią starsi, dzieci, ubodzy i chorzy.",
+      "przyklad_ru": "Больше всего страдают пожилые, дети, бедные и больные."
+    },
+    {
+      "id": "l09-cialo",
+      "pl": "ciało",
+      "ru": "тело",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Organizm starszych ludzi gorzej reguluje temperaturę ciała.",
+      "przyklad_ru": "Организм пожилых людей хуже регулирует температуру тела."
+    },
+    {
+      "id": "l09-budowlaniec",
+      "pl": "budowlaniec",
+      "ru": "строитель",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Budowlańcy, kurierzy i rolnicy pracują na słońcu.",
+      "przyklad_ru": "Строители, курьеры и фермеры работают на солнце."
+    },
+    {
+      "id": "l09-kurier",
+      "pl": "kurier",
+      "ru": "курьер",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Kurier w Warszawie nosił paczki w temperaturze 38 stopni.",
+      "przyklad_ru": "Курьер в Варшаве носил посылки при температуре 38 градусов."
+    },
+    {
+      "id": "l09-paczka",
+      "pl": "paczka",
+      "ru": "посылка, пакет",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Nie mógł odmówić i nosił paczki cały dzień.",
+      "przyklad_ru": "Он не мог отказаться и носил посылки весь день."
+    },
+    {
+      "id": "l09-klimatyzacja",
+      "pl": "klimatyzacja",
+      "ru": "кондиционер, кондиционирование",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "W Wielkiej Brytanii klimatyzacja jest rzadkością.",
+      "przyklad_ru": "В Великобритании кондиционер — редкость."
+    },
+    {
+      "id": "l09-susza",
+      "pl": "susza",
+      "ru": "засуха",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Dla krajów biednych to susza, głód i migracja.",
+      "przyklad_ru": "Для бедных стран это засуха, голод и миграция."
+    },
+    {
+      "id": "l09-glod",
+      "pl": "głód",
+      "ru": "голод",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Susza, głód i migracja to skutki ocieplenia.",
+      "przyklad_ru": "Засуха, голод и миграция — последствия потепления."
+    },
+    {
+      "id": "l09-emitowac",
+      "pl": "emitować",
+      "ru": "выбрасывать (в атмосферу)",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "wyemitować",
+      "przyklad": "Kraje, które emitują najwięcej, cierpią najmniej.",
+      "przyklad_ru": "Страны, которые выбрасывают больше всего, страдают меньше всего."
+    },
+    {
+      "id": "l09-zawalic-sie",
+      "pl": "zawalić się",
+      "ru": "обрушиться",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "zawalać się",
+      "przyklad": "Guterres ostrzegł, że cały dom może się zawalić.",
+      "przyklad_ru": "Гутерриш предупредил, что весь дом может обрушиться."
+    },
+    {
+      "id": "l09-oboz",
+      "pl": "obóz",
+      "ru": "лагерь",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Dyskusja podzieliła Europę na trzy obozy.",
+      "przyklad_ru": "Дискуссия разделила Европу на три лагеря."
+    },
+    {
+      "id": "l09-kropla-w-oceanie",
+      "pl": "kropla w oceanie",
+      "ru": "капля в океане",
+      "czesc": "wyrażenie",
+      "przyklad": "Jeden człowiek to kropla w oceanie ośmiu miliardów.",
+      "przyklad_ru": "Один человек — капля в океане из восьми миллиардов."
+    },
+    {
+      "id": "l09-jednostka",
+      "pl": "jednostka",
+      "ru": "личность, отдельный человек; единица",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Kto płaci — państwo czy jednostka?",
+      "przyklad_ru": "Кто платит — государство или отдельный человек?"
+    },
+    {
+      "id": "l09-opodatkowac",
+      "pl": "opodatkować",
+      "ru": "обложить налогом",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "opodatkowywać",
+      "przyklad": "Trzeba opodatkować emisje.",
+      "przyklad_ru": "Нужно обложить налогом выбросы."
+    },
+    {
+      "id": "l09-zakazac",
+      "pl": "zakazać",
+      "ru": "запретить",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "zakazywać",
+      "przyklad": "Trzeba zakazać spalarni.",
+      "przyklad_ru": "Нужно запретить мусоросжигательные заводы."
+    },
+    {
+      "id": "l09-spalarnia",
+      "pl": "spalarnia",
+      "ru": "мусоросжигательный завод",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Systemowcy chcą zakazać spalarni.",
+      "przyklad_ru": "Системщики хотят запретить мусоросжигательные заводы."
+    },
+    {
+      "id": "l09-odnawialne-zrodla-energii",
+      "pl": "odnawialne źródła energii",
+      "ru": "возобновляемые источники энергии (ВИЭ)",
+      "czesc": "wyrażenie",
+      "przyklad": "Trzeba zainwestować w odnawialne źródła energii.",
+      "przyklad_ru": "Нужно инвестировать в возобновляемые источники энергии."
+    },
+    {
+      "id": "l09-skuteczny",
+      "pl": "skuteczny",
+      "ru": "эффективный, действенный",
+      "czesc": "przymiotnik",
+      "przyklad": "To skuteczne, ale politycznie trudne.",
+      "przyklad_ru": "Это эффективно, но политически трудно."
+    },
+    {
+      "id": "l09-adaptacja",
+      "pl": "adaptacja",
+      "ru": "адаптация, приспособление",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Adaptacja jest tańsza niż zapobieganie.",
+      "przyklad_ru": "Адаптация дешевле, чем предотвращение."
+    },
+    {
+      "id": "l09-sadzic",
+      "pl": "sadzić",
+      "ru": "сажать (растения)",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "posadzić",
+      "przyklad": "Trzeba sadzić drzewa w miastach.",
+      "przyklad_ru": "Нужно сажать деревья в городах."
+    },
+    {
+      "id": "l09-wrazliwy",
+      "pl": "wrażliwy",
+      "ru": "уязвимый, чувствительный",
+      "czesc": "przymiotnik",
+      "przyklad": "Trzeba chronić wrażliwych.",
+      "przyklad_ru": "Нужно защищать уязвимых."
+    },
+    {
+      "id": "l09-zapobieganie",
+      "pl": "zapobieganie",
+      "ru": "предотвращение, профилактика",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Zapobieganie jest droższe niż adaptacja, twierdzi Lomborg.",
+      "przyklad_ru": "Предотвращение дороже, чем адаптация, утверждает Ломборг."
+    },
+    {
+      "id": "l09-strata",
+      "pl": "strata",
+      "ru": "потеря, ущерб",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Dziś rozmawiamy o stratach, nie o zapobieganiu.",
+      "przyklad_ru": "Сегодня мы говорим об ущербе, а не о предотвращении."
+    },
+    {
+      "id": "l09-spor-wartosci",
+      "pl": "spór wartości",
+      "ru": "спор ценностей",
+      "czesc": "wyrażenie",
+      "przyklad": "Polityka klimatyczna to spór wartości.",
+      "przyklad_ru": "Климатическая политика — это спор ценностей."
+    },
+    {
+      "id": "l09-wzrosnac",
+      "pl": "wzrosnąć",
+      "ru": "вырасти, возрасти",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "wzrastać",
+      "przyklad": "Od 1990 roku średnia temperatura w Polsce wzrosła o 1,5 stopnia.",
+      "przyklad_ru": "С 1990 года средняя температура в Польше выросла на 1,5 градуса."
+    }
+  ]
+}

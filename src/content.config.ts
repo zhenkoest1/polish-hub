@@ -21,6 +21,9 @@ const reguly = defineCollection({
     emoji: z.string(),
     lekcja: z.number().optional(), // numer lekcji, w której reguła się pojawia
     pytania: z.string().optional(), // np. "kogo? co?"
+    // grupowanie na stronie /reguly/ — przypadki / czasownik / inne
+    kategoria: z.enum(['przypadki', 'czasownik', 'inne']).default('inne'),
+    kolejnosc: z.number().default(99), // kolejność wewnątrz kategorii
   }),
 });
 

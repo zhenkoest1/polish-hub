@@ -1,0 +1,355 @@
+{
+  "lekcja": 2,
+  "temat": "Społeczeństwo zmęczenia",
+  "slowa": [
+    {
+      "id": "l02-zmeczenie",
+      "pl": "zmęczenie",
+      "ru": "усталость",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Ta zmiana wyjaśnia zmęczenie.",
+      "przyklad_ru": "Это изменение объясняет усталость."
+    },
+    {
+      "id": "l02-wypalenie",
+      "pl": "wypalenie",
+      "ru": "выгорание",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Wypalenie to nie jest słabość.",
+      "przyklad_ru": "Выгорание — это не слабость."
+    },
+    {
+      "id": "l02-choroba",
+      "pl": "choroba",
+      "ru": "болезнь",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Wypalenie to choroba naszych czasów.",
+      "przyklad_ru": "Выгорание — болезнь нашего времени."
+    },
+    {
+      "id": "l02-slabosc",
+      "pl": "słabość",
+      "ru": "слабость",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "To nie jest słabość, to koniec siły.",
+      "przyklad_ru": "Это не слабость, это конец сил."
+    },
+    {
+      "id": "l02-spoleczenstwo",
+      "pl": "społeczeństwo",
+      "ru": "общество",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Dzisiaj żyjemy w społeczeństwie osiągnięć.",
+      "przyklad_ru": "Сегодня мы живём в обществе достижений."
+    },
+    {
+      "id": "l02-osiagniecie",
+      "pl": "osiągnięcie",
+      "ru": "достижение",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Han pisze o społeczeństwie osiągnięć.",
+      "przyklad_ru": "Хан пишет об обществе достижений."
+    },
+    {
+      "id": "l02-dyscyplina",
+      "pl": "dyscyplina",
+      "ru": "дисциплина",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Dawniej ludzie żyli w społeczeństwie dyscypliny.",
+      "przyklad_ru": "Раньше люди жили в обществе дисциплины."
+    },
+    {
+      "id": "l02-filozof",
+      "pl": "filozof",
+      "ru": "философ",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Han jest filozofem i profesorem w Berlinie.",
+      "przyklad_ru": "Хан — философ и профессор в Берлине."
+    },
+    {
+      "id": "l02-zakaz",
+      "pl": "zakaz",
+      "ru": "запрет",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Wszędzie były zakazy: nie możesz, nie wolno.",
+      "przyklad_ru": "Повсюду были запреты: нельзя, не разрешено."
+    },
+    {
+      "id": "l02-wolnosc",
+      "pl": "wolność",
+      "ru": "свобода",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Brzmi jak wolność, prawda?",
+      "przyklad_ru": "Звучит как свобода, правда?"
+    },
+    {
+      "id": "l02-pulapka",
+      "pl": "pułapka",
+      "ru": "ловушка",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Ale Han widzi pułapkę.",
+      "przyklad_ru": "Но Хан видит ловушку."
+    },
+    {
+      "id": "l02-samoeksploatacja",
+      "pl": "samoeksploatacja",
+      "ru": "самоэксплуатация",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Han nazywa to samoeksploatacją.",
+      "przyklad_ru": "Хан называет это самоэксплуатацией."
+    },
+    {
+      "id": "l02-wiezienie",
+      "pl": "więzienie",
+      "ru": "тюрьма",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Człowiek nosi swoje więzienie ze sobą, w głowie.",
+      "przyklad_ru": "Человек носит свою тюрьму с собой, в голове."
+    },
+    {
+      "id": "l02-szef",
+      "pl": "szef",
+      "ru": "начальник, шеф",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Dawniej ludzie mieli surowych szefów.",
+      "przyklad_ru": "Раньше у людей были строгие начальники."
+    },
+    {
+      "id": "l02-surowy",
+      "pl": "surowy",
+      "ru": "строгий, суровый",
+      "czesc": "przymiotnik",
+      "przyklad": "Surowy szef mówił: musisz pracować!",
+      "przyklad_ru": "Строгий начальник говорил: ты должен работать!"
+    },
+    {
+      "id": "l02-wrog",
+      "pl": "wróg",
+      "ru": "враг",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Ludzie widzieli wroga: szefa, system, państwo.",
+      "przyklad_ru": "Люди видели врага: начальника, систему, государство."
+    },
+    {
+      "id": "l02-sukces",
+      "pl": "sukces",
+      "ru": "успех",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Kiedy nie masz sukcesu, winisz siebie.",
+      "przyklad_ru": "Когда у тебя нет успеха, ты винишь себя."
+    },
+    {
+      "id": "l02-odpowiedzialnosc",
+      "pl": "odpowiedzialność",
+      "ru": "ответственность",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "System przeniósł odpowiedzialność na ciebie.",
+      "przyklad_ru": "Система переложила ответственность на тебя."
+    },
+    {
+      "id": "l02-odpoczynek",
+      "pl": "odpoczynek",
+      "ru": "отдых",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Han proponuje prawdziwy odpoczynek.",
+      "przyklad_ru": "Хан предлагает настоящий отдых."
+    },
+    {
+      "id": "l02-nuda",
+      "pl": "nuda",
+      "ru": "скука",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Han pisze o głębokiej nudzie.",
+      "przyklad_ru": "Хан пишет о глубокой скуке."
+    },
+    {
+      "id": "l02-kreatywnosc",
+      "pl": "kreatywność",
+      "ru": "креативность, творческое начало",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Z głębokiej nudy rodzi się kreatywność.",
+      "przyklad_ru": "Из глубокой скуки рождается креативность."
+    },
+    {
+      "id": "l02-odwaga",
+      "pl": "odwaga",
+      "ru": "смелость, отвага",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "W tym świecie nie robić nic to akt odwagi.",
+      "przyklad_ru": "В этом мире ничего не делать — это акт смелости."
+    },
+    {
+      "id": "l02-kontemplacja",
+      "pl": "kontemplacja",
+      "ru": "созерцание",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Kontemplacja to spokojne myślenie bez wyniku.",
+      "przyklad_ru": "Созерцание — это спокойное мышление без результата."
+    },
+    {
+      "id": "l02-reklama",
+      "pl": "reklama",
+      "ru": "реклама",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Just do it! — mówi reklama Nike.",
+      "przyklad_ru": "Just do it! — говорит реклама Nike."
+    },
+    {
+      "id": "l02-aplikacja",
+      "pl": "aplikacja",
+      "ru": "приложение",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Kupuje nową aplikację.",
+      "przyklad_ru": "Он покупает новое приложение."
+    },
+    {
+      "id": "l02-produktywnosc",
+      "pl": "produktywność",
+      "ru": "продуктивность",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Kupuje aplikację do produktywności.",
+      "przyklad_ru": "Он покупает приложение для продуктивности."
+    },
+    {
+      "id": "l02-rozwiazanie",
+      "pl": "rozwiązanie",
+      "ru": "решение (задачи, проблемы)",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Han proponuje rozwiązanie, które brzmi dziwnie.",
+      "przyklad_ru": "Хан предлагает решение, которое звучит странно."
+    },
+    {
+      "id": "l02-media-spolecznosciowe",
+      "pl": "media społecznościowe",
+      "ru": "социальные сети",
+      "czesc": "wyrażenie",
+      "przyklad": "Pisze posty w mediach społecznościowych.",
+      "przyklad_ru": "Он пишет посты в социальных сетях."
+    },
+    {
+      "id": "l02-sprawdzac",
+      "pl": "sprawdzać",
+      "ru": "проверять",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "sprawdzić",
+      "przyklad": "Codziennie sprawdza telefon sto razy.",
+      "przyklad_ru": "Каждый день он проверяет телефон сто раз."
+    },
+    {
+      "id": "l02-mierzyc",
+      "pl": "mierzyć",
+      "ru": "измерять, мерить",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "zmierzyć",
+      "przyklad": "Mierzy każdy krok, każdą kalorię, każdą godzinę snu.",
+      "przyklad_ru": "Он измеряет каждый шаг, каждую калорию, каждый час сна."
+    },
+    {
+      "id": "l02-winic",
+      "pl": "winić",
+      "ru": "винить, обвинять",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "obwinić",
+      "przyklad": "Kiedy możesz wszystko, a nie masz sukcesu, kogo winisz?",
+      "przyklad_ru": "Когда ты можешь всё, а успеха нет, кого ты винишь?"
+    },
+    {
+      "id": "l02-walczyc",
+      "pl": "walczyć",
+      "ru": "бороться, сражаться",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "przyklad": "Ludzie mogli walczyć o swoje prawa.",
+      "przyklad_ru": "Люди могли бороться за свои права."
+    },
+    {
+      "id": "l02-protestowac",
+      "pl": "protestować",
+      "ru": "протестовать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "zaprotestować",
+      "przyklad": "Pracownik mógł protestować.",
+      "przyklad_ru": "Работник мог протестовать."
+    },
+    {
+      "id": "l02-zarabiac",
+      "pl": "zarabiać",
+      "ru": "зарабатывать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "zarobić",
+      "przyklad": "Dlaczego nie zarabiam więcej?",
+      "przyklad_ru": "Почему я не зарабатываю больше?"
+    },
+    {
+      "id": "l02-schudnac",
+      "pl": "schudnąć",
+      "ru": "похудеть",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "chudnąć",
+      "przyklad": "Możesz schudnąć dziesięć kilogramów.",
+      "przyklad_ru": "Ты можешь похудеть на десять килограммов."
+    },
+    {
+      "id": "l02-zatrzymac-sie",
+      "pl": "zatrzymać się",
+      "ru": "остановиться",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "zatrzymywać się",
+      "przyklad": "Czuje zmęczenie, ale nie może się zatrzymać.",
+      "przyklad_ru": "Он чувствует усталость, но не может остановиться."
+    },
+    {
+      "id": "l02-przegrac",
+      "pl": "przegrać",
+      "ru": "проиграть",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "przegrywać",
+      "przyklad": "Zatrzymać się znaczy przegrać.",
+      "przyklad_ru": "Остановиться — значит проиграть."
+    },
+    {
+      "id": "l02-zniszczyc",
+      "pl": "zniszczyć",
+      "ru": "уничтожить, разрушить",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "niszczyć",
+      "przyklad": "Ludzie mówią: nie mogę już więcej, bo sami siebie zniszczyli.",
+      "przyklad_ru": "Люди говорят: я больше не могу, потому что сами себя разрушили."
+    }
+  ]
+}

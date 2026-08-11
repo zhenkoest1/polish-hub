@@ -1,0 +1,366 @@
+{
+  "lekcja": 8,
+  "temat": "Dylemat wagonika",
+  "slowa": [
+    {
+      "id": "l08-eksperyment-myslowy",
+      "pl": "eksperyment myślowy",
+      "ru": "мысленный эксперимент",
+      "czesc": "wyrażenie",
+      "przyklad": "Philippa Foot zaproponowała eksperyment myślowy.",
+      "przyklad_ru": "Филиппа Фут предложила мысленный эксперимент."
+    },
+    {
+      "id": "l08-wagonik",
+      "pl": "wagonik",
+      "ru": "вагонетка",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Pędzący wagonik tramwajowy nie ma hamulców.",
+      "przyklad_ru": "Несущаяся трамвайная вагонетка не имеет тормозов."
+    },
+    {
+      "id": "l08-tor",
+      "pl": "tor",
+      "ru": "путь, рельсы, колея",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Na torach pracuje pięciu robotników.",
+      "przyklad_ru": "На путях работают пятеро рабочих."
+    },
+    {
+      "id": "l08-dzwignia",
+      "pl": "dźwignia",
+      "ru": "рычаг",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Stoisz przy dźwigni.",
+      "przyklad_ru": "Ты стоишь у рычага."
+    },
+    {
+      "id": "l08-hamulec",
+      "pl": "hamulec",
+      "ru": "тормоз",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Wagonik nie ma hamulców.",
+      "przyklad_ru": "У вагонетки нет тормозов."
+    },
+    {
+      "id": "l08-ofiara",
+      "pl": "ofiara",
+      "ru": "жертва",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Pięć ofiar to gorzej niż jedna.",
+      "przyklad_ru": "Пять жертв — это хуже, чем одна."
+    },
+    {
+      "id": "l08-utylitaryzm",
+      "pl": "utylitaryzm",
+      "ru": "утилитаризм",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Gdyby świat działał według utylitaryzmu, decyzje byłyby proste.",
+      "przyklad_ru": "Если бы мир работал по утилитаризму, решения были бы простыми."
+    },
+    {
+      "id": "l08-cierpienie",
+      "pl": "cierpienie",
+      "ru": "страдание",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Moralność to arytmetyka cierpienia.",
+      "przyklad_ru": "Мораль — это арифметика страдания."
+    },
+    {
+      "id": "l08-skrecic",
+      "pl": "skręcić",
+      "ru": "свернуть",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "skręcać",
+      "przyklad": "Wagonik skręci na boczny tor.",
+      "przyklad_ru": "Вагонетка свернёт на боковой путь."
+    },
+    {
+      "id": "l08-pociagnac",
+      "pl": "pociągnąć",
+      "ru": "потянуть, дёрнуть",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "pociągać",
+      "przyklad": "Większość ludzi pociągnęłaby dźwignię.",
+      "przyklad_ru": "Большинство людей потянуло бы рычаг."
+    },
+    {
+      "id": "l08-most",
+      "pl": "most",
+      "ru": "мост",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Stoisz na moście nad torami.",
+      "przyklad_ru": "Ты стоишь на мосту над путями."
+    },
+    {
+      "id": "l08-zepchnac",
+      "pl": "zepchnąć",
+      "ru": "столкнуть",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "spychać",
+      "przyklad": "Jeśli zepchniesz go z mostu, jego ciało zatrzyma wagonik.",
+      "przyklad_ru": "Если ты столкнёшь его с моста, его тело остановит вагонетку."
+    },
+    {
+      "id": "l08-nieznajomy",
+      "pl": "nieznajomy",
+      "ru": "незнакомец",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Obok ciebie stoi gruby nieznajomy.",
+      "przyklad_ru": "Рядом с тобой стоит толстый незнакомец."
+    },
+    {
+      "id": "l08-ocalec",
+      "pl": "ocaleć",
+      "ru": "уцелеть, спастись",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "przyklad": "Pięć osób ocaleje, a on zginie.",
+      "przyklad_ru": "Пять человек уцелеют, а он погибнет."
+    },
+    {
+      "id": "l08-zginac",
+      "pl": "zginąć",
+      "ru": "погибнуть",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "ginąć",
+      "przyklad": "Pięć osób ocaleje. On zginie.",
+      "przyklad_ru": "Пять человек спасутся. Он погибнет."
+    },
+    {
+      "id": "l08-buntowac-sie",
+      "pl": "buntować się",
+      "ru": "бунтовать, протестовать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "zbuntować się",
+      "przyklad": "Coś się w nas buntuje.",
+      "przyklad_ru": "Что-то в нас бунтует."
+    },
+    {
+      "id": "l08-traktowac",
+      "pl": "traktować",
+      "ru": "относиться, трактовать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "potraktować",
+      "przyklad": "Nigdy nie traktuj człowieka tylko jako środek.",
+      "przyklad_ru": "Никогда не относись к человеку только как к средству."
+    },
+    {
+      "id": "l08-srodek",
+      "pl": "środek",
+      "ru": "средство",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Człowiek nie może być tylko środkiem.",
+      "przyklad_ru": "Человек не может быть только средством."
+    },
+    {
+      "id": "l08-cel",
+      "pl": "cel",
+      "ru": "цель",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Traktuj człowieka zawsze także jako cel.",
+      "przyklad_ru": "Относись к человеку всегда также и как к цели."
+    },
+    {
+      "id": "l08-narzedzie",
+      "pl": "narzędzie",
+      "ru": "орудие, инструмент",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Zepchnąć grubego to użyć człowieka jako narzędzia.",
+      "przyklad_ru": "Столкнуть толстяка — значит использовать человека как орудие."
+    },
+    {
+      "id": "l08-niedopuszczalny",
+      "pl": "niedopuszczalny",
+      "ru": "недопустимый",
+      "czesc": "przymiotnik",
+      "przyklad": "Kant powiedziałby, że to jest niedopuszczalne.",
+      "przyklad_ru": "Кант сказал бы, что это недопустимо."
+    },
+    {
+      "id": "l08-samochod-autonomiczny",
+      "pl": "samochód autonomiczny",
+      "ru": "беспилотный автомобиль",
+      "czesc": "wyrażenie",
+      "przyklad": "Samochód autonomiczny musi wybrać, kogo poświęci.",
+      "przyklad_ru": "Беспилотный автомобиль должен выбрать, кем пожертвовать."
+    },
+    {
+      "id": "l08-pasazer",
+      "pl": "pasażer",
+      "ru": "пассажир",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Nasze auta zawsze będą chronić pasażera.",
+      "przyklad_ru": "Наши машины всегда будут защищать пассажира."
+    },
+    {
+      "id": "l08-pieszy",
+      "pl": "pieszy",
+      "ru": "пешеход",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Wybór jest między pasażerem a pieszym.",
+      "przyklad_ru": "Выбор — между пассажиром и пешеходом."
+    },
+    {
+      "id": "l08-oswiadczenie",
+      "pl": "oświadczenie",
+      "ru": "заявление",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Po fali krytyki Mercedes wycofał to oświadczenie.",
+      "przyklad_ru": "После волны критики Mercedes отозвал это заявление."
+    },
+    {
+      "id": "l08-przepis",
+      "pl": "przepis",
+      "ru": "правило, предписание",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Pieszy łamie przepisy.",
+      "przyklad_ru": "Пешеход нарушает правила."
+    },
+    {
+      "id": "l08-poswiecic",
+      "pl": "poświęcić",
+      "ru": "пожертвовать",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "poświęcać",
+      "przyklad": "Samochód musi wybrać, kogo poświęci.",
+      "przyklad_ru": "Автомобиль должен выбрать, кем пожертвовать."
+    },
+    {
+      "id": "l08-poswiecenie",
+      "pl": "poświęcenie",
+      "ru": "жертва, самопожертвование",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Poświęcenie jednej osoby ratuje pięć.",
+      "przyklad_ru": "Жертва одного человека спасает пятерых."
+    },
+    {
+      "id": "l08-inzynier",
+      "pl": "inżynier",
+      "ru": "инженер",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Inżynier w Stuttgarcie musiałby podjąć tę decyzję.",
+      "przyklad_ru": "Инженеру в Штутгарте пришлось бы принять это решение."
+    },
+    {
+      "id": "l08-uniwersalny",
+      "pl": "uniwersalny",
+      "ru": "универсальный",
+      "czesc": "przymiotnik",
+      "przyklad": "Nie ma uniwersalnej odpowiedzi.",
+      "przyklad_ru": "Универсального ответа не существует."
+    },
+    {
+      "id": "l08-podjac-decyzje",
+      "pl": "podjąć decyzję",
+      "ru": "принять решение",
+      "czesc": "wyrażenie",
+      "przyklad": "Ktoś musiałby podjąć decyzję.",
+      "przyklad_ru": "Кто-то должен был бы принять решение."
+    },
+    {
+      "id": "l08-mozg",
+      "pl": "mózg",
+      "ru": "мозг",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Co dzieje się w mózgu, kiedy człowiek rozwiązuje dylemat?",
+      "przyklad_ru": "Что происходит в мозге, когда человек решает дилемму?"
+    },
+    {
+      "id": "l08-ochotnik",
+      "pl": "ochotnik",
+      "ru": "доброволец",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Greene włożył ochotników do skanera fMRI.",
+      "przyklad_ru": "Грин поместил добровольцев в сканер фМРТ."
+    },
+    {
+      "id": "l08-wstret",
+      "pl": "wstręt",
+      "ru": "отвращение",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Wersja z grubasem aktywowała wstręt, lęk i opór.",
+      "przyklad_ru": "Версия с толстяком активировала отвращение, страх и сопротивление."
+    },
+    {
+      "id": "l08-opor",
+      "pl": "opór",
+      "ru": "сопротивление",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Czujemy wewnętrzny opór.",
+      "przyklad_ru": "Мы чувствуем внутреннее сопротивление."
+    },
+    {
+      "id": "l08-rozmyty",
+      "pl": "rozmyty",
+      "ru": "размытый",
+      "czesc": "przymiotnik",
+      "przyklad": "Realne dylematy moralne są rozmyte, długie i społeczne.",
+      "przyklad_ru": "Реальные моральные дилеммы размытые, долгие и социальные."
+    },
+    {
+      "id": "l08-balagan",
+      "pl": "bałagan",
+      "ru": "бардак, беспорядок",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Tu nie ma pięć kontra jeden, jest bałagan.",
+      "przyklad_ru": "Здесь нет «пять против одного», здесь бардак."
+    },
+    {
+      "id": "l08-kwarantanna",
+      "pl": "kwarantanna",
+      "ru": "карантин",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Kiedy decydujesz o kwarantannie w czasie pandemii.",
+      "przyklad_ru": "Когда ты принимаешь решение о карантине во время пандемии."
+    },
+    {
+      "id": "l08-respirator",
+      "pl": "respirator",
+      "ru": "аппарат ИВЛ",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Komu dostarczyć ostatnie respiratory?",
+      "przyklad_ru": "Кому доставить последние аппараты ИВЛ?"
+    },
+    {
+      "id": "l08-przepelniony",
+      "pl": "przepełniony",
+      "ru": "переполненный",
+      "czesc": "przymiotnik",
+      "przyklad": "Ostatni respirator w przepełnionym szpitalu.",
+      "przyklad_ru": "Последний аппарат ИВЛ в переполненной больнице."
+    }
+  ]
+}

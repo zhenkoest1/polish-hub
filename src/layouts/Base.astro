@@ -2,7 +2,7 @@
 interface Props {
   title: string;
   description?: string;
-  active?: 'lekcje' | 'reguly' | 'quizy' | '';
+  active?: 'lekcje' | 'reguly' | 'quizy' | 'slowka' | '';
 }
 const { title, description = 'Polski Klub — kurs polskiego dla trzech przyjaciół', active = '' } = Astro.props;
 // BASE_URL bywa z '/' na końcu lub bez — normalizujemy raz i na zawsze
@@ -37,6 +37,7 @@ const href = (p: string) => `${b}/${p.replace(/^\//, '')}`;
       <div class="nav-links">
         <a class:list={['nav-link', 'nl-lekcje', { on: active === 'lekcje' }]} href={href('lekcje/')}>Lekcje</a>
         <a class:list={['nav-link', 'nl-reguly', { on: active === 'reguly' }]} href={href('reguly/')}>Reguły</a>
+        <a class:list={['nav-link', 'nl-slowka', { on: active === 'slowka' }]} href={href('slowka/')}>Słówka</a>
         <a class:list={['nav-link', 'nl-quizy', { on: active === 'quizy' }]} href={href('quizy/')}>Quizy</a>
       </div>
     </nav>
@@ -66,6 +67,7 @@ const href = (p: string) => `${b}/${p.replace(/^\//, '')}`;
     --amber-deep: #e8a13c;
     --mak: #e05252;
     --zielony: #00b894;
+    --blekit: #6ea8fe;
     --correct: #00b894;
     --correct-bg: rgba(0, 184, 148, 0.14);
     --incorrect: #e05252;
@@ -154,6 +156,7 @@ const href = (p: string) => `${b}/${p.replace(/^\//, '')}`;
   .nav-link:hover { color: var(--text); }
   .nl-lekcje.on, .nl-lekcje:hover { color: var(--amber); border-color: var(--amber); }
   .nl-reguly.on, .nl-reguly:hover { color: var(--mak); border-color: var(--mak); }
+  .nl-slowka.on, .nl-slowka:hover { color: var(--blekit); border-color: var(--blekit); }
   .nl-quizy.on, .nl-quizy:hover { color: var(--zielony); border-color: var(--zielony); }
 
   .footer {
