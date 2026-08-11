@@ -25,9 +25,9 @@ const quizy = [
       <div class="p-osoby" id="p-osoby"></div>
       <form id="p-form" hidden>
         <p class="p-kim">Logujesz się jako <strong id="p-kim"></strong></p>
-        <input id="p-pin" class="p-pin" type="password" inputmode="numeric" maxlength="4" placeholder="••••" autocomplete="off" />
+        <input id="p-pin" class="p-pin" type="password" inputmode="numeric" maxlength="4" placeholder="••••" autocomplete="off" aria-label="PIN" />
         <button class="btn" type="submit">Zaloguj</button>
-        <p class="p-blad" id="p-blad" hidden></p>
+        <p class="p-blad" id="p-blad" role="alert" hidden></p>
       </form>
     </section>
 
@@ -42,11 +42,11 @@ const quizy = [
       <p class="p-pusto" id="p-pusto" hidden>Jeszcze żadnego quizu — <a href={href('quizy/')}>zagraj pierwszy</a>!</p>
     </section>
 
-    <script type="application/json" id="p-quizy" set:html={JSON.stringify(quizy)} />
+    <script type="application/json" id="p-quizy" set:html={JSON.stringify(quizy).replace(/</g, '\\u003c')} />
   </article>
 
   <script>
-    import { OSOBY, poprawnyPin } from '../scripts/konto.js';
+    import { OSOBY, poprawnyPin, osobaZeSluga } from '../scripts/konto.js';
     import { zaloguj, wyloguj, obserwujOsobe, mojProfil } from '../scripts/chmura.js';
 
     const $ = (id: string) => document.getElementById(id)!;
@@ -62,7 +62,8 @@ const quizy = [
       if (!btn) return;
       wybrany = btn.dataset.slug!;
       document.querySelectorAll('.p-osoba').forEach((x) => x.classList.toggle('on', x === btn));
-      $('p-kim').textContent = btn.textContent!.trim();
+      const o = osobaZeSluga(wybrany)!;
+      $('p-kim').textContent = `${o.emoji} ${o.name}`;
       $('p-form').hidden = false;
       ($('p-pin') as HTMLInputElement).focus();
     });
@@ -73,11 +74,15 @@ const quizy = [
       const blad = $('p-blad');
       blad.hidden = true;
       if (!poprawnyPin(pin)) { blad.textContent = 'PIN to 4 cyfry.'; blad.hidden = false; return; }
+      const btn = $('p-form').querySelector('button[type="submit"]') as HTMLButtonElement;
+      btn.disabled = true;
       try {
         await zaloguj(wybrany, pin);
       } catch (err: any) {
         blad.textContent = err.message === 'Zły PIN.' ? 'Zły PIN.' : 'Nie udało się zalogować. Jest internet?';
         blad.hidden = false;
+      } finally {
+        btn.disabled = false;
       }
     });
 
@@ -88,11 +93,19 @@ const quizy = [
       $('p-konto').hidden = !osoba;
       if (!osoba) return;
       $('p-imie').textContent = `${osoba.emoji} ${osoba.name}`;
-      const profil = await mojProfil();
-      const best = profil?.best ?? {};
+      let best: Record<string, any> = {};
+      try {
+        const profil = await mojProfil();
+        best = profil?.best ?? {};
+      } catch {
+        $('p-pusto').textContent = 'Nie udało się wczytać wyników — spróbuj odświeżyć.';
+        $('p-pusto').hidden = false;
+        $('p-wyniki').innerHTML = '';
+        return;
+      }
       const wiersze = quizy
         .filter((q) => best[q.id])
-        .map((q) => `<tr><td>${q.tytul}</td><td><strong>${best[q.id].pct}%</strong> (${best[q.id].got}/${best[q.id].max})</td></tr>`);
+        .map((q) => `<tr><td>${q.tytul}</td><td><strong>${Number(best[q.id].pct)}%</strong> (${Number(best[q.id].got)}/${Number(best[q.id].max)})</td></tr>`);
       $('p-wyniki').innerHTML = wiersze.join('');
       $('p-pusto').hidden = wiersze.length > 0;
     });

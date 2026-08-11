@@ -39,7 +39,7 @@ const href = (p: string) => `${b}/${p.replace(/^\//, '')}`;
         <a class:list={['nav-link', 'nl-reguly', { on: active === 'reguly' }]} href={href('reguly/')}>Reguły</a>
         <a class:list={['nav-link', 'nl-slowka', { on: active === 'slowka' }]} href={href('slowka/')}>Słówka</a>
         <a class:list={['nav-link', 'nl-quizy', { on: active === 'quizy' }]} href={href('quizy/')}>Quizy</a>
-        <a class:list={['nav-link', 'nl-profil', { on: active === 'profil' }]} href={href('profil/')} id="nav-profil">👤</a>
+        <a class:list={['nav-link', 'nl-profil', { on: active === 'profil' }]} href={href('profil/')} id="nav-profil" aria-label="Profil">👤</a>
       </div>
     </nav>
     <script is:inline>
