@@ -1,0 +1,374 @@
+{
+  "lekcja": 10,
+  "temat": "Efekt Zeigarnik",
+  "slowa": [
+    {
+      "id": "l10-kelner",
+      "pl": "kelner",
+      "ru": "официант",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Kelner nie zapisuje niczego i wszystko pamięta.",
+      "przyklad_ru": "Официант ничего не записывает и всё помнит."
+    },
+    {
+      "id": "l10-zamowienie",
+      "pl": "zamówienie",
+      "ru": "заказ",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Kelner wylicza każde zamówienie co do grosza.",
+      "przyklad_ru": "Официант перечисляет каждый заказ до гроша."
+    },
+    {
+      "id": "l10-rachunek",
+      "pl": "rachunek",
+      "ru": "счёт",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Dopóki rachunek był otwarty, zamówienie zostawało w pamięci.",
+      "przyklad_ru": "Пока счёт был открыт, заказ оставался в памяти."
+    },
+    {
+      "id": "l10-zaplacic",
+      "pl": "zapłacić",
+      "ru": "заплатить",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "płacić",
+      "przyklad": "Przecież państwo już zapłacili.",
+      "przyklad_ru": "Но вы же уже заплатили."
+    },
+    {
+      "id": "l10-zapamietac",
+      "pl": "zapamiętać",
+      "ru": "запомнить",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "zapamiętywać",
+      "przyklad": "Zeigarnik zapamiętała tę scenę na całe życie.",
+      "przyklad_ru": "Зейгарник запомнила эту сцену на всю жизнь."
+    },
+    {
+      "id": "l10-zapomniec",
+      "pl": "zapomnieć",
+      "ru": "забыть",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "zapominać",
+      "przyklad": "Kelner zapomniał zamówienie w sekundę po zapłaceniu rachunku.",
+      "przyklad_ru": "Официант забыл заказ через секунду после оплаты счёта."
+    },
+    {
+      "id": "l10-zostawic",
+      "pl": "zostawić",
+      "ru": "оставить",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "zostawiać",
+      "przyklad": "Zostawiła szalik na krześle i wróciła po niego.",
+      "przyklad_ru": "Она оставила шарф на стуле и вернулась за ним."
+    },
+    {
+      "id": "l10-badanie",
+      "pl": "badanie",
+      "ru": "исследование",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "W jej badaniu wzięło udział około stu trzydziestu osób.",
+      "przyklad_ru": "В её исследовании приняли участие около ста тридцати человек."
+    },
+    {
+      "id": "l10-badaczka",
+      "pl": "badaczka",
+      "ru": "исследовательница",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Połowę zadań badaczka przerywała w środku pracy.",
+      "przyklad_ru": "Половину заданий исследовательница прерывала в середине работы."
+    },
+    {
+      "id": "l10-uczestnik",
+      "pl": "uczestnik",
+      "ru": "участник",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Uczestnik odkładał niedokończoną figurkę i zaczynał nowe zadanie.",
+      "przyklad_ru": "Участник откладывал незаконченную фигурку и начинал новое задание."
+    },
+    {
+      "id": "l10-zadanie",
+      "pl": "zadanie",
+      "ru": "задание",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Każdy uczestnik dostawał serię krótkich zadań.",
+      "przyklad_ru": "Каждый участник получал серию коротких заданий."
+    },
+    {
+      "id": "l10-przerwac",
+      "pl": "przerwać",
+      "ru": "прервать",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "przerywać",
+      "przyklad": "Proszę przerwać i przejść do następnego zadania.",
+      "przyklad_ru": "Пожалуйста, прервите и переходите к следующему заданию."
+    },
+    {
+      "id": "l10-skonczyc",
+      "pl": "skończyć",
+      "ru": "закончить",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "kończyć",
+      "przyklad": "Drugą połowę zadań wszyscy skończyli normalnie.",
+      "przyklad_ru": "Вторую половину заданий все закончили нормально."
+    },
+    {
+      "id": "l10-dokonczenie",
+      "pl": "dokończenie",
+      "ru": "завершение",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Scena zostaje w głowie i sama domaga się dokończenia.",
+      "przyklad_ru": "Сцена остаётся в голове и сама требует завершения."
+    },
+    {
+      "id": "l10-haczyk",
+      "pl": "haczyk",
+      "ru": "подвох, крючок",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Haczyk był gdzie indziej.",
+      "przyklad_ru": "Подвох был в другом месте."
+    },
+    {
+      "id": "l10-wynik",
+      "pl": "wynik",
+      "ru": "результат",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Wynik był jednoznaczny.",
+      "przyklad_ru": "Результат был однозначным."
+    },
+    {
+      "id": "l10-wniosek",
+      "pl": "wniosek",
+      "ru": "вывод",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Wniosek był prosty: niedokończone zadanie zajmuje miejsce w pamięci.",
+      "przyklad_ru": "Вывод был простым: незаконченное задание занимает место в памяти."
+    },
+    {
+      "id": "l10-pamiec",
+      "pl": "pamięć",
+      "ru": "память",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Skończone zadanie zwalnia miejsce w pamięci.",
+      "przyklad_ru": "Законченное задание освобождает место в памяти."
+    },
+    {
+      "id": "l10-napiecie",
+      "pl": "napięcie",
+      "ru": "напряжение",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Dokończenie rozładowuje napięcie, przerwanie je zostawia.",
+      "przyklad_ru": "Завершение разряжает напряжение, прерывание его оставляет."
+    },
+    {
+      "id": "l10-zwalniac",
+      "pl": "zwalniać",
+      "ru": "освобождать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "zwolnić",
+      "przyklad": "Skończone zadanie zwalnia miejsce w pamięci.",
+      "przyklad_ru": "Законченное задание освобождает место в памяти."
+    },
+    {
+      "id": "l10-wyrzucac",
+      "pl": "wyrzucać",
+      "ru": "выбрасывать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "wyrzucić",
+      "przyklad": "Umysł otwarty rachunek trzyma, a zamknięty wyrzuca.",
+      "przyklad_ru": "Ум открытый счёт держит, а закрытый выбрасывает."
+    },
+    {
+      "id": "l10-odcinek",
+      "pl": "odcinek",
+      "ru": "серия, эпизод",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Odcinek kończy się w momencie, w którym bohater otwiera drzwi.",
+      "przyklad_ru": "Серия заканчивается в момент, когда герой открывает дверь."
+    },
+    {
+      "id": "l10-widz",
+      "pl": "widz",
+      "ru": "зритель",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Widz nie obejrzał sceny do końca.",
+      "przyklad_ru": "Зритель не досмотрел сцену до конца."
+    },
+    {
+      "id": "l10-obejrzec",
+      "pl": "obejrzeć",
+      "ru": "посмотреть (до конца)",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "oglądać",
+      "przyklad": "Chcę obejrzeć ten odcinek dzisiaj wieczorem.",
+      "przyklad_ru": "Хочу посмотреть эту серию сегодня вечером."
+    },
+    {
+      "id": "l10-odliczanie",
+      "pl": "odliczanie",
+      "ru": "обратный отсчёт",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Netflix dokłada jeszcze odliczanie: następny odcinek za pięć sekund.",
+      "przyklad_ru": "Netflix добавляет ещё обратный отсчёт: следующая серия через пять секунд."
+    },
+    {
+      "id": "l10-pasek-postepu",
+      "pl": "pasek postępu",
+      "ru": "индикатор выполнения, прогресс-бар",
+      "czesc": "wyrażenie",
+      "przyklad": "Banki i sklepy internetowe pokazują pasek postępu, bo pasek działa.",
+      "przyklad_ru": "Банки и интернет-магазины показывают прогресс-бар, потому что он работает."
+    },
+    {
+      "id": "l10-ukonczony",
+      "pl": "ukończony",
+      "ru": "завершённый",
+      "czesc": "przymiotnik",
+      "przyklad": "Twój profil jest ukończony w osiemdziesięciu procentach.",
+      "przyklad_ru": "Твой профиль заполнен на восемьдесят процентов."
+    },
+    {
+      "id": "l10-draznic",
+      "pl": "drażnić",
+      "ru": "раздражать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "przyklad": "Ta liczba nie ma informować — ona ma drażnić.",
+      "przyklad_ru": "Это число не должно информировать — оно должно раздражать."
+    },
+    {
+      "id": "l10-brakujacy",
+      "pl": "brakujący",
+      "ru": "недостающий",
+      "czesc": "przymiotnik",
+      "przyklad": "Brakujące dwadzieścia procent działa jak niedokończona figurka.",
+      "przyklad_ru": "Недостающие двадцать процентов работают как незаконченная фигурка."
+    },
+    {
+      "id": "l10-etap",
+      "pl": "etap",
+      "ru": "этап",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Aplikacje dzielą materiał na małe etapy.",
+      "przyklad_ru": "Приложения делят материал на маленькие этапы."
+    },
+    {
+      "id": "l10-wyswietlac",
+      "pl": "wyświetlać",
+      "ru": "отображать, показывать (на экране)",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "wyświetlić",
+      "przyklad": "Aplikacje wyświetlają, ile jeszcze zostało do końca.",
+      "przyklad_ru": "Приложения показывают, сколько ещё осталось до конца."
+    },
+    {
+      "id": "l10-wisiec",
+      "pl": "wisieć",
+      "ru": "висеть",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "przyklad": "Na liście od tygodnia wisi dziesięć niezrobionych punktów.",
+      "przyklad_ru": "В списке уже неделю висят десять невыполненных пунктов."
+    },
+    {
+      "id": "l10-niepokoj",
+      "pl": "niepokój",
+      "ru": "тревога, беспокойство",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Lista pracuje w tle — jako napięcie, niepokój, gorszy sen.",
+      "przyklad_ru": "Список работает в фоне — как напряжение, тревога, худший сон."
+    },
+    {
+      "id": "l10-domagac-sie",
+      "pl": "domagać się",
+      "ru": "требовать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "przyklad": "Scena zostaje w głowie i sama domaga się dokończenia.",
+      "przyklad_ru": "Сцена остаётся в голове и сама требует завершения."
+    },
+    {
+      "id": "l10-natretny",
+      "pl": "natrętny",
+      "ru": "навязчивый",
+      "czesc": "przymiotnik",
+      "przyklad": "Konkretny plan usuwa natrętne myśli prawie tak samo skutecznie jak działanie.",
+      "przyklad_ru": "Конкретный план убирает навязчивые мысли почти так же эффективно, как действие."
+    },
+    {
+      "id": "l10-usunac",
+      "pl": "usunąć",
+      "ru": "удалить, устранить",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "usuwać",
+      "przyklad": "Plan usunął natrętne myśli lepiej niż samo działanie.",
+      "przyklad_ru": "План убрал навязчивые мысли лучше, чем само действие."
+    },
+    {
+      "id": "l10-pilnowac",
+      "pl": "pilnować",
+      "ru": "стеречь, следить за",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "przypilnować",
+      "przyklad": "Umysł przestaje pilnować sprawy, bo pilnuje jej kartka.",
+      "przyklad_ru": "Ум перестаёт следить за делом, потому что за ним следит листок."
+    },
+    {
+      "id": "l10-zaangazowac-sie",
+      "pl": "zaangażować się",
+      "ru": "вовлечься, включиться",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "angażować się",
+      "przyklad": "Wiele zależy od tego, jak mocno człowiek zaangażował się w pracę.",
+      "przyklad_ru": "Многое зависит от того, насколько сильно человек включился в работу."
+    },
+    {
+      "id": "l10-porazka",
+      "pl": "porażka",
+      "ru": "неудача, поражение",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Ważne jest to, czy przerwanie odebrał jako porażkę.",
+      "przyklad_ru": "Важно то, воспринял ли он прерывание как неудачу."
+    },
+    {
+      "id": "l10-mniej-wiecej",
+      "pl": "mniej więcej",
+      "ru": "примерно, более-менее",
+      "czesc": "wyrażenie",
+      "przyklad": "Mniej więcej połowę zadań badaczka przerywała w środku pracy.",
+      "przyklad_ru": "Примерно половину заданий исследовательница прерывала в середине работы."
+    }
+  ]
+}

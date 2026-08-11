@@ -4,8 +4,16 @@ import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
   const lekcje = await getCollection('lekcje');
+  // Bierzemy tylko te lekcje, których plik quizu naprawdę istnieje.
+  // Lekcja w trakcie pisania deklaruje quiz, zanim JSON powstanie — bez tego
+  // filtra taka lekcja wywalała cały build.
+  const istnieje = new Set(
+    Object.keys(import.meta.glob('../../data/quizzes/*.json')).map(
+      (s) => s.split('/').pop()!.replace('.json', '')
+    )
+  );
   return lekcje
-    .filter((l) => l.data.quiz)
+    .filter((l) => l.data.quiz && istnieje.has(l.data.quiz))
     .map((l) => ({ params: { id: l.data.quiz! }, props: { lekcja: l } }));
 }
 

@@ -1,0 +1,360 @@
+{
+  "lekcja": 12,
+  "temat": "Grzeczność po polsku",
+  "slowa": [
+    {
+      "id": "l12-grzecznosc",
+      "pl": "grzeczność",
+      "ru": "вежливость",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Polska grzeczność mierzy się liczbą słów.",
+      "przyklad_ru": "Польская вежливость измеряется количеством слов."
+    },
+    {
+      "id": "l12-uprzejmy",
+      "pl": "uprzejmy",
+      "ru": "вежливый, любезный",
+      "czesc": "przymiotnik",
+      "przyklad": "Czy byłby pan tak uprzejmy i podał mi to?",
+      "przyklad_ru": "Не будете ли вы так любезны подать мне это?"
+    },
+    {
+      "id": "l12-rozkaz",
+      "pl": "rozkaz",
+      "ru": "приказ",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Po polsku to zdanie brzmi jak rozkaz.",
+      "przyklad_ru": "По-польски это предложение звучит как приказ."
+    },
+    {
+      "id": "l12-prosba",
+      "pl": "prośba",
+      "ru": "просьба",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Zwracam się z prośbą o urlop.",
+      "przyklad_ru": "Обращаюсь с просьбой об отпуске."
+    },
+    {
+      "id": "l12-urzednik",
+      "pl": "urzędnik",
+      "ru": "чиновник, служащий",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Urzędniczka spojrzała na niego zimno.",
+      "przyklad_ru": "Служащая холодно посмотрела на него."
+    },
+    {
+      "id": "l12-urzad",
+      "pl": "urząd",
+      "ru": "учреждение, ведомство",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "W urzędzie coś poszło nie tak.",
+      "przyklad_ru": "В учреждении что-то пошло не так."
+    },
+    {
+      "id": "l12-okienko",
+      "pl": "okienko",
+      "ru": "окошко (в учреждении)",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Podszedł do okienka i powiedział jedno zdanie.",
+      "przyklad_ru": "Он подошёл к окошку и сказал одну фразу."
+    },
+    {
+      "id": "l12-formularz",
+      "pl": "formularz",
+      "ru": "бланк, формуляр",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Proszę wypełnić ten formularz.",
+      "przyklad_ru": "Пожалуйста, заполните этот бланк."
+    },
+    {
+      "id": "l12-wniosek",
+      "pl": "wniosek",
+      "ru": "заявление",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Żenia składa wniosek o pobyt czasowy.",
+      "przyklad_ru": "Женя подаёт заявление на временное пребывание."
+    },
+    {
+      "id": "l12-zalacznik",
+      "pl": "załącznik",
+      "ru": "приложение (к документу)",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Tu brakuje jednego załącznika.",
+      "przyklad_ru": "Здесь не хватает одного приложения."
+    },
+    {
+      "id": "l12-zaswiadczenie",
+      "pl": "zaświadczenie",
+      "ru": "справка",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Musi pan donieść zaświadczenie z pracy.",
+      "przyklad_ru": "Вам нужно донести справку с работы."
+    },
+    {
+      "id": "l12-potwierdzenie",
+      "pl": "potwierdzenie",
+      "ru": "подтверждение, квитанция",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Niech pan weźmie też potwierdzenie opłaty.",
+      "przyklad_ru": "Возьмите также квитанцию об оплате."
+    },
+    {
+      "id": "l12-dowod-osobisty",
+      "pl": "dowód osobisty",
+      "ru": "удостоверение личности",
+      "czesc": "wyrażenie",
+      "przyklad": "Proszę o dowód osobisty albo paszport.",
+      "przyklad_ru": "Прошу удостоверение личности или паспорт."
+    },
+    {
+      "id": "l12-przychodnia",
+      "pl": "przychodnia",
+      "ru": "поликлиника",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "W przychodni Lena czeka na lekarza rodzinnego.",
+      "przyklad_ru": "В поликлинике Лена ждёт семейного врача."
+    },
+    {
+      "id": "l12-przepisac",
+      "pl": "przepisać",
+      "ru": "выписать (лекарство)",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "przepisywać",
+      "przyklad": "Czy mógłby pan mi coś przepisać?",
+      "przyklad_ru": "Не могли бы вы мне что-нибудь выписать?"
+    },
+    {
+      "id": "l12-gardlo",
+      "pl": "gardło",
+      "ru": "горло",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Od tygodnia boli mnie gardło.",
+      "przyklad_ru": "Неделю у меня болит горло."
+    },
+    {
+      "id": "l12-doniesc",
+      "pl": "donieść",
+      "ru": "донести, досдать (документ)",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "donosić",
+      "przyklad": "Musi pan donieść jeszcze jeden dokument.",
+      "przyklad_ru": "Вам нужно донести ещё один документ."
+    },
+    {
+      "id": "l12-przeslac",
+      "pl": "przesłać",
+      "ru": "переслать, отправить",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "przesyłać",
+      "przyklad": "Czy mógłbym je przesłać mailem?",
+      "przyklad_ru": "Мог бы я отправить их по почте?"
+    },
+    {
+      "id": "l12-przelozony",
+      "pl": "przełożony",
+      "ru": "начальник, руководитель",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Anno — tak napisze przełożony, Aniu — przyjaciółka.",
+      "przyklad_ru": "«Anno» напишет начальник, «Aniu» — подруга."
+    },
+    {
+      "id": "l12-urlop",
+      "pl": "urlop",
+      "ru": "отпуск",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Zwracam się z prośbą o urlop w dniach od 3 do 7 września.",
+      "przyklad_ru": "Обращаюсь с просьбой об отпуске с 3 по 7 сентября."
+    },
+    {
+      "id": "l12-obowiazek",
+      "pl": "obowiązek",
+      "ru": "обязанность",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Moje obowiązki na ten czas przejmie pan Nowak.",
+      "przyklad_ru": "Мои обязанности на это время возьмёт пан Новак."
+    },
+    {
+      "id": "l12-odpowiedz",
+      "pl": "odpowiedź",
+      "ru": "ответ",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Będę wdzięczny za odpowiedź do piątku.",
+      "przyklad_ru": "Буду благодарен за ответ до пятницы."
+    },
+    {
+      "id": "l12-wzor",
+      "pl": "wzór",
+      "ru": "образец",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Oto wzór, który warto umieć na pamięć.",
+      "przyklad_ru": "Вот образец, который стоит знать наизусть."
+    },
+    {
+      "id": "l12-wdzieczny",
+      "pl": "wdzięczny",
+      "ru": "благодарный",
+      "czesc": "przymiotnik",
+      "przyklad": "Będę wdzięczny za szybką odpowiedź.",
+      "przyklad_ru": "Буду благодарен за быстрый ответ."
+    },
+    {
+      "id": "l12-dystans",
+      "pl": "dystans",
+      "ru": "дистанция",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Zbyt wczesne „ty” kosztuje więcej niż nadmiar dystansu.",
+      "przyklad_ru": "Слишком раннее «ты» обходится дороже, чем избыток дистанции."
+    },
+    {
+      "id": "l12-sasiad",
+      "pl": "sąsiad",
+      "ru": "сосед",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Sąsiad robi remont od świtu.",
+      "przyklad_ru": "Сосед делает ремонт с рассвета."
+    },
+    {
+      "id": "l12-remont",
+      "pl": "remont",
+      "ru": "ремонт",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Za ścianą od tygodnia trwa remont.",
+      "przyklad_ru": "За стеной уже неделю идёт ремонт."
+    },
+    {
+      "id": "l12-halasowac",
+      "pl": "hałasować",
+      "ru": "шуметь",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "przyklad": "Nie hałasuj tak wieczorem!",
+      "przyklad_ru": "Не шуми так вечером!"
+    },
+    {
+      "id": "l12-przeszkadzac",
+      "pl": "przeszkadzać",
+      "ru": "мешать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "przeszkodzić",
+      "przyklad": "Pracuję z domu i trochę mi to przeszkadza.",
+      "przyklad_ru": "Я работаю из дома, и это мне немного мешает."
+    },
+    {
+      "id": "l12-drabina",
+      "pl": "drabina",
+      "ru": "лестница, стремянка",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Wyobraźcie sobie drabinę grzeczności.",
+      "przyklad_ru": "Представьте себе лестницу вежливости."
+    },
+    {
+      "id": "l12-szczebel",
+      "pl": "szczebel",
+      "ru": "ступень, ступенька",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "To samo znaczenie, sześć szczebli.",
+      "przyklad_ru": "Один и тот же смысл, шесть ступеней."
+    },
+    {
+      "id": "l12-bezposredni",
+      "pl": "bezpośredni",
+      "ru": "прямой, непосредственный",
+      "czesc": "przymiotnik",
+      "przyklad": "Zdanie robi się dłuższe i mniej bezpośrednie.",
+      "przyklad_ru": "Предложение становится длиннее и менее прямым."
+    },
+    {
+      "id": "l12-ostrzezenie",
+      "pl": "ostrzeżenie",
+      "ru": "предупреждение",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "W ostrzeżeniach na grzeczność nie ma czasu.",
+      "przyklad_ru": "В предупреждениях на вежливость нет времени."
+    },
+    {
+      "id": "l12-odmowa",
+      "pl": "odmowa",
+      "ru": "отказ",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Mówiący zostawia rozmówcy miejsce na odmowę.",
+      "przyklad_ru": "Говорящий оставляет собеседнику место для отказа."
+    },
+    {
+      "id": "l12-prosze-pana",
+      "pl": "proszę pana / proszę pani",
+      "ru": "обращение к незнакомому мужчине / женщине",
+      "czesc": "wyrażenie",
+      "przyklad": "Przepraszam, proszę pani, która godzina?",
+      "przyklad_ru": "Извините, пани, который час?"
+    },
+    {
+      "id": "l12-przepraszam-bardzo",
+      "pl": "przepraszam bardzo",
+      "ru": "извините, пожалуйста",
+      "czesc": "wyrażenie",
+      "przyklad": "Przepraszam bardzo, czy to jest właściwe okienko?",
+      "przyklad_ru": "Извините, пожалуйста, это правильное окошко?"
+    },
+    {
+      "id": "l12-czy-moglby",
+      "pl": "czy mógłby pan / mogłaby pani",
+      "ru": "вы не могли бы",
+      "czesc": "wyrażenie",
+      "przyklad": "Czy mógłby pan mi to podać?",
+      "przyklad_ru": "Вы не могли бы мне это подать?"
+    },
+    {
+      "id": "l12-z-gory",
+      "pl": "z góry dziękuję",
+      "ru": "заранее спасибо",
+      "czesc": "wyrażenie",
+      "przyklad": "Z góry dziękuję za odpowiedź.",
+      "przyklad_ru": "Заранее спасибо за ответ."
+    },
+    {
+      "id": "l12-z-powazaniem",
+      "pl": "z poważaniem",
+      "ru": "с уважением",
+      "czesc": "wyrażenie",
+      "przyklad": "Z poważaniem, Oleg Sidorow.",
+      "przyklad_ru": "С уважением, Олег Сидоров."
+    },
+    {
+      "id": "l12-przejsc-na",
+      "pl": "przejść na ty",
+      "ru": "перейти на «ты»",
+      "czesc": "wyrażenie",
+      "przyklad": "Może przejdźmy na ty?",
+      "przyklad_ru": "Может, перейдём на «ты»?"
+    }
+  ]
+}

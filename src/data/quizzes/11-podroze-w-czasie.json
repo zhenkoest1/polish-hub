@@ -1,0 +1,79 @@
+{
+  "title": "Quiz — Podróże w czasie",
+  "subtitle": "Przeszłość i przyszłość w jednym przebiegu. 6 rund, 31 pytań. Dwie największe pułapki: „robili” czy „robiły” — oraz „będę zrobić”, którego po prostu nie ma.",
+  "sections": [
+    {
+      "emoji": "❓",
+      "title": "Prawda czy fałsz? — czy uważaliście na tekst",
+      "type": "tf",
+      "questions": [
+        { "q": "Endel Tulving podzielił pamięć na semantyczną i epizodyczną.", "answer": true, "explain": "W 1972 roku. Semantyczna to wiedza, epizodyczna to przeżyte wydarzenia." },
+        { "q": "Po wypadku K.C. zapomniał, ile ma lat i gdzie mieszka.", "answer": false, "explain": "Odwrotnie — pamięć semantyczna działała dalej. Zniknęła epizodyczna." },
+        { "q": "K.C. wiedział, że jego brat nie żyje, ale nie pamiętał ani jednej wspólnej chwili z nim.", "answer": true, "explain": "Fakt bez obrazu — dokładnie na tym polega utrata pamięci epizodycznej." },
+        { "q": "Zapytany, co będzie robił jutro, K.C. mówił o pustce — takiej samej jak wtedy, gdy próbował wspominać przeszłość.", "answer": true, "explain": "Porównał to do pływania w środku jeziora, gdzie nie ma się czego złapać." },
+        { "q": "Badanie Schactera i Addis pokazało, że wspominanie przeszłości i wyobrażanie sobie przyszłości aktywują zupełnie różne obszary mózgu.", "answer": false, "explain": "Przeciwnie — aktywowały się w dużej mierze te same obszary, czyli domyślna sieć mózgu." },
+        { "q": "Rezonans magnetyczny dowiódł, że pamiętanie i wyobrażanie sobie to dokładnie ten sam proces.", "answer": false, "explain": "Nie dowiódł. Pokazuje tylko, że te same obszary są aktywne. Nakładanie się to jeszcze nie tożsamość." },
+        { "q": "Według Gilberta i Wilsona ludzie zwykle przeceniają, jak długo będzie trwać silna emocja.", "answer": true, "explain": "To błąd trwałości. Kierunek uczucia przewidujemy nieźle, czas trwania — źle." }
+      ]
+    },
+    {
+      "emoji": "⏪",
+      "title": "Runda 1 — czas przeszły, tematy nieregularne",
+      "type": "typein",
+      "questions": [
+        { "q": "iść, on → Wczoraj __________ do pracy pieszo.", "hint": "on, czas przeszły", "answer": "szedł" },
+        { "q": "iść, ona → Wczoraj __________ do pracy pieszo.", "hint": "temat żeński to szł-", "answer": "szła" },
+        { "q": "iść, oni → Naukowcy __________ długim korytarzem.", "hint": "m-os., l.mn.", "answer": "szli" },
+        { "q": "móc, ja *(mężczyzna)* → Nie __________ sobie przypomnieć jej imienia.", "hint": "uwaga na ó", "answer": "mogłem" },
+        { "q": "móc, on → K.C. nie __________ wyobrazić sobie jutra.", "hint": "goła forma męska", "answer": "mógł" },
+        { "q": "jeść, oni → Studenci __________ obiad w stołówce.", "hint": "m-os., wymiana a → e", "answer": "jedli" },
+        { "q": "wziąć, on → On __________ urlop w lipcu.", "hint": "nosowe ą", "answer": "wziął" },
+        { "q": "wziąć, ona → Ona __________ urlop w lipcu.", "hint": "nosowe ę", "answer": "wzięła" }
+      ]
+    },
+    {
+      "emoji": "👥",
+      "title": "Runda 2 — męskoosobowy czy niemęskoosobowy?",
+      "type": "mc",
+      "questions": [
+        { "q": "Naukowcy __________ pamięć przez czterdzieści lat.", "options": ["badali", "badały", "badał", "badałyśmy"], "answer": "badali", "explain": "„Naukowcy” to sami mężczyźni → forma męskoosobowa na -li." },
+        { "q": "Badaczki __________ ochotników do skanera.", "options": ["zaprosiły", "zaprosili", "zaprosił", "zaprosiłyśmy"], "answer": "zaprosiły", "explain": "Same kobiety → niemęskoosobowa forma na -ły. „Zaprosiłyśmy” to „my”, a tu podmiotem są „one”." },
+        { "q": "Dzieci długo __________ w parku.", "options": ["bawiły się", "bawili się", "bawił się", "bawiłyśmy się"], "answer": "bawiły się", "explain": "„Dzieci” to ludzie, ale kategoria nazywa się męskoosobowa, nie żywotna. Zawsze nm-os.: bawiły się." },
+        { "q": "Wspomnienia __________ się po każdym opowiedzeniu.", "options": ["zmieniały", "zmieniali", "zmieniał", "zmieniałyby"], "answer": "zmieniały", "explain": "Rzeczy i pojęcia są zawsze niemęskoosobowe. „Zmieniałyby” to tryb przypuszczający — inny czas." },
+        { "q": "Schacter i Addis __________ wyniki w 2007 roku. *(Donna Rose Addis to kobieta)*", "options": ["opublikowali", "opublikowały", "opublikował", "opublikowałyśmy"], "answer": "opublikowali", "explain": "Jeden mężczyzna w grupie przestawia całą grupę na męskoosobową." },
+        { "q": "Ania i Kasia __________ wczoraj do kina.", "options": ["poszły", "poszli", "poszła", "pójdą"], "answer": "poszły", "explain": "Dwie kobiety → nm-os. „Pójdą” to czas przyszły, a zdanie mówi o wczoraj." },
+        { "q": "Dziewczyny będą __________ do egzaminu przez całe wakacje.", "options": ["uczyły się", "uczyli się", "uczyłyśmy się", "uczyła się"], "answer": "uczyły się", "explain": "W czasie przyszłym złożonym forma na -ł też uzgadnia się w rodzaju: dziewczyny → będą uczyły się." }
+      ]
+    },
+    {
+      "emoji": "⏩",
+      "title": "Runda 3 — przyszły prosty czy złożony?",
+      "type": "mc",
+      "questions": [
+        { "q": "Jutro __________ ten artykuł do końca. *(przeczytać — dk)*", "options": ["przeczytam", "będę przeczytać", "będę przeczytał", "przeczytałem"], "answer": "przeczytam", "explain": "Czasownik dokonany ma przyszłość prostą. „Być” nigdy nie łączy się z dk." },
+        { "q": "Przez całe wakacje __________ polskiego. *(uczyć się — ndk, ja, kobieta)*", "options": ["będę się uczyła", "będę się uczyłam", "będę się nauczyła", "będę się uczyli"], "answer": "będę się uczyła", "explain": "Ndk → przyszły złożony. Forma na -ł uzgadnia rodzaj (uczyła), ale nigdy nie bierze końcówki osobowej (nie: uczyłam). „Nauczyć się” to dk — po „będę” niemożliwe." },
+        { "q": "Które zdanie jest poprawne?", "options": ["Będę robił zadanie przez godzinę.", "Będę zrobił zadanie przez godzinę.", "Będę zrobić zadanie przez godzinę.", "Będę robiłem zadanie przez godzinę."], "answer": "Będę robił zadanie przez godzinę.", "explain": "„Zrobić” jest dk, więc odpada w obu wariantach. „Robiłem” ma końcówkę osobową, a osoba siedzi już w „będę”." },
+        { "q": "Popraw błąd: „Ona będzie pisał raport”.", "options": ["Ona będzie pisała raport.", "Ona będzie pisałam raport.", "Ona będą pisała raport.", "Ona będzie napisała raport."], "answer": "Ona będzie pisała raport.", "explain": "Forma na -ł uzgadnia się w rodzaju z podmiotem: ona → pisała. Bez końcówki osobowej." },
+        { "q": "Kiedy __________ pracę, zadzwonię do ciebie. *(skończyć — dk)*", "options": ["skończę", "będę skończyć", "będę skończył", "skończyłem"], "answer": "skończę", "explain": "Po „kiedy” też stoi czas przyszły. Skończyć jest dk → forma prosta." },
+        { "q": "Czasownik *móc* nie ma pary dokonanej. Które zdanie jest poprawne?", "options": ["Będę mógł ci pomóc.", "Będę mogę ci pomóc.", "Zmogę ci pomóc.", "Będę mógłem ci pomóc."], "answer": "Będę mógł ci pomóc.", "explain": "Po „będę” nie stoi forma osobowa (mogę), nie istnieje też „zmóc”, a „mógłem” to podwójny błąd — poprawnie „mogłem”." },
+        { "q": "Za rok __________ w Krakowie. *(mieszkać — ndk, my, grupa z mężczyzną)*", "options": ["będziemy mieszkali", "będziemy mieszkały", "będziemy mieszkaliśmy", "będą mieszkali"], "answer": "będziemy mieszkali", "explain": "Grupa z mężczyzną → m-os. „Mieszkaliśmy” dokłada zbędną końcówkę osobową, a „będą” to oni, nie my." }
+      ]
+    },
+    {
+      "emoji": "🧠",
+      "title": "Runda 4 — połącz pojęcie z wyjaśnieniem",
+      "type": "match",
+      "questions": [
+        { "q": "Dopasuj pojęcie do wyjaśnienia.", "pairs": [["pamięć epizodyczna", "wspomnienie konkretnego dnia, z miejscem, czasem i tobą w środku"], ["pamięć semantyczna", "sucha wiedza o świecie, bez daty i bez adresu"], ["hipokamp", "struktura mózgu zniszczona u pacjenta K.C."], ["sieć trybu domyślnego", "obszary aktywne i przy wspominaniu, i przy wyobrażaniu sobie jutra"], ["prognozowanie afektywne", "przewidywanie własnych przyszłych uczuć"], ["błąd trwałości", "przekonanie, że emocja zostanie z nami dłużej, niż zostaje naprawdę"]] }
+      ]
+    },
+    {
+      "emoji": "🧩",
+      "title": "Runda 5 — uzupełnij historię (wczoraj → jutro)",
+      "type": "tap_fill",
+      "questions": [
+        { "text": "Wczoraj Marek {0} do biblioteki i {1} artykuł o pamięci. Nie {2} sobie przypomnieć, kto mu go polecił. Wieczorem jego siostry {3} o tym w kuchni, a rodzice {4} już w drugim pokoju. Jutro Marek {5} notatki i {6} je koleżance. W przyszłym tygodniu {7} przygotowywał prezentację, a dziewczyny z grupy będą {8} materiały.", "answers": ["poszedł", "przeczytał", "mógł", "rozmawiały", "spali", "napisze", "wyśle", "będzie", "zbierały"] }
+      ]
+    }
+  ]
+}

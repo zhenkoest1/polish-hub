@@ -1,0 +1,79 @@
+{
+  "title": "Quiz — Mądrość tłumu",
+  "subtitle": "Galton, wół, Asch i najważniejsze pytanie polskiej liczby mnogiej: czy w tej grupie jest choć jeden mężczyzna? 6 rund, punkty na końcu.",
+  "sections": [
+    {
+      "emoji": "❓",
+      "title": "Prawda czy fałsz? — czy uważaliście na tekst",
+      "type": "tf",
+      "questions": [
+        { "q": "Francis Galton pojechał na jarmark w Plymouth w 1906 roku.", "answer": true, "explain": "Miał wtedy osiemdziesiąt cztery lata." },
+        { "q": "Uczestnicy konkursu widzieli odpowiedzi innych, zanim napisali swoją.", "answer": false, "explain": "Nikt nie widział cudzej kartki — na tym polegała niezależność." },
+        { "q": "Środkowa odpowiedź tłumu wynosiła 1207 funtów, a prawdziwa waga 1198 funtów.", "answer": true, "explain": "Błąd niecały jeden procent. Późniejsze przeliczenie średniej dało 1197 funtów." },
+        { "q": "Galton jechał na jarmark z nadzieją, że tłum zgadnie wagę bardzo dokładnie.", "answer": false, "explain": "Odwrotnie — chciał udowodnić, że tłumy się mylą." },
+        { "q": "Surowiecki wymienia cztery warunki: niezależność, różnorodność, decentralizację i sposób liczenia.", "answer": true },
+        { "q": "U Ascha około trzy czwarte badanych przynajmniej raz poszło za grupą wbrew własnym oczom.", "answer": true, "explain": "W grupie kontrolnej, gdzie każdy odpowiadał sam, błędów było mniej niż jeden procent." },
+        { "q": "W eksperymencie z ośmioma „światami” muzyki wszędzie wygrała ta sama piosenka.", "answer": false, "explain": "Ta sama piosenka bywała pierwsza w jednym świecie i czterdziesta w drugim." },
+        { "q": "Jeśli w grupie jest choć jeden mężczyzna, cała grupa jest męskoosobowa.", "answer": true, "explain": "Sto kobiet i jeden mężczyzna → oni przyszli." }
+      ]
+    },
+    {
+      "emoji": "🔧",
+      "title": "Runda 1 — utwórz liczbę mnogą męskoosobową",
+      "type": "typein",
+      "questions": [
+        { "q": "naukowiec → __________", "hint": "-ec → -cy, „e” wypada", "answer": "naukowcy" },
+        { "q": "uczestnik → __________", "hint": "k → cy", "answer": "uczestnicy" },
+        { "q": "ekspert → __________", "hint": "t → ci", "answer": "eksperci" },
+        { "q": "Polak → __________", "hint": "k → cy", "answer": "Polacy" },
+        { "q": "Szwed → __________", "hint": "d → dzi", "answer": "Szwedzi" },
+        { "q": "aktor → __________", "hint": "r → rzy", "answer": "aktorzy" },
+        { "q": "biolog → __________", "hint": "g → dzy", "answer": "biolodzy" },
+        { "q": "Włoch → __________", "hint": "ch → si", "answer": "Włosi" }
+      ]
+    },
+    {
+      "emoji": "🎨",
+      "title": "Runda 2 — przymiotnik przy grupie",
+      "type": "typein",
+      "questions": [
+        { "q": "Ci __________ eksperci i tak się pomylili. *(dobry)*", "hint": "r → rz", "answer": "dobrzy" },
+        { "q": "W sali siedzieli __________ mężczyźni. *(wysoki)*", "hint": "k → c", "answer": "wysocy" },
+        { "q": "To byli bardzo __________ ludzie. *(miły)*", "hint": "ł → l", "answer": "mili" },
+        { "q": "Na jarmark przyszli też __________ rolnicy. *(młody)*", "hint": "d → dzi", "answer": "młodzi" },
+        { "q": "Te __________ odpowiedzi były bliskie prawdy. *(dobry)*", "hint": "grupa niemęskoosobowa", "answer": "dobre" },
+        { "q": "Ci __________ doradcy nie powiedzieli ani słowa. *(inteligentny)*", "hint": "n → ni", "answer": "inteligentni" }
+      ]
+    },
+    {
+      "emoji": "⏪",
+      "title": "Runda 3 — czasownik: -li czy -ły?",
+      "type": "mc",
+      "questions": [
+        { "q": "Naukowcy __________ wszystkie dane jeszcze raz.", "options": ["przeliczyli", "przeliczyły", "przeliczył", "przeliczyła"], "answer": "przeliczyli", "explain": "„Naukowcy” to grupa mężczyzn — męskoosobowy, końcówka -li." },
+        { "q": "Kobiety __________ swoje odpowiedzi na kartkach.", "options": ["zapisały", "zapisali", "zapisało", "zapisał"], "answer": "zapisały", "explain": "Same kobiety — niemęskoosobowy, końcówka -ły." },
+        { "q": "Ludzie __________ na jarmark już od rana.", "options": ["przychodzili", "przychodziły", "przychodziło", "przychodził"], "answer": "przychodzili", "explain": "„Ludzie” wygląda nietypowo, ale jest męskoosobowy: byli, przychodzili, mówili." },
+        { "q": "Dzieci __________ obok wołu i nic nie rozumiały.", "options": ["stały", "stali", "stało", "stała"], "answer": "stały", "explain": "„Dzieci” to rzeczownik niemęskoosobowy — dzieci były, dzieci stały." },
+        { "q": "Rolnicy i ich żony __________ do domu przed wieczorem.", "options": ["wrócili", "wróciły", "wróciło", "wracała"], "answer": "wrócili", "explain": "W grupie jest choć jeden mężczyzna — cała grupa staje się męskoosobowa." },
+        { "q": "Wszystkie uczestniczki __________ tę samą liczbę.", "options": ["podały", "podali", "podało", "podała"], "answer": "podały", "explain": "Same kobiety: wszystkie uczestniczki podały. Przy mężczyznach byłoby: wszyscy uczestnicy podali." },
+        { "q": "Od tamtego jarmarku __________ ponad sto lat.", "options": ["minęły", "minęli", "minął", "minęła"], "answer": "minęły", "explain": "„Lata” to forma niemęskoosobowa, mimo że pochodzi od męskiego „rok”." }
+      ]
+    },
+    {
+      "emoji": "🔗",
+      "title": "Runda 4 — nieregularna liczba mnoga",
+      "type": "match",
+      "questions": [
+        { "q": "Dopasuj liczbę pojedynczą do nieregularnej liczby mnogiej.", "pairs": [["człowiek", "ludzie"], ["rok", "lata"], ["dziecko", "dzieci"], ["brat", "bracia"], ["ksiądz", "księża"], ["przyjaciel", "przyjaciele"]] }
+      ]
+    },
+    {
+      "emoji": "🧩",
+      "title": "Runda 5 — uzupełnij tekst o Galtonie",
+      "type": "tap_fill",
+      "questions": [
+        { "text": "W 1906 roku na jarmark w Plymouth {0} setki osób. {1} i rzeźnicy znali się na bydle, ale zwykli {2} widzieli wołu pierwszy raz w życiu. Wszystkie {3} zostały zapisane osobno — nikt nie zaglądał sąsiadowi przez ramię. Środkowa odpowiedź wynosiła 1207 funtów, a prawdziwa waga 1198. Pojedynczy {4} pomylili się bardziej niż cały tłum. Kobiety też brały udział i {5} nie gorzej niż mężczyźni. Dopiero {6} razem dali wynik bliski prawdy.", "answers": ["przyszły", "Rolnicy", "przechodnie", "odpowiedzi", "eksperci", "zgadywały", "wszyscy"] }
+      ]
+    }
+  ]
+}

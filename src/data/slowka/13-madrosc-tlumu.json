@@ -1,0 +1,367 @@
+{
+  "lekcja": 13,
+  "temat": "Mądrość tłumu",
+  "slowa": [
+    {
+      "id": "l13-tlum",
+      "pl": "tłum",
+      "ru": "толпа",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Tłum pomylił się o niecały jeden procent.",
+      "przyklad_ru": "Толпа ошиблась меньше чем на один процент."
+    },
+    {
+      "id": "l13-madrosc",
+      "pl": "mądrość",
+      "ru": "мудрость",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Galton wierzył, że mądrość należy do wąskiej elity.",
+      "przyklad_ru": "Гальтон верил, что мудрость принадлежит узкой элите."
+    },
+    {
+      "id": "l13-jarmark",
+      "pl": "jarmark",
+      "ru": "ярмарка",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "W 1906 roku Galton pojechał na jarmark do Plymouth.",
+      "przyklad_ru": "В 1906 году Гальтон поехал на ярмарку в Плимут."
+    },
+    {
+      "id": "l13-wol",
+      "pl": "wół",
+      "ru": "вол",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Organizatorzy przyprowadzili wołu i kazali zgadywać jego wagę.",
+      "przyklad_ru": "Организаторы привели вола и велели угадывать его вес."
+    },
+    {
+      "id": "l13-bydlo",
+      "pl": "bydło",
+      "ru": "скот",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Rolnicy i rzeźnicy znali się na bydle.",
+      "przyklad_ru": "Фермеры и мясники разбирались в скоте."
+    },
+    {
+      "id": "l13-waga",
+      "pl": "waga",
+      "ru": "вес",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Prawdziwa waga wynosiła 1198 funtów.",
+      "przyklad_ru": "Настоящий вес составлял 1198 фунтов."
+    },
+    {
+      "id": "l13-funt",
+      "pl": "funt",
+      "ru": "фунт",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Środkowa odpowiedź brzmiała: 1207 funtów.",
+      "przyklad_ru": "Срединный ответ был: 1207 фунтов."
+    },
+    {
+      "id": "l13-zgadywac",
+      "pl": "zgadywać",
+      "ru": "угадывать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "zgadnąć",
+      "przyklad": "Uczestnicy zgadywali wagę wołu, każdy osobno.",
+      "przyklad_ru": "Участники угадывали вес вола, каждый отдельно."
+    },
+    {
+      "id": "l13-rolnik",
+      "pl": "rolnik",
+      "ru": "фермер, крестьянин",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Na jarmark przyszli rolnicy i rzeźnicy.",
+      "przyklad_ru": "На ярмарку пришли фермеры и мясники."
+    },
+    {
+      "id": "l13-rzeznik",
+      "pl": "rzeźnik",
+      "ru": "мясник",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Rzeźnicy też się mylili, ale w drugą stronę.",
+      "przyklad_ru": "Мясники тоже ошибались, но в другую сторону."
+    },
+    {
+      "id": "l13-urzednik",
+      "pl": "urzędnik",
+      "ru": "чиновник, служащий",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Kartki kupowali urzędnicy i sklepikarze.",
+      "przyklad_ru": "Карточки покупали чиновники и лавочники."
+    },
+    {
+      "id": "l13-przechodzien",
+      "pl": "przechodzień",
+      "ru": "прохожий",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Przypadkowi przechodnie nie widzieli wołu z bliska.",
+      "przyklad_ru": "Случайные прохожие не видели вола вблизи."
+    },
+    {
+      "id": "l13-uczestnik",
+      "pl": "uczestnik",
+      "ru": "участник",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Uczestnicy narady zapisują ocenę, zanim usłyszą szefa.",
+      "przyklad_ru": "Участники совещания записывают оценку, прежде чем услышат начальника."
+    },
+    {
+      "id": "l13-ekspert",
+      "pl": "ekspert",
+      "ru": "эксперт",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Żaden pojedynczy ekspert nie był tak dokładny jak tłum.",
+      "przyklad_ru": "Ни один отдельный эксперт не был так точен, как толпа."
+    },
+    {
+      "id": "l13-naukowiec",
+      "pl": "naukowiec",
+      "ru": "учёный",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Nawet dobrzy naukowcy mylą się razem, jeśli myślą tak samo.",
+      "przyklad_ru": "Даже хорошие учёные ошибаются вместе, если думают одинаково."
+    },
+    {
+      "id": "l13-badacz",
+      "pl": "badacz",
+      "ru": "исследователь",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Badacze podzielili uczestników na osiem osobnych światów.",
+      "przyklad_ru": "Исследователи разделили участников на восемь отдельных миров."
+    },
+    {
+      "id": "l13-statystyk",
+      "pl": "statystyk",
+      "ru": "статистик",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Statystyk Kenneth Wallis przeliczył te same dane sto lat później.",
+      "przyklad_ru": "Статистик Кеннет Уоллис пересчитал те же данные сто лет спустя."
+    },
+    {
+      "id": "l13-specjalista",
+      "pl": "specjalista",
+      "ru": "специалист",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Craven poprosił specjalistów z różnych dziedzin.",
+      "przyklad_ru": "Крейвен попросил специалистов из разных областей."
+    },
+    {
+      "id": "l13-doradca",
+      "pl": "doradca",
+      "ru": "советник",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Doradcy prezydenta planowali inwazję i nikt nie powiedział „nie”.",
+      "przyklad_ru": "Советники президента планировали вторжение, и никто не сказал «нет»."
+    },
+    {
+      "id": "l13-sluchacz",
+      "pl": "słuchacz",
+      "ru": "слушатель",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Słuchacze widzieli, ile razy piosenkę pobrali inni.",
+      "przyklad_ru": "Слушатели видели, сколько раз песню скачали другие."
+    },
+    {
+      "id": "l13-uzytkownik",
+      "pl": "użytkownik",
+      "ru": "пользователь",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Algorytm pokazuje to, co wybrali podobni do ciebie użytkownicy.",
+      "przyklad_ru": "Алгоритм показывает то, что выбрали похожие на тебя пользователи."
+    },
+    {
+      "id": "l13-srednia",
+      "pl": "średnia",
+      "ru": "среднее значение",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Średnia ich odpowiedzi wskazała punkt oddalony o dwieście metrów.",
+      "przyklad_ru": "Среднее их ответов указало точку в двухстах метрах."
+    },
+    {
+      "id": "l13-blad",
+      "pl": "błąd",
+      "ru": "ошибка",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Ich błędy szły w różne strony i wzajemnie się znosiły.",
+      "przyklad_ru": "Их ошибки шли в разные стороны и взаимно погашались."
+    },
+    {
+      "id": "l13-znosic-sie",
+      "pl": "znosić się wzajemnie",
+      "ru": "взаимно погашаться",
+      "czesc": "wyrażenie",
+      "przyklad": "Przy dużej liczbie odpowiedzi błędy znoszą się wzajemnie.",
+      "przyklad_ru": "При большом числе ответов ошибки взаимно погашаются."
+    },
+    {
+      "id": "l13-dokladny",
+      "pl": "dokładny",
+      "ru": "точный",
+      "czesc": "przymiotnik",
+      "przyklad": "Nikt z osobna nie był tak dokładny jak cała grupa.",
+      "przyklad_ru": "Никто по отдельности не был так точен, как вся группа."
+    },
+    {
+      "id": "l13-wiarygodny",
+      "pl": "wiarygodny",
+      "ru": "достоверный, надёжный",
+      "czesc": "przymiotnik",
+      "przyklad": "Wynik okazał się bardziej wiarygodny, niż Galton się spodziewał.",
+      "przyklad_ru": "Результат оказался более достоверным, чем Гальтон ожидал."
+    },
+    {
+      "id": "l13-udowodnic",
+      "pl": "udowodnić",
+      "ru": "доказать",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "udowadniać",
+      "przyklad": "Chciał udowodnić, że tłumy się mylą.",
+      "przyklad_ru": "Он хотел доказать, что толпы ошибаются."
+    },
+    {
+      "id": "l13-przyznac",
+      "pl": "przyznać",
+      "ru": "признать",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "przyznawać",
+      "przyklad": "Przyznał, że wynik jest lepszy, niż zakładał.",
+      "przyklad_ru": "Он признал, что результат лучше, чем он предполагал."
+    },
+    {
+      "id": "l13-warunek",
+      "pl": "warunek",
+      "ru": "условие",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Tłum jest mądry tylko wtedy, gdy spełnione są cztery warunki.",
+      "przyklad_ru": "Толпа умна только тогда, когда выполнены четыре условия."
+    },
+    {
+      "id": "l13-niezaleznosc",
+      "pl": "niezależność",
+      "ru": "независимость",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Niezależność jest warunkiem najłatwiejszym do zepsucia.",
+      "przyklad_ru": "Независимость — условие, которое легче всего испортить."
+    },
+    {
+      "id": "l13-roznorodnosc",
+      "pl": "różnorodność",
+      "ru": "разнообразие",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Bez różnorodności wszyscy popełnią ten sam błąd.",
+      "przyklad_ru": "Без разнообразия все совершат одну и ту же ошибку."
+    },
+    {
+      "id": "l13-glosowac",
+      "pl": "głosować",
+      "ru": "голосовать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "zagłosować",
+      "przyklad": "Dobre zespoły głosują przed dyskusją, nie po niej.",
+      "przyklad_ru": "Хорошие команды голосуют до обсуждения, а не после."
+    },
+    {
+      "id": "l13-wskazac",
+      "pl": "wskazać",
+      "ru": "указать",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "wskazywać",
+      "przyklad": "Wszyscy jednogłośnie wskazali złą linię.",
+      "przyklad_ru": "Все единогласно указали на неправильную линию."
+    },
+    {
+      "id": "l13-jednoglosnie",
+      "pl": "jednogłośnie",
+      "ru": "единогласно",
+      "czesc": "przysłówek",
+      "przyklad": "W dwunastu turach grupa odpowiadała jednogłośnie źle.",
+      "przyklad_ru": "В двенадцати раундах группа единогласно отвечала неправильно."
+    },
+    {
+      "id": "l13-watpliwosc",
+      "pl": "wątpliwość",
+      "ru": "сомнение",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Kilku doradców miało wątpliwości i żaden ich nie wypowiedział.",
+      "przyklad_ru": "У нескольких советников были сомнения, и ни один их не высказал."
+    },
+    {
+      "id": "l13-wahac-sie",
+      "pl": "wahać się",
+      "ru": "колебаться, сомневаться",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "zawahać się",
+      "przyklad": "Każdy był przekonany, że tylko on się waha.",
+      "przyklad_ru": "Каждый был убеждён, что колеблется только он."
+    },
+    {
+      "id": "l13-konformizm",
+      "pl": "konformizm",
+      "ru": "конформизм",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Asch badał konformizm za pomocą trzech linii na kartce.",
+      "przyklad_ru": "Аш исследовал конформизм с помощью трёх линий на карточке."
+    },
+    {
+      "id": "l13-polubienie",
+      "pl": "polubienie",
+      "ru": "лайк, отметка «нравится»",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Widzisz post razem z liczbą polubień.",
+      "przyklad_ru": "Ты видишь пост вместе с количеством лайков."
+    },
+    {
+      "id": "l13-narada",
+      "pl": "narada",
+      "ru": "совещание",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Na naradzie ludzie rzadko mówią to, co naprawdę myślą.",
+      "przyklad_ru": "На совещании люди редко говорят то, что действительно думают."
+    },
+    {
+      "id": "l13-media-spolecznosciowe",
+      "pl": "media społecznościowe",
+      "ru": "социальные сети",
+      "czesc": "wyrażenie",
+      "przyklad": "Media społecznościowe systematycznie niszczą niezależność opinii.",
+      "przyklad_ru": "Социальные сети систематически разрушают независимость мнений."
+    }
+  ]
+}

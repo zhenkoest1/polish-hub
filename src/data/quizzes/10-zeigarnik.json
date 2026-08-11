@@ -1,0 +1,78 @@
+{
+  "title": "Quiz — Efekt Zeigarnik",
+  "subtitle": "Kelner, przerwane figurki z plasteliny i cała różnica między „robiłem” a „zrobiłem”. 6 rund. Pamiętajcie: czasownik dokonany nie ma czasu teraźniejszego!",
+  "sections": [
+    {
+      "emoji": "❓",
+      "title": "Prawda czy fałsz? — czy uważaliście na tekst",
+      "type": "tf",
+      "questions": [
+        { "q": "Bluma Zeigarnik była studentką profesora Kurta Lewina.", "answer": true },
+        { "q": "Kelner w kawiarni zapisywał wszystkie zamówienia w notesie.", "answer": false, "explain": "Nie zapisywał niczego — chodził między stolikami i wszystko pamiętał." },
+        { "q": "Po zapłaceniu rachunku kelner nadal dokładnie pamiętał zamówienie.", "answer": false, "explain": "Nie pamiętał ani jednej pozycji. Zamknięty rachunek pamięć od razu wypuściła." },
+        { "q": "Eksperyment Zeigarnik został opublikowany w 1927 roku.", "answer": true },
+        { "q": "W eksperymencie uczestnicy dostawali od osiemnastu do dwudziestu dwóch krótkich zadań.", "answer": true, "explain": "Lepienie figurek, zagadki, liczenie w pamięci, nawlekanie koralików." },
+        { "q": "Zadania przerwane uczestnicy wymieniali mniej więcej dwa razy częściej niż dokończone.", "answer": true, "explain": "A zadania były identyczne — jedyna różnica polegała na tym, czy zostały zamknięte." },
+        { "q": "Efekt Owsiankiny to potrzeba wracania do przerwanego zadania.", "answer": true, "explain": "Maria Owsiankina pokazała w 1928 roku, że ludzie wracają sami, bez polecenia." },
+        { "q": "Żeby uwolnić głowę od niedokończonej sprawy, trzeba koniecznie tę sprawę wykonać.", "answer": false, "explain": "Często wystarczy konkretny plan — kiedy i jak. Badania Masicampo i Baumeistera (2011) pokazały, że sam plan działa prawie tak samo skutecznie." },
+        { "q": "Późniejsze replikacje efektu Zeigarnik zawsze dawały ten sam, bardzo silny wynik.", "answer": false, "explain": "Wyniki bywały różne. Efekt jest realny, ale słabszy i bardziej zależny od kontekstu, niż mówi wersja popularna." }
+      ]
+    },
+    {
+      "emoji": "🔍",
+      "title": "Runda 1 — rozpoznaj parę aspektową",
+      "type": "mc",
+      "questions": [
+        { "q": "Który czasownik jest parą dokonaną do „pisać”?", "options": ["napisać", "zapisać", "spisać", "popisać się"], "answer": "napisać", "explain": "Para aspektowa to pisać → napisać. Zapisać, spisać i popisać się mają własne, inne znaczenia." },
+        { "q": "Który czasownik jest parą niedokonaną do „dać”?", "options": ["dawać", "dodawać", "oddawać", "poddawać się"], "answer": "dawać", "explain": "Tu kierunek jest odwrotny: podstawą jest dokonane „dać”, a niedokonane „dawać” powstaje od niego przyrostkiem -wa-." },
+        { "q": "Który czasownik jest parą dokonaną do „brać”?", "options": ["wziąć", "zabrać", "nabrać", "odebrać"], "answer": "wziąć", "explain": "To para supletywna — dwa różne rdzenie, dokładnie jak „брать / взять”." },
+        { "q": "Który czasownik jest parą niedokonaną do „zacząć”?", "options": ["zaczynać", "poczynać", "rozpoczynać", "wszczynać"], "answer": "zaczynać", "explain": "Zacząć → zaczynać. „Rozpoczynać” jest parą do „rozpocząć”, a nie do „zacząć”." },
+        { "q": "Które zdanie jest poprawne?", "options": ["Codziennie piszę e-maile.", "Codziennie napiszę e-maile.", "Codziennie będę napisać e-maile.", "Codziennie napisuję e-maile."], "answer": "Codziennie piszę e-maile.", "explain": "„Codziennie” oznacza powtarzanie, więc potrzebny jest aspekt niedokonany w czasie teraźniejszym." },
+        { "q": "Które zdanie jest NIEpoprawne?", "options": ["Jutro będę napisać list.", "Jutro napiszę list.", "Jutro będę pisał list.", "Jutro będę pisać list."], "answer": "Jutro będę napisać list.", "explain": "Czasownik dokonany nie tworzy czasu przyszłego złożonego z „być”. Ma tylko przyszły prosty: napiszę." },
+        { "q": "Zeigarnik __________ tę scenę i zrobiła z niej temat pracy naukowej. Które słowo pasuje?", "options": ["zapamiętała", "zapomniała", "zapisała się", "zapowiedziała"], "answer": "zapamiętała", "explain": "Zapamiętać znaczy zachować w pamięci. Zapomnieć znaczy dokładnie odwrotnie — stracić z pamięci. To najczęstsza pomyłka Rosjan." }
+      ]
+    },
+    {
+      "emoji": "🔧",
+      "title": "Runda 2 — wstaw właściwy aspekt",
+      "type": "typein",
+      "questions": [
+        { "q": "Wczoraj cały wieczór __________ list, ale go nie skończyłem.", "hint": "pisać / napisać — ja, czas przeszły", "answer": "pisałem" },
+        { "q": "Wreszcie __________ raport — leży gotowy na biurku.", "hint": "kończyć / skończyć — ja, czas przeszły", "answer": "skończyłem" },
+        { "q": "Codziennie __________ dwie strony po polsku.", "hint": "czytać / przeczytać — ja, czas teraźniejszy", "answer": "czytam" },
+        { "q": "Zeigarnik __________ mniej więcej połowę zadań w środku pracy.", "hint": "przerywać / przerwać — robiła to wiele razy", "answer": "przerywała" },
+        { "q": "Kelner nie __________ zamówień — pamiętał wszystko.", "hint": "zapisywać / zapisać — zwyczaj, czas przeszły", "answer": "zapisywał" },
+        { "q": "Nagle __________, o co chodzi.", "hint": "rozumieć / zrozumieć — ja, czas przeszły", "answer": "zrozumiałem" }
+      ]
+    },
+    {
+      "emoji": "⏩",
+      "title": "Runda 3 — aspekt w czasie przyszłym i w zakazie",
+      "type": "typein",
+      "questions": [
+        { "q": "Jutro __________ ten e-mail i od razu go wyślę.", "hint": "napisać — ja", "answer": "napiszę" },
+        { "q": "Cały wieczór __________ książkę.", "hint": "czytać — ja, przyszły złożony z bezokolicznikiem", "answer": "będę czytać" },
+        { "q": "Za godzinę __________ obiad i usiądziemy do stołu.", "hint": "ugotować — my", "answer": "ugotujemy" },
+        { "q": "Od jutra __________ codziennie po polsku.", "hint": "mówić — ja, przyszły złożony z bezokolicznikiem", "answer": "będę mówić" },
+        { "q": "__________ ci to jutro o dziesiątej.", "hint": "powiedzieć — ja", "answer": "Powiem" },
+        { "q": "Nie __________ okna, jest zimno!", "hint": "otwierać / otworzyć — zakaz, tryb rozkazujący", "answer": "otwieraj" }
+      ]
+    },
+    {
+      "emoji": "🔗",
+      "title": "Runda 4 — połącz pary aspektowe",
+      "type": "match",
+      "questions": [
+        { "q": "Dopasuj czasownik niedokonany do jego pary dokonanej.", "pairs": [["pisać", "napisać"], ["dawać", "dać"], ["brać", "wziąć"], ["zaczynać", "zacząć"], ["oglądać", "obejrzeć"], ["szukać", "znaleźć"]] }
+      ]
+    },
+    {
+      "emoji": "🧩",
+      "title": "Runda 5 — uzupełnij tekst",
+      "type": "tap_fill",
+      "questions": [
+        { "text": "Kelner {0} każde zamówienie, dopóki rachunek był otwarty. Kiedy goście {1}, pamięć od razu je {2}. W 1927 roku Zeigarnik {3} to w laboratorium: mniej więcej połowę zadań {4} w środku pracy, a resztę uczestnicy {5} normalnie. Zadania przerwane ludzie potem {6} dwa razy częściej. Wniosek jest prosty: niedokończone zadanie {7} miejsce w pamięci, a skończone to miejsce {8}.", "answers": ["pamiętał", "zapłacili", "wyrzuciła", "sprawdziła", "przerywała", "kończyli", "wymieniali", "zajmuje", "zwalnia"] }
+      ]
+    }
+  ]
+}

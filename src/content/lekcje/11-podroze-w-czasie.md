@@ -38,7 +38,7 @@ quiz: "11-podroze-w-czasie"
 
 > **Dwadzieścia pięć lat później technologia pozwoliła sprawdzić to na zdrowych mózgach.** W 2007 roku Daniel Schacter i Donna Rose Addis z Harvardu umieścili **ochotników** w skanerze **rezonansu magnetycznego**. Prosili ich na zmianę o dwie rzeczy: *„przypomnij sobie konkretny dzień z przeszłości”* oraz *„wyobraź sobie konkretny dzień, który dopiero nadejdzie”*.
 
-> **Obraz na ekranie był prawie ten sam.** W obu zadaniach zapalały się te same obszary: hipokamp, przyśrodkowa kora przedczołowa i tylny zakręt obręczy. Razem tworzą one **sieć** znaną jako **domyślna sieć mózgu** *(default mode network)* — układ, który włącza się wtedy, gdy przestajemy skupiać się na świecie zewnętrznym.
+> **Obraz na ekranie był prawie ten sam.** W obu zadaniach zapalały się te same obszary: hipokamp, przyśrodkowa kora przedczołowa i tylny zakręt obręczy. Razem tworzą one **sieć** znaną jako **sieć trybu domyślnego** *(default mode network)* — układ, który włącza się wtedy, gdy przestajemy skupiać się na świecie zewnętrznym.
 
 > **Dlaczego tak jest?** Schacter zaproponował wyjaśnienie znane jako **hipoteza konstrukcyjnej symulacji epizodycznej**. **Mózg** nie **przechowuje** przyszłości, bo przyszłości jeszcze nie ma. Musi ją zbudować — a buduje ją z **części** starych wspomnień. Bierze twarz z jednego **wspomnienia**, pokój z drugiego, emocję z trzeciego i **skleja** z nich scenę, której nigdy nie było. Kiedy magazyn części jest pusty, budowa nie ruszy.
 
@@ -219,7 +219,7 @@ Kilka czasowników **nie ma pary dokonanej**, więc mają wyłącznie przyszły 
 | mózg | мозг | **Mózg** nie przechowuje przyszłości. |
 | hipokamp | гиппокамп | Wypadek zniszczył mu oba **hipokampy**. |
 | sieć | сеть | Razem tworzą one **sieć**. |
-| domyślna sieć mózgu | сеть пассивного режима работы мозга | Znana jako **domyślna sieć mózgu**. |
+| sieć trybu domyślnego | сеть пассивного режима работы мозга | Znana jako **sieć trybu domyślnego**. |
 | rezonans magnetyczny | МРТ | Skaner **rezonansu magnetycznego**. |
 | ochotnik | доброволец | Umieścili **ochotników** w skanerze. |
 | badanie | исследование | Według części **badań** różnice istnieją. |

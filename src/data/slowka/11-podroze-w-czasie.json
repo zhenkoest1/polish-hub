@@ -1,0 +1,355 @@
+{
+  "lekcja": 11,
+  "temat": "Podróże w czasie",
+  "slowa": [
+    {
+      "id": "l11-pamiec",
+      "pl": "pamięć",
+      "ru": "память",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Pamięć nie jest jednym magazynem.",
+      "przyklad_ru": "Память — это не один склад."
+    },
+    {
+      "id": "l11-wspomnienie",
+      "pl": "wspomnienie",
+      "ru": "воспоминание",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Mózg bierze twarz z jednego wspomnienia, a pokój z drugiego.",
+      "przyklad_ru": "Мозг берёт лицо из одного воспоминания, а комнату из другого."
+    },
+    {
+      "id": "l11-wiedza",
+      "pl": "wiedza",
+      "ru": "знание, знания",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Pamięć semantyczna to czysta wiedza o świecie.",
+      "przyklad_ru": "Семантическая память — это чистое знание о мире."
+    },
+    {
+      "id": "l11-wydarzenie",
+      "pl": "wydarzenie",
+      "ru": "событие",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Pamięć epizodyczna to pamięć wydarzeń, które przeżyłeś osobiście.",
+      "przyklad_ru": "Эпизодическая память — это память о событиях, которые ты пережил лично."
+    },
+    {
+      "id": "l11-przeszlosc",
+      "pl": "przeszłość",
+      "ru": "прошлое",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Pamięć potrafi cofnąć nas w przeszłość.",
+      "przyklad_ru": "Память способна отбросить нас в прошлое."
+    },
+    {
+      "id": "l11-przyszlosc",
+      "pl": "przyszłość",
+      "ru": "будущее",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Czy ten sam mechanizm zabierze nas w przyszłość?",
+      "przyklad_ru": "Заберёт ли нас тот же механизм в будущее?"
+    },
+    {
+      "id": "l11-podroz-w-czasie",
+      "pl": "podróż w czasie",
+      "ru": "путешествие во времени",
+      "czesc": "wyrażenie",
+      "przyklad": "Tulving nazwał wspominanie podróżą w czasie.",
+      "przyklad_ru": "Тулвинг назвал воспоминание путешествием во времени."
+    },
+    {
+      "id": "l11-przypomniec-sobie",
+      "pl": "przypomnieć sobie",
+      "ru": "вспомнить",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "przypominać sobie",
+      "przyklad": "Nie potrafił przypomnieć sobie żadnego weekendu nad jeziorem.",
+      "przyklad_ru": "Он не мог вспомнить ни одних выходных на озере."
+    },
+    {
+      "id": "l11-wyobrazic-sobie",
+      "pl": "wyobrazić sobie",
+      "ru": "представить себе",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "wyobrażać sobie",
+      "przyklad": "Wyobraź sobie konkretny dzień, który dopiero nadejdzie.",
+      "przyklad_ru": "Представь себе конкретный день, который ещё только наступит."
+    },
+    {
+      "id": "l11-wyobraznia",
+      "pl": "wyobraźnia",
+      "ru": "воображение",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Cudze doświadczenie przewiduje twoje uczucia lepiej niż twoja wyobraźnia.",
+      "przyklad_ru": "Чужой опыт предсказывает твои чувства лучше, чем твоё воображение."
+    },
+    {
+      "id": "l11-przewidywac",
+      "pl": "przewidywać",
+      "ru": "предсказывать, предвидеть",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "przewidzieć",
+      "przyklad": "Ludzie źle przewidują siłę własnych uczuć.",
+      "przyklad_ru": "Люди плохо предсказывают силу собственных чувств."
+    },
+    {
+      "id": "l11-mozg",
+      "pl": "mózg",
+      "ru": "мозг",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Mózg nie przechowuje przyszłości, bo przyszłości jeszcze nie ma.",
+      "przyklad_ru": "Мозг не хранит будущее, потому что будущего ещё нет."
+    },
+    {
+      "id": "l11-hipokamp",
+      "pl": "hipokamp",
+      "ru": "гиппокамп",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Wypadek zniszczył mu oba hipokampy.",
+      "przyklad_ru": "Авария разрушила ему оба гиппокампа."
+    },
+    {
+      "id": "l11-siec",
+      "pl": "sieć",
+      "ru": "сеть",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Te obszary tworzą razem jedną sieć.",
+      "przyklad_ru": "Эти области вместе образуют одну сеть."
+    },
+    {
+      "id": "l11-siec-trybu-domyslnego",
+      "pl": "sieć trybu domyślnego",
+      "ru": "сеть пассивного режима работы мозга",
+      "czesc": "wyrażenie",
+      "przyklad": "Sieć trybu domyślnego włącza się, gdy przestajemy skupiać się na świecie zewnętrznym.",
+      "przyklad_ru": "Сеть пассивного режима включается, когда мы перестаём сосредотачиваться на внешнем мире."
+    },
+    {
+      "id": "l11-rezonans-magnetyczny",
+      "pl": "rezonans magnetyczny",
+      "ru": "магнитно-резонансная томография, МРТ",
+      "czesc": "wyrażenie",
+      "przyklad": "Ochotnicy leżeli w skanerze rezonansu magnetycznego.",
+      "przyklad_ru": "Добровольцы лежали в сканере МРТ."
+    },
+    {
+      "id": "l11-ochotnik",
+      "pl": "ochotnik",
+      "ru": "доброволец",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Naukowcy umieścili ochotników w skanerze.",
+      "przyklad_ru": "Учёные поместили добровольцев в сканер."
+    },
+    {
+      "id": "l11-badanie",
+      "pl": "badanie",
+      "ru": "исследование",
+      "czesc": "rzeczownik",
+      "rodzaj": "n",
+      "przyklad": "Według części badań różnice jednak istnieją.",
+      "przyklad_ru": "Согласно части исследований, различия всё же существуют."
+    },
+    {
+      "id": "l11-wypadek",
+      "pl": "wypadek",
+      "ru": "авария, несчастный случай",
+      "czesc": "rzeczownik",
+      "rodzaj": "m",
+      "przyklad": "Jego brat zginął dwa lata przed wypadkiem.",
+      "przyklad_ru": "Его брат погиб за два года до аварии."
+    },
+    {
+      "id": "l11-zniszczyc",
+      "pl": "zniszczyć",
+      "ru": "разрушить, уничтожить",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "niszczyć",
+      "przyklad": "Wypadek zniszczył struktury odpowiedzialne za pamięć wydarzeń.",
+      "przyklad_ru": "Авария разрушила структуры, отвечающие за память о событиях."
+    },
+    {
+      "id": "l11-stracic",
+      "pl": "stracić",
+      "ru": "потерять, утратить",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "tracić",
+      "przyklad": "Człowiek, który stracił przeszłość, stracił razem z nią przyszłość.",
+      "przyklad_ru": "Человек, потерявший прошлое, потерял вместе с ним и будущее."
+    },
+    {
+      "id": "l11-pustka",
+      "pl": "pustka",
+      "ru": "пустота",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Powiedział, że w głowie ma pustkę.",
+      "przyklad_ru": "Он сказал, что в голове у него пустота."
+    },
+    {
+      "id": "l11-zgasnac",
+      "pl": "zgasnąć",
+      "ru": "погаснуть",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "gasnąć",
+      "przyklad": "Obie strony czasu zgasły jednocześnie.",
+      "przyklad_ru": "Обе стороны времени погасли одновременно."
+    },
+    {
+      "id": "l11-zdolnosc",
+      "pl": "zdolność",
+      "ru": "способность",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Gdyby to były dwie osobne zdolności, jedna powinna była przetrwać.",
+      "przyklad_ru": "Если бы это были две отдельные способности, одна должна была бы уцелеть."
+    },
+    {
+      "id": "l11-przezyc",
+      "pl": "przeżyć",
+      "ru": "пережить",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "przeżywać",
+      "przyklad": "Zapytaj kogoś, kto już to przeżył.",
+      "przyklad_ru": "Спроси кого-нибудь, кто это уже пережил."
+    },
+    {
+      "id": "l11-przechowywac",
+      "pl": "przechowywać",
+      "ru": "хранить",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "przechować",
+      "przyklad": "Mózg nie przechowuje przyszłości — musi ją zbudować.",
+      "przyklad_ru": "Мозг не хранит будущее — он должен его построить."
+    },
+    {
+      "id": "l11-czesc",
+      "pl": "część",
+      "ru": "часть",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Mózg buduje przyszłość z części starych wspomnień.",
+      "przyklad_ru": "Мозг строит будущее из частей старых воспоминаний."
+    },
+    {
+      "id": "l11-skleic",
+      "pl": "skleić",
+      "ru": "склеить",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "sklejać",
+      "przyklad": "Skleja z nich scenę, której nigdy nie było.",
+      "przyklad_ru": "Он склеивает из них сцену, которой никогда не было."
+    },
+    {
+      "id": "l11-rekonstrukcja",
+      "pl": "rekonstrukcja",
+      "ru": "реконструкция",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Wspomnienie jest rekonstrukcją, a nie plikiem.",
+      "przyklad_ru": "Воспоминание — это реконструкция, а не файл."
+    },
+    {
+      "id": "l11-skladac",
+      "pl": "składać",
+      "ru": "собирать, складывать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "złożyć",
+      "przyklad": "Mózg składa wspomnienie na nowo za każdym razem.",
+      "przyklad_ru": "Мозг каждый раз заново собирает воспоминание."
+    },
+    {
+      "id": "l11-klamac",
+      "pl": "kłamać",
+      "ru": "лгать, врать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "skłamać",
+      "przyklad": "Studenci nie kłamali — byli przekonani, że powtarzają oryginał.",
+      "przyklad_ru": "Студенты не лгали — они были убеждены, что повторяют оригинал."
+    },
+    {
+      "id": "l11-prognozowanie-afektywne",
+      "pl": "prognozowanie afektywne",
+      "ru": "аффективное прогнозирование",
+      "czesc": "wyrażenie",
+      "przyklad": "Prognozowanie afektywne to przewidywanie własnych uczuć.",
+      "przyklad_ru": "Аффективное прогнозирование — это предсказание собственных чувств."
+    },
+    {
+      "id": "l11-trafny",
+      "pl": "trafny",
+      "ru": "верный, точный, меткий",
+      "czesc": "przymiotnik",
+      "przyklad": "Kierunek zwykle był trafny, ale czas trwania — nie.",
+      "przyklad_ru": "Направление обычно было верным, а вот длительность — нет."
+    },
+    {
+      "id": "l11-znikac",
+      "pl": "znikać",
+      "ru": "исчезать",
+      "czesc": "czasownik",
+      "aspekt": "ndk",
+      "para": "zniknąć",
+      "przyklad": "Emocja znikała znacznie szybciej, niż ludzie się spodziewali.",
+      "przyklad_ru": "Эмоция исчезала намного быстрее, чем люди ожидали."
+    },
+    {
+      "id": "l11-przyzwyczaic-sie",
+      "pl": "przyzwyczaić się",
+      "ru": "привыкнуть",
+      "czesc": "czasownik",
+      "aspekt": "dk",
+      "para": "przyzwyczajać się",
+      "przyklad": "Zapominamy o jednej rzeczy: o tym, że przyzwyczaimy się.",
+      "przyklad_ru": "Мы забываем об одной вещи: о том, что привыкнем."
+    },
+    {
+      "id": "l11-porazka",
+      "pl": "porażka",
+      "ru": "неудача, поражение",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Mózg tłumaczy sobie porażkę i znajduje nowy cel.",
+      "przyklad_ru": "Мозг объясняет себе неудачу и находит новую цель."
+    },
+    {
+      "id": "l11-strata",
+      "pl": "strata",
+      "ru": "потеря, утрата",
+      "czesc": "rzeczownik",
+      "rodzaj": "ż",
+      "przyklad": "Psychiczny układ odpornościowy powoli oswaja stratę.",
+      "przyklad_ru": "Психическая иммунная система постепенно приручает утрату."
+    },
+    {
+      "id": "l11-jednoczesnie",
+      "pl": "jednocześnie",
+      "ru": "одновременно",
+      "czesc": "przysłówek",
+      "przyklad": "Przez chwilę jesteś w dwóch miejscach jednocześnie.",
+      "przyklad_ru": "На мгновение ты находишься в двух местах одновременно."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "title": "Quiz — Grzeczność po polsku",
+  "subtitle": "Tryb rozkazujący, wołacz i drabina rejestrów. 6 rund, punkty na końcu. Pamiętajcie: rozkaz powstaje od formy „on / ona”, a nie od bezokolicznika!",
+  "sections": [
+    {
+      "emoji": "🔧",
+      "title": "Runda 1 — utwórz tryb rozkazujący",
+      "type": "typein",
+      "questions": [
+        { "q": "robić, ty → __________ to teraz.", "hint": "3. osoba: robi", "answer": "rób" },
+        { "q": "pisać, ty → __________ trochę wolniej.", "hint": "3. osoba: pisze", "answer": "pisz" },
+        { "q": "pracować, ty → __________ spokojnie, mamy czas.", "hint": "3. osoba: pracuje — wszystkie czasowniki na -ować dają -uj", "answer": "pracuj" },
+        { "q": "czytać, wy → __________ na głos, po kolei!", "hint": "czyta + j, potem końcówka -cie", "answer": "czytajcie" },
+        { "q": "być, ty → __________ cierpliwy, to potrwa chwilę.", "hint": "forma nieregularna", "answer": "bądź" },
+        { "q": "wziąć, ty → __________ parasol, będzie padać.", "hint": "od „weźmie”, ale bez -m", "answer": "weź" },
+        { "q": "pomóc, ty → __________ mi, proszę.", "hint": "obowiązkowa wymiana o → ó", "answer": "pomóż" },
+        { "q": "zamknąć, ty → __________ okno.", "hint": "zamknie + -ij", "answer": "zamknij" },
+        { "q": "iść, my → __________ już, jest późno.", "hint": "od „idzie”, końcówka -my", "answer": "idźmy" }
+      ]
+    },
+    {
+      "emoji": "🚫",
+      "title": "Runda 2 — rozkaz czy zakaz? aspekt pod przeczeniem",
+      "type": "mc",
+      "questions": [
+        { "q": "Mówisz koledze, żeby tego nie robił. Które zdanie jest poprawne?", "options": ["Nie rób tego!", "Nie zrób tego!", "Nie robij tego!", "Nie zrobisz tego!"], "answer": "Nie rób tego!", "explain": "Zakaz = aspekt niedokonany. „Nie zrób” brzmiałoby jak ostrzeżenie, a formy „robij” w ogóle nie ma." },
+        { "q": "Prosisz kolegę, żeby zamknął okno — teraz, jeden raz. Które zdanie?", "options": ["Zamknij okno.", "Zamykaj okno.", "Zamknąj okno.", "Zamkń okno."], "answer": "Zamknij okno.", "explain": "Rozkaz celuje w wynik, więc aspekt dokonany: zamknij. „Zamykaj okno” znaczyłoby: rób to regularnie." },
+        { "q": "Ostrzegasz kolegę przed jutrzejszym egzaminem — chodzi o ten jeden raz. Co powiesz?", "options": ["Nie spóźnij się!", "Nie spóźniaj się!", "Nie spóźnisz się!", "Nie spóźń się!"], "answer": "Nie spóźnij się!", "explain": "Obie pierwsze formy istnieją, ale o konkretnym, jednorazowym zdarzeniu mówimy dokonanie: Nie spóźnij się! „Nie spóźniaj się” to raczej uwaga o nawyku." },
+        { "q": "W którym zdaniu jest błąd w przypadku?", "options": ["Nie zamykaj okno.", "Nie zamykaj okna.", "Zamknij okno.", "Nie otwieraj drzwi."], "answer": "Nie zamykaj okno.", "explain": "Pod przeczeniem dopełnienie przechodzi z biernika do dopełniacza: nie zamykaj okna." },
+        { "q": "Mama do dziecka: zupa stoi na stole i stygnie. Które zdanie jest poprawne?", "options": ["Jedz zupę!", "Jedź zupę!", "Jedzaj zupę!", "Jeść zupę!"], "answer": "Jedz zupę!", "explain": "„jedz” od jeść, „jedź” od jechać — różnica to jedna kreska. „Zjedz zupę!” też jest poprawne, gdy chodzi o zjedzenie do końca." },
+        { "q": "Tabliczka w parku. Które sformułowanie jest typowe dla zakazów pisanych?", "options": ["Nie deptać trawnika!", "Nie deptaj trawnika!", "Nie zdepcz trawnika!", "Nie deptajcie trawnik!"], "answer": "Nie deptać trawnika!", "explain": "Na tabliczkach i w instrukcjach używa się bezokolicznika: Nie deptać, Nie palić, Nie dotykać. W mowie do jednej osoby byłoby: Nie depcz trawnika (deptać → depcze → depcz)." }
+      ]
+    },
+    {
+      "emoji": "🎩",
+      "title": "Runda 3 — który rejestr? co wypada powiedzieć",
+      "type": "mc",
+      "questions": [
+        { "q": "W urzędzie, przy okienku siedzi mężczyzna. Chcesz dostać formularz. Które zdanie jest odpowiednie?", "options": ["Czy mógłby mi pan dać ten formularz?", "Daj mi ten formularz.", "Dawaj formularz, proszę.", "Ty masz mi dać ten formularz."], "answer": "Czy mógłby mi pan dać ten formularz?", "explain": "Do obcej osoby: pan + tryb przypuszczający. Goły rozkaz z „ty” brzmi w urzędzie jak polecenie." },
+        { "q": "Lekarz chce, żeby pacjentka otworzyła usta. Które zdanie powie?", "options": ["Niech pani otworzy usta.", "Niech pani otworzyć usta.", "Otwórz usta.", "Pani otwiera usta."], "answer": "Niech pani otworzy usta.", "explain": "Po „niech” idzie trzecia osoba, nie bezokolicznik. Można też neutralnie: Proszę otworzyć usta." },
+        { "q": "Ogłoszenie w poczekalni przychodni. Która forma jest typowa?", "options": ["Proszę nie palić.", "Proszę nie palcie.", "Nie pal, proszę.", "Niech nie palą."], "answer": "Proszę nie palić.", "explain": "W ogłoszeniach i instrukcjach: proszę + bezokolicznik albo „nie wolno” + bezokolicznik." },
+        { "q": "Piszesz e-mail do dyrektora firmy. Jak go zaczynasz?", "options": ["Szanowny Panie Dyrektorze,", "Szanowny Pan Dyrektor,", "Witam Panie Dyrektorze,", "Szanowny Panu Dyrektorowi,"], "answer": "Szanowny Panie Dyrektorze,", "explain": "Oba rzeczowniki idą do wołacza (panie, dyrektorze), przymiotnik zostaje w mianowniku (szanowny). „Witam” wobec przełożonego wielu Polaków odbiera jako nieuprzejme." },
+        { "q": "Pytasz nieznajomą kobietę na ulicy o godzinę. Co brzmi najlepiej?", "options": ["Przepraszam, proszę pani, która godzina?", "Przepraszam, pani, która godzina?", "Powiedz mi, która godzina.", "Pani, mów, która godzina."], "answer": "Przepraszam, proszę pani, która godzina?", "explain": "„Proszę pani” to skamieniała formuła zwracania się do obcych. Samo „pani” bez „proszę” brzmi obcesowo." },
+        { "q": "Kolega z pracy, z którym jesteś na ty. Chcesz, żeby przesłał ci plik. Co powiesz?", "options": ["Czy mógłbyś mi przesłać ten plik?", "Czy mógłby mi pan przesłać ten plik?", "Prześlij mi plik natychmiast.", "Niech pan prześle mi ten plik."], "answer": "Czy mógłbyś mi przesłać ten plik?", "explain": "Jesteście na ty, więc „pan” tworzy sztuczny dystans, a rozkaz z „natychmiast” brzmi jak polecenie służbowe. Samo „Prześlij mi plik, proszę” też byłoby w porządku." },
+        { "q": "Prosisz sąsiada, żeby był ciszej. Które zdanie najmniej ryzykuje kłótnię?", "options": ["Przepraszam bardzo, czy mógłby pan trochę ściszyć muzykę?", "Nie hałasuj!", "Proszę natychmiast przestać hałasować.", "Pan musi być ciszej."], "answer": "Przepraszam bardzo, czy mógłby pan trochę ściszyć muzykę?", "explain": "Dłużej i bardziej okrężnie = grzeczniej. „Pan musi” to w polskim nacisk, nie prośba." },
+        { "q": "Zamawiasz kawę w kawiarni. Co powie Polak?", "options": ["Poproszę kawę.", "Daj mi kawę.", "Musisz mi dać kawę.", "Chcę kawę natychmiast."], "answer": "Poproszę kawę.", "explain": "W kawiarni i sklepie standardem jest „poproszę”, nie tryb rozkazujący. „Chcę kawę” jest zrozumiałe, ale brzmi szorstko." }
+      ]
+    },
+    {
+      "emoji": "📣",
+      "title": "Runda 4 — wołacz w nagłówku listu",
+      "type": "typein",
+      "questions": [
+        { "q": "Anna, list oficjalny od przełożonego → Szanowna Pani __________,", "hint": "pełne imię na -a → końcówka -o", "answer": "Anno" },
+        { "q": "Ania, list od przyjaciółki → Droga __________,", "hint": "zdrobnienie → końcówka -u", "answer": "Aniu" },
+        { "q": "Marek → Drogi __________,", "hint": "wołacz = miejscownik: o Marku", "answer": "Marku" },
+        { "q": "pan → Szanowny __________,", "hint": "wyjątek! nie „Panu”", "answer": "Panie" },
+        { "q": "dyrektor → Szanowny Panie __________,", "hint": "wołacz = miejscownik: o dyrektorze", "answer": "Dyrektorze" },
+        { "q": "mama → Kochana __________,", "hint": "zwykłe słowo na -a → końcówka -o", "answer": "Mamo" },
+        { "q": "państwo → Szanowni __________,", "hint": "liczba mnoga = mianownik", "answer": "Państwo" }
+      ]
+    },
+    {
+      "emoji": "🔗",
+      "title": "Runda 5 — dopasuj sytuację do sformułowania",
+      "type": "match",
+      "questions": [
+        { "q": "Dopasuj sytuację do zdania, które w niej pasuje.", "pairs": [["Prosisz lekarza o powtórzenie zdania", "Czy mogłaby pani powtórzyć?"], ["Mówisz do brata przy stole", "Podaj mi sól."], ["Tabliczka w szpitalu", "Proszę nie palić."], ["Początek oficjalnego e-maila do firmy", "Szanowni Państwo,"], ["Zapraszasz obcą osobę do gabinetu", "Niech pan wejdzie."], ["Zamawiasz coś w kawiarni", "Poproszę herbatę."]] }
+      ]
+    },
+    {
+      "emoji": "🧩",
+      "title": "Finał — uzupełnij oficjalny e-mail",
+      "type": "tap_fill",
+      "questions": [
+        { "text": "Szanowny Panie {0}, zwracam się z {1} o przesunięcie terminu spotkania. Bardzo {2} za kłopot. Czy {3} pan zaproponować inny wolny dzień w przyszłym tygodniu? Z {4} dziękuję za odpowiedź. Z {5}, Lena Iwanowa", "answers": ["Dyrektorze", "prośbą", "przepraszam", "mógłby", "góry", "poważaniem"] }
+      ]
+    }
+  ]
+}
