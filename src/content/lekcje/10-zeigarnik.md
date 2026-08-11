@@ -198,6 +198,8 @@ Po rosyjsku istnieje forma dokonana («сделав», «написав»), wię
 *Zrób to!* → *Nie **rób** tego!*
 Tu akurat rosyjski pomaga — logika jest identyczna. Warto z tego korzystać.
 
+Jeden wyjątek działa tak samo jak po rosyjsku: czasownik dokonany po *nie* to już nie zakaz, tylko **przestroga** — *Nie zapomnij kluczy!*, *Nie spóźnij się!* («не забудь», «не опоздай»). Zakaz — ndk, ostrzeżenie przed przypadkiem — dk.
+
 > [⏳ Pełna ściąga: aspekt →](/polish-hub/reguly/aspekt/)
 
 ## 📝 Słowa z tekstu
@@ -239,7 +241,7 @@ Tu akurat rosyjski pomaga — logika jest identyczna. Warto z tego korzystać.
 | niepokój | тревога | Ona pracuje w tle — jako napięcie, **niepokój**, gorszy sen. |
 | domagać się | требовать | Scena sama **domaga się** dokończenia. |
 | natrętny | навязчивый | Plan **usuwa natrętne myśli**. |
-| usunąć *(ndk usuwać)* | удалить, устранить | Plan **usuwa** natrętne myśli. |
+| usuwać *(dk usunąć)* | удалять, устранять | Plan **usuwa** natrętne myśli. |
 | pilnować | стеречь, следить за | Umysł przestaje jej **pilnować**. |
 | zaangażować się | вовлечься | Jak mocno **zaangażował się** w pracę. |
 | porażka | неудача | Czy przerwanie **odebrał jako porażkę**. |
@@ -251,9 +253,33 @@ Tu akurat rosyjski pomaga — logika jest identyczna. Warto z tego korzystać.
 
 ### 🔥 Rozgrzewka *(5 minut)*
 
-1. Podajcie parę **dokonaną**: *pisać, robić, czytać, płacić, mówić, liczyć*.
-2. Podajcie parę **niedokonaną**: *dać, wziąć, zacząć, kupić, otworzyć, zapomnieć*.
-3. Powiedzcie jedno zdanie o sprawie, której **nie skończyliście** w tym tygodniu — i drugie zdanie o tym, kiedy ją **skończycie**.
+Dwa szybkie ćwiczenia na stronie — każdy wpisuje sam, potem porównujecie wyniki:
+
+```cwiczenie
+{ "typ": "wpisz", "tytul": "Podaj parę dokonaną", "instrukcja": "Wpisz czasownik dokonany z tej samej pary.",
+  "zdania": [
+    { "przed": "pisać → ", "odpowiedz": ["napisać"], "po": "", "czemu": "para pisać / napisać" },
+    { "przed": "robić → ", "odpowiedz": ["zrobić"], "po": "", "czemu": "para robić / zrobić" },
+    { "przed": "czytać → ", "odpowiedz": ["przeczytać"], "po": "", "czemu": "para czytać / przeczytać" },
+    { "przed": "płacić → ", "odpowiedz": ["zapłacić"], "po": "", "czemu": "para płacić / zapłacić" },
+    { "przed": "mówić → ", "odpowiedz": ["powiedzieć"], "po": "", "czemu": "para mówić / powiedzieć" },
+    { "przed": "liczyć → ", "odpowiedz": ["policzyć", "obliczyć"], "po": "", "czemu": "para liczyć / policzyć" }
+  ] }
+```
+
+```cwiczenie
+{ "typ": "wpisz", "tytul": "Podaj parę niedokonaną", "instrukcja": "Wpisz czasownik niedokonany z tej samej pary.",
+  "zdania": [
+    { "przed": "dać → ", "odpowiedz": ["dawać"], "po": "", "czemu": "para dawać / dać" },
+    { "przed": "wziąć → ", "odpowiedz": ["brać"], "po": "", "czemu": "para brać / wziąć" },
+    { "przed": "zacząć → ", "odpowiedz": ["zaczynać"], "po": "", "czemu": "para zaczynać / zacząć" },
+    { "przed": "kupić → ", "odpowiedz": ["kupować"], "po": "", "czemu": "para kupować / kupić" },
+    { "przed": "otworzyć → ", "odpowiedz": ["otwierać"], "po": "", "czemu": "para otwierać / otworzyć" },
+    { "przed": "zapomnieć → ", "odpowiedz": ["zapominać"], "po": "", "czemu": "para zapominać / zapomnieć" }
+  ] }
+```
+
+Na koniec ustnie: powiedzcie jedno zdanie o sprawie, której **nie skończyliście** w tym tygodniu — i drugie zdanie o tym, kiedy ją **skończycie**.
 
 ### Pytania do tekstu
 
@@ -270,22 +296,22 @@ Odpowiadajcie po polsku, pełnym zdaniem:
 
 ### Runda 1 — proces czy wynik?
 
-Każdy czyta swoje zdania na głos, **wybiera aspekt i odmienia czasownik**. Potem jednym zdaniem tłumaczy wybór.
+Każdy rozwiązuje wszystkie zdania na stronie, a po sprawdzeniu **tłumaczy na głos**, dlaczego wybrał ten aspekt.
 
-**Osoba A:**
-1. Wczoraj cały wieczór *(czytać / przeczytać)* tę książkę.
-2. W godzinę *(pisać / napisać)* raport i wysłałem go szefowi.
-3. Codziennie *(gotować / ugotować)* obiad dla całej rodziny.
-
-**Osoba B:**
-1. Nagle *(rozumieć / zrozumieć)*, o co chodzi.
-2. Przez dwa lata *(uczyć się / nauczyć się)* polskiego w szkole.
-3. Wreszcie *(kończyć / skończyć)* ten projekt!
-
-**Osoba C:**
-1. Zwykle *(wracać / wrócić)* do domu o szóstej.
-2. Od razu *(dzwonić / zadzwonić)* do niej i wszystko wyjaśniłem.
-3. Godzinami *(oglądać / obejrzeć)* seriale zamiast się uczyć.
+```cwiczenie
+{ "typ": "wybor", "tytul": "Proces czy wynik?", "instrukcja": "Wybierz właściwy aspekt. Po sprawdzeniu wytłumacz na głos, dlaczego.",
+  "zdania": [
+    { "przed": "Wczoraj cały wieczór ", "opcje": ["czytałem", "przeczytałem"], "dobra": 0, "po": " tę książkę.", "czemu": "cały wieczór = proces → ndk" },
+    { "przed": "W godzinę ", "opcje": ["pisałem", "napisałem"], "dobra": 1, "po": " raport i wysłałem go szefowi.", "czemu": "w godzinę + wynik wysłany → dk" },
+    { "przed": "Codziennie ", "opcje": ["gotuję", "ugotuję"], "dobra": 0, "po": " obiad dla całej rodziny.", "czemu": "codziennie = powtarzalność → ndk" },
+    { "przed": "Nagle ", "opcje": ["rozumiałem", "zrozumiałem"], "dobra": 1, "po": ", o co chodzi.", "czemu": "nagle = moment → dk" },
+    { "przed": "Przez dwa lata ", "opcje": ["uczyłem się", "nauczyłem się"], "dobra": 0, "po": " polskiego w szkole.", "czemu": "przez dwa lata = trwanie → ndk" },
+    { "przed": "Wreszcie ", "opcje": ["kończyłem", "skończyłem"], "dobra": 1, "po": " ten projekt!", "czemu": "wreszcie = osiągnięty wynik → dk" },
+    { "przed": "Zwykle ", "opcje": ["wracam", "wrócę"], "dobra": 0, "po": " do domu o szóstej.", "czemu": "zwykle = nawyk → ndk" },
+    { "przed": "Od razu ", "opcje": ["dzwoniłem", "zadzwoniłem"], "dobra": 1, "po": " do niej i wszystko wyjaśniłem.", "czemu": "od razu + wyjaśniłem (dk) → dk" },
+    { "przed": "Godzinami ", "opcje": ["oglądam", "obejrzę"], "dobra": 0, "po": " seriale zamiast się uczyć.", "czemu": "godzinami = trwanie → ndk" }
+  ] }
+```
 
 ### Runda 2 — zamknij rachunek
 

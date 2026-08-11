@@ -8,6 +8,7 @@
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { parsujCwiczenie } from '../src/scripts/cwiczenia-logika.js';
 
 const KORZEN = join(dirname(fileURLToPath(import.meta.url)), '..');
 const P = (...c) => join(KORZEN, ...c);
@@ -48,6 +49,17 @@ for (const f of lekcje) {
   // Śmieci po generowaniu
   sprawdz(`${etykieta}: bez śmieciowych tagów`, !/<\/(content|invoke|parameter)>/.test(tekst));
   sprawdz(`${etykieta}: parzyste bloki kodu`, (tekst.match(/```/g) ?? []).length % 2 === 0);
+
+  // Bloki ```cwiczenie w lekcjach — zepsuty JSON nie psuje builda,
+  // więc to walidator musi go wyłapać
+  const RE_CWICZENIE = /```cwiczenie\n([\s\S]*?)```/g;
+  let mc;
+  let nrCw = 0;
+  while ((mc = RE_CWICZENIE.exec(tekst)) !== null) {
+    nrCw += 1;
+    const w = parsujCwiczenie(mc[1]);
+    sprawdz(`${etykieta}: ćwiczenie ${nrCw} poprawne${w.ok ? '' : ` — ${w.blad}`}`, w.ok);
+  }
 
   // Sekcje, na których opiera się format lekcji.
   // Każda lekcja musi mieć ćwiczenia ustne i blok gramatyczny — ale nagłówek
