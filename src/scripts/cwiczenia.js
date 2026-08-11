@@ -10,11 +10,10 @@ function esc(s) {
 }
 
 function znajdzBloki() {
-  // Shiki renderuje nieznany jezyk jako <pre data-language="cwiczenie">
-  const bloki = [...document.querySelectorAll('pre[data-language="cwiczenie"]')];
-  if (bloki.length) return bloki;
-  // Fallback: zwykly <pre><code> zaczynajacy sie od {"typ"
-  return [...document.querySelectorAll('pre > code')]
+  // Shiki NIE zna jezyka "cwiczenie" i renderuje go jako data-language="plaintext"
+  // (sprawdzone w dist). Szukamy wiec plaintext-blokow wygladajacych jak nasz JSON;
+  // pelna walidacja schematu w parsujCwiczenie i tak odsiewa przypadkowe trafienia.
+  return [...document.querySelectorAll('pre[data-language="plaintext"] > code')]
     .filter((c) => c.textContent.trim().startsWith('{') && c.textContent.includes('"typ"'))
     .map((c) => c.parentElement);
 }
@@ -89,7 +88,7 @@ function podepnij(box, dane) {
         const input = li.querySelector('.cw-input');
         stan = sprawdzWpisz(z, input.value);
         input.disabled = true;
-        input.classList.add(stan === 'zle' ? 'cw-zle' : 'cw-dobrze');
+        input.classList.add(`cw-${stan}`); // spojny sygnal: dobrze/prawie/zle
       }
       li.classList.add(`cw-${stan}`);
       wynikEl.hidden = false;
@@ -111,7 +110,7 @@ function podepnij(box, dane) {
     box.querySelectorAll('.cw-zdanie').forEach((li) => li.classList.remove('cw-dobrze', 'cw-prawie', 'cw-zle'));
     box.querySelectorAll('.cw-wynik').forEach((el) => { el.hidden = true; el.innerHTML = ''; });
     box.querySelectorAll('.cw-opcja').forEach((b) => { b.disabled = false; b.classList.remove('on', 'dobra', 'zla'); });
-    box.querySelectorAll('.cw-input').forEach((el) => { el.disabled = false; el.value = ''; el.classList.remove('cw-dobrze', 'cw-zle'); });
+    box.querySelectorAll('.cw-input').forEach((el) => { el.disabled = false; el.value = ''; el.classList.remove('cw-dobrze', 'cw-prawie', 'cw-zle'); });
     odswiezSprawdz();
   };
 }

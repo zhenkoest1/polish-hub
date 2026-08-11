@@ -23,6 +23,7 @@ const pliki = (kat, ext) => readdirSync(P(kat)).filter((f) => f.endsWith(ext)).s
 // ——— Lekcje ———————————————————————————————————————————————
 const lekcje = pliki('src/content/lekcje', '.md');
 const numery = new Set();
+let cwiczeniaRazem = 0; // bezpiecznik: regex, ktory nic nie znajduje, nie moze byc "zielony"
 
 for (const f of lekcje) {
   const tekst = readFileSync(P('src/content/lekcje', f), 'utf-8');
@@ -51,12 +52,14 @@ for (const f of lekcje) {
   sprawdz(`${etykieta}: parzyste bloki kodu`, (tekst.match(/```/g) ?? []).length % 2 === 0);
 
   // Bloki ```cwiczenie w lekcjach — zepsuty JSON nie psuje builda,
-  // więc to walidator musi go wyłapać
-  const RE_CWICZENIE = /```cwiczenie\n([\s\S]*?)```/g;
+  // więc to walidator musi go wyłapać. \r?\n: na Windows (autocrlf) plik
+  // w drzewie ma CRLF i regex z samym \n cicho nie znajdował NICZEGO.
+  const RE_CWICZENIE = /```cwiczenie\r?\n([\s\S]*?)```/g;
   let mc;
   let nrCw = 0;
   while ((mc = RE_CWICZENIE.exec(tekst)) !== null) {
     nrCw += 1;
+    cwiczeniaRazem += 1;
     const w = parsujCwiczenie(mc[1]);
     sprawdz(`${etykieta}: ćwiczenie ${nrCw} poprawne${w.ok ? '' : ` — ${w.blad}`}`, w.ok);
   }
@@ -77,6 +80,8 @@ for (const f of lekcje) {
   }
 }
 sprawdz('są jakieś lekcje', lekcje.length > 0);
+// Lekcja 10 ma 3 bloki cwiczen — jesli walidator widzi mniej, to on jest zepsuty
+sprawdz(`ćwiczenia: znaleziono ≥3 bloki (jest ${cwiczeniaRazem})`, cwiczeniaRazem >= 3);
 
 // ——— Quizy ————————————————————————————————————————————————
 const TYPY = new Set(['tf', 'mc', 'typein', 'match', 'tap_fill']);

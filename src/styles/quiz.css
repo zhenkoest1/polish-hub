@@ -284,6 +284,7 @@
 }
 .cw-input:focus { outline: none; border-color: var(--blekit); }
 .cw-input.cw-dobrze { border-color: var(--correct); }
+.cw-input.cw-prawie { border-color: var(--amber); }
 .cw-input.cw-zle { border-color: var(--incorrect); }
 .cw-wynik { display: block; font-size: 0.88rem; color: var(--text-dim); }
 .cw-zdanie.cw-dobrze .cw-wynik { color: var(--correct); }

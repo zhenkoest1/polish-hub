@@ -139,7 +139,9 @@ t('sprawdzWpisz: multi answer 1', sprawdzWpisz({ odpowiedz: ['biolodzy', 'biolog
 t('sprawdzWpisz: multi answer 2', sprawdzWpisz({ odpowiedz: ['biolodzy', 'biologowie'] }, 'biologowie') === 'dobrze');
 
 // sprawdzWpisz — prawie with multi-answer (without diacritics)
-t('sprawdzWpisz: multi answer prawie', sprawdzWpisz({ odpowiedz: ['biologowie'] }, 'biologowie') === 'dobrze');
+t('sprawdzWpisz: multi answer prawie (drugi wariant bez ogonkow)', sprawdzWpisz({ odpowiedz: ['policzyć', 'obliczyć'] }, 'obliczyc') === 'prawie');
+t('sprawdzWpisz: tytul nie-string -> ok:false', parsujCwiczenie(JSON.stringify({ typ: 'wpisz', tytul: 42, zdania: [{ przed: 'a', po: '', odpowiedz: ['b'] }] })).ok === false);
+t('sprawdzWpisz: czemu nie-string -> ok:false', parsujCwiczenie(JSON.stringify({ typ: 'wpisz', zdania: [{ przed: 'a', po: '', odpowiedz: ['b'], czemu: [] }] })).ok === false);
 
 // sprawdzWpisz — empty input
 t('sprawdzWpisz: empty input', sprawdzWpisz({ odpowiedz: ['test'] }, '') === 'zle');

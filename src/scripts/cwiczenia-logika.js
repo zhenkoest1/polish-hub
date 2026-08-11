@@ -25,11 +25,22 @@ export function parsujCwiczenie(tekstJson) {
     return { ok: false, blad: 'zdania: pusta lista' };
   }
 
+  // pola opcjonalne, ale jesli sa — musza byc stringami (inaczej [object Object] w UI)
+  for (const pole of ['tytul', 'instrukcja']) {
+    if (dane[pole] !== undefined && typeof dane[pole] !== 'string') {
+      return { ok: false, blad: `${pole}: musi być stringiem` };
+    }
+  }
+
   for (const [i, z] of dane.zdania.entries()) {
     const gdzie = `zdanie ${i + 1}`;
 
     if (typeof z.przed !== 'string' || typeof z.po !== 'string') {
       return { ok: false, blad: `${gdzie}: przed/po muszą być stringami` };
+    }
+
+    if (z.czemu !== undefined && typeof z.czemu !== 'string') {
+      return { ok: false, blad: `${gdzie}: czemu musi być stringiem` };
     }
 
     if (dane.typ === 'wybor') {
