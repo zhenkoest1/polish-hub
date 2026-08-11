@@ -1,0 +1,3 @@
+# Prywatny kurs dla trzech osób — proszę nie indeksować.
+User-agent: *
+Disallow: /
