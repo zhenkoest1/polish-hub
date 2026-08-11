@@ -8,6 +8,10 @@ const href = (p: string) => `${b}/${p.replace(/^\//, '')}`;
 const lekcje = (await getCollection('lekcje')).sort((a, c) => a.data.numer - c.data.numer);
 const reguly = await getCollection('reguly');
 const quizy = lekcje.filter((l) => l.data.quiz);
+const quizyDash = [
+  ...quizy.map((l) => ({ id: l.data.quiz!, tytul: `${l.data.emoji} ${String(l.data.numer).padStart(2, '0')}` })),
+  { id: 'mix', tytul: '⚡ Mix' },
+];
 
 // Słówka: sumujemy wszystkie talie, żeby na kafelku pokazać realną liczbę.
 const talieSlowek = import.meta.glob<{ slowa: unknown[] }>('../data/slowka/*.json', { eager: true });
@@ -95,6 +99,17 @@ const slowa = ['cześć', 'dziękuję', 'góra', 'jezioro', 'zmęczenie', 'wład
     <p class="latest-all"><a href={href('lekcje/')}>wszystkie lekcje →</a></p>
   </section>
 
+  <section class="klub" id="klub">
+    <h2 class="section-title">Klub — kto co przeszedł</h2>
+    <p class="klub-zacheta" id="klub-zacheta">
+      <a href={href('profil/')}>Zaloguj się</a>, żeby zbierać wyniki i widzieć postęp całej trójki.
+    </p>
+    <div class="klub-tabela-wrap" id="klub-wrap" hidden>
+      <table class="klub-tabela"><thead id="klub-head"></thead><tbody id="klub-body"></tbody></table>
+    </div>
+    <script type="application/json" id="klub-quizy" set:html={JSON.stringify(quizyDash).replace(/</g, '\\u003c')} />
+  </section>
+
   <a class="mix-card" href={href('mix/')}>
     <span class="mix-bolt" aria-hidden="true">⚡</span>
     <span class="mix-body">
@@ -107,6 +122,34 @@ const slowa = ['cześć', 'dziękuję', 'góra', 'jezioro', 'zmęczenie', 'wład
     </span>
     <span class="mix-go" aria-hidden="true">→</span>
   </a>
+
+  <script>
+    import { gotowyUzytkownik, pobierzProfile } from '../scripts/chmura.js';
+
+    const quizy: { id: string; tytul: string }[] = JSON.parse(document.getElementById('klub-quizy')!.textContent!);
+
+    gotowyUzytkownik().then(async (user) => {
+      if (!user) return; // zostaje zacheta do logowania
+      let profile;
+      try {
+        profile = await pobierzProfile();
+      } catch {
+        return; // brak sieci / reguly — zostaje zacheta, bez pustej tabeli
+      }
+      profile.sort((a, b) => String(a.name ?? '').localeCompare(String(b.name ?? '')));
+      document.getElementById('klub-zacheta')!.hidden = true;
+      document.getElementById('klub-wrap')!.hidden = false;
+      const esc = (s: unknown) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]!));
+      document.getElementById('klub-head')!.innerHTML =
+        `<tr><th>Quiz</th>${profile.map((p) => `<th>${esc(p.emoji)} ${esc(p.name)}</th>`).join('')}</tr>`;
+      document.getElementById('klub-body')!.innerHTML = quizy.map((q) =>
+        `<tr><td>${esc(q.tytul)}</td>${profile.map((p) => {
+          const w = p.best?.[q.id];
+          return `<td>${w ? `<strong>${Number(w.pct)}%</strong>` : '—'}</td>`;
+        }).join('')}</tr>`
+      ).join('');
+    });
+  </script>
 </Base>
 
 <style>
@@ -331,4 +374,11 @@ const slowa = ['cześć', 'dziękuję', 'góra', 'jezioro', 'zmęczenie', 'wład
     from { opacity: 0; transform: translateY(16px); }
     to { opacity: 1; transform: translateY(0); }
   }
+
+  .klub-zacheta { color: var(--text-dim); }
+  .klub-tabela-wrap { overflow-x: auto; }
+  .klub-tabela { border-collapse: collapse; width: 100%; }
+  .klub-tabela th, .klub-tabela td { border: 1px solid var(--line); padding: 7px 12px; text-align: left; font-size: 0.92rem; }
+  .klub-tabela th { background: var(--panel-2); font-family: var(--font-display); }
+  .klub-tabela td strong { color: var(--zielony); }
 </style>
