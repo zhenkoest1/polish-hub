@@ -1,0 +1,135 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const b = import.meta.env.BASE_URL.replace(/\/$/, '');
+const href = (p: string) => `${b}/${p.replace(/^\//, '')}`;
+
+// Tytuly quizow do tabeli "moje najlepsze wyniki"
+const lekcje = (await getCollection('lekcje')).sort((a, c) => a.data.numer - c.data.numer);
+const quizy = [
+  ...lekcje.filter((l) => l.data.quiz).map((l) => ({ id: l.data.quiz!, tytul: `${l.data.emoji} ${l.data.tytul}` })),
+  { id: 'mix', tytul: '⚡ Wielki Mix' },
+];
+---
+<Base title="Profil — Polski Klub" active="profil">
+  <article class="profil">
+    <header>
+      <p class="kicker" style="color: var(--blekit)">twoje konto</p>
+      <h1>Profil</h1>
+    </header>
+
+    <!-- ekran logowania -->
+    <section id="p-login" hidden>
+      <p>Kliknij, kim jesteś, i wpisz swój PIN (4 cyfry). Przy pierwszym logowaniu PIN, który wpiszesz, staje się twoim PIN-em na zawsze.</p>
+      <div class="p-osoby" id="p-osoby"></div>
+      <form id="p-form" hidden>
+        <p class="p-kim">Logujesz się jako <strong id="p-kim"></strong></p>
+        <input id="p-pin" class="p-pin" type="password" inputmode="numeric" maxlength="4" placeholder="••••" autocomplete="off" />
+        <button class="btn" type="submit">Zaloguj</button>
+        <p class="p-blad" id="p-blad" hidden></p>
+      </form>
+    </section>
+
+    <!-- ekran zalogowanego -->
+    <section id="p-konto" hidden>
+      <p class="p-czesc">Cześć, <strong id="p-imie"></strong>! <button class="btn p-wyloguj" id="p-wyloguj">Wyloguj</button></p>
+      <h2>Twoje najlepsze wyniki</h2>
+      <table class="p-tabela">
+        <thead><tr><th>Quiz</th><th>Najlepszy wynik</th></tr></thead>
+        <tbody id="p-wyniki"></tbody>
+      </table>
+      <p class="p-pusto" id="p-pusto" hidden>Jeszcze żadnego quizu — <a href={href('quizy/')}>zagraj pierwszy</a>!</p>
+    </section>
+
+    <script type="application/json" id="p-quizy" set:html={JSON.stringify(quizy)} />
+  </article>
+
+  <script>
+    import { OSOBY, poprawnyPin } from '../scripts/konto.js';
+    import { zaloguj, wyloguj, obserwujOsobe, mojProfil } from '../scripts/chmura.js';
+
+    const $ = (id: string) => document.getElementById(id)!;
+    const quizy: { id: string; tytul: string }[] = JSON.parse($('p-quizy').textContent!);
+    let wybrany = '';
+
+    // przyciski osob
+    $('p-osoby').innerHTML = OSOBY.map(
+      (o) => `<button class="p-osoba" data-slug="${o.slug}"><span>${o.emoji}</span>${o.name}</button>`
+    ).join('');
+    $('p-osoby').addEventListener('click', (e) => {
+      const btn = (e.target as HTMLElement).closest('.p-osoba') as HTMLElement | null;
+      if (!btn) return;
+      wybrany = btn.dataset.slug!;
+      document.querySelectorAll('.p-osoba').forEach((x) => x.classList.toggle('on', x === btn));
+      $('p-kim').textContent = btn.textContent!.trim();
+      $('p-form').hidden = false;
+      ($('p-pin') as HTMLInputElement).focus();
+    });
+
+    $('p-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const pin = ($('p-pin') as HTMLInputElement).value;
+      const blad = $('p-blad');
+      blad.hidden = true;
+      if (!poprawnyPin(pin)) { blad.textContent = 'PIN to 4 cyfry.'; blad.hidden = false; return; }
+      try {
+        await zaloguj(wybrany, pin);
+      } catch (err: any) {
+        blad.textContent = err.message === 'Zły PIN.' ? 'Zły PIN.' : 'Nie udało się zalogować. Jest internet?';
+        blad.hidden = false;
+      }
+    });
+
+    $('p-wyloguj').addEventListener('click', () => wyloguj());
+
+    obserwujOsobe(async (osoba) => {
+      $('p-login').hidden = !!osoba;
+      $('p-konto').hidden = !osoba;
+      if (!osoba) return;
+      $('p-imie').textContent = `${osoba.emoji} ${osoba.name}`;
+      const profil = await mojProfil();
+      const best = profil?.best ?? {};
+      const wiersze = quizy
+        .filter((q) => best[q.id])
+        .map((q) => `<tr><td>${q.tytul}</td><td><strong>${best[q.id].pct}%</strong> (${best[q.id].got}/${best[q.id].max})</td></tr>`);
+      $('p-wyniki').innerHTML = wiersze.join('');
+      $('p-pusto').hidden = wiersze.length > 0;
+    });
+  </script>
+
+  <style>
+    .profil { padding-top: 26px; }
+    .p-osoby { display: flex; gap: 12px; flex-wrap: wrap; margin: 18px 0; }
+    .p-osoba {
+      font-family: var(--font-display); font-weight: 700; font-size: 1.05rem;
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      padding: 18px 26px; background: var(--panel); color: var(--text);
+      border: 2px solid var(--line); border-radius: var(--radius); cursor: pointer;
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+    .p-osoba span { font-size: 2rem; }
+    .p-osoba:hover { transform: translateY(-3px); }
+    .p-osoba.on { border-color: var(--blekit); }
+    #p-form { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+    .p-kim { width: 100%; margin: 0 0 4px; color: var(--text-dim); }
+    .p-pin {
+      width: 110px; text-align: center; letter-spacing: 0.4em; font-size: 1.3rem;
+      background: var(--panel); color: var(--text);
+      border: 2px solid var(--line); border-radius: var(--radius); padding: 10px 12px;
+    }
+    .p-pin:focus { outline: none; border-color: var(--blekit); }
+    .btn {
+      font-family: var(--font-display); font-weight: 700; font-size: 1rem;
+      background: var(--amber); color: var(--bg-deep); border: 0;
+      border-radius: 99px; padding: 10px 22px; cursor: pointer;
+    }
+    .btn:hover { background: var(--amber-deep); }
+    .p-blad { color: var(--incorrect); width: 100%; margin: 4px 0 0; }
+    .p-czesc { display: flex; align-items: center; gap: 14px; font-size: 1.15rem; }
+    .p-wyloguj { font-size: 0.85rem; background: var(--panel-2); color: var(--text); }
+    .p-tabela { border-collapse: collapse; width: 100%; max-width: 560px; }
+    .p-tabela th, .p-tabela td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; }
+    .p-tabela th { background: var(--panel-2); font-family: var(--font-display); }
+  </style>
+</Base>
