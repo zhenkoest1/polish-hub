@@ -1,0 +1,77 @@
+// Blok ```cwiczenie w markdown lekcji zawiera JSON:
+// { "typ": "wybor", "tytul": "...", "instrukcja": "...",
+//   "zdania": [ { "przed": "Wczoraj cały wieczór ", "opcje": ["czytać", "przeczytać"],
+//                 "dobra": 0, "po": " tę książkę.", "czemu": "cały wieczór = proces → ndk" } ] }
+// { "typ": "wpisz", "tytul": "...", "instrukcja": "...",
+//   "zdania": [ { "przed": "pisać → ", "odpowiedz": ["napisać"], "po": "", "czemu": "..." } ] }
+
+import { stripDiacritics, norm } from './tekst.js';
+
+const TYPY = ['wybor', 'wpisz'];
+
+export function parsujCwiczenie(tekstJson) {
+  let dane;
+  try {
+    dane = JSON.parse(tekstJson);
+  } catch (e) {
+    return { ok: false, blad: 'niepoprawny JSON: ' + e.message };
+  }
+
+  if (!TYPY.includes(dane.typ)) {
+    return { ok: false, blad: `nieznany typ: ${dane.typ}` };
+  }
+
+  if (!Array.isArray(dane.zdania) || dane.zdania.length === 0) {
+    return { ok: false, blad: 'zdania: pusta lista' };
+  }
+
+  for (const [i, z] of dane.zdania.entries()) {
+    const gdzie = `zdanie ${i + 1}`;
+
+    if (typeof z.przed !== 'string' || typeof z.po !== 'string') {
+      return { ok: false, blad: `${gdzie}: przed/po muszą być stringami` };
+    }
+
+    if (dane.typ === 'wybor') {
+      if (
+        !Array.isArray(z.opcje) ||
+        z.opcje.length < 2 ||
+        !z.opcje.every((o) => typeof o === 'string' && o.length > 0)
+      ) {
+        return { ok: false, blad: `${gdzie}: opcje — min. 2 niepuste stringi` };
+      }
+
+      if (!Number.isInteger(z.dobra) || z.dobra < 0 || z.dobra >= z.opcje.length) {
+        return { ok: false, blad: `${gdzie}: dobra poza zakresem` };
+      }
+    }
+
+    if (dane.typ === 'wpisz') {
+      if (
+        !Array.isArray(z.odpowiedz) ||
+        z.odpowiedz.length === 0 ||
+        !z.odpowiedz.every((o) => typeof o === 'string' && o.trim().length > 0)
+      ) {
+        return { ok: false, blad: `${gdzie}: odpowiedz — niepusta lista stringów` };
+      }
+    }
+  }
+
+  return { ok: true, dane };
+}
+
+export function sprawdzWybor(zdanie, wybranyIndex) {
+  return zdanie.dobra === wybranyIndex;
+}
+
+// 'dobrze' | 'prawie' (brak polskich znaków) | 'zle'
+export function sprawdzWpisz(zdanie, wpisane) {
+  const val = norm(wpisane ?? '');
+  if (!val) return 'zle';
+
+  if (zdanie.odpowiedz.some((a) => norm(a) === val)) return 'dobrze';
+  if (zdanie.odpowiedz.some((a) => stripDiacritics(a) === stripDiacritics(val)))
+    return 'prawie';
+
+  return 'zle';
+}
