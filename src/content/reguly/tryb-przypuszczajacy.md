@@ -184,7 +184,7 @@ zrobili + by + śmy  →  zrobilibyśmy
 - *Gdybym miał czas, przyszedłbym.* — сейчас / вообще
 - *Gdybym **wczoraj** miał czas, przyszedłbym.* — вчера, но времени не было
 
-> ⚠️ Настоящее прошедшее сослагательное в польском существует — *byłbym przyszedł*, *byłabym to zrobiła* — но это **архаика**. Встречается в литературе XIX–XX века и в очень формальном стиле. **Узнавать — да, употреблять — нет.** На экзамене B1 пишите обычное *przyszedłbym*.
+> ⚠️ Отдельное прошедшее сослагательное в польском существует — *byłbym przyszedł*, *byłabym to zrobiła* — но это **архаика**. Встречается в литературе XIX–XX века и в очень формальном стиле. **Узнавать — да, употреблять — нет.** На экзамене B1 пишите обычное *przyszedłbym*.
 
 ---
 
@@ -331,5 +331,3 @@ zrobili + by + śmy  →  zrobilibyśmy
 - [💪 Czasowniki modalne →](/polish-hub/reguly/modalne/) — *chciałbym, mógłbym*, а также *trzeba, można, należy* без *by*
 - [🎯 Lekcja 7 — Dylemat więźnia →](/polish-hub/lekcje/07-wiezien/) — тема введена здесь
 - [🚋 Lekcja 8 — Dylemat wagonika →](/polish-hub/lekcje/08-wagonik/) — безличные конструкции и «Co by było, gdyby…»
-</content>
-</invoke>

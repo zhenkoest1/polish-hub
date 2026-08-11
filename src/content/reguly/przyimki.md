@@ -231,8 +231,8 @@ kolejnosc: 23
 
 | Базовая форма | С *-e* | Когда | Примеры |
 |----------------|---------|-------|---------|
-| *z* | *ze* | перед s, z, ś, ź, sz, ż, rz + согласная | *ze szkoły, ze stołu, ze Śląska, ze wsi, ze Lwowa, ze zmianami* |
-| *w* | *we* | перед w, f + согласная | *we Wrocławiu, we Francji, we Włoszech, we wtorek, we krwi* |
+| *z* | *ze* | перед s, z, ś, ź, sz, ż, rz + согласная, а также перед другими труднопроизносимыми группами | *ze szkoły, ze stołu, ze Śląska, ze zmianami*; также *ze wsi, ze Lwowa* |
+| *w* | *we* | перед w, f + согласная, а также перед другими труднопроизносимыми группами | *we Wrocławiu, we Francji, we Włoszech, we wtorek*; также *we krwi* |
 | *od* | *ode* | почти только перед *mnie* | *ode mnie* |
 | *bez* | *beze* | почти только перед *mnie* | *beze mnie* |
 | *przez* | *przeze* | почти только перед *mnie* | *przeze mnie* |
@@ -297,3 +297,16 @@ kolejnosc: 23
 | спросить **о** дороге | *pytać o drodze* | *pytać **o drogę*** | *Pytać o* + Biernik, не Miejscownik |
 
 > **Общая подсказка:** совпадение с русским — ловушка, а не помощь. Половина польских предлогов пишется как русские, но требует другого падежа. Проверяйте *do, po, za, przy, na* отдельно — именно они дают больше всего ошибок.
+
+---
+
+## Куда дальше
+
+Каждый предлог тянет за собой падеж — вот они по отдельности:
+
+- [🧩 Dopełniacz](/polish-hub/reguly/dopelniacz/) — *do, od, z, bez, dla, u*
+- [🎯 Biernik](/polish-hub/reguly/biernik/) — *przez, na, w, o* с движением
+- [🛠️ Narzędnik](/polish-hub/reguly/narzednik/) — *z, nad, pod, przed, za* в покое
+- [📍 Miejscownik](/polish-hub/reguly/miejscownik/) — *w, na, o, po, przy*
+- [🤲 Celownik](/polish-hub/reguly/celownik/) — *ku, dzięki, przeciwko, wbrew*
+- [🗺️ Przypadki — przegląd](/polish-hub/reguly/przypadki-przeglad/)

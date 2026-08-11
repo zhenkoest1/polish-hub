@@ -237,7 +237,7 @@ czyta-ć →  czyta + ł + am →  czytałam
 | *Mógłem* | *Mogłem* | *ó* только в форме *mógł* |
 | *Szłem* | *Szedłem* | Мужская основа — *szedł-* |
 | *Ona wziął* / *wziąłam* | *Ona wzięła* / *wzięłam* | *ą* только в мужском роде ед. ч. |
-| *Oni mieli* → *oni miali* | *Oni mieli* | *-eć* даёт *-eli* в m-os. |
+| *Oni miali* | *Oni mieli* | *-eć* даёт *-eli* в m-os. |
 | *Gdzieś ty byłeś?* | *Gdzieś ty był?* | Окончание не удваивается |
 | *Myśmy robiliśmy.* | *Myśmy robili.* | То же самое: одно окончание на предложение |
 

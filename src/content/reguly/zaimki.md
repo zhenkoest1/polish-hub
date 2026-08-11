@@ -64,14 +64,15 @@ kolejnosc: 21
 |-------|--------|---------|
 | **D** *ja* | *mnie* | — (краткой нет) |
 | **D** *ty* | *ciebie* | *cię* |
-| **D/B** *on, ono* | *jego* | *go* |
+| **D** *on, ono* | *jego* | *go* |
+| **B** *on* | *jego* | *go* |
 | **C** *ja* | *mnie* | *mi* |
 | **C** *ty* | *tobie* | *ci* |
 | **C** *on, ono* | *jemu* | *mu* |
 | **B** *ja* | *mnie* | — (краткой нет) |
 | **B** *ty* | *ciebie* | *cię* |
 
-> У *ona, my, wy, oni, one* пары «долгая/краткая» нет — форма одна: *jej, nas, was, ich, im*.
+> У *ona, my, wy, oni, one* пары «долгая/краткая» нет — форма одна: *jej, nas, was, ich, im*. У *ono* в **Bierniku** тоже одна форма — *je* (не *jego / go*): *Widzę je.*
 
 ### Когда какая форма
 
@@ -333,3 +334,11 @@ kolejnosc: 21
 | *Ja mam dwa koty.* (в нейтральной речи) | *Mam dwa koty.* | Окончание глагола уже показывает лицо; *ja* — только для ударения |
 
 > **Подсказка для русскоговорящих:** система в целом знакомая — «свой», «себе», «который», несклоняемые «его/её/их». Три реальных капкана: (1) краткие формы *mi/ci/go/mu* нельзя ставить в начало; (2) после предлога обязательно *n-*: *do niego*, а не *do jego*; (3) *oni/one* и *ci/te* требуют выбора по мужсколичности, которого в русском нет.
+
+---
+
+## Куда дальше
+
+- [🗺️ Przypadki — przegląd](/polish-hub/reguly/przypadki-przeglad/) — все 7 падежей и полная таблица местоимений
+- [🤲 Celownik](/polish-hub/reguly/celownik/) — где живут краткие *mi / ci / mu*
+- [📍 Miejscownik](/polish-hub/reguly/miejscownik/) — формы на *n-* после предлога

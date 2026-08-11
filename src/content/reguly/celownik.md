@@ -38,8 +38,8 @@ Celownik обозначает того, кто получает действие
 
 | Тип | Окончание | Примеры |
 |-----|-----------|---------|
-| После твёрдой согласной | *-e* (с чередованием!) | *mama → mamie, siostra → siostrze, koleżanka → koleżance, Polska → Polsce, żona → żonie* |
-| После мягкой согласной | *-i / -ii* | *pani → pani, ciocia → cioci, Maria → Marii, lekcja → lekcji, Lena → Lenie* |
+| После твёрдой согласной | *-e* (с чередованием!) | *mama → mamie, siostra → siostrze, koleżanka → koleżance, Polska → Polsce, żona → żonie, Lena → Lenie* |
+| После мягкой согласной | *-i / -ii* | *pani → pani, ciocia → cioci, Maria → Marii, lekcja → lekcji* |
 
 > **Чередования в женском роде:** *k→c* (koleżanka→koleżance), *g→dz* (droga→drodze), *r→rz* (siostra→siostrze), *t→ci* (kobieta→kobiecie), *d→dzi* (woda→wodzie), *n→ni* (żona→żonie).
 
@@ -65,7 +65,9 @@ Celownik обозначает того, кто получает действие
 
 **Когда какая форма:**
 - **Краткая** (*mi, ci, mu*) — в середине предложения, нейтрально
-- **Полная** (*mnie, tobie, jemu*) — после предлога, в начале предложения, при подчёркивании
+- **Полная** (*mnie, tobie, jemu*) — в начале предложения и при подчёркивании: *Mnie dał książkę, nie tobie.*
+
+> ⚠️ **После предлога — не полная форма, а форма на *n-*.** Четыре предлога с целительным (*ku, dzięki, przeciwko, wbrew*) требуют *niemu / niej / nim*, а не *jemu / jej / im*: *dzięki **niemu*** (не *«dzięki jemu»*), *przeciwko **nim***, *ku **niej***. Правило то же, что в [📍 Miejscowniku](/polish-hub/reguly/miejscownik/) и разобрано подробно в [👤 Zaimkach](/polish-hub/reguly/zaimki/).
 
 | Краткая | Полная |
 |---------|--------|

@@ -192,3 +192,11 @@ zwracam się z prośbą o…
 - **Wołacz = Miejscownik** в мужском роде: выучили *o Marku, o profesorze, o synu* — получили *Marku! Profesorze! Synu!* Исключения: *pan → panie*, *ojciec → ojcze*, *chłopiec → chłopcze*, *Bóg → Boże*, *ksiądz → księże*.
 - **Wołacz = Mianownik** в среднем роде, во всём множественном числе и у всех прилагательных.
 - **Женский род** — единственное место, где нужна собственная форма: *-o* или *-u*.
+
+---
+
+## Куда дальше
+
+- [📍 Miejscownik](/polish-hub/reguly/miejscownik/) — источник мужской формы (кроме *pan → panie*)
+- [🧱 Mianownik i liczba mnoga](/polish-hub/reguly/mianownik-liczba-mnoga/) — форма для среднего рода и множественного
+- [🗺️ Przypadki — przegląd](/polish-hub/reguly/przypadki-przeglad/)

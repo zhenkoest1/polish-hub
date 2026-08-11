@@ -103,9 +103,9 @@ Mianownik — исходная, словарная форма. Это то, чт
 
 ---
 
-## Чередования согласных перед *-i* в męskoosobowym
+## Чередования согласных в męskoosobowym
 
-Окончание *-i* смягчает предшествующую согласную. Это не исключения — это система. Выучив таблицу, вы перестанете угадывать.
+Окончание множественного числа смягчает предшествующую согласную. Это не исключения — это система. Выучив таблицу, вы перестанете угадывать.
 
 | Чередование | Mianownik ед. ч. | Mianownik мн. ч. |
 |-------------|------------------|------------------|
@@ -117,7 +117,7 @@ Mianownik — исходная, словарная форма. Это то, чт
 | **r → rzy** | *aktor, autor, dyrektor* | *aktorzy, autorzy, dyrektorzy* |
 | **ch → si** | *Włoch, Czech* | *Włosi, Czesi* |
 | **z → zi** | *Francuz* | *Francuzi* |
-| **n → ni** | *Hiszpan* | *Hiszpanie* |
+| **n → ni** (окончание *-e*) | *Hiszpan, Amerykanin* | *Hiszpanie, Amerykanie* |
 | **-ec → -cy** (*e* выпадает) | *chłopiec, Niemiec, kupiec* | *chłopcy, Niemcy, kupcy* |
 | нерегулярное | *brat* | *bracia* |
 
@@ -158,11 +158,11 @@ Mianownik — исходная, словарная форма. Это то, чт
 | **k → c** | *wysokie, wielkie* | *wysocy, wielcy* |
 | **g → dz** | *drogie, ubogie* | *drodzy, ubodzy* |
 | **sk → sc** | *polskie, ludzkie* | *polscy, ludzcy* |
-| **d → dz** | *młode* | *młodzi* |
-| **t → c** | *bogate* | *bogaci* |
+| **d → dzi** | *młode* | *młodzi* |
+| **t → ci** | *bogate* | *bogaci* |
 | **ł → l** | *miłe, wesołe* | *mili, weseli* |
-| **ż → z** | *duże* | *duzi* |
-| **sz → s** | *pierwsze* | *pierwsi* |
+| **ż → zi** | *duże* | *duzi* |
+| **sz → si** | *pierwsze* | *pierwsi* |
 | **n → ni** | *inteligentne* | *inteligentni* |
 | **w → wi** | *zdrowe, ciekawe* | *zdrowi, ciekawi* |
 | без изменений (мягкие) | *tanie, głupie, ostatnie* | *tani, głupi, ostatni* |

@@ -146,7 +146,9 @@ kolejnosc: 0
 | **4. B** | *mnie* | *ciebie, cię* | *jego, go / niego* | *je / nie* | *ją / nią* | *nas* | *was* | *ich / nich* | *je / nie* |
 | **5. N** | *mną* | *tobą* | *nim* | *nim* | *nią* | *nami* | *wami* | *nimi* | *nimi* |
 | **6. Msc** | *(o) mnie* | *(o) tobie* | *(o) nim* | *(o) nim* | *(o) niej* | *(o) nas* | *(o) was* | *(o) nich* | *(o) nich* |
-| **7. W** | — | *ty!* | — | — | — | — | *wy!* | — | — |
+| **7. W** | — | — | — | — | — | — | — | — | — |
+
+> **Почему строка Wołacza пустая.** У личных местоимений отдельного звательного падежа нет. Обращения вроде *Ty! Chodź tu!* — это mianownik в роли обращения, а не особая форма. Так же это подано в [👤 Zaimkach](/polish-hub/reguly/zaimki/).
 
 ### Как этим пользоваться
 

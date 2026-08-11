@@ -168,7 +168,7 @@ kolejnosc: 24
 | ja | *żebym* | *Chcesz, żebym przyszedł?* |
 | ty | *żebyś* | *Chcę, żebyś przyszedł.* |
 | on / ona / ono | *żeby* | *Chcę, żeby przyszedł.* |
-| my | *żebyśmy* | *Chce, żebyśmy przyszli.* |
+| my | *żebyśmy* | *Chcę, żebyśmy przyszli.* |
 | wy | *żebyście* | *Proszę, żebyście przyszli.* |
 | oni / one | *żeby* | *Chcę, żeby przyszli.* |
 
@@ -247,7 +247,7 @@ kolejnosc: 24
 
 > Но: *niż* с глаголом = придаточное → **запятая нужна**: *Jest starszy**,** niż myślałem.*
 
-### Два особых случая
+### Три особых случая
 
 **1. Придаточное в середине — запятые с ОБЕИХ сторон:**
 
@@ -322,3 +322,11 @@ kolejnosc: 24
 | *Nie wiem czy przyjdzie.* | *Nie wiem, czy przyjdzie.* | Косвенный вопрос — тоже придаточное, запятая нужна |
 
 > **Подсказка для русскоговорящих:** логика союзов почти полностью совпадает с русской — *i/a/ale*, *потому что / чтобы*, *пока не*. Основной риск не в выборе союза, а в двух вещах: **запятые** (ставьте перед каждым *że, żeby, który, bo, jeśli, gdy, chociaż*) и **личные окончания у *żeby* и *gdyby*** (*żebyś*, *gdybym*), которых в русском нет вовсе.
+
+---
+
+## Куда дальше
+
+- [🤔 Tryb przypuszczający](/polish-hub/reguly/tryb-przypuszczajacy/) — личные окончания у *gdyby* и *żeby*
+- [👤 Zaimki](/polish-hub/reguly/zaimki/) — *który* как связка придаточного
+- [⏳ Aspekt](/polish-hub/reguly/aspekt/) — какой вид ставить после *zanim, dopóki, kiedy*

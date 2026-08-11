@@ -72,7 +72,7 @@ kolejnosc: 12
 | *powiedzieć* | *powiem* | *powiesz* | *powie* | *powiemy* | *powiecie* | ***powiedzą*** |
 | *wziąć* | *wezmę* | *weźmiesz* | *weźmie* | *weźmiemy* | *weźmiecie* | ***wezmą*** |
 
-> *Dadzą, zjedzą, powiedzą* — не *✗ dają, ✗ zjedą, ✗ powiedzieją*. Три самых частых глагола, и все три ломают шаблон.
+> *Dadzą, zjedzą, powiedzą, wezmą* — не *✗ dają, ✗ zjedą, ✗ powiedzieją, ✗ weźmią*. Четыре очень частых глагола, и все четыре ломают шаблон.
 
 ---
 

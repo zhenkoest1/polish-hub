@@ -253,3 +253,13 @@ Miejscownik — падеж места и темы разговора. Главн
 - **Miejscownik = Celownik** в женском роде: *daję siostrze* / *o siostrze*, *daję matce* / *o matce*. Учите один раз — получаете два падежа.
 - **Miejscownik vs Biernik** с *na / o / po*: *na koncert* (куда) / *na koncercie* (где); *pytam o cenę* / *mówię o cenie*.
 - **Miejscownik vs Narzędnik** для места: *w parku, na stole* (miejscownik), но *nad morzem, przed domem, pod stołem, za miastem* (narzędnik).
+
+---
+
+## Куда дальше
+
+- [🤲 Celownik](/polish-hub/reguly/celownik/) — в женском роде формы совпадают полностью
+- [🎯 Biernik](/polish-hub/reguly/biernik/) — тот же предлог, но с движением
+- [🔗 Przyimki z przypadkami](/polish-hub/reguly/przyimki/) — вся пятёрка *w, na, o, po, przy* в контексте
+- [📣 Wołacz](/polish-hub/reguly/wolacz/) — в мужском роде форма та же
+- [🗺️ Przypadki — przegląd](/polish-hub/reguly/przypadki-przeglad/)
