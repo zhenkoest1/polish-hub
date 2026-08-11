@@ -10,7 +10,7 @@ import {
   doc, getDoc, setDoc, addDoc, collection, getDocs, serverTimestamp,
 } from 'firebase/firestore';
 import { firebaseConfig } from './firebase-config.js';
-import { emailOsoby, pinNaHaslo, osobaZeSluga } from './konto.js';
+import { emailOsoby, pinNaHaslo, osobaZeSluga, poprawnyPin } from './konto.js';
 import { lepszyWynik } from './wyniki.js';
 
 const app = initializeApp(firebaseConfig);
@@ -43,6 +43,7 @@ export async function zaloguj(slug, pin) {
   // osierocone konto w Auth i wywalilo sie na osoba.name (uwaga z code review)
   const osoba = osobaZeSluga(slug);
   if (!osoba) throw new Error('Nieznana osoba.');
+  if (!poprawnyPin(pin)) throw new Error('PIN to 4 cyfry.');
   const email = emailOsoby(slug);
   const haslo = pinNaHaslo(slug, pin);
   try {
@@ -80,12 +81,16 @@ export async function zapiszWynik(quizId, wynik) {
   const ref = doc(db, 'users', user.uid);
   const snap = await getDoc(ref);
   const best = (snap.exists() && snap.data().best) || {};
+  // ts: Date.now() — lepszyWynik porownuje ts po stronie klienta; serverTimestamp to sentinel az do potwierdzenia
   const nowy = { ...wynik, ts: Date.now() };
   best[quizId] = lepszyWynik(best[quizId], nowy);
-  await setDoc(ref, { best }, { merge: true });
-  await addDoc(collection(db, 'users', user.uid, 'attempts'), {
+  const osoba = osobaZeSluga(user.email.split('@')[0]);
+  // Wyslij obie operacje przed oczekiwaniem: offline nie zawieszaj addDoc
+  const p1 = setDoc(ref, { ...(osoba ?? {}), best: { [quizId]: best[quizId] } }, { merge: true });
+  const p2 = addDoc(collection(db, 'users', user.uid, 'attempts'), {
     quiz: quizId, ...wynik, ts: serverTimestamp(),
   });
+  await Promise.all([p1, p2]);
   return true;
 }
 
