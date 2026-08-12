@@ -291,3 +291,16 @@
 .cw-zdanie.cw-prawie .cw-wynik { color: var(--amber); }
 .cw-zdanie.cw-zle .cw-wynik { color: var(--incorrect); }
 .cw-sprawdz:disabled { opacity: 0.5; cursor: default; }
+
+/* typ "pisanie": wolny tekst do zeszytu */
+.cw-pisanie {
+  display: block; width: 100%; margin: 6px 0 2px; padding: 8px 10px;
+  font: inherit; font-size: 0.95rem; line-height: 1.5; resize: vertical;
+  background: var(--bg-deep); color: var(--text);
+  border: 1.5px solid var(--line); border-radius: 8px;
+}
+.cw-pisanie:focus { outline: none; border-color: var(--blekit); }
+.cw-podpowiedz { display: block; font-size: 0.82rem; color: var(--text-dim); }
+.cw-status { margin: 10px 0 0; font-size: 0.9rem; color: var(--text-dim); }
+.cw-status a { color: var(--amber); }
+.cw-zdanie.cw-pisanie-li { line-height: 1.6; }

@@ -9,6 +9,11 @@ function esc(s) {
   return d.innerHTML;
 }
 
+// Slug tytulu do klucza szkicu: litery i cyfry (tez polskie) zostaja, reszta -> "-".
+function slugTytulu(s) {
+  return String(s ?? '').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '-').replace(/^-|-$/g, '');
+}
+
 function znajdzBloki() {
   // Shiki NIE zna jezyka "cwiczenie" i renderuje go jako data-language="plaintext"
   // (sprawdzone w dist). Szukamy wiec plaintext-blokow wygladajacych jak nasz JSON;
@@ -22,6 +27,14 @@ function zbuduj(pre, dane) {
   const box = document.createElement('section');
   box.className = 'cw-box';
   const zdaniaHtml = dane.zdania.map((z, i) => {
+    // pisanie: wolny tekst, nie ma czego sprawdzac — zero .cw-wynik, czemu jako podpowiedz
+    if (dane.typ === 'pisanie') {
+      return `<li class="cw-zdanie cw-pisanie-li" data-i="${i}">
+      <span class="cw-tekst">${esc(z.przed)}${esc(z.po)}</span>
+      <textarea class="cw-pisanie" data-i="${i}" rows="3"></textarea>
+      ${z.czemu ? `<span class="cw-podpowiedz">${esc(z.czemu)}</span>` : ''}
+    </li>`;
+    }
     const srodek = dane.typ === 'wybor'
       ? `<span class="cw-opcje" data-i="${i}">${z.opcje.map((o, oi) =>
           `<button type="button" class="cw-opcja" data-oi="${oi}">${esc(o)}</button>`).join('')}</span>`
@@ -31,17 +44,72 @@ function zbuduj(pre, dane) {
       <span class="cw-wynik" hidden></span>
     </li>`;
   }).join('');
+  const dol = dane.typ === 'pisanie'
+    ? `<button type="button" class="cw-zapisz btn">💾 Zapisz w zeszycie</button>
+    <p class="cw-status" hidden></p>`
+    : '<button type="button" class="cw-sprawdz btn">Sprawdź</button>';
   box.innerHTML = `
     ${dane.tytul ? `<p class="cw-tytul">${esc(dane.tytul)}</p>` : ''}
     ${dane.instrukcja ? `<p class="cw-instrukcja">${esc(dane.instrukcja)}</p>` : ''}
     <ol class="cw-lista">${zdaniaHtml}</ol>
-    <button type="button" class="cw-sprawdz btn">Sprawdź</button>
+    ${dol}
   `;
   pre.replaceWith(box);
   podepnij(box, dane);
 }
 
+// pisanie: szkic w localStorage + zapis do zeszytu w chmurze
+function podepnijPisanie(box, dane) {
+  const pola = [...box.querySelectorAll('.cw-pisanie')];
+  const status = box.querySelector('.cw-status');
+  const lekcja = document.querySelector('[data-lekcja]')?.dataset.lekcja ?? location.pathname;
+  const klucz = `pk_szkic_${lekcja}_${slugTytulu(dane.tytul)}`;
+
+  // szkic przezywa odswiezenie strony; localStorage w prywatnym trybie rzuca — stad try/catch
+  try {
+    const szkic = JSON.parse(localStorage.getItem(klucz) ?? 'null');
+    if (Array.isArray(szkic)) {
+      pola.forEach((el, i) => { if (typeof szkic[i] === 'string') el.value = szkic[i]; });
+    }
+  } catch { /* brak szkicu albo smiec w kluczu — trudno */ }
+
+  const zapiszSzkic = () => {
+    try { localStorage.setItem(klucz, JSON.stringify(pola.map((el) => el.value))); } catch { /* prywatny tryb */ }
+  };
+  pola.forEach((el) => el.addEventListener('input', zapiszSzkic));
+
+  box.querySelector('.cw-zapisz').addEventListener('click', () => {
+    const wpisy = pola.map((el) => el.value.trim());
+    if (wpisy.every((w) => !w)) {
+      pola.forEach((el) => { el.classList.add('shake'); setTimeout(() => el.classList.remove('shake'), 400); });
+      return;
+    }
+    status.hidden = false;
+    status.textContent = '⏳ zapisuję…';
+
+    const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+    // Firestore offline: promise wisi do powrotu sieci — po 4 s uznajemy "zapisze sie pozniej"
+    // (persistentLocalCache dowiezie). .catch na wewnetrznym promise: gdy timeout wygra wyscig,
+    // pozniejszy reject nie moze zostac unhandled rejection.
+    const zapis = import('./chmura.js').then(({ zapiszDoZeszytu }) =>
+      zapiszDoZeszytu({ lekcja, zadanie: dane.tytul ?? '', wpisy }));
+    zapis.catch(() => {});
+    Promise.race([zapis, new Promise((res) => setTimeout(() => res('timeout'), 4000))])
+      .then((r) => {
+        if (r === true) {
+          status.textContent = '✓ Zapisano w zeszycie';
+          // praca jest juz w chmurze — szkic niepotrzebny
+          try { localStorage.removeItem(klucz); } catch { /* prywatny tryb */ }
+        } else if (r === 'timeout') status.textContent = '✓ Zapisze się, gdy wróci internet';
+        else status.innerHTML = `<a href="${base}/profil/">Zaloguj się</a>, żeby zapisywać w zeszycie`;
+      })
+      .catch(() => { status.textContent = '⚠️ Nie udało się zapisać'; });
+  });
+}
+
 function podepnij(box, dane) {
+  if (dane.typ === 'pisanie') { podepnijPisanie(box, dane); return; }
+
   const wybory = new Map(); // i -> wybrany index (tylko wybor)
 
   box.querySelectorAll('.cw-opcja').forEach((btn) => {
