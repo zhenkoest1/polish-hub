@@ -4,6 +4,7 @@
 //                 "dobra": 0, "po": " tę książkę.", "czemu": "cały wieczór = proces → ndk" } ] }
 // { "typ": "wpisz", "tytul": "...", "instrukcja": "...",
 //   "zdania": [ { "przed": "pisać → ", "odpowiedz": ["napisać"], "po": "", "czemu": "..." } ] }
+// "dokladnie": true — diakrytyki znacza (jedz ≠ jedź), brak "prawie"
 // { "typ": "pisanie", "tytul": "...", "instrukcja": "...",
 //   "zdania": [ { "przed": "1. Co zacząłem i nie skończyłem?", "po": "", "czemu": "ndk, czas przeszły" } ] }
 // (pisanie = wolny tekst do zeszytu — nie ma poprawnej odpowiedzi do sprawdzenia)
@@ -68,6 +69,10 @@ export function parsujCwiczenie(tekstJson) {
       ) {
         return { ok: false, blad: `${gdzie}: odpowiedz — niepusta lista stringów` };
       }
+
+      if (z.dokladnie !== undefined && typeof z.dokladnie !== 'boolean') {
+        return { ok: false, blad: `${gdzie}: dokladnie musi być boolean` };
+      }
     }
   }
 
@@ -84,6 +89,11 @@ export function sprawdzWpisz(zdanie, wpisane) {
   if (!val) return 'zle';
 
   if (zdanie.odpowiedz.some((a) => norm(a) === val)) return 'dobrze';
+
+  // dokladnie: para minimalna (jedz = jedz!, jedź = jedz samochodem) — tu brak ogonka
+  // to inne slowo, a nie literowka. "Prawie" przeklamaloby cala lekcje na blad.
+  if (zdanie.dokladnie === true) return 'zle';
+
   if (zdanie.odpowiedz.some((a) => stripDiacritics(a) === stripDiacritics(val)))
     return 'prawie';
 

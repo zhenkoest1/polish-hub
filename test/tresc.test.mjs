@@ -80,8 +80,9 @@ for (const f of lekcje) {
   }
 }
 sprawdz('są jakieś lekcje', lekcje.length > 0);
-// Lekcja 10 ma 3 bloki cwiczen — jesli walidator widzi mniej, to on jest zepsuty
-sprawdz(`ćwiczenia: znaleziono ≥3 bloki (jest ${cwiczeniaRazem})`, cwiczeniaRazem >= 3);
+// Prog bezpiecznika: lekcje 10-13 maja razem 21 blokow cwiczen. Jesli regex nagle
+// widzi mniej niz 20, to zepsul sie walidator (albo lekcje), a nie tresc.
+sprawdz(`ćwiczenia: znaleziono ≥20 bloków (jest ${cwiczeniaRazem})`, cwiczeniaRazem >= 20);
 
 // ——— Quizy ————————————————————————————————————————————————
 const TYPY = new Set(['tf', 'mc', 'typein', 'match', 'tap_fill']);

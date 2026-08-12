@@ -147,6 +147,20 @@ t('sprawdzWpisz: czemu nie-string -> ok:false', parsujCwiczenie(JSON.stringify({
 t('sprawdzWpisz: empty input', sprawdzWpisz({ odpowiedz: ['test'] }, '') === 'zle');
 t('sprawdzWpisz: only spaces', sprawdzWpisz({ odpowiedz: ['test'] }, '   ') === 'zle');
 
+// dokladnie: pary minimalne (jedz/jedź) — diakrytyk zmienia znaczenie, nie ma "prawie"
+t('dokladnie: brak ogonka to blad, nie prawie',
+  sprawdzWpisz({ odpowiedz: ['jedź'], dokladnie: true }, 'jedz') === 'zle');
+t('dokladnie: poprawna odpowiedz nadal dobrze',
+  sprawdzWpisz({ odpowiedz: ['jedź'], dokladnie: true }, 'jedź') === 'dobrze');
+t('dokladnie: wielkosc liter i spacje nadal wybaczane',
+  sprawdzWpisz({ odpowiedz: ['jedź'], dokladnie: true }, '  Jedź ') === 'dobrze');
+t('bez dokladnie: brak ogonka to prawie',
+  sprawdzWpisz({ odpowiedz: ['jedź'] }, 'jedz') === 'prawie');
+t('dokladnie musi byc boolean',
+  parsujCwiczenie(JSON.stringify({ typ: 'wpisz', zdania: [{ przed: 'a', po: '', odpowiedz: ['b'], dokladnie: 'tak' }] })).ok === false);
+t('dokladnie: true przechodzi walidacje',
+  parsujCwiczenie(JSON.stringify({ typ: 'wpisz', zdania: [{ przed: 'a', po: '', odpowiedz: ['b'], dokladnie: true }] })).ok === true);
+
 // typ "pisanie" — wolny tekst, nie ma czego sprawdzac automatycznie
 const PISANIE_OK = JSON.stringify({
   typ: 'pisanie', tytul: 'Mini-pisanie', instrukcja: 'Napisz trzy zdania.',

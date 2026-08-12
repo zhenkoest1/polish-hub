@@ -78,7 +78,10 @@ function podepnijPisanie(box, dane) {
   };
   pola.forEach((el) => el.addEventListener('input', zapiszSzkic));
 
-  box.querySelector('.cw-zapisz').addEventListener('click', () => {
+  const przycisk = box.querySelector('.cw-zapisz');
+  const odblokuj = () => { przycisk.disabled = false; };
+
+  przycisk.addEventListener('click', () => {
     const wpisy = pola.map((el) => el.value.trim());
     if (wpisy.every((w) => !w)) {
       pola.forEach((el) => { el.classList.add('shake'); setTimeout(() => el.classList.remove('shake'), 400); });
@@ -86,6 +89,10 @@ function podepnijPisanie(box, dane) {
     }
     status.hidden = false;
     status.textContent = '⏳ zapisuję…';
+    // Kazde klikniecie tworzy NOWY dokument, a firestore.rules ma
+    // `allow update, delete: if false` — dubla nie da sie potem usunac.
+    // Stad blokada na czas zapisu; odblokowujemy tylko tam, gdzie ponowienie ma sens.
+    przycisk.disabled = true;
 
     const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     // Firestore offline: promise wisi do powrotu sieci — po 4 s uznajemy "zapisze sie pozniej"
@@ -100,10 +107,18 @@ function podepnijPisanie(box, dane) {
           status.textContent = '✓ Zapisano w zeszycie';
           // praca jest juz w chmurze — szkic niepotrzebny
           try { localStorage.removeItem(klucz); } catch { /* prywatny tryb */ }
-        } else if (r === 'timeout') status.textContent = '✓ Zapisze się, gdy wróci internet';
-        else status.innerHTML = `<a href="${base}/profil/">Zaloguj się</a>, żeby zapisywać w zeszycie`;
+          // przycisk zostaje zablokowany: drugi zapis tego samego tekstu to czysty dubel.
+          // Dopiero gdy uczen cos dopisze, nowy zapis niesie nowa tresc — wtedy odblokuj.
+          pola.forEach((el) => el.addEventListener('input', odblokuj, { once: true }));
+        } else {
+          // timeout / brak logowania — nic nie poszlo do bazy albo poszlo do kolejki offline,
+          // wiec ponowienie nie grozi dublem
+          if (r === 'timeout') status.textContent = '✓ Zapisze się, gdy wróci internet';
+          else status.innerHTML = `<a href="${base}/profil/">Zaloguj się</a>, żeby zapisywać w zeszycie`;
+          odblokuj();
+        }
       })
-      .catch(() => { status.textContent = '⚠️ Nie udało się zapisać'; });
+      .catch(() => { status.textContent = '⚠️ Nie udało się zapisać'; odblokuj(); });
   });
 }
 
