@@ -40,6 +40,10 @@ const quizy = [
         <tbody id="p-wyniki"></tbody>
       </table>
       <p class="p-pusto" id="p-pusto" hidden>Jeszcze żadnego quizu — <a href={href('quizy/')}>zagraj pierwszy</a>!</p>
+
+      <h2>Mój zeszyt</h2>
+      <p class="zeszyt-info" id="z-info">Twoje prace pisemne z lekcji. Widzisz je tylko Ty.</p>
+      <div id="z-lista"></div>
     </section>
 
     <script type="application/json" id="p-quizy" set:html={JSON.stringify(quizy).replace(/</g, '\\u003c')} />
@@ -47,9 +51,10 @@ const quizy = [
 
   <script>
     import { OSOBY, poprawnyPin, osobaZeSluga } from '../scripts/konto.js';
-    import { zaloguj, wyloguj, obserwujOsobe, mojProfil } from '../scripts/chmura.js';
+    import { zaloguj, wyloguj, obserwujOsobe, mojProfil, pobierzZeszyt } from '../scripts/chmura.js';
 
     const $ = (id: string) => document.getElementById(id)!;
+    const esc = (s: unknown) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]!));
     const quizy: { id: string; tytul: string }[] = JSON.parse($('p-quizy').textContent!);
     let wybrany = '';
 
@@ -88,11 +93,8 @@ const quizy = [
 
     $('p-wyloguj').addEventListener('click', () => wyloguj());
 
-    obserwujOsobe(async (osoba) => {
-      $('p-login').hidden = !!osoba;
-      $('p-konto').hidden = !osoba;
-      if (!osoba) return;
-      $('p-imie').textContent = `${osoba.emoji} ${osoba.name}`;
+    // Tabela najlepszych wynikow. Blad tutaj nie moze zablokowac zeszytu — stad osobna funkcja.
+    async function pokazWyniki() {
       let best: Record<string, any> = {};
       try {
         const profil = await mojProfil();
@@ -108,6 +110,42 @@ const quizy = [
         .map((q) => `<tr><td>${q.tytul}</td><td><strong>${Number(best[q.id].pct)}%</strong> (${Number(best[q.id].got)}/${Number(best[q.id].max)})</td></tr>`);
       $('p-wyniki').innerHTML = wiersze.join('');
       $('p-pusto').hidden = wiersze.length > 0;
+    }
+
+    // Prace pisemne z lekcji, od najnowszej.
+    async function pokazZeszyt() {
+      let wpisyZ: any[];
+      try {
+        wpisyZ = await pobierzZeszyt();
+      } catch {
+        $('z-lista').innerHTML = '<p class="zeszyt-pusto">Nie udało się wczytać zeszytu — spróbuj odświeżyć.</p>';
+        return;
+      }
+      if (!wpisyZ.length) {
+        $('z-lista').innerHTML = '<p class="zeszyt-pusto">Jeszcze nic nie napisałeś — ćwiczenia pisemne są w lekcjach.</p>';
+        return;
+      }
+      $('z-lista').innerHTML = wpisyZ
+        .map((w) => {
+          // ts bywa null tuz po zapisie — serverTimestamp jeszcze nie wrocil z serwera
+          const d = w.ts?.toDate?.();
+          const data = d instanceof Date ? d.toLocaleDateString('pl-PL') : 'przed chwilą';
+          const linie = (Array.isArray(w.wpisy) ? w.wpisy : []).map((t: unknown) => `<li>${esc(t)}</li>`).join('');
+          return `<article class="zeszyt-wpis">
+  <header><strong>${esc(w.zadanie)}</strong> <span class="zeszyt-meta">${esc(w.lekcja)} · ${esc(data)}</span></header>
+  <ol class="zeszyt-wpisy">${linie}</ol>
+</article>`;
+        })
+        .join('');
+    }
+
+    obserwujOsobe(async (osoba) => {
+      $('p-login').hidden = !!osoba;
+      $('p-konto').hidden = !osoba;
+      if (!osoba) return;
+      $('p-imie').textContent = `${osoba.emoji} ${osoba.name}`;
+      await pokazWyniki();
+      await pokazZeszyt();
     });
   </script>
 
@@ -148,5 +186,15 @@ const quizy = [
     .p-tabela { border-collapse: collapse; width: 100%; max-width: 560px; }
     .p-tabela th, .p-tabela td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; }
     .p-tabela th { background: var(--panel-2); font-family: var(--font-display); }
+    .zeszyt-info { color: var(--text-dim); font-size: 0.9rem; }
+    .zeszyt-pusto { color: var(--text-dim); }
+    .zeszyt-wpis {
+      margin: 12px 0; padding: 14px 16px; background: var(--panel);
+      border: 1px solid var(--line); border-radius: var(--radius);
+    }
+    .zeszyt-wpis header { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+    .zeszyt-meta { color: var(--text-dim); font-size: 0.82rem; }
+    .zeszyt-wpisy { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+    .zeszyt-wpisy li { white-space: pre-wrap; }
   </style>
 </Base>
