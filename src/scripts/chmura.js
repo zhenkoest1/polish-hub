@@ -119,6 +119,28 @@ export async function pobierzZeszyt(ile = 30) {
   return snap.docs.map((d) => ({ id: d.id, ...d.data() }));
 }
 
+// Stan Leitnera w profilu — jedno pole, jeden zapis; kolizje godzi polacz().
+// Zwraca true gdy zapisano, false gdy nikt nie jest zalogowany.
+export async function zapiszLeitner(stan) {
+  const user = auth.currentUser ?? await gotowyUzytkownik();
+  if (!user) return false;
+  await setDoc(doc(db, 'users', user.uid), { leitner: stan }, { merge: true });
+  return true;
+}
+
+// Stan Leitnera z chmury; {} gdy nikt niezalogowany albo profil go nie ma.
+export async function pobierzLeitner() {
+  const user = auth.currentUser ?? await gotowyUzytkownik();
+  if (!user) return {};
+  try {
+    const snap = await getDoc(doc(db, 'users', user.uid));
+    return (snap.exists() && snap.data().leitner) || {};
+  } catch {
+    // Zimny cache offline — lepiej uczyc sie na stanie lokalnym niz wywalic strone.
+    return {};
+  }
+}
+
 // Profil zalogowanej osoby (z best) albo null.
 export async function mojProfil() {
   const user = auth.currentUser;

@@ -41,6 +41,11 @@ export function stanSlowa(stan, id) {
   return stan[id] ?? { pudelko: 0, termin: 0, widziane: 0, dobre: 0 };
 }
 
+/** Licznik z zapisanego stanu; stany sprzed danego pola dają 0, nigdy NaN. */
+function licznik(wartosc) {
+  return Number.isFinite(wartosc) ? wartosc : 0;
+}
+
 /** Czy słowo czeka na powtórkę teraz? */
 export function czyDoPowtorki(stan, id, teraz = Date.now()) {
   const s = stanSlowa(stan, id);
@@ -64,8 +69,8 @@ export function oceń(stan, id, ocena, teraz = Date.now()) {
   stan[id] = {
     pudelko,
     termin: teraz + dni * DZIEN,
-    widziane: s.widziane + 1,
-    dobre: s.dobre + (ocena === 'wiem' ? 1 : 0),
+    widziane: licznik(s.widziane) + 1,
+    dobre: licznik(s.dobre) + (ocena === 'wiem' ? 1 : 0),
   };
   zapiszStan(stan);
   return stan[id];
