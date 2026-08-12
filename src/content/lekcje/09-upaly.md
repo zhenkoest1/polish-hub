@@ -139,7 +139,7 @@ Zacznijcie ustnie: ile stopni jest teraz za oknem? Ile było w zeszłym tygodniu
 Potem dwa szybkie ćwiczenia na stronie — każdy wpisuje sam:
 
 ```cwiczenie
-{ "typ": "wpisz", "tytul": "Jak to jest po polsku?", "instrukcja": "Wpisz polskie słowo albo wyrażenie w mianowniku liczby pojedynczej.",
+{ "typ": "wpisz", "tytul": "Jak to jest po polsku?", "instrukcja": "Wpisz polskie słowo albo wyrażenie w podstawowej formie — tak, jak stoi w liście słów z tekstu (w wyrażeniach mianownik dotyczy tylko wyrazu głównego, np. fala upałów).",
   "zdania": [
     { "przed": "жара → ", "odpowiedz": ["upał", "gorąco"], "po": "", "czemu": "fala upałów; w tekście także «europejska fala gorąca»" },
     { "przed": "волна жары → ", "odpowiedz": ["fala upałów"], "po": "", "czemu": "Fala upałów nie dotyka wszystkich tak samo." },

@@ -195,12 +195,12 @@ Na koniec ustnie: **co byś zrobił**, gdybyś musiał wybrać — uratować pi�
 To samo zdanie, tylko bez wytykania palcem. Bezokolicznik jest już na miejscu — brakuje konstrukcji przed nim. Czasem pasuje więcej niż jedna; przyjmowana jest każda z tabeli.
 
 ```cwiczenie
-{ "typ": "wpisz", "tytul": "Bez wskazywania osoby", "instrukcja": "Wpisz konstrukcję bezosobową: trzeba by, należałoby, powinno się albo można by.",
+{ "typ": "wpisz", "tytul": "Bez wskazywania osoby", "instrukcja": "Wpisz konstrukcję bezosobową: trzeba by, należałoby, powinno się albo można by. Uwaga: nie każda konstrukcja pasuje do każdego zdania — decyduje znaczenie. Gdzie chodzi o obowiązek, wchodzą trzeba by / należałoby / powinno się; gdzie o możliwość — można by.",
   "zdania": [
     { "przed": "Powinieneś przeczytać Kanta. → ", "odpowiedz": ["Powinno się", "Należałoby", "Trzeba by"], "po": " przeczytać Kanta.", "czemu": "norma zamiast nacisku na osobę; po każdej z tych konstrukcji stoi bezokolicznik" },
     { "przed": "Musimy zapytać inżyniera. → ", "odpowiedz": ["Trzeba by", "Należałoby", "Powinno się"], "po": " zapytać inżyniera.", "czemu": "z tabeli: Trzeba by zapytać inżyniera — nigdy «trzeba by zapytał»" },
     { "przed": "Możemy zaprogramować to inaczej. → ", "odpowiedz": ["Można by"], "po": " zaprogramować to inaczej.", "czemu": "to możliwość, a nie powinność: Można by zaprogramować to inaczej." },
-    { "przed": "Nie wolno traktować człowieka jak narzędzia. → Nie ", "odpowiedz": ["powinno się", "należałoby"], "po": " traktować człowieka jak narzędzia.", "czemu": "w «powinno się» cząstka się jest obowiązkowa — samo «powinno traktować» nie istnieje" },
+    { "przed": "Nie możesz traktować człowieka jak narzędzia. → Nie ", "odpowiedz": ["powinno się", "należałoby"], "po": " traktować człowieka jak narzędzia.", "czemu": "w «powinno się» cząstka się jest obowiązkowa — samo «powinno traktować» nie istnieje" },
     { "przed": "Powinniśmy chronić młodszych czy starszych? → ", "odpowiedz": ["Powinno się", "Należałoby", "Trzeba by"], "po": " chronić młodszych czy starszych?", "czemu": "z tabeli: Powinno się chronić słabszych." },
     { "przed": "Musisz najpierw zdefiniować pojęcia. → ", "odpowiedz": ["Należałoby", "Trzeba by", "Powinno się"], "po": " najpierw zdefiniować pojęcia.", "czemu": "formalna rada, jak «Należałoby przeanalizować problem»" }
   ] }

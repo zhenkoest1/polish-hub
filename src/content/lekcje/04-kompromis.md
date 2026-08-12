@@ -194,7 +194,7 @@ Tych trzeba uczyć się razem z przypadkiem — inaczej się nie da:
 Najpierw słówka — każdy wpisuje sam, bez zaglądania do listy, potem porównujecie wyniki:
 
 ```cwiczenie
-{ "typ": "wpisz", "tytul": "Jak to jest po polsku?", "instrukcja": "Wpisz polskie słowo w mianowniku — tak, jak stoi w liście słów z tekstu.",
+{ "typ": "wpisz", "tytul": "Jak to jest po polsku?", "instrukcja": "Wpisz polskie słowo w formie z tabeli słów — rzeczowniki w mianowniku, czasowniki w bezokoliczniku.",
   "zdania": [
     { "przed": "компромисс → ", "odpowiedz": ["kompromis"], "po": "", "czemu": "Dlatego pytanie o kompromis nie jest proste." },
     { "przed": "уступать / уступить → ", "odpowiedz": ["ustępować", "ustąpić"], "po": "", "czemu": "Czasem trzeba ustąpić — bo druga osoba jest ważniejsza niż reguła." },

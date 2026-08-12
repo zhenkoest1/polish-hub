@@ -117,7 +117,7 @@ Po czasownikach: *pomagać, ufać, wierzyć, wybaczać, dziękować, mówić, da
 Piętnaście zdań, każdy wpisuje sam. Przed każdym kliknięciem sprawdź dwie rzeczy naraz: **jaki to rodzaj** i **czy w zdaniu stoi „niż”** — bo bez „niż” potrzebny jest stopień najwyższy.
 
 ```cwiczenie
-{ "typ": "wpisz", "tytul": "Wyższy czy najwyższy?", "instrukcja": "Wpisz przymiotnik z nawiasu we właściwym stopniu i rodzaju.",
+{ "typ": "wpisz", "tytul": "Wyższy czy najwyższy?", "instrukcja": "Wpisz słowo z nawiasu we właściwym stopniu i rodzaju. Przymiotniki w formie prostej (na -szy / -iejszy), nie opisowej z „bardziej”.",
   "zdania": [
     { "przed": "(słynny) Morskie Oko jest ", "odpowiedz": ["słynniejsze"], "po": " niż Wielki Staw Polski.", "czemu": "Morskie Oko to rodzaj nijaki → -e; słynny → słynniejszy (-iejszy)" },
     { "przed": "(ciężki) Niedźwiedź jest ", "odpowiedz": ["cięższy"], "po": " niż kozica.", "czemu": "niedźwiedź: rodzaj męski; ciężki → cięższy (jak szybki → szybszy)" },
@@ -157,15 +157,15 @@ Wpisz samą odpowiedź — słowo z nawiasu w narzędniku, razem z przymiotnikie
     { "przed": "Kim był Arystoteles? (grecki filozof) — Arystoteles był ", "odpowiedz": ["greckim filozofem"], "po": ".", "czemu": "po «być» rola idzie w narzędniku; filozof → filozofem (-em), grecki → greckim (-im po k/g)" },
     { "przed": "Czym jest samoeksploatacja? (więzienie bez krat) — Samoeksploatacja jest ", "odpowiedz": ["więzieniem bez krat"], "po": ".", "czemu": "nijakie więzienie → więzieniem (-em); dokładnie tak nazywa to Han" },
     { "przed": "Z kim rozmawiają liderzy? (inni liderzy) — Liderzy rozmawiają z ", "odpowiedz": ["innymi liderami"], "po": ".", "czemu": "po przyimku «z» narzędnik; liczba mnoga: liderzy → liderami (-ami), przymiotnik → innymi (-ymi)" },
-    { "przed": "Kim staje się rewolucjonista? (konserwatysta) — Rewolucjonista staje się ", "odpowiedz": ["konserwatystą"], "po": ".", "czemu": "rzeczownik męski na -a odmienia się jak żeński: -a → -ą (jak socjalista → socjalistą)" },
+    { "przed": "Kim staje się rewolucjonista? (konserwatysta) — Rewolucjonista staje się ", "odpowiedz": ["konserwatystą"], "dokladnie": true, "po": ".", "czemu": "rzeczownik męski na -a odmienia się jak żeński: -a → -ą (jak socjalista → socjalistą) — końcówka -ą, nie -a" },
     { "przed": "Kim był Kant? (niemiecki filozof) — Kant był ", "odpowiedz": ["niemieckim filozofem"], "po": ".", "czemu": "niemiecki → niemieckim (-im po k/g), filozof → filozofem" },
-    { "przed": "Czym jest demokracja według Michelsa? (rower) — Demokracja jest ", "odpowiedz": ["rowerem"], "po": ".", "czemu": "rzeczownik męski bierze -em: rower → rowerem" },
-    { "przed": "Z kim rozmawiali komuniści przy Okrągłym Stole? (opozycja) — Komuniści rozmawiali z ", "odpowiedz": ["opozycją"], "po": ".", "czemu": "przyimek «z» + narzędnik; żeński -a → -ą" },
+    { "przed": "Czym jest organizacja według Michelsa? (narzędzie) — Organizacja jest ", "odpowiedz": ["narzędziem"], "po": ".", "czemu": "narzędzie → narzędziem (rodzaj nijaki, -e → -em)" },
+    { "przed": "Z kim rozmawiali komuniści przy Okrągłym Stole? (opozycja) — Komuniści rozmawiali z ", "odpowiedz": ["opozycją"], "dokladnie": true, "po": ".", "czemu": "przyimek «z» + narzędnik; żeński -a → -ą — końcówka -ą, nie -a" },
     { "przed": "Kim jest Byung-Chul Han? (profesor w Berlinie) — Han jest ", "odpowiedz": ["profesorem w Berlinie"], "po": ".", "czemu": "profesor → profesorem (-em); zmienia się tylko rola, nie miejsce" },
     { "przed": "Czym jest liberum veto? (absolutna sztywność) — Liberum veto jest ", "odpowiedz": ["absolutną sztywnością"], "po": ".", "czemu": "żeński na spółgłoskę + -ą: sztywność → sztywnością; przymiotnik żeński → absolutną" },
     { "przed": "Kim był Michels? (socjolog i członek SPD) — Michels był ", "odpowiedz": ["socjologiem i członkiem SPD"], "po": ".", "czemu": "po k/g końcówka -iem: socjolog → socjologiem, członek → członkiem (uwaga: «e» wypada)" },
-    { "przed": "Czym zarządzają liderzy? (organizacja) — Liderzy zarządzają ", "odpowiedz": ["organizacją"], "po": ".", "czemu": "czasownik zarządzać sam wymaga narzędnika, bez przyimka; żeński -a → -ą" },
-    { "przed": "Między kim leży kompromis? (dwie strony) — Kompromis leży między ", "odpowiedz": ["dwiema stronami"], "po": ".", "czemu": "przyimek «między» + narzędnik; liczba mnoga -ami, liczebnik → dwiema (jak: wybór między dwiema drogami)" }
+    { "przed": "Czym zarządzają liderzy? (organizacja) — Liderzy zarządzają ", "odpowiedz": ["organizacją"], "dokladnie": true, "po": ".", "czemu": "czasownik zarządzać sam wymaga narzędnika, bez przyimka; żeński -a → -ą — końcówka -ą, nie -a" },
+    { "przed": "Między kim leży kompromis? (dwie strony) — Kompromis leży między ", "odpowiedz": ["dwiema stronami", "dwoma stronami"], "po": ".", "czemu": "przyimek «między» + narzędnik; liczba mnoga -ami, liczebnik → dwiema (jak: wybór między dwiema drogami). Forma «dwoma stronami» też jest poprawna — słownik PWN dopuszcza obie." }
   ] }
 ```
 
@@ -183,7 +183,7 @@ Tu poprawnych wersji jest wiele — osoba, czas i kontekst zależą od ciebie. U
     { "przed": "chcieć + zaufać + Oleg", "po": "", "czemu": "ufać komuś; imię męskie → Olegowi (standardowa końcówka -owi)" },
     { "przed": "trzeba + pomóc + mama", "po": "", "czemu": "«trzeba» nie ma podmiotu i bierze sam bezokolicznik; mama → mamie" },
     { "przed": "nie móc + ustąpić + on", "po": "", "czemu": "ustępować komuś; zaimek on → mu w środku zdania, jemu z naciskiem" },
-    { "przed": "nie wolno + kłamać + przyjaciele", "po": "", "czemu": "«nie wolno» + bezokolicznik — ulubiona konstrukcja Kanta; komu? — celownik, tym razem w liczbie mnogiej" }
+    { "przed": "nie wolno + kłamać + przyjaciel", "po": "", "czemu": "«nie wolno» + bezokolicznik — ulubiona konstrukcja Kanta; komu? — celownik: przyjaciel → przyjacielowi (standardowa końcówka -owi, jak w tabeli wyżej)" }
   ] }
 ```
 

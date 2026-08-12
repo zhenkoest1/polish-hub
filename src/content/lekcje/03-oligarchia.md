@@ -161,8 +161,8 @@ Najpierw każdy wpisuje formy sam na stronie. Na spotkaniu robicie z tego szybk�
     { "przed": "(samochód) Jadę do pracy ", "odpowiedz": ["samochodem"], "po": ".", "czemu": "rodzaj męski + -em; ó przechodzi w o: samochód → samochodem" },
     { "przed": "(autobus) Jadę do pracy ", "odpowiedz": ["autobusem"], "po": ".", "czemu": "rodzaj męski + -em" },
     { "przed": "(metro) Jadę do pracy ", "odpowiedz": ["metrem"], "po": ".", "czemu": "rodzaj nijaki + -em, tak jak narzędzie → narzędziem" },
-    { "przed": "(łyżka) Jem zupę ", "odpowiedz": ["łyżką"], "po": ".", "czemu": "rodzaj żeński: -a → -ą" },
-    { "przed": "(karta) Płacę ", "odpowiedz": ["kartą"], "po": ".", "czemu": "rodzaj żeński: -a → -ą" },
+    { "przed": "(łyżka) Jem zupę ", "odpowiedz": ["łyżką"], "dokladnie": true, "po": ".", "czemu": "rodzaj żeński: -a → -ą — końcówka -ą, nie -a" },
+    { "przed": "(karta) Płacę ", "odpowiedz": ["kartą"], "dokladnie": true, "po": ".", "czemu": "rodzaj żeński: -a → -ą — końcówka -ą, nie -a" },
     { "przed": "(telefon) Robię zdjęcia ", "odpowiedz": ["telefonem"], "po": ".", "czemu": "rodzaj męski + -em" },
     { "przed": "(klucz) Otwieram drzwi ", "odpowiedz": ["kluczem"], "po": ".", "czemu": "rodzaj męski + -em: klucz → kluczem" }
   ] }

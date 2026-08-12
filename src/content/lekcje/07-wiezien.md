@@ -194,8 +194,7 @@ Dwa szybkie ćwiczenia na stronie — każdy wpisuje sam, potem porównujecie wy
     { "przed": "доверие → ", "odpowiedz": ["zaufanie"], "po": "", "czemu": "Gdyby zaufali sobie…" },
     { "przed": "предательство → ", "odpowiedz": ["zdrada"], "po": "", "czemu": "czasownik: zdradzić — lepiej zdradzić niż milczeć?" },
     { "przed": "сотрудничество → ", "odpowiedz": ["współpraca"], "po": "", "czemu": "Współpraca daje lepszy wynik." },
-    { "przed": "наказание → ", "odpowiedz": ["kara", "ukaranie"], "po": "", "czemu": "z tekstu: wygrywa ten, kto umie i ukarać, i wybaczyć" },
-    { "przed": "прощение → ", "odpowiedz": ["przebaczenie"], "po": "", "czemu": "Przebaczenie po odpowiedzi — nie chowaj urazy." },
+    { "przed": "прощение → ", "odpowiedz": ["przebaczenie", "wybaczenie"], "po": "", "czemu": "Przebaczenie po odpowiedzi — nie chowaj urazy. «Wybaczenie» też jest dobre — por. wybaczać komuś z lekcji 4." },
     { "przed": "заключённый → ", "odpowiedz": ["więzień"], "po": "", "czemu": "l.mn. więźniowie" },
     { "przed": "противник → ", "odpowiedz": ["przeciwnik"], "po": "", "czemu": "Powtarzaj ruch przeciwnika." },
     { "przed": "ход → ", "odpowiedz": ["ruch"], "po": "", "czemu": "Pierwszy ruch — zaufaj." }

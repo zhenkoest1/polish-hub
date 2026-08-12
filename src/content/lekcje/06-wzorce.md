@@ -190,6 +190,8 @@ Wszystkie odpowiadają na pytanie **Kogo? Czego?** — to **dopełniacz**.
 | wartość | ценность, стоимость | **Wartość** waluty spada. |
 | fundusz | фонд | Założyciel **funduszu** hedgingowego. |
 | imperium *(l.mn. imperia)* | империя | Historia **imperiów**. |
+| cykl | цикл | Odkrył powtarzający się **cykl**. |
+| chaos | хаос | Po okresie **chaosu** pojawia się silny lider. |
 | etap | этап | Sześć **etapów** cyklu. |
 | porządek | порядок | Nowy **porządek**. |
 | dług *(l.mn. długi)* | долг(и) | Gromadzenie **długu**. |

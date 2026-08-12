@@ -85,7 +85,7 @@ Trzecie zadanie sprawdzisz od razu na stronie:
 { "typ": "wpisz", "tytul": "Mniejsze i większe niż kozica", "instrukcja": "Wpisz nazwę zwierzęcia z tekstu — w mianowniku.",
   "zdania": [
     { "przed": "zwierzę mniejsze niż kozica → ", "odpowiedz": ["świstak"], "po": "", "czemu": "Świstak jest mniejszy niż kozica — to gryzoń, który śpi zimą prawie 7 miesięcy." },
-    { "przed": "zwierzę większe niż kozica → ", "odpowiedz": ["niedźwiedź", "niedźwiedź brunatny"], "po": "", "czemu": "Niedźwiedź brunatny jest największym zwierzęciem w Tatrach — waży ponad 200 kg." }
+    { "przed": "zwierzę większe niż kozica → ", "odpowiedz": ["niedźwiedź", "niedźwiedź brunatny", "jeleń"], "po": "", "czemu": "Niedźwiedź brunatny jest największym zwierzęciem w Tatrach — waży ponad 200 kg. Jeleń też jest dobrą odpowiedzią: kozica to mniejsze zwierzę niż jeleń." }
   ] }
 ```
 
@@ -94,7 +94,7 @@ Trzecie zadanie sprawdzisz od razu na stronie:
 Najpierw wpisz formy sam na stronie, a potem przeczytajcie całe zdania na głos:
 
 ```cwiczenie
-{ "typ": "wpisz", "tytul": "Stopień wyższy + niż", "instrukcja": "Wpisz przymiotnik ze stopnia równego w stopniu wyższym. Uważaj na rodzaj — forma musi pasować do podmiotu.",
+{ "typ": "wpisz", "tytul": "Stopień wyższy + niż", "instrukcja": "Wpisz przymiotnik ze stopnia równego w stopniu wyższym. Uważaj na rodzaj — forma musi pasować do podmiotu. Wpisz formę prostą (na -szy / -iejszy), nie opisową z „bardziej”.",
   "zdania": [
     { "przed": "wysoki: Rysy (2499 m) są ", "odpowiedz": ["wyższe"], "po": " niż Kasprowy Wierch (1987 m).", "czemu": "wysoki → wyższy; Rysy to liczba mnoga → wyższe, tak jak w regule: «Rysy są wyższe niż Giewont»" },
     { "przed": "duży: Morskie Oko (35 ha) jest ", "odpowiedz": ["większe"], "po": " niż Wielki Staw Polski (34 ha).", "czemu": "duży → większy (forma nieregularna); Morskie Oko to rodzaj nijaki → większe" },
