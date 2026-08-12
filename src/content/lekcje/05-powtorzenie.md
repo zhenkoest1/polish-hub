@@ -110,15 +110,34 @@ Po czasownikach: *pomagać, ufać, wierzyć, wybaczać, dziękować, mówić, da
 
 ## 🗣️ Na spotkaniu — ćwiczenia ustne
 
-*(pisemne ćwiczenia z tej lekcji znajdziecie niżej — w quizie!)*
+*(ćwiczenia pisemne robicie od razu na stronie — w polach niżej; na koniec czeka jeszcze quiz)*
 
-### Runda 1 — stopniowanie *(każdy czyta swoje zdania na głos)*
+### Runda 1 — stopniowanie
 
-**Osoba A:** 1. Morskie Oko jest \_\_\_ *(słynny)* niż Wielki Staw Polski. 2. Niedźwiedź jest \_\_\_ *(ciężki)* niż kozica. 3. Rysy to \_\_\_ *(wysoki)* szczyt w polskich Tatrach. 4. Wypalenie jest \_\_\_ *(poważny)* niż zwykłe zmęczenie. 5. Demokracja jest \_\_\_ *(dobry)* niż oligarchia.
+Piętnaście zdań, każdy wpisuje sam. Przed każdym kliknięciem sprawdź dwie rzeczy naraz: **jaki to rodzaj** i **czy w zdaniu stoi „niż”** — bo bez „niż” potrzebny jest stopień najwyższy.
 
-**Osoba B:** 1. Kolejka linowa jest \_\_\_ *(łatwy)* niż wędrówka pieszo. 2. Kontemplacja jest \_\_\_ *(trudny)* niż scrollowanie telefonu. 3. Świstak to \_\_\_ *(mały)* zwierzę z trzech: niedźwiedź, kozica, świstak. 4. Giewont jest \_\_\_ *(niski)* niż Rysy. 5. Kompromis jest \_\_\_ *(dobry)* niż konflikt.
+```cwiczenie
+{ "typ": "wpisz", "tytul": "Wyższy czy najwyższy?", "instrukcja": "Wpisz przymiotnik z nawiasu we właściwym stopniu i rodzaju.",
+  "zdania": [
+    { "przed": "(słynny) Morskie Oko jest ", "odpowiedz": ["słynniejsze"], "po": " niż Wielki Staw Polski.", "czemu": "Morskie Oko to rodzaj nijaki → -e; słynny → słynniejszy (-iejszy)" },
+    { "przed": "(ciężki) Niedźwiedź jest ", "odpowiedz": ["cięższy"], "po": " niż kozica.", "czemu": "niedźwiedź: rodzaj męski; ciężki → cięższy (jak szybki → szybszy)" },
+    { "przed": "(wysoki) Rysy to ", "odpowiedz": ["najwyższy"], "po": " szczyt w polskich Tatrach.", "czemu": "nie ma «niż» → stopień najwyższy: naj- + wyższy; określamy słowo szczyt, czyli rodzaj męski" },
+    { "przed": "(poważny) Wypalenie jest ", "odpowiedz": ["poważniejsze"], "po": " niż zwykłe zmęczenie.", "czemu": "wypalenie: rodzaj nijaki → -e; poważny → poważniejszy" },
+    { "przed": "(dobry) Demokracja jest ", "odpowiedz": ["lepsza"], "po": " niż oligarchia.", "czemu": "nieregularne: dobry → lepszy; demokracja jest żeńska → lepsza" },
+    { "przed": "(łatwy) Kolejka linowa jest ", "odpowiedz": ["łatwiejsza"], "po": " niż wędrówka pieszo.", "czemu": "kolejka: rodzaj żeński → -a; łatwy → łatwiejszy" },
+    { "przed": "(trudny) Kontemplacja jest ", "odpowiedz": ["trudniejsza"], "po": " niż scrollowanie telefonu.", "czemu": "kontemplacja: rodzaj żeński → -a; trudny → trudniejszy" },
+    { "przed": "(mały) Świstak to ", "odpowiedz": ["najmniejsze"], "po": " zwierzę z trzech: niedźwiedź, kozica, świstak.", "czemu": "«z trzech» → stopień najwyższy; zwierzę jest nijakie; mały → mniejszy → najmniejszy (nieregularne)" },
+    { "przed": "(niski) Giewont jest ", "odpowiedz": ["niższy"], "po": " niż Rysy.", "czemu": "Giewont: rodzaj męski; niski → niższy" },
+    { "przed": "(dobry) Kompromis jest ", "odpowiedz": ["lepszy"], "po": " niż konflikt.", "czemu": "kompromis: rodzaj męski; nieregularne dobry → lepszy" },
+    { "przed": "(głęboki) Wielki Staw Polski jest ", "odpowiedz": ["głębszy"], "po": " niż Morskie Oko.", "czemu": "staw: rodzaj męski; głęboki → głębszy" },
+    { "przed": "(dużo) Lider wie ", "odpowiedz": ["więcej"], "po": " niż zwykły członek organizacji.", "czemu": "nieregularne: dużo → więcej → najwięcej; to forma przysłówkowa, nie zmienia się przez rodzaje" },
+    { "przed": "(nowy) Społeczeństwo osiągnięć jest ", "odpowiedz": ["nowsze"], "po": " niż społeczeństwo dyscypliny.", "czemu": "społeczeństwo: rodzaj nijaki → -e; nowy → nowszy" },
+    { "przed": "(zły) Samoeksploatacja jest ", "odpowiedz": ["gorsza"], "po": " niż eksploatacja przez szefa.", "czemu": "nieregularne: zły → gorszy; samoeksploatacja jest żeńska → gorsza" },
+    { "przed": "(popularny) Tatrzański Park Narodowy to ", "odpowiedz": ["najpopularniejszy"], "po": " park w Polsce.", "czemu": "nie ma «niż» → stopień najwyższy; park jest męski; popularny → popularniejszy → najpopularniejszy" }
+  ] }
+```
 
-**Osoba C:** 1. Wielki Staw Polski jest \_\_\_ *(głęboki)* niż Morskie Oko. 2. Lider wie \_\_\_ *(dużo)* niż zwykły członek organizacji. 3. Społeczeństwo osiągnięć jest \_\_\_ *(nowy)* niż społeczeństwo dyscypliny. 4. Samoeksploatacja jest \_\_\_ *(zły)* niż eksploatacja przez szefa. 5. Tatrzański Park Narodowy to \_\_\_ *(popularny)* park w Polsce.
+Po sprawdzeniu przeczytajcie zdania na głos, po kolei — każdy swoją piątkę.
 
 ### Runda 2 — tłumaczenie na głos
 
@@ -128,21 +147,45 @@ Po czasownikach: *pomagać, ufać, wierzyć, wybaczać, dziękować, mówić, da
 
 **Osoba C:** 1. Великий Став Польский глубже, чем Морское Око. 2. Самоэксплуатация — самый опасный вид усталости. 3. Юм был более гибким, чем Кант. 4. Либерум вето было самым плохим правилом в польском сейме.
 
-### Runda 3 — narzędnik: odpowiadajcie pełnym zdaniem
+### Runda 3 — narzędnik
 
-**Osoba A:** 1. Kim był Arystoteles? *(grecki filozof)* 2. Czym jest samoeksploatacja? *(więzienie bez krat)* 3. Z kim rozmawiają liderzy? *(inni liderzy)* 4. Kim staje się rewolucjonista? *(konserwatysta)*
+Wpisz samą odpowiedź — słowo z nawiasu w narzędniku, razem z przymiotnikiem, jeśli jakiś tam stoi. Pamiętaj o pułapce: po **być / zostać / stać się** zawód i rola idą w narzędniku, ale po *to jest* zostaje mianownik.
 
-**Osoba B:** 1. Kim był Kant? *(niemiecki filozof)* 2. Czym jest demokracja według Michelsa? *(rower)* 3. Z kim rozmawiali komuniści przy Okrągłym Stole? *(opozycja)* 4. Kim jest Byung-Chul Han? *(profesor w Berlinie)*
+```cwiczenie
+{ "typ": "wpisz", "tytul": "Kim? Czym?", "instrukcja": "Wpisz wyrażenie z nawiasu w narzędniku.",
+  "zdania": [
+    { "przed": "Kim był Arystoteles? (grecki filozof) — Arystoteles był ", "odpowiedz": ["greckim filozofem"], "po": ".", "czemu": "po «być» rola idzie w narzędniku; filozof → filozofem (-em), grecki → greckim (-im po k/g)" },
+    { "przed": "Czym jest samoeksploatacja? (więzienie bez krat) — Samoeksploatacja jest ", "odpowiedz": ["więzieniem bez krat"], "po": ".", "czemu": "nijakie więzienie → więzieniem (-em); dokładnie tak nazywa to Han" },
+    { "przed": "Z kim rozmawiają liderzy? (inni liderzy) — Liderzy rozmawiają z ", "odpowiedz": ["innymi liderami"], "po": ".", "czemu": "po przyimku «z» narzędnik; liczba mnoga: liderzy → liderami (-ami), przymiotnik → innymi (-ymi)" },
+    { "przed": "Kim staje się rewolucjonista? (konserwatysta) — Rewolucjonista staje się ", "odpowiedz": ["konserwatystą"], "po": ".", "czemu": "rzeczownik męski na -a odmienia się jak żeński: -a → -ą (jak socjalista → socjalistą)" },
+    { "przed": "Kim był Kant? (niemiecki filozof) — Kant był ", "odpowiedz": ["niemieckim filozofem"], "po": ".", "czemu": "niemiecki → niemieckim (-im po k/g), filozof → filozofem" },
+    { "przed": "Czym jest demokracja według Michelsa? (rower) — Demokracja jest ", "odpowiedz": ["rowerem"], "po": ".", "czemu": "rzeczownik męski bierze -em: rower → rowerem" },
+    { "przed": "Z kim rozmawiali komuniści przy Okrągłym Stole? (opozycja) — Komuniści rozmawiali z ", "odpowiedz": ["opozycją"], "po": ".", "czemu": "przyimek «z» + narzędnik; żeński -a → -ą" },
+    { "przed": "Kim jest Byung-Chul Han? (profesor w Berlinie) — Han jest ", "odpowiedz": ["profesorem w Berlinie"], "po": ".", "czemu": "profesor → profesorem (-em); zmienia się tylko rola, nie miejsce" },
+    { "przed": "Czym jest liberum veto? (absolutna sztywność) — Liberum veto jest ", "odpowiedz": ["absolutną sztywnością"], "po": ".", "czemu": "żeński na spółgłoskę + -ą: sztywność → sztywnością; przymiotnik żeński → absolutną" },
+    { "przed": "Kim był Michels? (socjolog i członek SPD) — Michels był ", "odpowiedz": ["socjologiem i członkiem SPD"], "po": ".", "czemu": "po k/g końcówka -iem: socjolog → socjologiem, członek → członkiem (uwaga: «e» wypada)" },
+    { "przed": "Czym zarządzają liderzy? (organizacja) — Liderzy zarządzają ", "odpowiedz": ["organizacją"], "po": ".", "czemu": "czasownik zarządzać sam wymaga narzędnika, bez przyimka; żeński -a → -ą" },
+    { "przed": "Między kim leży kompromis? (dwie strony) — Kompromis leży między ", "odpowiedz": ["dwiema stronami"], "po": ".", "czemu": "przyimek «między» + narzędnik; liczba mnoga -ami, liczebnik → dwiema (jak: wybór między dwiema drogami)" }
+  ] }
+```
 
-**Osoba C:** 1. Czym jest liberum veto? *(absolutna sztywność)* 2. Kim był Michels? *(socjolog i członek SPD)* 3. Czym zarządzają liderzy? *(organizacja)* 4. Między kim leży kompromis? *(dwie strony)*
+Po sprawdzeniu powtórzcie każdą odpowiedź na głos, pełnym zdaniem.
 
 ### Runda 4 — składanie zdań: modalny + czasownik + celownik
 
-Każda osoba układa zdanie na głos, potem grupa poprawia.
+Tu poprawnych wersji jest wiele — osoba, czas i kontekst zależą od ciebie. Ułóż każde zdanie sam i zapisz je; na spotkaniu przeczytacie zdania na głos i grupa poprawi.
 
-**Osoba A:** *(musieć + pomóc + siostra)* · *(powinien + wybaczyć + kolega)*
-**Osoba B:** *(chcieć + zaufać + Oleg)* · *(trzeba + pomóc + mama)*
-**Osoba C:** *(nie móc + ustąpić + on)* · *(nie wolno + kłamać + przyjaciele)*
+```cwiczenie
+{ "typ": "pisanie", "tytul": "Modalny + czasownik + celownik", "instrukcja": "Ułóż z każdego zestawu jedno pełne zdanie. Modalny w formie osobowej, drugi czasownik w bezokoliczniku, osoba na końcu — w celowniku.",
+  "zdania": [
+    { "przed": "musieć + pomóc + siostra", "po": "", "czemu": "pomagać komuś: siostra → siostrze (żeński -e z wymianą, jak mama → mamie)" },
+    { "przed": "powinien + wybaczyć + kolega", "po": "", "czemu": "powinien zmienia się przez rodzaje: powinienem / powinnam; kolega → koledze (męski na -a odmienia się jak żeński)" },
+    { "przed": "chcieć + zaufać + Oleg", "po": "", "czemu": "ufać komuś; imię męskie → Olegowi (standardowa końcówka -owi)" },
+    { "przed": "trzeba + pomóc + mama", "po": "", "czemu": "«trzeba» nie ma podmiotu i bierze sam bezokolicznik; mama → mamie" },
+    { "przed": "nie móc + ustąpić + on", "po": "", "czemu": "ustępować komuś; zaimek on → mu w środku zdania, jemu z naciskiem" },
+    { "przed": "nie wolno + kłamać + przyjaciele", "po": "", "czemu": "«nie wolno» + bezokolicznik — ulubiona konstrukcja Kanta; komu? — celownik, tym razem w liczbie mnogiej" }
+  ] }
+```
 
 ### 💬 Dyskusja — połączcie cztery lekcje
 

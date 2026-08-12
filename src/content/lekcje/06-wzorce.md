@@ -220,13 +220,24 @@ Wszystkie odpowiadają na pytanie **Kogo? Czego?** — to **dopełniacz**.
 
 ## 🗣️ Na spotkaniu — ćwiczenia ustne
 
-*(pisemne ćwiczenia z tej lekcji znajdziecie niżej — w quizie!)*
+*(ćwiczenia pisemne robicie od razu na stronie — w polach niżej; na koniec czeka jeszcze quiz)*
 
 ### 🔥 Rozgrzewka *(5 minut)*
 
-1. Jak po polsku jest: *паттерн, хаос, кризис, империя, цикл*?
-2. Czy widzisz powtarzające się wzorce w swoim życiu? Jakie?
-3. Czy historia się powtarza? Dlaczego tak — dlaczego nie?
+Pięć słów-kluczy tej lekcji — każdy wpisuje sam, potem porównujecie wyniki. Po sprawdzeniu spójrz w podpowiedzi: przy każdym słowie czeka już jego dopełniacz.
+
+```cwiczenie
+{ "typ": "wpisz", "tytul": "Jak to jest po polsku?", "instrukcja": "Wpisz polskie słowo w mianowniku liczby pojedynczej.",
+  "zdania": [
+    { "przed": "паттерн, образец → ", "odpowiedz": ["wzorzec"], "po": "", "czemu": "l.mn. wzorce; dopełniacz: wzorca — wyjątek na -a, i «e» wypada" },
+    { "przed": "хаос → ", "odpowiedz": ["chaos"], "po": "", "czemu": "Po okresie chaosu pojawia się silny lider — dopełniacz: chaosu" },
+    { "przed": "кризис → ", "odpowiedz": ["kryzys"], "po": "", "czemu": "dopełniacz: kryzysu (-u, bo nieżywotny); bez kryzysu nie ma zmian" },
+    { "przed": "империя → ", "odpowiedz": ["imperium"], "po": "", "czemu": "l.mn. imperia; dopełniacz l.poj. bez zmian: upadek imperium, ale l.mn. już -ów: historia imperiów" },
+    { "przed": "цикл → ", "odpowiedz": ["cykl"], "po": "", "czemu": "Wielki Cykl Dalio; dopełniacz: sześć etapów cyklu" }
+  ] }
+```
+
+Potem ustnie, po kolei: czy widzisz powtarzające się wzorce w swoim życiu? Jakie? I czy historia się powtarza — dlaczego tak, dlaczego nie?
 
 ### Pytania do tekstu
 
@@ -241,13 +252,25 @@ Odpowiadajcie po polsku, pełnym zdaniem:
 
 ### Runda — pełne zdania z dopełniaczem
 
-Każda osoba odpowiada na głos, pełnym zdaniem, z dopełniaczem:
+Dwanaście krótkich odpowiedzi — każda jednym pełnym zdaniem, każda z dopełniaczem. Poprawnych wersji jest wiele, więc tu nic się nie sprawdza automatycznie: zapisz swoją i na spotkaniu przeczytajcie odpowiedzi na głos, po kolei. W podpowiedzi przy każdym pytaniu stoi to, co musi się w odpowiedzi znaleźć.
 
-**Osoba A:** 1. Czego nie ma bez kryzysu? 2. Czyj upadek opisuje Dalio? 3. Podczas czego wzbogacili się miliarderzy? 4. Dla kogo kryzys jest możliwością?
-
-**Osoba B:** 1. Czego brakuje instytucjom według Klein? 2. Ile jest etapów w cyklu? 3. Czego jest dużo, a czego mało w waszym kraju? 4. Z czego można ułożyć mapę sprzeczności?
-
-**Osoba C:** 1. Założycielem czego jest Dalio? 2. Historia czego się powtarza? 3. Czego nie widzicie w tych danych? 4. Utrata czego zaczyna etap piąty?
+```cwiczenie
+{ "typ": "pisanie", "tytul": "Pełne zdania z dopełniaczem", "instrukcja": "Odpowiedz pełnym zdaniem. W każdej odpowiedzi ma stać forma dopełniacza.",
+  "zdania": [
+    { "przed": "Czego nie ma bez kryzysu?", "po": "", "czemu": "dwa razy ten sam przypadek naraz: «bez» + dopełniacz i «nie ma» + dopełniacz" },
+    { "przed": "Czyj upadek opisuje Dalio?", "po": "", "czemu": "przynależność: upadek + dopełniacz. Uwaga na pułapkę — upadek imperium, nigdy «imperia»" },
+    { "przed": "Podczas czego wzbogacili się miliarderzy?", "po": "", "czemu": "«podczas» + dopełniacz: podczas pandemii (żeńskie -a → -y/-i)" },
+    { "przed": "Dla kogo kryzys jest możliwością?", "po": "", "czemu": "«dla» + dopełniacz — dokładnie jak rosyjskie «для»" },
+    { "przed": "Czego brakuje instytucjom według Klein?", "po": "", "czemu": "brak / brakować + dopełniacz: brak zaufania (nijakie -e → -a)" },
+    { "przed": "Ile jest etapów w cyklu?", "po": "", "czemu": "«ile» + dopełniacz liczby mnogiej: etapów (męskie → -ów)" },
+    { "przed": "Czego jest dużo, a czego mało w twoim kraju?", "po": "", "czemu": "«dużo» i «mało» + dopełniacz: dużo pieniędzy — forma nieregularna, na pamięć" },
+    { "przed": "Z czego można ułożyć mapę sprzeczności?", "po": "", "czemu": "«z» + dopełniacz; w tekście: z dziesięciu źródeł (nijakie, końcówka zerowa + ruchome «e»)" },
+    { "przed": "Założycielem czego jest Dalio?", "po": "", "czemu": "przynależność: założyciel + dopełniacz (funduszu); samo słowo «założycielem» stoi w narzędniku — dwa przypadki w jednym zdaniu" },
+    { "przed": "Historia czego się powtarza?", "po": "", "czemu": "historia + dopełniacz liczby mnogiej: imperiów — tu «-um» już się zmienia" },
+    { "przed": "Czego nie widzisz w tych danych?", "po": "", "czemu": "po przeczeniu biernik zmienia się w dopełniacz: widzę wzorzec → nie widzę wzorca" },
+    { "przed": "Utrata czego zaczyna etap piąty?", "po": "", "czemu": "utrata + dopełniacz: utrata zaufania do instytucji" }
+  ] }
+```
 
 ### 💬 Dyskusja *(po 2–3 minuty na osobę)*
 

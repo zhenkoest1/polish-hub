@@ -187,13 +187,25 @@ Tych trzeba uczyć się razem z przypadkiem — inaczej się nie da:
 
 ## 🗣️ Na spotkaniu — ćwiczenia ustne
 
-*(pisemne ćwiczenia z tej lekcji znajdziecie niżej — w quizie!)*
+*(ćwiczenia pisemne robicie od razu na stronie — w polach niżej; na koniec czeka jeszcze quiz)*
 
 ### 🔥 Rozgrzewka *(5 minut)*
 
-1. Jak po polsku jest: *компромисс, уступать, упрямый, гибкий*?
-2. Czy ostatnio z kimś się kłóciłeś/kłóciłaś? O co?
-3. Co dla ciebie znaczy „dobry kompromis”? A „zły kompromis”?
+Najpierw słówka — każdy wpisuje sam, bez zaglądania do listy, potem porównujecie wyniki:
+
+```cwiczenie
+{ "typ": "wpisz", "tytul": "Jak to jest po polsku?", "instrukcja": "Wpisz polskie słowo w mianowniku — tak, jak stoi w liście słów z tekstu.",
+  "zdania": [
+    { "przed": "компромисс → ", "odpowiedz": ["kompromis"], "po": "", "czemu": "Dlatego pytanie o kompromis nie jest proste." },
+    { "przed": "уступать / уступить → ", "odpowiedz": ["ustępować", "ustąpić"], "po": "", "czemu": "Czasem trzeba ustąpić — bo druga osoba jest ważniejsza niż reguła." },
+    { "przed": "упрямство → ", "odpowiedz": ["upór"], "po": "", "czemu": "Elastyczność leży pomiędzy uporem a uległością." },
+    { "przed": "гибкость → ", "odpowiedz": ["elastyczność"], "po": "", "czemu": "Elastyczność leży pomiędzy uporem a uległością." },
+    { "przed": "покорность → ", "odpowiedz": ["uległość"], "po": "", "czemu": "Zgoda nie znaczy uległość." },
+    { "przed": "согласие → ", "odpowiedz": ["zgoda"], "po": "", "czemu": "Zgoda buduje, niezgoda rujnuje." }
+  ] }
+```
+
+Potem ustnie, po kolei: czy ostatnio z kimś się kłóciłeś/kłóciłaś? O co? I co dla ciebie znaczy „dobry kompromis”, a co „zły kompromis”?
 
 ### Pytania do tekstu
 
@@ -209,9 +221,17 @@ Odpowiadajcie po polsku, pełnym zdaniem:
 
 ### Mini-pisanie *(5 minut, potem czytamy na głos)*
 
-Napiszcie 4–5 zdań na temat: *„Komu ostatnio ustąpiłem/ustąpiłam — i czy było warto?”*
+Cztery pytania na temat: *„Komu ostatnio ustąpiłem/ustąpiłam — i czy było warto?”*. Pisz od razu na stronie — po kliknięciu **Zapisz w zeszycie** tekst trafia do twojego zeszytu w chmurze.
 
-Użyjcie minimum: jeden czasownik modalny, jeden czasownik z celownikiem, spójniki *bo / dlatego / żeby / mimo że*.
+```cwiczenie
+{ "typ": "pisanie", "tytul": "Komu ostatnio ustąpiłem", "instrukcja": "Cztery odpowiedzi, razem 4–5 zdań. Minimum: jeden czasownik modalny i jeden czasownik z celownikiem. Na spotkaniu czytacie na głos.",
+  "zdania": [
+    { "przed": "Komu ostatnio ustąpiłeś / ustąpiłaś?", "po": "", "czemu": "ustępować rządzi celownikiem (komu?): bratu, koledze, mamie, jej" },
+    { "przed": "Ustąpiłeś / ustąpiłaś, bo musiałeś — czy dlatego, że tak było słusznie?", "po": "", "czemu": "muszę = nie ma wyboru; powinienem / powinnam = wybór jest. Użyj obu form i poczuj różnicę" },
+    { "przed": "Co wtedy czułeś / czułaś?", "po": "", "czemu": "konstrukcje bezosobowe z celownikiem: przykro mi, smutno mi, głupio mi, wolno mi" },
+    { "przed": "Czy było warto?", "po": "", "czemu": "połącz zdania spójnikami: bo / dlatego / żeby / mimo że" }
+  ] }
+```
 
 ### 💬 Dyskusja
 
