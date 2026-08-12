@@ -147,5 +147,24 @@ t('sprawdzWpisz: czemu nie-string -> ok:false', parsujCwiczenie(JSON.stringify({
 t('sprawdzWpisz: empty input', sprawdzWpisz({ odpowiedz: ['test'] }, '') === 'zle');
 t('sprawdzWpisz: only spaces', sprawdzWpisz({ odpowiedz: ['test'] }, '   ') === 'zle');
 
+// typ "pisanie" — wolny tekst, nie ma czego sprawdzac automatycznie
+const PISANIE_OK = JSON.stringify({
+  typ: 'pisanie', tytul: 'Mini-pisanie', instrukcja: 'Napisz trzy zdania.',
+  zdania: [
+    { przed: '1. Co zacząłem i nie skończyłem?', po: '', czemu: 'ndk, czas przeszły' },
+    { przed: '2. Kiedy to skończę?', po: '', czemu: 'dk, czas przyszły' },
+  ],
+});
+t('pisanie: poprawny blok', parsujCwiczenie(PISANIE_OK).ok === true);
+t('pisanie: typ zachowany', parsujCwiczenie(PISANIE_OK).dane.typ === 'pisanie');
+t('pisanie: nie wymaga odpowiedz ani opcje',
+  parsujCwiczenie(JSON.stringify({ typ: 'pisanie', zdania: [{ przed: 'Napisz coś', po: '' }] })).ok === true);
+t('pisanie: puste zdania -> blad',
+  parsujCwiczenie(JSON.stringify({ typ: 'pisanie', zdania: [] })).ok === false);
+t('pisanie: przed nie-string -> blad',
+  parsujCwiczenie(JSON.stringify({ typ: 'pisanie', zdania: [{ przed: 42, po: '' }] })).ok === false);
+t('pisanie: czemu nie-string -> blad',
+  parsujCwiczenie(JSON.stringify({ typ: 'pisanie', zdania: [{ przed: 'a', po: '', czemu: 7 }] })).ok === false);
+
 console.log(`\n${ok} przeszlo, ${zle} nie przeszlo`);
 process.exit(zle ? 1 : 0);

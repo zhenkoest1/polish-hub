@@ -4,10 +4,13 @@
 //                 "dobra": 0, "po": " tę książkę.", "czemu": "cały wieczór = proces → ndk" } ] }
 // { "typ": "wpisz", "tytul": "...", "instrukcja": "...",
 //   "zdania": [ { "przed": "pisać → ", "odpowiedz": ["napisać"], "po": "", "czemu": "..." } ] }
+// { "typ": "pisanie", "tytul": "...", "instrukcja": "...",
+//   "zdania": [ { "przed": "1. Co zacząłem i nie skończyłem?", "po": "", "czemu": "ndk, czas przeszły" } ] }
+// (pisanie = wolny tekst do zeszytu — nie ma poprawnej odpowiedzi do sprawdzenia)
 
 import { stripDiacritics, norm } from './tekst.js';
 
-const TYPY = ['wybor', 'wpisz'];
+const TYPY = ['wybor', 'wpisz', 'pisanie'];
 
 export function parsujCwiczenie(tekstJson) {
   let dane;
