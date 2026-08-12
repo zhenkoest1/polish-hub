@@ -113,7 +113,7 @@ Te słowa odpowiadają na pytanie **Kim? Czym?** — to jest **narzędnik** (Ins
 
 ## 🗣️ Na spotkaniu — ćwiczenia ustne
 
-*(pisemne ćwiczenia z tej lekcji znajdziecie niżej — w quizie!)*
+*(ćwiczenia pisemne robicie od razu na stronie — w polach niżej; na koniec czeka jeszcze quiz)*
 
 ### Znajdźcie w tekście formy narzędnika
 
@@ -124,11 +124,21 @@ Te słowa odpowiadają na pytanie **Kim? Czym?** — to jest **narzędnik** (Ins
 
 ### Kim jesteś? Kim chcesz być? *(po 1 minucie na osobę)*
 
-Każdy mówi 4 zdania z narzędnikiem po „być / zostać / stać się”:
+Najpierw zapisz swoje cztery zdania na stronie, a na spotkaniu powiedzcie je na głos — po minucie na osobę:
 
 > **Przykład:** *Jestem programistą. Wcześniej byłem studentem. Chcę zostać dobrym menedżerem. Za dziesięć lat będę nauczycielem.*
 
 ⚠️ Pamiętajcie o pułapce: *Jestem inżynierem* **ale** *Jestem zmęczony*.
+
+```cwiczenie
+{ "typ": "pisanie", "tytul": "Kim jesteś? Kim chcesz być?", "instrukcja": "Cztery zdania — w każdym jedna forma narzędnika po «być», «zostać» albo «stać się».",
+  "zdania": [
+    { "przed": "1. Kim jesteś teraz?", "po": "", "czemu": "jestem + narzędnik: rodzaj męski -em / -iem, żeński -ą" },
+    { "przed": "2. Kim byłeś / byłaś wcześniej?", "po": "", "czemu": "byłem / byłam + narzędnik (Wcześniej byłem studentem.)" },
+    { "przed": "3. Kim chcesz zostać?", "po": "", "czemu": "zostać + narzędnik, razem z przymiotnikiem: dobrym menedżerem (-ym + -em)" },
+    { "przed": "4. Kim będziesz za dziesięć lat?", "po": "", "czemu": "będę + narzędnik — ale uwaga na pułapkę: przymiotnik po «być» zostaje w mianowniku (jestem zmęczony)" }
+  ] }
+```
 
 ### Rozmawiajcie! *(po 2 minuty na osobę)*
 
@@ -142,11 +152,21 @@ Każda osoba wybiera JEDNO pytanie i odpowiada po polsku *(minimum 3 zdania)*:
 
 ### Czym to robisz? — szybka runda
 
-Jedna osoba pyta „Czym…?”, druga odpowiada pełnym zdaniem. Zmieniajcie się!
+Najpierw każdy wpisuje formy sam na stronie. Na spotkaniu robicie z tego szybką rundę: jedna osoba pyta „Czym…?”, druga odpowiada pełnym zdaniem. Zmieniajcie się!
 
-*pisać (długopis) · jechać do pracy (samochód / autobus / metro) · jeść zupę (łyżka) · płacić (karta) · robić zdjęcia (telefon) · otwierać drzwi (klucz)*
-
-> **Przykład:** *— Czym piszesz? — Piszę długopisem.*
+```cwiczenie
+{ "typ": "wpisz", "tytul": "Czym to robisz?", "instrukcja": "Wpisz słowo z nawiasu w narzędniku.",
+  "zdania": [
+    { "przed": "(długopis) Piszę ", "odpowiedz": ["długopisem"], "po": ".", "czemu": "rodzaj męski + -em — narzędzie odpowiada na pytanie «czym?»" },
+    { "przed": "(samochód) Jadę do pracy ", "odpowiedz": ["samochodem"], "po": ".", "czemu": "rodzaj męski + -em; ó przechodzi w o: samochód → samochodem" },
+    { "przed": "(autobus) Jadę do pracy ", "odpowiedz": ["autobusem"], "po": ".", "czemu": "rodzaj męski + -em" },
+    { "przed": "(metro) Jadę do pracy ", "odpowiedz": ["metrem"], "po": ".", "czemu": "rodzaj nijaki + -em, tak jak narzędzie → narzędziem" },
+    { "przed": "(łyżka) Jem zupę ", "odpowiedz": ["łyżką"], "po": ".", "czemu": "rodzaj żeński: -a → -ą" },
+    { "przed": "(karta) Płacę ", "odpowiedz": ["kartą"], "po": ".", "czemu": "rodzaj żeński: -a → -ą" },
+    { "przed": "(telefon) Robię zdjęcia ", "odpowiedz": ["telefonem"], "po": ".", "czemu": "rodzaj męski + -em" },
+    { "przed": "(klucz) Otwieram drzwi ", "odpowiedz": ["kluczem"], "po": ".", "czemu": "rodzaj męski + -em: klucz → kluczem" }
+  ] }
+```
 
 ### Dyskusja — spór Michels kontra Lipset
 

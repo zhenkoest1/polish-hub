@@ -100,7 +100,7 @@ Formuła: **PODMIOT + CZASOWNIK + BIERNIK**
 
 ## 🗣️ Na spotkaniu — ćwiczenia ustne
 
-*(pisemne ćwiczenia z tej lekcji znajdziecie niżej — w quizie!)*
+*(ćwiczenia pisemne robicie od razu na stronie — w polach niżej; na koniec czeka jeszcze quiz)*
 
 ### Znajdźcie w tekście formy biernika
 
@@ -121,11 +121,22 @@ Każda osoba wybiera JEDNO pytanie i odpowiada po polsku *(minimum 3 zdania)*:
 
 ### Opiszcie swój typowy dzień *(użyjcie biernika!)*
 
-Każda osoba opisuje swój typowy dzień w 5 zdaniach, używając czasowników z biernikiem.
+Każdy pisze swoje pięć zdań od razu na stronie — po kliknięciu **Zapisz w zeszycie** tekst trafia do twojego zeszytu w chmurze. Na spotkaniu czytacie je na głos.
 
 **Czasowniki do użycia:** *sprawdzać, czytać, pisać, kupować, robić, planować, oglądać, jeść, pić*
 
 > **Przykład:** *Rano sprawdzam telefon. Piję kawę. Czytam wiadomości. Planuję dzień. Wieczorem oglądam film.*
+
+```cwiczenie
+{ "typ": "pisanie", "tytul": "Mój typowy dzień", "instrukcja": "Pięć zdań o swoim dniu. W każdym jeden czasownik akcji i jedno dopełnienie w bierniku.",
+  "zdania": [
+    { "przed": "1. Co robisz zaraz po przebudzeniu?", "po": "", "czemu": "biernik męski nieżywotny = mianownik: sprawdzam telefon" },
+    { "przed": "2. Co jesz i pijesz rano?", "po": "", "czemu": "biernik żeński: -a → -ę (piję kawę, jem kanapkę)" },
+    { "przed": "3. Co czytasz albo oglądasz w ciągu dnia?", "po": "", "czemu": "czytam / oglądam + biernik; przy rodzaju męskim nieżywotnym przymiotnik też zostaje jak w mianowniku: nowy film" },
+    { "przed": "4. Co kupujesz albo planujesz?", "po": "", "czemu": "przymiotnik + rzeczownik żeński w bierniku: -ą + -ę (kupuję nową aplikację)" },
+    { "przed": "5. Czego nie masz w swoim dniu?", "po": "", "czemu": "po «nie» biernik zmienia się w dopełniacz: nie mam czasu, nie widzę problemu, nie czuję radości" }
+  ] }
+```
 
 ### Dyskusja — filozofia Hana w praktyce
 

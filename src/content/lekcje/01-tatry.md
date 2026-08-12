@@ -70,25 +70,40 @@ W polskim przymiotniki mają **3 stopnie**:
 
 ## 🗣️ Na spotkaniu — ćwiczenia ustne
 
-*(pisemne ćwiczenia z tej lekcji znajdziecie niżej — w quizie!)*
+*(ćwiczenia pisemne robicie od razu na stronie — w polach niżej; na koniec czeka jeszcze quiz)*
 
 ### Znajdźcie w tekście
 
+Dwa pierwsze zadania róbcie na głos — wracajcie do tekstu i czytajcie znalezione formy:
+
 1. Trzy przymiotniki w stopniu najwyższym
 2. Dwa porównania z „niż"
-3. Jedno zwierzę mniejsze niż kozica i jedno większe
+
+Trzecie zadanie sprawdzisz od razu na stronie:
+
+```cwiczenie
+{ "typ": "wpisz", "tytul": "Mniejsze i większe niż kozica", "instrukcja": "Wpisz nazwę zwierzęcia z tekstu — w mianowniku.",
+  "zdania": [
+    { "przed": "zwierzę mniejsze niż kozica → ", "odpowiedz": ["świstak"], "po": "", "czemu": "Świstak jest mniejszy niż kozica — to gryzoń, który śpi zimą prawie 7 miesięcy." },
+    { "przed": "zwierzę większe niż kozica → ", "odpowiedz": ["niedźwiedź", "niedźwiedź brunatny"], "po": "", "czemu": "Niedźwiedź brunatny jest największym zwierzęciem w Tatrach — waży ponad 200 kg." }
+  ] }
+```
 
 ### Porównajcie — mówcie pełnym zdaniem
 
-Używajcie stopnia wyższego + „niż":
+Najpierw wpisz formy sam na stronie, a potem przeczytajcie całe zdania na głos:
 
-1. Rysy (2499 m) i Kasprowy Wierch (1987 m) → *wysoki*
-2. Morskie Oko (35 ha) i Wielki Staw Polski (34 ha) → *duży*
-3. wędrówka na Giewont i kolejka na Kasprowy → *trudny*
-4. lato w Tatrach i zima w Tatrach → *ciepły*
-5. kozica (30 kg) i niedźwiedź (200 kg) → *ciężki*
+```cwiczenie
+{ "typ": "wpisz", "tytul": "Stopień wyższy + niż", "instrukcja": "Wpisz przymiotnik ze stopnia równego w stopniu wyższym. Uważaj na rodzaj — forma musi pasować do podmiotu.",
+  "zdania": [
+    { "przed": "wysoki: Rysy (2499 m) są ", "odpowiedz": ["wyższe"], "po": " niż Kasprowy Wierch (1987 m).", "czemu": "wysoki → wyższy; Rysy to liczba mnoga → wyższe, tak jak w regule: «Rysy są wyższe niż Giewont»" },
+    { "przed": "duży: Morskie Oko (35 ha) jest ", "odpowiedz": ["większe"], "po": " niż Wielki Staw Polski (34 ha).", "czemu": "duży → większy (forma nieregularna); Morskie Oko to rodzaj nijaki → większe" },
+    { "przed": "trudny: wędrówka na Giewont jest ", "odpowiedz": ["trudniejsza"], "po": " niż kolejka na Kasprowy.", "czemu": "trudny → trudniejszy; wędrówka to rodzaj żeński → trudniejsza" },
+    { "przed": "ciężki: niedźwiedź (200 kg) jest ", "odpowiedz": ["cięższy"], "po": " niż kozica (30 kg).", "czemu": "ciężki → cięższy, tak samo jak szybki → szybszy: -ki wypada przed -szy" }
+  ] }
+```
 
-> **Przykład:** *Rysy są wyższe niż Kasprowy Wierch.*
+Piąte porównanie zostawcie na głos: **lato w Tatrach i zima w Tatrach** → *ciepły*. Ta forma nie mieści się w żadnym wierszu tabeli z reguły, więc sprawdźcie ją razem w słowniku.
 
 ### Rozmawiajcie! *(po 2 minuty na osobę)*
 
@@ -106,9 +121,22 @@ Każdy wybiera zwierzę (**kozica, świstak, niedźwiedź**) i opisuje je BEZ na
 
 ### Napiszcie razem 5 zdań o Tatrach
 
+Każdy pisze swoje pięć zdań od razu na stronie — po kliknięciu **Zapisz w zeszycie** tekst trafia do twojego zeszytu w chmurze. Na spotkaniu czytacie je na głos i porównujecie.
+
 - ✅ minimum 2 formy stopnia wyższego (np. *wyższy niż*)
 - ✅ minimum 2 formy stopnia najwyższego (np. *najpiękniejsze*)
 - ✅ minimum 3 nowe słowa z tej lekcji
+
+```cwiczenie
+{ "typ": "pisanie", "tytul": "Pięć zdań o Tatrach", "instrukcja": "Napisz pięć zdań — razem minimum dwa razy stopień wyższy, minimum dwa razy stopień najwyższy i minimum trzy nowe słowa z lekcji.",
+  "zdania": [
+    { "przed": "1. Gdzie leżą Tatry i jakie to góry?", "po": "", "czemu": "stopień najwyższy: naj- + przymiotnik (najwyższe góry w Polsce)" },
+    { "przed": "2. Porównaj dwa szczyty.", "po": "", "czemu": "stopień wyższy + niż: A jest wyższy / niższy niż B" },
+    { "przed": "3. Napisz o jednym jeziorze w Tatrach.", "po": "", "czemu": "stopień najwyższy (największe, najgłębsze) i słowa: jezioro, głębokość, przejrzysty" },
+    { "przed": "4. Porównaj dwa tatrzańskie zwierzęta.", "po": "", "czemu": "stopień wyższy + niż; słowa: kozica, gryzoń, dziki" },
+    { "przed": "5. Jak chcesz dostać się na Kasprowy Wierch — kolejką linową czy pieszo? Dlaczego?", "po": "", "czemu": "porównanie dwóch sposobów: łatwiejszy / trudniejszy niż" }
+  ] }
+```
 
 ---
 
