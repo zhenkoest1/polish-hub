@@ -246,7 +246,7 @@ Kilka czasowników **nie ma pary dokonanej**, więc mają wyłącznie przyszły 
 
 ## 🗣️ Na spotkaniu — ćwiczenia ustne
 
-*(pisemne ćwiczenia z tej lekcji znajdziecie niżej — w quizie!)*
+*(ćwiczenia pisemne robicie od razu na stronie — w polach niżej; na koniec czeka jeszcze quiz)*
 
 ### 🔥 Rozgrzewka *(5 minut)*
 
@@ -290,17 +290,17 @@ Odpowiadajcie po polsku, pełnym zdaniem:
 Każdy przerabia wszystkie zdania na stronie, a po sprawdzeniu **mówi na głos** jedno słowo o każdej swojej odpowiedzi: **prosty** czy **złożony** — i dlaczego.
 
 ```cwiczenie
-{ "typ": "wpisz", "tytul": "Z wczoraj w jutro i z powrotem", "instrukcja": "Wpisz brakującą formę czasownika. Strzałka pokazuje kierunek; zachowaj rodzaj i liczbę z pierwszego zdania.",
+{ "typ": "wpisz", "tytul": "Z wczoraj w jutro i z powrotem", "instrukcja": "Wpisz brakującą formę czasownika. Strzałka pokazuje kierunek; zachowaj rodzaj i liczbę z pierwszego zdania — wszystkie zdania są w rodzaju męskim.",
   "zdania": [
     { "przed": "Wczoraj przeczytałem cały artykuł. → Jutro ", "odpowiedz": ["przeczytam"], "po": " cały artykuł.", "czemu": "przeczytać jest dk → czas przyszły prosty, bez «będę»" },
-    { "przed": "W sobotę będę odpoczywał. → W zeszłą sobotę ", "odpowiedz": ["odpoczywałem", "odpoczywałam"], "po": ".", "czemu": "przyszły złożony → czas przeszły ndk: odpoczywałem" },
-    { "przed": "Rano nie mogłem sobie przypomnieć jej imienia. → Jutro rano nie ", "odpowiedz": ["będę mógł", "będę mogła"], "po": " sobie przypomnieć jej imienia.", "czemu": "móc nie ma pary dokonanej → tylko przyszły złożony: będę mógł" },
+    { "przed": "W sobotę będę odpoczywał. → W zeszłą sobotę ", "odpowiedz": ["odpoczywałem"], "po": ".", "czemu": "przyszły złożony → czas przeszły ndk: odpoczywałem" },
+    { "przed": "Rano nie mogłem sobie przypomnieć jej imienia. → Jutro rano nie ", "odpowiedz": ["będę mógł"], "po": " sobie przypomnieć jej imienia.", "czemu": "móc nie ma pary dokonanej → tylko przyszły złożony: będę mógł" },
     { "przed": "Wczoraj poszedłem do lekarza. → Jutro ", "odpowiedz": ["pójdę"], "po": " do lekarza.", "czemu": "pójść jest dk → czas przyszły prosty: pójdę" },
     { "przed": "W przyszłym tygodniu będziemy szukali mieszkania. → W zeszłym tygodniu ", "odpowiedz": ["szukaliśmy"], "po": " mieszkania.", "czemu": "będziemy szukali to forma męskoosobowa → szukaliśmy, nie «szukałyśmy»" },
     { "przed": "Wziąłem urlop w lipcu. → W przyszłym roku ", "odpowiedz": ["wezmę"], "po": " urlop w lipcu.", "czemu": "wziąć jest dk → czas przyszły prosty: wezmę" },
     { "przed": "Wczoraj zjedliśmy obiad w mieście. → Jutro ", "odpowiedz": ["zjemy"], "po": " obiad w mieście.", "czemu": "zjeść jest dk → czas przyszły prosty: zjemy" },
-    { "przed": "Za miesiąc będę uczył się do egzaminu. → Miesiąc temu ", "odpowiedz": ["uczyłem się", "uczyłam się"], "po": " do egzaminu.", "czemu": "przyszły złożony → czas przeszły ndk: uczyłem się" },
-    { "przed": "Nie miałem czasu na sport. → Za rok nie ", "odpowiedz": ["będę miał", "będę miała"], "po": " czasu na sport.", "czemu": "mieć nie ma pary dokonanej → tylko przyszły złożony: będę miał" }
+    { "przed": "Za miesiąc będę uczył się do egzaminu. → Miesiąc temu ", "odpowiedz": ["uczyłem się", "się uczyłem"], "po": " do egzaminu.", "czemu": "przyszły złożony → czas przeszły ndk: uczyłem się" },
+    { "przed": "Nie miałem czasu na sport. → Za rok nie ", "odpowiedz": ["będę miał"], "po": " czasu na sport.", "czemu": "mieć nie ma pary dokonanej → tylko przyszły złożony: będę miał" }
   ] }
 ```
 

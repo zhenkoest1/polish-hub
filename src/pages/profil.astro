@@ -11,6 +11,8 @@ const quizy = [
   ...lekcje.filter((l) => l.data.quiz).map((l) => ({ id: l.data.quiz!, tytul: `${l.data.emoji} ${l.data.tytul}` })),
   { id: 'mix', tytul: '⚡ Wielki Mix' },
 ];
+// Zeszyt zapisuje id lekcji ("11-podroze-w-czasie") — w profilu pokazujemy tytul
+const tytulyLekcji = Object.fromEntries(lekcje.map((l) => [l.id, `${l.data.emoji} ${l.data.tytul}`]));
 ---
 <Base title="Profil — Polski Klub" active="profil">
   <article class="profil">
@@ -46,6 +48,7 @@ const quizy = [
       <div id="z-lista"></div>
     </section>
 
+    <script type="application/json" id="p-lekcje" set:html={JSON.stringify(tytulyLekcji).replace(/</g, '\u003c')} />
     <script type="application/json" id="p-quizy" set:html={JSON.stringify(quizy).replace(/</g, '\\u003c')} />
   </article>
 
@@ -54,8 +57,10 @@ const quizy = [
     import { zaloguj, wyloguj, obserwujOsobe, mojProfil, pobierzZeszyt } from '../scripts/chmura.js';
 
     const $ = (id: string) => document.getElementById(id)!;
+    const BAZA = import.meta.env.BASE_URL.replace(/\/$/, '');
     const esc = (s: unknown) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]!));
     const quizy: { id: string; tytul: string }[] = JSON.parse($('p-quizy').textContent!);
+    const tytulyLekcji: Record<string, string> = JSON.parse($('p-lekcje').textContent!);
     let wybrany = '';
 
     // przyciski osob
@@ -105,6 +110,8 @@ const quizy = [
         $('p-wyniki').innerHTML = '';
         return;
       }
+      // po udanym odczycie kasujemy ewentualny stary komunikat bledu
+      $('p-pusto').innerHTML = `Jeszcze żadnego quizu — <a href="${BAZA}/quizy/">zagraj pierwszy</a>!`;
       const wiersze = quizy
         .filter((q) => best[q.id])
         .map((q) => `<tr><td>${q.tytul}</td><td><strong>${Number(best[q.id].pct)}%</strong> (${Number(best[q.id].got)}/${Number(best[q.id].max)})</td></tr>`);
@@ -132,7 +139,7 @@ const quizy = [
           const data = d instanceof Date ? d.toLocaleDateString('pl-PL') : 'przed chwilą';
           const linie = (Array.isArray(w.wpisy) ? w.wpisy : []).map((t: unknown) => `<li>${esc(t)}</li>`).join('');
           return `<article class="zeszyt-wpis">
-  <header><strong>${esc(w.zadanie)}</strong> <span class="zeszyt-meta">${esc(w.lekcja)} · ${esc(data)}</span></header>
+  <header><strong>${esc(w.zadanie)}</strong> <span class="zeszyt-meta">${esc(tytulyLekcji[w.lekcja] ?? w.lekcja)} · ${esc(data)}</span></header>
   <ol class="zeszyt-wpisy">${linie}</ol>
 </article>`;
         })

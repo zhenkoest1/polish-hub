@@ -249,7 +249,7 @@ Jeden wyjątek działa tak samo jak po rosyjsku: czasownik dokonany po *nie* to 
 
 ## 🗣️ Na spotkaniu — ćwiczenia ustne
 
-*(pisemne ćwiczenia z tej lekcji znajdziecie niżej — w quizie!)*
+*(ćwiczenia pisemne robicie od razu na stronie — w polach niżej; na koniec czeka jeszcze quiz)*
 
 ### 🔥 Rozgrzewka *(5 minut)*
 

@@ -273,7 +273,7 @@ To zarazem jeden z najpewniejszych sygnałów obcego akcentu w piśmie. Zdanie *
 
 ## 🗣️ Na spotkaniu — ćwiczenia ustne
 
-*(pisemne ćwiczenia z tej lekcji znajdziecie niżej — w quizie!)*
+*(ćwiczenia pisemne robicie od razu na stronie — w polach niżej; na koniec czeka jeszcze quiz)*
 
 ### 🔥 Rozgrzewka *(5 minut)*
 
@@ -284,10 +284,10 @@ Dwa szybkie ćwiczenia na stronie — każdy wpisuje sam, potem porównujecie wy
   "zdania": [
     { "przed": "толпа → ", "odpowiedz": ["tłum"], "po": "", "czemu": "Tłum pomylił się o niecały procent." },
     { "przed": "участник → ", "odpowiedz": ["uczestnik"], "po": "", "czemu": "l.mn. uczestnicy" },
-    { "przed": "учёный → ", "odpowiedz": ["naukowiec"], "po": "", "czemu": "l.mn. naukowcy" },
+    { "przed": "учёный → ", "odpowiedz": ["naukowiec", "uczony"], "po": "", "czemu": "l.mn. naukowcy" },
     { "przed": "эксперт → ", "odpowiedz": ["ekspert"], "po": "", "czemu": "l.mn. eksperci" },
     { "przed": "независимость → ", "odpowiedz": ["niezależność"], "po": "", "czemu": "Niezależność jest najłatwiejsza do zepsucia." },
-    { "przed": "ошибка → ", "odpowiedz": ["błąd"], "po": "", "czemu": "l.mn. błędy — Ich błędy szły w różne strony." }
+    { "przed": "ошибка → ", "odpowiedz": ["błąd", "pomyłka"], "po": "", "czemu": "l.mn. błędy — Ich błędy szły w różne strony." }
   ] }
 ```
 
@@ -339,7 +339,7 @@ Czternaście grup, jeden czasownik. Przed każdym kliknięciem zadaj sobie pytan
     { "przed": "Naukowcy ", "opcje": ["przyszli", "przyszły"], "dobra": 0, "po": " na jarmark.", "czemu": "naukowcy — m-os. (-ec → -cy)" },
     { "przed": "Żony rolników ", "opcje": ["przyszli", "przyszły"], "dobra": 1, "po": " na jarmark.", "czemu": "podmiot to żony, a nie rolnicy → nm-os." },
     { "przed": "Profesorowie ", "opcje": ["przyszli", "przyszły"], "dobra": 0, "po": " na jarmark.", "czemu": "profesorowie — m-os. na -owie" },
-    { "przed": "Odpowiedzi ", "opcje": ["przyszli", "przyszły"], "dobra": 1, "po": " na jarmark.", "czemu": "pojęcia zawsze nm-os." }
+    { "przed": "Odpowiedzi ", "opcje": ["przyszli", "przyszły"], "dobra": 1, "po": " pocztą.", "czemu": "pojęcia zawsze nm-os." }
   ] }
 ```
 
@@ -370,7 +370,7 @@ Każde zdanie jest niemęskoosobowe. Dołóż do grupy jednego mężczyznę i po
     { "przed": "Wszystkie uczestniczki zgadywały wagę. → ", "odpowiedz": ["Wszyscy uczestnicy zgadywali"], "po": " wagę.", "czemu": "wszystkie → wszyscy; uczestniczki → uczestnicy (k → cy); zgadywały → zgadywali" },
     { "przed": "Nasze młode koleżanki były na naradzie. → ", "odpowiedz": ["Nasi młodzi koledzy byli"], "po": " na naradzie.", "czemu": "nasze → nasi; młode → młodzi; koleżanki → koledzy (g → dzy); były → byli" },
     { "przed": "Te Polki głosowały osobno. → ", "odpowiedz": ["Ci Polacy głosowali"], "po": " osobno.", "czemu": "Polki → Polacy (k → cy) — wymiana działa tylko w męskoosobowym" },
-    { "przed": "One się myliły. → ", "odpowiedz": ["Oni się mylili"], "po": ".", "czemu": "one → oni; myliły się → mylili się" },
+    { "przed": "One się myliły. → ", "odpowiedz": ["Oni się mylili", "Oni mylili się"], "po": ".", "czemu": "one → oni; myliły się → mylili się" },
     { "przed": "Które kobiety wskazały złą linię? → ", "odpowiedz": ["Którzy mężczyźni wskazali"], "po": " złą linię?", "czemu": "które → którzy; kobiety → mężczyźni; wskazały → wskazali" }
   ] }
 ```

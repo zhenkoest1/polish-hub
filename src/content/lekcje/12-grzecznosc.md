@@ -283,7 +283,7 @@ Trzy dodatkowe pułapki tej lekcji:
 
 ## 🗣️ Na spotkaniu — ćwiczenia ustne
 
-*(pisemne ćwiczenia z tej lekcji znajdziecie niżej — w quizie!)*
+*(ćwiczenia pisemne robicie od razu na stronie — w polach niżej; na koniec czeka jeszcze quiz)*
 
 ### 🔥 Rozgrzewka *(5 minut)*
 
@@ -300,8 +300,8 @@ Dwa szybkie ćwiczenia na stronie — każdy wpisuje sam, bez zastanawiania, pot
     { "przed": "pomóc → ", "odpowiedz": ["pomóż"], "po": "", "czemu": "nieregularne: pomóż — obowiązkowa wymiana o → ó" },
     { "przed": "być → ", "odpowiedz": ["bądź"], "po": "", "czemu": "nieregularne: bądź ≠ budź" },
     { "przed": "mieć → ", "odpowiedz": ["miej"], "po": "", "czemu": "nieregularne: miej, nie «maj»" },
-    { "przed": "jechać → ", "odpowiedz": ["jedź"], "po": "", "czemu": "jedź (езжай) — z kreską nad d" },
-    { "przed": "jeść → ", "odpowiedz": ["jedz"], "po": "", "czemu": "jedz (ешь) — bez kreski; różnica z «jedź» to jeden znak" }
+    { "przed": "jechać → ", "odpowiedz": ["jedź"], "dokladnie": true, "po": "", "czemu": "jedź (езжай) — z kreską nad d; «jedz» to inny czasownik (ешь)" },
+    { "przed": "jeść → ", "odpowiedz": ["jedz"], "dokladnie": true, "po": "", "czemu": "jedz (ешь) — bez kreski; «jedź» to inny czasownik (езжай)" }
   ] }
 ```
 
@@ -312,7 +312,7 @@ Dwa szybkie ćwiczenia na stronie — każdy wpisuje sam, bez zastanawiania, pot
     { "przed": "Napisz! → Nie ", "odpowiedz": ["pisz"], "po": "!", "czemu": "napisać (dk) → pisać (ndk)" },
     { "przed": "Zamknij okno! → Nie ", "odpowiedz": ["zamykaj"], "po": " okna!", "czemu": "zamknąć (dk) → zamykać (ndk); okno → okna, bo pod przeczeniem idzie dopełniacz" },
     { "przed": "Weź to! → Nie ", "odpowiedz": ["bierz"], "po": " tego!", "czemu": "para supletywna: wziąć (dk) → brać (ndk)" },
-    { "przed": "Zjedz to! → Nie ", "odpowiedz": ["jedz"], "po": " tego!", "czemu": "zjeść (dk) → jeść (ndk)" },
+    { "przed": "Zjedz to! → Nie ", "odpowiedz": ["jedz"], "dokladnie": true, "po": " tego!", "czemu": "zjeść (dk) → jeść (ndk); uwaga: «jedź» to jechać" },
     { "przed": "Zapłać! → Nie ", "odpowiedz": ["płać"], "po": "!", "czemu": "zapłacić (dk) → płacić (ndk)" },
     { "przed": "Usiądź! → Nie ", "odpowiedz": ["siadaj"], "po": "!", "czemu": "usiąść (dk) → siadać (ndk)" }
   ] }
@@ -346,7 +346,7 @@ Osoba B załatwia sprawę, Osoba A siedzi za okienkiem, Osoba C słucha i po ka�
 
 ### Runda 2 — powiedz to grzeczniej
 
-Zdania po lewej to pierwszy szczebel drabiny — **do kolegi na ty**. Wjedźcie o dwa wyżej. Najpierw szczebel czwarty, neutralnie oficjalny: *proszę* + bezokolicznik.
+Zdania po lewej to pierwszy szczebel drabiny — **do kolegi na ty**. Wjedźcie wyżej. Najpierw szczebel czwarty, neutralnie oficjalny: *proszę* + bezokolicznik.
 
 ```cwiczenie
 { "typ": "wpisz", "tytul": "Szczebel 4 — proszę + bezokolicznik", "instrukcja": "Wpisz bezokolicznik. Pamiętaj: po «proszę» nigdy nie stoi rozkaz.",
