@@ -45,7 +45,7 @@
       "czesc": "rzeczownik",
       "rodzaj": "ż",
       "przyklad": "Pamięć potrafi cofnąć nas w przeszłość.",
-      "przyklad_ru": "Память способна отбросить нас в прошлое."
+      "przyklad_ru": "Память способна вернуть нас в прошлое."
     },
     {
       "id": "l11-przyszlosc",
@@ -257,8 +257,8 @@
       "czesc": "czasownik",
       "aspekt": "dk",
       "para": "sklejać",
-      "przyklad": "Skleja z nich scenę, której nigdy nie było.",
-      "przyklad_ru": "Он склеивает из них сцену, которой никогда не было."
+      "przyklad": "Mózg skleił z nich scenę, której nigdy nie było.",
+      "przyklad_ru": "Мозг склеил из них сцену, которой никогда не было."
     },
     {
       "id": "l11-rekonstrukcja",
@@ -341,7 +341,7 @@
       "czesc": "rzeczownik",
       "rodzaj": "ż",
       "przyklad": "Psychiczny układ odpornościowy powoli oswaja stratę.",
-      "przyklad_ru": "Психическая иммунная система постепенно приручает утрату."
+      "przyklad_ru": "Психическая иммунная система постепенно свыкается с утратой."
     },
     {
       "id": "l11-jednoczesnie",

@@ -43,8 +43,8 @@
       "ru": "чиновник, служащий",
       "czesc": "rzeczownik",
       "rodzaj": "m",
-      "przyklad": "Urzędniczka spojrzała na niego zimno.",
-      "przyklad_ru": "Служащая холодно посмотрела на него."
+      "przyklad": "Urzędnik za okienkiem poprosił o dowód osobisty.",
+      "przyklad_ru": "Служащий за окошком попросил удостоверение личности."
     },
     {
       "id": "l12-urzad",
@@ -163,7 +163,7 @@
       "aspekt": "dk",
       "para": "przesyłać",
       "przyklad": "Czy mógłbym je przesłać mailem?",
-      "przyklad_ru": "Мог бы я отправить их по почте?"
+      "przyklad_ru": "Мог бы я отправить их по электронной почте?"
     },
     {
       "id": "l12-przelozony",

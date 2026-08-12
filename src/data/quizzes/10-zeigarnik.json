@@ -38,11 +38,11 @@
       "type": "typein",
       "questions": [
         { "q": "Wczoraj cały wieczór __________ list, ale go nie skończyłem.", "hint": "pisać / napisać — ja, czas przeszły", "answer": "pisałem" },
-        { "q": "Wreszcie __________ raport — leży gotowy na biurku.", "hint": "kończyć / skończyć — ja, czas przeszły", "answer": "skończyłem" },
+        { "q": "Wreszcie __________ raport — leży gotowy na biurku.", "hint": "kończyć / skończyć — ja *(mężczyzna)*, czas przeszły", "answer": "skończyłem" },
         { "q": "Codziennie __________ dwie strony po polsku.", "hint": "czytać / przeczytać — ja, czas teraźniejszy", "answer": "czytam" },
         { "q": "Zeigarnik __________ mniej więcej połowę zadań w środku pracy.", "hint": "przerywać / przerwać — robiła to wiele razy", "answer": "przerywała" },
         { "q": "Kelner nie __________ zamówień — pamiętał wszystko.", "hint": "zapisywać / zapisać — zwyczaj, czas przeszły", "answer": "zapisywał" },
-        { "q": "Nagle __________, o co chodzi.", "hint": "rozumieć / zrozumieć — ja, czas przeszły", "answer": "zrozumiałem" }
+        { "q": "Nagle __________, o co chodzi.", "hint": "rozumieć / zrozumieć — ja *(mężczyzna)*, czas przeszły", "answer": "zrozumiałem" }
       ]
     },
     {

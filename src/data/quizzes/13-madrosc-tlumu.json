@@ -28,7 +28,7 @@
         { "q": "Polak → __________", "hint": "k → cy", "answer": "Polacy" },
         { "q": "Szwed → __________", "hint": "d → dzi", "answer": "Szwedzi" },
         { "q": "aktor → __________", "hint": "r → rzy", "answer": "aktorzy" },
-        { "q": "biolog → __________", "hint": "g → dzy", "answer": "biolodzy" },
+        { "q": "biolog → __________", "hint": "g → dzy", "answer": ["biolodzy", "biologowie"] },
         { "q": "Włoch → __________", "hint": "ch → si", "answer": "Włosi" }
       ]
     },
@@ -56,7 +56,7 @@
         { "q": "Dzieci __________ obok wołu i nic nie rozumiały.", "options": ["stały", "stali", "stało", "stała"], "answer": "stały", "explain": "„Dzieci” to rzeczownik niemęskoosobowy — dzieci były, dzieci stały." },
         { "q": "Rolnicy i ich żony __________ do domu przed wieczorem.", "options": ["wrócili", "wróciły", "wróciło", "wracała"], "answer": "wrócili", "explain": "W grupie jest choć jeden mężczyzna — cała grupa staje się męskoosobowa." },
         { "q": "Wszystkie uczestniczki __________ tę samą liczbę.", "options": ["podały", "podali", "podało", "podała"], "answer": "podały", "explain": "Same kobiety: wszystkie uczestniczki podały. Przy mężczyznach byłoby: wszyscy uczestnicy podali." },
-        { "q": "Od tamtego jarmarku __________ ponad sto lat.", "options": ["minęły", "minęli", "minął", "minęła"], "answer": "minęły", "explain": "„Lata” to forma niemęskoosobowa, mimo że pochodzi od męskiego „rok”." }
+        { "q": "Od tamtego dnia __________ dwa lata.", "options": ["minęły", "minęli", "minął", "minęła"], "answer": "minęły", "explain": "„Lata” to forma niemęskoosobowa, mimo że pochodzi od męskiego „rok” — stąd -ły. Uwaga: od pięciu wzwyż liczebnik przejmuje władzę i czasownik idzie w rodzaju nijakim: minęło pięć lat, minęło sto lat." }
       ]
     },
     {

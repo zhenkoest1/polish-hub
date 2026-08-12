@@ -104,7 +104,7 @@ Po rosyjsku liczba mnoga ma **jedną** formę: «они делали» — i nie
 
 | Zdanie | Forma | Dlaczego |
 |---|---|---|
-| *Naukowcy **badali** pamięć.* | m-os. | sami mężczyźni |
+| *Naukowcy **badali** pamięć.* | m-os. | *naukowcy* to rzeczownik męskoosobowy — w grupie są mężczyźni |
 | *Badaczki **badały** pamięć.* | nm-os. | same kobiety |
 | *Schacter i Addis **opublikowali** wyniki.* | m-os. | Addis to kobieta, ale Schacter jest mężczyzną — wystarczy jeden |
 | *Dzieci **bawiły się** w parku.* | nm-os. | *dzieci* to ludzie, ale kategoria nazywa się „męskoosobowa”, nie „żywotna” |
@@ -232,7 +232,7 @@ Kilka czasowników **nie ma pary dokonanej**, więc mają wyłącznie przyszły 
 | przeżyć | пережить | Zapytaj kogoś, kto już to **przeżył**. |
 | przechowywać | хранить | Mózg nie **przechowuje** przyszłości. |
 | część | часть | Buduje ją z **części** starych wspomnień. |
-| skleić | склеить | **Skleja** z nich scenę, której nigdy nie było. |
+| sklejać *(dk skleić)* | склеивать | **Skleja** z nich scenę, której nigdy nie było. |
 | rekonstrukcja | реконструкция | Wspomnienie jest **rekonstrukcją**. |
 | składać | собирать, складывать | Mózg **składa** je na nowo za każdym razem. |
 | kłamać | лгать | Studenci nie **kłamali**. |

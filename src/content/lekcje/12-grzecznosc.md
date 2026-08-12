@@ -60,7 +60,7 @@ quiz: "12-grzecznosc"
 > 5. *Czy mógłby mi pan to podać?* — obcy człowiek, sytuacja oficjalna. Najbezpieczniejszy wybór, gdy nie wiemy, jak się zachować.
 > 6. *Czy byłby pan tak **uprzejmy** i podał mi to?* — bardzo formalnie. Konstrukcja skostniała: w rozmowie zabrzmi sztucznie, w piśmie urzędowym już nie.
 
-> **Widzicie regułę?** Im wyżej, tym **dłużej**. Polska grzeczność mierzy się liczbą słów. Rozkaz to jedno słowo — *Podaj!*. Uprzejma prośba to siedem — *Czy mógłby mi pan to podać?*. Zdanie robi się dłuższe, bardziej okrężne, mniej bezpośrednie — i właśnie dlatego brzmi grzecznie. Mówiący jakby zostawia rozmówcy miejsce na **odmowę**.
+> **Widzicie regułę?** Im wyżej, tym **dłużej**. Polska grzeczność mierzy się liczbą słów. Rozkaz to jedno słowo — *Podaj!*. Uprzejma prośba to sześć — *Czy mógłby mi pan to podać?*. Zdanie robi się dłuższe, bardziej okrężne, mniej bezpośrednie — i właśnie dlatego brzmi grzecznie. Mówiący jakby zostawia rozmówcy miejsce na **odmowę**.
 
 > **Uwaga na jeden fałszywy trop.** *Czy mógłby pan…* jest grzeczne, ale nie jest magiczne. Powiedziane ostrym tonem w kolejce potrafi zabrzmieć ironicznie — dokładnie jak rosyjskie «Не могли бы вы наконец…». Ton waży tu tyle samo co gramatyka.
 

@@ -32,7 +32,7 @@ quiz: "13-madrosc-tlumu"
 
 > **Niezależność.** Każdy zgaduje sam, nie widząc cudzych odpowiedzi. To jest warunek najważniejszy i najłatwiejszy do zepsucia.
 
-> **Różnorodność.** W grupie muszą siedzieć **ludzie** z różną wiedzą i różnym doświadczeniem. Stu **ekspertów** z tej samej katedry pomyli się razem, bo **popełnią** ten sam błąd.
+> **Różnorodność.** W grupie muszą siedzieć **ludzie** z różną wiedzą i różnym doświadczeniem. Stu **ekspertów** z tej samej katedry pomyli się razem, bo wszyscy **popełnią** ten sam błąd.
 
 > **Decentralizacja.** Nikt nie steruje odpowiedziami z góry; każdy korzysta z tego, co wie lokalnie.
 
@@ -62,7 +62,7 @@ quiz: "13-madrosc-tlumu"
 
 > **Media społecznościowe robią dokładnie to samo, tylko na okrągło.** Widzisz post razem z liczbą polubień. Widzisz komentarze, zanim pomyślisz. **Algorytmy** pokazują ci to, co już wybrali podobni do ciebie **użytkownicy**. Warunek pierwszy — niezależność — jest tam **systematycznie niszczony**. Nie przypadkiem: na tym polega produkt.
 
-> **Da się to naprawić, ale trzeba chcieć.** Dobre zespoły **głosują** przed dyskusją, nie po. **Uczestnicy** narady zapisują swoją ocenę na kartce, zanim usłyszą szefa. Metoda delficka każe **ekspertom** odpowiadać anonimowo i w kilku rundach. To wszystko są sposoby, żeby wyprodukować sztuczną niezależność tam, gdzie naturalna zniknęła.
+> **Da się to naprawić, ale trzeba chcieć.** Dobre zespoły **głosują** przed dyskusją, nie po niej. **Uczestnicy** narady zapisują swoją ocenę na kartce, zanim usłyszą szefa. Metoda delficka każe **ekspertom** odpowiadać anonimowo i w kilku rundach. To wszystko są sposoby, żeby wyprodukować sztuczną niezależność tam, gdzie naturalna zniknęła.
 
 > 🧠 **Uwaga krytyczna:** „mądrość tłumu” to nie jest prawo natury, tylko **wynik pewnego warunku**. Działa świetnie przy pytaniach z jedną liczbową odpowiedzią, którą można później sprawdzić — waga wołu, cena akcji, data wydarzenia. Działa znacznie gorzej przy pytaniach o wartości, gust albo o rzeczy, których nikt w grupie nie wie. Sam Galton nie zmienił zresztą poglądów: do końca życia **uważał**, że demokracja jest ryzykowna. Zdanie „tłum wie lepiej” jest równie naiwne jak „**eksperci** wiedzą najlepiej”. Prawdziwe pytanie brzmi: **czy w tej konkretnej sytuacji cztery warunki są spełnione?**
 
@@ -257,7 +257,7 @@ To zarazem jeden z najpewniejszych sygnałów obcego akcentu w piśmie. Zdanie *
 | dokładny / dokładność | точный / точность | Nikt nie był tak **dokładny**. |
 | wiarygodny | достоверный | Wynik był bardziej **wiarygodny**. |
 | udowodnić | доказать | Chciał **udowodnić**, że tłumy się mylą. |
-| przyznać | признать | **Przyznał**, że się pomylił. |
+| przyznać | признать | **Przyznał**, że wynik jest bardziej wiarygodny, niż się spodziewał. |
 | warunek *(l.mn. warunki)* | условие | Cztery **warunki** muszą być spełnione. |
 | spełniony | выполненный | Czy **warunki są spełnione**? |
 | niezależność | независимость | **Niezależność** jest najłatwiejsza do zepsucia. |
