@@ -287,9 +287,38 @@ Trzy dodatkowe pułapki tej lekcji:
 
 ### 🔥 Rozgrzewka *(5 minut)*
 
-1. Utwórzcie rozkaz od czasownika, po kolei, bez zastanowienia: *pisać, czytać, pracować, mówić, wziąć, pomóc, być, mieć, jechać, jeść*.
-2. Teraz to samo z przeczeniem: *Nie …!* Uwaga na aspekt.
-3. Kiedy ostatnio ktoś w Polsce zaproponował wam *ty*? Jak to brzmiało?
+Dwa szybkie ćwiczenia na stronie — każdy wpisuje sam, bez zastanawiania, potem porównujecie wyniki:
+
+```cwiczenie
+{ "typ": "wpisz", "tytul": "Utwórz rozkaz", "instrukcja": "Wpisz tryb rozkazujący dla «ty». Zanim wpiszesz, powiedz sobie w głowie formę trzeciej osoby.",
+  "zdania": [
+    { "przed": "pisać → ", "odpowiedz": ["pisz"], "po": "", "czemu": "pisze → pisz (goły temat, nie «pisaj»)" },
+    { "przed": "czytać → ", "odpowiedz": ["czytaj"], "po": "", "czemu": "czyta → czytaj (3. osoba na -a dodaje -j)" },
+    { "przed": "pracować → ", "odpowiedz": ["pracuj"], "po": "", "czemu": "pracuje → pracuj; wszystkie czasowniki na -ować dają -uj" },
+    { "przed": "mówić → ", "odpowiedz": ["mów"], "po": "", "czemu": "mówi → mów" },
+    { "przed": "wziąć → ", "odpowiedz": ["weź"], "po": "", "czemu": "nieregularne: weź, weźmy, weźcie — bez zbędnej sylaby «weźmi»" },
+    { "przed": "pomóc → ", "odpowiedz": ["pomóż"], "po": "", "czemu": "nieregularne: pomóż — obowiązkowa wymiana o → ó" },
+    { "przed": "być → ", "odpowiedz": ["bądź"], "po": "", "czemu": "nieregularne: bądź ≠ budź" },
+    { "przed": "mieć → ", "odpowiedz": ["miej"], "po": "", "czemu": "nieregularne: miej, nie «maj»" },
+    { "przed": "jechać → ", "odpowiedz": ["jedź"], "po": "", "czemu": "jedź (езжай) — z kreską nad d" },
+    { "przed": "jeść → ", "odpowiedz": ["jedz"], "po": "", "czemu": "jedz (ешь) — bez kreski; różnica z «jedź» to jeden znak" }
+  ] }
+```
+
+```cwiczenie
+{ "typ": "wpisz", "tytul": "To samo z przeczeniem", "instrukcja": "Zamień rozkaz na zakaz. Uwaga na aspekt — dopełniacz masz już podany.",
+  "zdania": [
+    { "przed": "Zrób to! → Nie ", "odpowiedz": ["rób"], "po": " tego!", "czemu": "zakaz celuje w czynność, nie w wynik → ndk" },
+    { "przed": "Napisz! → Nie ", "odpowiedz": ["pisz"], "po": "!", "czemu": "napisać (dk) → pisać (ndk)" },
+    { "przed": "Zamknij okno! → Nie ", "odpowiedz": ["zamykaj"], "po": " okna!", "czemu": "zamknąć (dk) → zamykać (ndk); okno → okna, bo pod przeczeniem idzie dopełniacz" },
+    { "przed": "Weź to! → Nie ", "odpowiedz": ["bierz"], "po": " tego!", "czemu": "para supletywna: wziąć (dk) → brać (ndk)" },
+    { "przed": "Zjedz to! → Nie ", "odpowiedz": ["jedz"], "po": " tego!", "czemu": "zjeść (dk) → jeść (ndk)" },
+    { "przed": "Zapłać! → Nie ", "odpowiedz": ["płać"], "po": "!", "czemu": "zapłacić (dk) → płacić (ndk)" },
+    { "przed": "Usiądź! → Nie ", "odpowiedz": ["siadaj"], "po": "!", "czemu": "usiąść (dk) → siadać (ndk)" }
+  ] }
+```
+
+Na koniec ustnie: kiedy ostatnio ktoś w Polsce zaproponował wam *ty*? Jak to brzmiało?
 
 ### Pytania do tekstu
 
@@ -317,11 +346,37 @@ Osoba B załatwia sprawę, Osoba A siedzi za okienkiem, Osoba C słucha i po ka�
 
 ### Runda 2 — powiedz to grzeczniej
 
-Każdy dostaje zdania i mówi je na trzech poziomach: **do kolegi na ty**, **neutralnie oficjalnie** *(proszę + bezokolicznik)*, **bardzo uprzejmie** *(czy mógłby pan / mogłaby pani)*.
+Zdania po lewej to pierwszy szczebel drabiny — **do kolegi na ty**. Wjedźcie o dwa wyżej. Najpierw szczebel czwarty, neutralnie oficjalny: *proszę* + bezokolicznik.
 
-**Osoba A:** *Zamknij okno.* · *Powtórz to.* · *Daj mi długopis.* · *Podpisz tutaj.*
-**Osoba B:** *Mów wolniej.* · *Poczekaj chwilę.* · *Pokaż mi ten dokument.* · *Nie pal tutaj.*
-**Osoba C:** *Otwórz drzwi.* · *Przyjdź jutro.* · *Napisz do mnie.* · *Nie hałasuj wieczorem.*
+```cwiczenie
+{ "typ": "wpisz", "tytul": "Szczebel 4 — proszę + bezokolicznik", "instrukcja": "Wpisz bezokolicznik. Pamiętaj: po «proszę» nigdy nie stoi rozkaz.",
+  "zdania": [
+    { "przed": "Zamknij okno. → Proszę ", "odpowiedz": ["zamknąć"], "po": " okno.", "czemu": "po «proszę» idzie bezokolicznik, nie «proszę zamknij»" },
+    { "przed": "Powtórz to. → Proszę to ", "odpowiedz": ["powtórzyć"], "po": ".", "czemu": "powtórz → powtórzyć" },
+    { "przed": "Daj mi długopis. → Proszę mi ", "odpowiedz": ["dać"], "po": " długopis.", "czemu": "daj → dać; to właśnie tu Oleg poległ przy okienku" },
+    { "przed": "Podpisz tutaj. → Proszę ", "odpowiedz": ["podpisać"], "po": " tutaj.", "czemu": "podpisz → podpisać" },
+    { "przed": "Mów wolniej. → Proszę ", "odpowiedz": ["mówić"], "po": " wolniej.", "czemu": "mów → mówić" },
+    { "przed": "Poczekaj chwilę. → Proszę ", "odpowiedz": ["poczekać"], "po": " chwilę.", "czemu": "poczekaj → poczekać" },
+    { "przed": "Pokaż mi ten dokument. → Proszę mi ", "odpowiedz": ["pokazać"], "po": " ten dokument.", "czemu": "pokaż → pokazać" },
+    { "przed": "Nie pal tutaj. → Proszę tutaj nie ", "odpowiedz": ["palić"], "po": ".", "czemu": "zakaz zostaje niedokonany: proszę nie palić" },
+    { "przed": "Otwórz drzwi. → Proszę ", "odpowiedz": ["otworzyć"], "po": " drzwi.", "czemu": "otwórz → otworzyć" },
+    { "przed": "Przyjdź jutro. → Proszę ", "odpowiedz": ["przyjść"], "po": " jutro.", "czemu": "przyjdź → przyjść" },
+    { "przed": "Napisz do mnie. → Proszę do mnie ", "odpowiedz": ["napisać"], "po": ".", "czemu": "napisz → napisać" },
+    { "przed": "Nie hałasuj wieczorem. → Proszę wieczorem nie ", "odpowiedz": ["hałasować"], "po": ".", "czemu": "zakaz zostaje niedokonany: nie hałasować" }
+  ] }
+```
+
+Teraz szczebel piąty — najbezpieczniejszy wybór wobec obcej osoby. Tu poprawnych wersji jest wiele, więc zapisz swoje i porównajcie je na spotkaniu:
+
+```cwiczenie
+{ "typ": "pisanie", "tytul": "Szczebel 5 — czy mógłby pan…", "instrukcja": "Przepisz każdą prośbę tak, żeby dało się ją powiedzieć obcej osobie w urzędzie.",
+  "zdania": [
+    { "przed": "Zamknij okno.", "po": "", "czemu": "czy mógłby pan / czy mogłaby pani + bezokolicznik" },
+    { "przed": "Pokaż mi ten dokument.", "po": "", "czemu": "pytanie zamiast rozkazu — zostaw rozmówcy miejsce na odmowę" },
+    { "przed": "Przyjdź jutro.", "po": "", "czemu": "spróbuj też wariantu z «niech pan / niech pani» i porównaj odcień" },
+    { "przed": "Nie hałasuj wieczorem.", "po": "", "czemu": "prośba do sąsiada — nie schodź poniżej czwartego szczebla" }
+  ] }
+```
 
 ### Runda 3 — u lekarza i za ścianą *(role: A = lekarz / sąsiad, B = pacjent / lokator, C = sędzia)*
 
@@ -344,13 +399,16 @@ Każdy wybiera jedno pytanie i mówi minimum pięć zdań:
 
 ### ✍️ Mini-pisanie *(5 minut, potem czytamy na głos)*
 
-Napiszcie krótki **oficjalny e-mail** — 5–7 zdań. Wybierzcie temat:
+Krótki **oficjalny e-mail** — 5–7 zdań, pisany od razu na stronie. Po kliknięciu **Zapisz w zeszycie** tekst trafia do twojego zeszytu w chmurze.
 
-1. Do dyrektora szkoły językowej: prośba o przesunięcie terminu egzaminu.
-2. Do urzędu: prośba o informację, jakich dokumentów brakuje w waszym wniosku.
-3. Do właściciela mieszkania: zgłoszenie awarii i prośba o naprawę.
-
-**Obowiązkowo:** poprawny wołacz w nagłówku *(Szanowny Panie…, Szanowna Pani…, Szanowni Państwo…)*, przecinek i mała litera w pierwszym słowie, minimum jedna forma *czy mógłby pan / mogłaby pani*, jedno *proszę + bezokolicznik* oraz zakończenie *Z poważaniem*. Zaimki grzecznościowe w środku listu — wielką literą.
+```cwiczenie
+{ "typ": "pisanie", "tytul": "Oficjalny e-mail", "instrukcja": "Wybierz temat: 1) do dyrektora szkoły językowej — prośba o przesunięcie terminu egzaminu; 2) do urzędu — prośba o informację, jakich dokumentów brakuje we wniosku; 3) do właściciela mieszkania — zgłoszenie awarii i prośba o naprawę.",
+  "zdania": [
+    { "przed": "Nagłówek — zwrot do adresata.", "po": "", "czemu": "wołacz obowiązkowy: Szanowny Panie…, Szanowna Pani…, Szanowni Państwo… — na końcu przecinek, nigdy «Szanowny Pan»" },
+    { "przed": "Treść — 4–5 zdań.", "po": "", "czemu": "pierwsze słowo małą literą; minimum jedno «czy mógłby pan / mogłaby pani» i jedno «proszę + bezokolicznik»; zaimki grzecznościowe (Pan, Pani, Państwo) wielką literą" },
+    { "przed": "Zakończenie.", "po": "", "czemu": "Z poważaniem, + imię i nazwisko; wobec przełożonego unikaj «Witam»" }
+  ] }
+```
 
 Po napisaniu wymieńcie się tekstami: każdy szuka u sąsiada jednego błędu w wołaczu i jednego miejsca, które da się powiedzieć uprzejmiej.
 

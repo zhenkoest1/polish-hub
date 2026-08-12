@@ -277,9 +277,36 @@ To zarazem jeden z najpewniejszych sygnałów obcego akcentu w piśmie. Zdanie *
 
 ### 🔥 Rozgrzewka *(5 minut)*
 
-1. Jak po polsku jest: *толпа, участник, учёный, эксперт, независимость, ошибка*?
-2. Podajcie liczbę mnogą na głos, po kolei: *student, Polak, rolnik, lekarz, pan, brat, człowiek, kobieta, dziecko*.
-3. Zgadnijcie bez telefonu: ile osób mieszka w Krakowie? Zapiszcie liczbę **na kartce, nie mówiąc jej głośno**. Potem policzcie średnią z trzech odpowiedzi i sprawdźcie. Kto był bliżej: pojedyncza osoba czy średnia?
+Dwa szybkie ćwiczenia na stronie — każdy wpisuje sam, potem porównujecie wyniki:
+
+```cwiczenie
+{ "typ": "wpisz", "tytul": "Jak to jest po polsku?", "instrukcja": "Wpisz polskie słowo w liczbie pojedynczej, w mianowniku.",
+  "zdania": [
+    { "przed": "толпа → ", "odpowiedz": ["tłum"], "po": "", "czemu": "Tłum pomylił się o niecały procent." },
+    { "przed": "участник → ", "odpowiedz": ["uczestnik"], "po": "", "czemu": "l.mn. uczestnicy" },
+    { "przed": "учёный → ", "odpowiedz": ["naukowiec"], "po": "", "czemu": "l.mn. naukowcy" },
+    { "przed": "эксперт → ", "odpowiedz": ["ekspert"], "po": "", "czemu": "l.mn. eksperci" },
+    { "przed": "независимость → ", "odpowiedz": ["niezależność"], "po": "", "czemu": "Niezależność jest najłatwiejsza do zepsucia." },
+    { "przed": "ошибка → ", "odpowiedz": ["błąd"], "po": "", "czemu": "l.mn. błędy — Ich błędy szły w różne strony." }
+  ] }
+```
+
+```cwiczenie
+{ "typ": "wpisz", "tytul": "Podaj liczbę mnogą", "instrukcja": "Wpisz mianownik liczby mnogiej.",
+  "zdania": [
+    { "przed": "student → ", "odpowiedz": ["studenci"], "po": "", "czemu": "m-os., wymiana t → ci" },
+    { "przed": "Polak → ", "odpowiedz": ["Polacy"], "po": "", "czemu": "m-os., wymiana k → cy (nigdy «Polaki»)" },
+    { "przed": "rolnik → ", "odpowiedz": ["rolnicy"], "po": "", "czemu": "m-os., wymiana k → cy" },
+    { "przed": "lekarz → ", "odpowiedz": ["lekarze"], "po": "", "czemu": "m-os., słowa na -arz biorą -e" },
+    { "przed": "pan → ", "odpowiedz": ["panowie"], "po": "", "czemu": "m-os., -owie: tytuły, pokrewieństwo, szacunek" },
+    { "przed": "brat → ", "odpowiedz": ["bracia"], "po": "", "czemu": "m-os., nieregularne" },
+    { "przed": "człowiek → ", "odpowiedz": ["ludzie"], "po": "", "czemu": "m-os. mimo nietypowej formy: ludzie byli, nigdy «ludzie były»" },
+    { "przed": "kobieta → ", "odpowiedz": ["kobiety"], "po": "", "czemu": "rodzaj żeński → nm-os., bez żadnej wymiany" },
+    { "przed": "dziecko → ", "odpowiedz": ["dzieci"], "po": "", "czemu": "nieregularne, nm-os.: dzieci były" }
+  ] }
+```
+
+Na koniec ustnie — mały eksperyment Galtona. Zgadnijcie bez telefonu: ile osób mieszka w Krakowie? Zapiszcie liczbę **na kartce, nie mówiąc jej głośno**. Potem policzcie średnią z trzech odpowiedzi i sprawdźcie. Kto był bliżej: pojedyncza osoba czy średnia?
 
 ### Pytania do tekstu
 
@@ -294,34 +321,85 @@ Odpowiadajcie po polsku, pełnym zdaniem:
 
 ### Runda 1 — kto przyszedł?
 
-**Osoba A** wymienia grupę z listy. **Osoba B** buduje zdanie w czasie przeszłym z czasownikiem *przyjść*. **Osoba C** dodaje do tej samej grupy przymiotnik *dobry* albo *młody*. Potem zmieniacie się rolami.
+Czternaście grup, jeden czasownik. Przed każdym kliknięciem zadaj sobie pytanie: **czy w tej grupie jest choć jeden mężczyzna?**
 
-> *rolnicy · kobiety · dzieci · eksperci · studentki · ludzie · bracia · uczestniczki · Polacy · grupy · naukowcy · żony rolników · profesorowie · odpowiedzi*
+```cwiczenie
+{ "typ": "wybor", "tytul": "Kto przyszedł?", "instrukcja": "Wybierz właściwą formę czasu przeszłego.",
+  "zdania": [
+    { "przed": "Rolnicy ", "opcje": ["przyszli", "przyszły"], "dobra": 0, "po": " na jarmark.", "czemu": "rolnicy — m-os. → -li" },
+    { "przed": "Kobiety ", "opcje": ["przyszli", "przyszły"], "dobra": 1, "po": " na jarmark.", "czemu": "same kobiety → nm-os." },
+    { "przed": "Dzieci ", "opcje": ["przyszli", "przyszły"], "dobra": 1, "po": " na jarmark.", "czemu": "dzieci to nm-os. — kategoria nazywa się męskoosobowa, nie żywotna" },
+    { "przed": "Eksperci ", "opcje": ["przyszli", "przyszły"], "dobra": 0, "po": " na jarmark.", "czemu": "eksperci — m-os. (t → ci)" },
+    { "przed": "Studentki ", "opcje": ["przyszli", "przyszły"], "dobra": 1, "po": " na jarmark.", "czemu": "same kobiety → nm-os." },
+    { "przed": "Ludzie ", "opcje": ["przyszli", "przyszły"], "dobra": 0, "po": " na jarmark.", "czemu": "ludzie to m-os. mimo nietypowej formy — nigdy «ludzie przyszły»" },
+    { "przed": "Bracia ", "opcje": ["przyszli", "przyszły"], "dobra": 0, "po": " na jarmark.", "czemu": "bracia — m-os." },
+    { "przed": "Uczestniczki ", "opcje": ["przyszli", "przyszły"], "dobra": 1, "po": " na jarmark.", "czemu": "same kobiety → nm-os." },
+    { "przed": "Polacy ", "opcje": ["przyszli", "przyszły"], "dobra": 0, "po": " na jarmark.", "czemu": "Polacy — m-os. (k → cy)" },
+    { "przed": "Grupy ", "opcje": ["przyszli", "przyszły"], "dobra": 1, "po": " na jarmark.", "czemu": "rzecz, nie ludzie → nm-os." },
+    { "przed": "Naukowcy ", "opcje": ["przyszli", "przyszły"], "dobra": 0, "po": " na jarmark.", "czemu": "naukowcy — m-os. (-ec → -cy)" },
+    { "przed": "Żony rolników ", "opcje": ["przyszli", "przyszły"], "dobra": 1, "po": " na jarmark.", "czemu": "podmiot to żony, a nie rolnicy → nm-os." },
+    { "przed": "Profesorowie ", "opcje": ["przyszli", "przyszły"], "dobra": 0, "po": " na jarmark.", "czemu": "profesorowie — m-os. na -owie" },
+    { "przed": "Odpowiedzi ", "opcje": ["przyszli", "przyszły"], "dobra": 1, "po": " na jarmark.", "czemu": "pojęcia zawsze nm-os." }
+  ] }
+```
 
-Wzór: *rolnicy* → **Osoba B:** *Rolnicy przyszli.* → **Osoba C:** *Młodzi rolnicy przyszli.*
-Wzór: *kobiety* → **Osoba B:** *Kobiety przyszły.* → **Osoba C:** *Młode kobiety przyszły.*
+Teraz dołóż do grupy przymiotnik — przy męskoosobowym zmienia się i on:
+
+```cwiczenie
+{ "typ": "wpisz", "tytul": "Dobry czy dobrzy?", "instrukcja": "Wpisz przymiotnik w liczbie mnogiej we właściwym rodzaju.",
+  "zdania": [
+    { "przed": "młody + rolnicy → ", "odpowiedz": ["młodzi"], "po": " rolnicy", "czemu": "m-os.: d → dzi" },
+    { "przed": "młody + kobiety → ", "odpowiedz": ["młode"], "po": " kobiety", "czemu": "nm-os.: końcówka -e, bez wymiany" },
+    { "przed": "dobry + naukowcy → ", "odpowiedz": ["dobrzy"], "po": " naukowcy", "czemu": "m-os.: r → rz" },
+    { "przed": "dobry + odpowiedzi → ", "odpowiedz": ["dobre"], "po": " odpowiedzi", "czemu": "nm-os.: końcówka -e" },
+    { "przed": "dobry + eksperci → ", "odpowiedz": ["dobrzy"], "po": " eksperci", "czemu": "m-os.: r → rz" },
+    { "przed": "młody + studentki → ", "odpowiedz": ["młode"], "po": " studentki", "czemu": "nm-os.: końcówka -e" },
+    { "przed": "dobry + ludzie → ", "odpowiedz": ["dobrzy"], "po": " ludzie", "czemu": "ludzie to m-os. → dobrzy ludzie" },
+    { "przed": "dobry + dzieci → ", "odpowiedz": ["dobre"], "po": " dzieci", "czemu": "dzieci to nm-os. → dobre dzieci" }
+  ] }
+```
 
 ### Runda 2 — dołóż jednego mężczyznę
 
-**Osoba A** czyta zdanie niemęskoosobowe. **Osoba B** powtarza je, dodając do grupy jednego mężczyznę — i poprawia **wszystko**, co trzeba: zaimek, przymiotnik i czasownik. **Osoba C** sprawdza i mówi, ile form się zmieniło.
+Każde zdanie jest niemęskoosobowe. Dołóż do grupy jednego mężczyznę i popraw **wszystko**, co trzeba naraz: określnik, przymiotnik, rzeczownik i czasownik. Po sprawdzeniu policz na głos, ile form się zmieniło.
 
-**Osoba A czyta:**
-1. *Te dobre studentki czytały tekst.*
-2. *Wszystkie uczestniczki zgadywały wagę.*
-3. *Nasze młode koleżanki były na naradzie.*
-4. *Te Polki głosowały osobno.*
-5. *One się myliły.*
-6. *Które kobiety wskazały złą linię?*
-
-*(oczekiwane: ci dobrzy studenci czytali · wszyscy uczestnicy zgadywali · nasi młodzi koledzy byli · ci Polacy głosowali · oni się mylili · którzy mężczyźni wskazali)*
+```cwiczenie
+{ "typ": "wpisz", "tytul": "Dołóż jednego mężczyznę", "instrukcja": "Wpisz przerobiony początek zdania. Reszta zdania zostaje bez zmian.",
+  "zdania": [
+    { "przed": "Te dobre studentki czytały tekst. → ", "odpowiedz": ["Ci dobrzy studenci czytali"], "po": " tekst.", "czemu": "zmieniają się cztery formy: te → ci, dobre → dobrzy, studentki → studenci, czytały → czytali" },
+    { "przed": "Wszystkie uczestniczki zgadywały wagę. → ", "odpowiedz": ["Wszyscy uczestnicy zgadywali"], "po": " wagę.", "czemu": "wszystkie → wszyscy; uczestniczki → uczestnicy (k → cy); zgadywały → zgadywali" },
+    { "przed": "Nasze młode koleżanki były na naradzie. → ", "odpowiedz": ["Nasi młodzi koledzy byli"], "po": " na naradzie.", "czemu": "nasze → nasi; młode → młodzi; koleżanki → koledzy (g → dzy); były → byli" },
+    { "przed": "Te Polki głosowały osobno. → ", "odpowiedz": ["Ci Polacy głosowali"], "po": " osobno.", "czemu": "Polki → Polacy (k → cy) — wymiana działa tylko w męskoosobowym" },
+    { "przed": "One się myliły. → ", "odpowiedz": ["Oni się mylili"], "po": ".", "czemu": "one → oni; myliły się → mylili się" },
+    { "przed": "Które kobiety wskazały złą linię? → ", "odpowiedz": ["Którzy mężczyźni wskazali"], "po": " złą linię?", "czemu": "które → którzy; kobiety → mężczyźni; wskazały → wskazali" }
+  ] }
+```
 
 ### Runda 3 — łańcuch wymian *(szybko, bez zastanawiania)*
 
-Idziecie w kółko: A mówi słowo w liczbie pojedynczej, B daje liczbę mnogą męskoosobową i nazywa wymianę, C układa z tym zdanie w czasie przeszłym.
+Wpisz liczbę mnogą męskoosobową. Po sprawdzeniu przejdźcie na głos przez całą listę jeszcze raz: każdy nazywa wymianę i układa z jednym słowem zdanie w czasie przeszłym.
 
-> *ekspert · Polak · Szwed · aktor · biolog · chłopiec · Włoch · turysta · brat · pan · naukowiec · uczestnik · człowiek · ksiądz*
+> Wzór ustny: *ekspert* → *eksperci, t → ci* → *Eksperci pomylili się bardziej niż tłum.*
 
-Wzór: *ekspert* → **B:** *eksperci, t → ci* → **C:** *Eksperci pomylili się bardziej niż tłum.*
+```cwiczenie
+{ "typ": "wpisz", "tytul": "Łańcuch wymian", "instrukcja": "Wpisz liczbę mnogą męskoosobową.",
+  "zdania": [
+    { "przed": "ekspert → ", "odpowiedz": ["eksperci"], "po": "", "czemu": "t → ci" },
+    { "przed": "Polak → ", "odpowiedz": ["Polacy"], "po": "", "czemu": "k → cy" },
+    { "przed": "Szwed → ", "odpowiedz": ["Szwedzi"], "po": "", "czemu": "d → dzi" },
+    { "przed": "aktor → ", "odpowiedz": ["aktorzy"], "po": "", "czemu": "r → rzy" },
+    { "przed": "biolog → ", "odpowiedz": ["biolodzy", "biologowie"], "po": "", "czemu": "g → dzy; oboczna forma «biologowie» też jest poprawna" },
+    { "przed": "chłopiec → ", "odpowiedz": ["chłopcy"], "po": "", "czemu": "-ec → -cy, e wypada" },
+    { "przed": "Włoch → ", "odpowiedz": ["Włosi"], "po": "", "czemu": "ch → si" },
+    { "przed": "turysta → ", "odpowiedz": ["turyści"], "po": "", "czemu": "st → ści" },
+    { "przed": "brat → ", "odpowiedz": ["bracia"], "po": "", "czemu": "nieregularne" },
+    { "przed": "pan → ", "odpowiedz": ["panowie"], "po": "", "czemu": "-owie: tytuły i szacunek" },
+    { "przed": "naukowiec → ", "odpowiedz": ["naukowcy"], "po": "", "czemu": "-ec → -cy, e wypada" },
+    { "przed": "uczestnik → ", "odpowiedz": ["uczestnicy"], "po": "", "czemu": "k → cy" },
+    { "przed": "człowiek → ", "odpowiedz": ["ludzie"], "po": "", "czemu": "nieregularne, ale m-os.: ludzie byli" },
+    { "przed": "ksiądz → ", "odpowiedz": ["księża"], "po": "", "czemu": "nieregularne, m-os." }
+  ] }
+```
 
 ### 💬 Dyskusja *(po 3 minuty na osobę)*
 
@@ -337,12 +415,17 @@ Każdy wybiera jedno pytanie i mówi minimum 6 zdań — **z minimum czterema fo
 
 ### ✍️ Mini-pisanie *(5 minut, potem czytamy na głos)*
 
-Opiszcie sytuację, w której poszliście za grupą wbrew własnemu zdaniu. **Minimum 6 form w liczbie mnogiej — przynajmniej trzy męskoosobowe i przynajmniej dwie niemęskoosobowe.**
+Opisz sytuację, w której poszedłeś / poszłaś za grupą wbrew własnemu zdaniu. Pisz od razu na stronie — po kliknięciu **Zapisz w zeszycie** tekst trafia do twojego zeszytu w chmurze.
 
-1. Kto tam był? *(rzeczownik + przymiotnik w l.mn.)*
-2. Co zrobili / zrobiły? *(czas przeszły!)*
-3. Co wy sami myśleliście naprawdę?
-4. Który z czterech warunków Surowieckiego został wtedy złamany?
+```cwiczenie
+{ "typ": "pisanie", "tytul": "Kiedy poszedłem za grupą", "instrukcja": "Cztery odpowiedzi. Razem minimum sześć form w liczbie mnogiej — przynajmniej trzy męskoosobowe i przynajmniej dwie niemęskoosobowe. Na spotkaniu czytacie na głos.",
+  "zdania": [
+    { "przed": "Kto tam był?", "po": "", "czemu": "rzeczownik + przymiotnik w l.mn. — uważaj na zgodę: ci dobrzy koledzy / te dobre koleżanki" },
+    { "przed": "Co zrobili / zrobiły?", "po": "", "czemu": "czas przeszły: -li czy -ły? sprawdź, czy w grupie jest choć jeden mężczyzna" },
+    { "przed": "Co ty sam / sama myślałeś / myślałaś naprawdę?", "po": "", "czemu": "liczba pojedyncza — tu rodzaj zależy tylko od ciebie" },
+    { "przed": "Który z czterech warunków Surowieckiego został wtedy złamany?", "po": "", "czemu": "niezależność, różnorodność, decentralizacja czy sposób liczenia?" }
+  ] }
+```
 
 ---
 

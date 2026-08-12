@@ -250,9 +250,28 @@ Kilka czasowników **nie ma pary dokonanej**, więc mają wyłącznie przyszły 
 
 ### 🔥 Rozgrzewka *(5 minut)*
 
-1. Jak po polsku jest: *воспоминание, прошлое, будущее, пустота, воображение*?
-2. Co robiłeś / robiłaś wczoraj o dziewiętnastej? Jedno pełne zdanie w czasie przeszłym.
-3. Co będziesz robił / robiła jutro o dziewiętnastej? To samo zdanie, tylko w czasie przyszłym.
+Najpierw słówka — każdy wpisuje sam na stronie, potem porównujecie wyniki:
+
+```cwiczenie
+{ "typ": "wpisz", "tytul": "Jak to jest po polsku?", "instrukcja": "Wpisz polskie słowo w mianowniku.",
+  "zdania": [
+    { "przed": "воспоминание → ", "odpowiedz": ["wspomnienie"], "po": "", "czemu": "Bierze twarz z jednego wspomnienia." },
+    { "przed": "прошлое → ", "odpowiedz": ["przeszłość"], "po": "", "czemu": "Pamięć potrafi cofnąć nas w przeszłość." },
+    { "przed": "будущее → ", "odpowiedz": ["przyszłość"], "po": "", "czemu": "Czy ten sam mechanizm zabierze nas w przyszłość?" },
+    { "przed": "пустота → ", "odpowiedz": ["pustka"], "po": "", "czemu": "W głowie ma pustkę." },
+    { "przed": "воображение → ", "odpowiedz": ["wyobraźnia"], "po": "", "czemu": "Lepiej niż twoja własna wyobraźnia." }
+  ] }
+```
+
+Teraz to samo zdanie w dwie strony — o sobie. Zapisz je w zeszycie, na spotkaniu przeczytacie na głos:
+
+```cwiczenie
+{ "typ": "pisanie", "tytul": "Dwa razy dziewiętnasta", "instrukcja": "Po jednym pełnym zdaniu. To ma być dokładnie to samo zdanie, tylko w innym czasie.",
+  "zdania": [
+    { "przed": "Co robiłeś / robiłaś wczoraj o dziewiętnastej?", "po": "", "czemu": "czas przeszły, jedno pełne zdanie" },
+    { "przed": "Co będziesz robił / robiła jutro o dziewiętnastej?", "po": "", "czemu": "czas przyszły złożony: będę + bezokolicznik albo będę + forma na -ł" }
+  ] }
+```
 
 ### Pytania do tekstu
 
@@ -268,36 +287,57 @@ Odpowiadajcie po polsku, pełnym zdaniem:
 
 ### Runda 1 — z wczoraj w jutro i z powrotem
 
-Każdy dostaje zdanie i mówi je na głos w drugim czasie. Strzałka pokazuje kierunek.
+Każdy przerabia wszystkie zdania na stronie, a po sprawdzeniu **mówi na głos** jedno słowo o każdej swojej odpowiedzi: **prosty** czy **złożony** — i dlaczego.
 
-**Osoba A:**
-1. *Wczoraj przeczytałem cały artykuł.* → *Jutro…*
-2. *W sobotę będę odpoczywał.* → *W zeszłą sobotę…*
-3. *Rano nie mogłem sobie przypomnieć jej imienia.* → *Jutro rano…*
-
-**Osoba B:**
-1. *Wczoraj poszedłem do lekarza.* → *Jutro…*
-2. *W przyszłym tygodniu będziemy szukali mieszkania.* → *W zeszłym tygodniu…*
-3. *Wziąłem urlop w lipcu.* → *W przyszłym roku…*
-
-**Osoba C:**
-1. *Wczoraj zjedliśmy obiad w mieście.* → *Jutro…*
-2. *Za miesiąc będę uczył się do egzaminu.* → *Miesiąc temu…*
-3. *Nie miałem czasu na sport.* → *Za rok…*
-
-> 💡 Po każdej odpowiedzi grupa mówi jedno słowo: **prosty** czy **złożony**? I dlaczego.
+```cwiczenie
+{ "typ": "wpisz", "tytul": "Z wczoraj w jutro i z powrotem", "instrukcja": "Wpisz brakującą formę czasownika. Strzałka pokazuje kierunek; zachowaj rodzaj i liczbę z pierwszego zdania.",
+  "zdania": [
+    { "przed": "Wczoraj przeczytałem cały artykuł. → Jutro ", "odpowiedz": ["przeczytam"], "po": " cały artykuł.", "czemu": "przeczytać jest dk → czas przyszły prosty, bez «będę»" },
+    { "przed": "W sobotę będę odpoczywał. → W zeszłą sobotę ", "odpowiedz": ["odpoczywałem", "odpoczywałam"], "po": ".", "czemu": "przyszły złożony → czas przeszły ndk: odpoczywałem" },
+    { "przed": "Rano nie mogłem sobie przypomnieć jej imienia. → Jutro rano nie ", "odpowiedz": ["będę mógł", "będę mogła"], "po": " sobie przypomnieć jej imienia.", "czemu": "móc nie ma pary dokonanej → tylko przyszły złożony: będę mógł" },
+    { "przed": "Wczoraj poszedłem do lekarza. → Jutro ", "odpowiedz": ["pójdę"], "po": " do lekarza.", "czemu": "pójść jest dk → czas przyszły prosty: pójdę" },
+    { "przed": "W przyszłym tygodniu będziemy szukali mieszkania. → W zeszłym tygodniu ", "odpowiedz": ["szukaliśmy"], "po": " mieszkania.", "czemu": "będziemy szukali to forma męskoosobowa → szukaliśmy, nie «szukałyśmy»" },
+    { "przed": "Wziąłem urlop w lipcu. → W przyszłym roku ", "odpowiedz": ["wezmę"], "po": " urlop w lipcu.", "czemu": "wziąć jest dk → czas przyszły prosty: wezmę" },
+    { "przed": "Wczoraj zjedliśmy obiad w mieście. → Jutro ", "odpowiedz": ["zjemy"], "po": " obiad w mieście.", "czemu": "zjeść jest dk → czas przyszły prosty: zjemy" },
+    { "przed": "Za miesiąc będę uczył się do egzaminu. → Miesiąc temu ", "odpowiedz": ["uczyłem się", "uczyłam się"], "po": " do egzaminu.", "czemu": "przyszły złożony → czas przeszły ndk: uczyłem się" },
+    { "przed": "Nie miałem czasu na sport. → Za rok nie ", "odpowiedz": ["będę miał", "będę miała"], "po": " czasu na sport.", "czemu": "mieć nie ma pary dokonanej → tylko przyszły złożony: będę miał" }
+  ] }
+```
 
 ### Runda 2 — czy w grupie jest mężczyzna?
 
-Każdy dostaje podmiot i czasownik. Buduje zdanie **dwa razy**: najpierw w czasie przeszłym, potem w przyszłym złożonym z formą na *-ł*.
+Ten sam podmiot przechodzi przez dwa czasy. Najpierw przeszły — jedno pytanie kontrolne przed każdym kliknięciem: **a jest tam mężczyzna?**
 
-*Wzór:* **naukowcy + badać** → *Naukowcy badali pamięć.* → *Naukowcy będą badali pamięć.*
+```cwiczenie
+{ "typ": "wybor", "tytul": "-li czy -ły?", "instrukcja": "Wybierz właściwą formę czasu przeszłego. Po sprawdzeniu powiedz na głos, dlaczego.",
+  "zdania": [
+    { "przed": "Naukowcy ", "opcje": ["pracowali", "pracowały"], "dobra": 0, "po": " nad nowym badaniem.", "czemu": "naukowcy — w grupie są mężczyźni → m-os." },
+    { "przed": "Badaczki ", "opcje": ["pracowali", "pracowały"], "dobra": 1, "po": " nad nowym badaniem.", "czemu": "same kobiety → nm-os." },
+    { "przed": "Dzieci ", "opcje": ["bawili się", "bawiły się"], "dobra": 1, "po": " w parku.", "czemu": "dzieci są żywe, ale kategoria nazywa się męskoosobowa, nie żywotna → nm-os." },
+    { "przed": "Schacter i Addis ", "opcje": ["publikowali", "publikowały"], "dobra": 0, "po": " wyniki.", "czemu": "Addis to kobieta, ale Schacter jest mężczyzną — wystarczy jeden" },
+    { "przed": "Ania i Kasia ", "opcje": ["czekali", "czekały"], "dobra": 1, "po": " na wyniki.", "czemu": "same kobiety → nm-os.; dołóż Tomka i będzie «czekali»" },
+    { "przed": "Wspomnienia ", "opcje": ["zmieniali się", "zmieniały się"], "dobra": 1, "po": " z czasem.", "czemu": "rzeczy i pojęcia zawsze nm-os." },
+    { "przed": "Studenci ", "opcje": ["czytali", "czytały"], "dobra": 0, "po": " tekst.", "czemu": "studenci → m-os." },
+    { "przed": "Studentki ", "opcje": ["czytali", "czytały"], "dobra": 1, "po": " tekst.", "czemu": "studentki → nm-os." },
+    { "przed": "Psy ", "opcje": ["spali", "spały"], "dobra": 1, "po": " pod stołem.", "czemu": "zwierzęta → nm-os." }
+  ] }
+```
 
-**Osoba A:** *naukowcy + pracować* · *badaczki + pracować* · *dzieci + bawić się*
-**Osoba B:** *Schacter i Addis + publikować* · *Ania i Kasia + czekać* · *wspomnienia + zmieniać się*
-**Osoba C:** *studenci + czytać* · *studentki + czytać* · *psy + spać*
+Teraz to samo w przyszłości złożonej — wariantem z formą na *-ł*. Osoba siedzi w *będą*, więc cała opozycja *-li / -ły* wraca:
 
-> ⚠️ Kontrolne pytanie po każdym zdaniu: *-li* czy *-ły*? Jeśli ktoś się pomyli, grupa nie poprawia od razu — najpierw pyta: „a jest tam mężczyzna?”.
+```cwiczenie
+{ "typ": "wpisz", "tytul": "Będą… — forma na -ł", "instrukcja": "Wpisz samą formę na -ł (wariant B), bez «będą». Wzór: naukowcy + badać → «Naukowcy będą badali».",
+  "zdania": [
+    { "przed": "Naukowcy będą ", "odpowiedz": ["pracowali"], "po": " nad nowym badaniem.", "czemu": "m-os. → -li" },
+    { "przed": "Badaczki będą ", "odpowiedz": ["pracowały"], "po": " nad nowym badaniem.", "czemu": "nm-os. → -ły" },
+    { "przed": "Schacter i Addis będą ", "odpowiedz": ["publikowali"], "po": " wyniki.", "czemu": "jeden mężczyzna wystarczy → m-os." },
+    { "przed": "Ania i Kasia będą ", "odpowiedz": ["czekały"], "po": " na wyniki.", "czemu": "same kobiety → nm-os." },
+    { "przed": "Studenci będą ", "odpowiedz": ["czytali"], "po": " tekst.", "czemu": "m-os. → -li" },
+    { "przed": "Psy będą ", "odpowiedz": ["spały"], "po": " pod stołem.", "czemu": "zwierzęta → nm-os." }
+  ] }
+```
+
+> ⚠️ Na spotkaniu wracacie do tego ustnie: jeśli ktoś się pomyli, grupa nie poprawia od razu — najpierw pyta: „a jest tam mężczyzna?”.
 
 ### Runda 3 — opowiedz swój czas *(po 2 minuty na osobę)*
 
@@ -323,11 +363,16 @@ Każdy wybiera jedno pytanie i mówi minimum pięć zdań — **z formami z obu 
 
 ### ✍️ Mini-pisanie *(5 minut, potem czytamy na głos)*
 
-Napiszcie dwa krótkie akapity o dwóch dniach.
+Dwa krótkie akapity o dwóch dniach. Pisz od razu na stronie — po kliknięciu **Zapisz w zeszycie** tekst trafia do twojego zeszytu w chmurze.
 
-1. **Dzień, który pamiętacie najlepiej** — cały akapit w czasie przeszłym, minimum sześć czasowników.
-2. **Dzień, którego się spodziewacie** *(za rok, za dziesięć lat — jak chcecie)* — cały akapit w czasie przyszłym, minimum sześć czasowników, w tym trzy złożone.
-3. Na koniec jedno zdanie: *Czy naprawdę będę się wtedy czuł / czuła tak, jak to sobie dziś wyobrażam?*
+```cwiczenie
+{ "typ": "pisanie", "tytul": "Dwa dni", "instrukcja": "Dwa akapity i jedno zdanie na koniec. Na spotkaniu czytacie na głos.",
+  "zdania": [
+    { "przed": "Dzień, który pamiętasz najlepiej.", "po": "", "czemu": "cały akapit w czasie przeszłym, minimum sześć czasowników" },
+    { "przed": "Dzień, którego się spodziewasz (za rok, za dziesięć lat — jak chcesz).", "po": "", "czemu": "cały akapit w czasie przyszłym, minimum sześć czasowników, w tym trzy złożone (będę…)" },
+    { "przed": "Na koniec jedno zdanie: czy naprawdę będę się wtedy czuł / czuła tak, jak to sobie dziś wyobrażam?", "po": "", "czemu": "jedno zdanie — odpowiedz sobie uczciwie" }
+  ] }
+```
 
 ---
 
