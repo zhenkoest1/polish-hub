@@ -1,0 +1,535 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { parsujCwiczenie } from '../scripts/cwiczenia-logika.js';
+
+const b = import.meta.env.BASE_URL.replace(/\/$/, '');
+const href = (p: string) => `${b}/${p.replace(/^\//, '')}`;
+
+// Ten sam wzorzec co w testach tresci — bloki ```cwiczenie w markdownie lekcji.
+const RE_CWICZENIE = /```cwiczenie\r?\n([\s\S]*?)```/g;
+
+// Quiz w lekcji to id pliku JSON, ktory moze jeszcze nie istniec (lekcja
+// napisana, quiz w drodze). Bierzemy tylko te, ktore naprawde sa na dysku.
+const quizyPliki = import.meta.glob<{ default: any }>('../data/quizzes/*.json', { eager: true });
+const quizy: Record<string, any> = Object.fromEntries(
+  Object.entries(quizyPliki).map(([sciezka, mod]) => [
+    sciezka.split('/').pop()!.replace('.json', ''),
+    mod.default,
+  ])
+);
+
+const wpisy = (await getCollection('lekcje')).sort((a, c) => a.data.numer - c.data.numer);
+
+// lekcje  — chudy opis kursu dla plan-sesji.js (bez tresci, sama metryka)
+// cwiczenia — pelne dane blokow, zeby silnik cwiczen mial co zbudowac na kliencie
+const lekcje: any[] = [];
+const cwiczenia: Record<string, any[]> = {};
+
+for (const w of wpisy) {
+  const bloki: any[] = [];
+  for (const m of (w.body ?? '').matchAll(RE_CWICZENIE)) {
+    const wynik = parsujCwiczenie(m[1]);
+    // Zepsuty blok pomijamy tak samo jak silnik na lekcji: sesja ma sie zlozyc,
+    // a o bledzie i tak krzyczy `npm test` (tresc.test.mjs).
+    if (wynik.ok) bloki.push(wynik.dane);
+    else console.warn(`[sesja] Lekcja "${w.id}": pomijam zepsute cwiczenie — ${wynik.blad}`);
+  }
+  cwiczenia[w.id] = bloki;
+
+  lekcje.push({
+    id: w.id,
+    numer: w.data.numer,
+    tytul: w.data.tytul,
+    emoji: w.data.emoji,
+    // gramatyka to wszystko poza pisaniem — lekcja z samym wypracowaniem
+    // nie nadaje sie na blok cwiczen
+    maCwiczenia: bloki.some((d) => d.typ !== 'pisanie'),
+    maPisanie: bloki.some((d) => d.typ === 'pisanie'),
+    quiz: w.data.quiz && quizy[w.data.quiz] ? w.data.quiz : null,
+  });
+}
+
+
+// Wszystkie talie w jednym worku: kolejke Leitnera i tak liczymy na kliencie,
+// bo termin powtorki siedzi w localStorage.
+const taliePliki = import.meta.glob<{ slowa: any[] }>('../data/slowka/*.json', { eager: true });
+// Fiszki w sesji pokazuja tylko te piec pol — reszta (czesc mowy, rodzaj,
+// aspekt, para) jest na /slowka/ i nie musi jechac w HTML tej strony.
+const slowa = Object.values(taliePliki)
+  .flatMap((t) => t.slowa ?? [])
+  .map((w: any) => ({ id: w.id, pl: w.pl, ru: w.ru, przyklad: w.przyklad, przyklad_ru: w.przyklad_ru }));
+
+const json = (x: unknown) => JSON.stringify(x).replace(/</g, '\\u003c');
+---
+<Base
+  title="Sesja — Polski Klub"
+  description="Jedno zajęcie na 40 minut: powtórka słówek, gramatyka, quiz i pisanie — złożone z tego, co już jest w kursie."
+  active="sesja"
+>
+  <article class="ses">
+    <header class="ses-head">
+      <p class="kicker" style="color: var(--amber)">jeden na jeden · bez nauczyciela</p>
+      <h1 class="ses-h1">Sesja</h1>
+      <p class="ses-lead">
+        Czterdzieści minut ułożone za Ciebie: powtórka słówek, gramatyka z kolejnej lekcji,
+        quiz i kawałek pisania. Nic nie trzeba wybierać — siadasz i robisz.
+      </p>
+    </header>
+
+    <!-- ── 1. start ── -->
+    <section class="ses-start" id="s-start" hidden>
+      <p class="ses-minuty" id="s-minuty"></p>
+      <ol class="ses-plan" id="s-plan"></ol>
+      <p class="ses-anon" id="s-anon" hidden>
+        Nikt nie jest zalogowany — postęp z quizu i pisania nie zapisze się w chmurze.
+        <a href={href('profil/')}>Zaloguj się</a> albo po prostu zaczynaj.
+      </p>
+      <button class="btn btn-big" id="s-zacznij" type="button">Zaczynamy</button>
+    </section>
+
+    <!-- pusty kurs / brak ćwiczeń — sesji nie ma z czego złożyć -->
+    <section class="ses-pusto" id="s-pusto" hidden>
+      <h2>Nie ma z czego złożyć sesji</h2>
+      <p>
+        Żadna lekcja nie ma jeszcze ćwiczeń. Zajrzyj do
+        <a href={href('lekcje/')}>lekcji</a> albo do <a href={href('slowka/')}>słówek</a>.
+      </p>
+    </section>
+
+    <!-- ── 2. bieg ── -->
+    <section class="ses-bieg" id="s-bieg" hidden>
+      <div class="ses-nag">
+        <div>
+          <h2 class="ses-blok-tytul" id="s-blok-tytul"></h2>
+          <p class="ses-krok" id="s-krok"></p>
+        </div>
+        <p class="ses-timer" id="s-timer"></p>
+      </div>
+      <div class="ses-pasek"><span class="ses-pasek-fill" id="s-pasek"></span></div>
+
+      <div class="ses-scena" id="s-scena"></div>
+
+      <div class="ses-stopka">
+        <button class="btn" id="s-dalej" type="button">Dalej →</button>
+        <span class="ses-stopka-info">Timer nic nie przerywa — to tylko podpowiedź tempa.</span>
+      </div>
+    </section>
+
+    <!-- ── 3. koniec ── -->
+    <section class="ses-koniec" id="s-koniec" hidden>
+      <h2 class="ses-koniec-h2">Sesja skończona 💪</h2>
+      <p class="ses-koniec-wynik" id="s-podsumowanie"></p>
+      <p class="ses-koniec-zapis" id="s-zapisane" hidden></p>
+      <div class="ses-koniec-btny">
+        <button class="btn" id="s-jeszcze" type="button">Jeszcze jedna sesja</button>
+        <a class="ses-wroc" href={href('lekcje/')}>Wróć do lekcji</a>
+      </div>
+    </section>
+
+    <script type="application/json" id="s-dane-lekcje" set:html={json(lekcje)} />
+    <script type="application/json" id="s-dane-cwiczenia" set:html={json(cwiczenia)} />
+    <script type="application/json" id="s-dane-slowa" set:html={json(slowa)} />
+  </article>
+</Base>
+
+<script>
+  import { zbudujSesje } from '../scripts/plan-sesji.js';
+  import { wczytajStan, oceń, zbudujKolejke, stanSlowa, MAX_PUDELKO } from '../scripts/flashcards.js';
+  import { zbudujZDanych } from '../scripts/cwiczenia.js';
+  import { uruchomQuiz } from '../scripts/quiz-engine.js';
+  import { confetti } from '../scripts/confetti.js';
+
+  const $ = (id) => document.getElementById(id);
+  const wczytaj = (id) => JSON.parse($(id).textContent);
+
+  const LEKCJE = wczytaj('s-dane-lekcje');
+  const CWICZENIA = wczytaj('s-dane-cwiczenia');
+  // Quizy ladujemy leniwie: wszystkie naraz to 113 KB w HTML, a sesja
+  // bierze dokladnie jeden. Vite rozbija te importy na osobne pliki.
+  const QUIZY_LAZY = import.meta.glob('../data/quizzes/*.json');
+  const wczytajQuiz = async (id) => {
+    const laduj = QUIZY_LAZY[`../data/quizzes/${id}.json`];
+    return laduj ? (await laduj()).default : null;
+  };
+  const SLOWA = wczytaj('s-dane-slowa');
+
+  // Rotacja lekcji miedzy sesjami. Zapis do chmury to osobny krok — na razie
+  // wystarczy urzadzenie, bo stan Leitnera i tak siedzi obok w localStorage.
+  const KLUCZ_OSTATNIA = 'pk_ostatnia_lekcja';
+  const KLUCZ_KTO = 'pk_kto_v1'; // podpowiedz z nawigacji — bez ladowania Firebase
+
+  const esc = (s) => {
+    const d = document.createElement('div');
+    d.textContent = s ?? '';
+    return d.innerHTML;
+  };
+
+  const bezpiecznie = (fn, gdy = null) => { try { return fn(); } catch { return gdy; } };
+
+  const kto = bezpiecznie(() => JSON.parse(localStorage.getItem(KLUCZ_KTO)));
+  const stan = wczytajStan();
+
+  // Kolejke buduje silnik Leitnera (najbardziej zalegle na poczatku);
+  // plan-sesji tnie ja do 20 kart.
+  const plan = zbudujSesje({
+    slowaDoPowtorki: zbudujKolejke(SLOWA, stan, 40),
+    lekcje: LEKCJE,
+    ostatniaLekcja: bezpiecznie(() => localStorage.getItem(KLUCZ_OSTATNIA)),
+  });
+
+  const IKONY = { slowka: '🃏', gramatyka: '📐', quiz: '🎯', pisanie: '✍️' };
+
+  let krok = 0;
+  let policzoneSlowa = 0;
+  let wynikQuizu = null;
+  let tik = null;
+  let sprzataj = null; // odpiecie sluchaczy poprzedniego bloku
+
+  /* ── 1. ekran startowy ── */
+
+  if (plan.bloki.length === 0) {
+    $('s-pusto').hidden = false;
+  } else {
+    $('s-start').hidden = false;
+    $('s-minuty').textContent = `Dzisiejsza sesja ≈ ${plan.minutyRazem} min`;
+    $('s-plan').innerHTML = plan.bloki
+      .map(
+        (blok) => `<li class="ses-plan-item">
+          <span class="ses-plan-ikona">${IKONY[blok.rodzaj] ?? '•'}</span>
+          <span class="ses-plan-tytul">${esc(blok.tytul)}</span>
+          <span class="ses-plan-min">${blok.minuty} min</span>
+        </li>`
+      )
+      .join('');
+    if (!kto) $('s-anon').hidden = false;
+    $('s-zacznij').addEventListener('click', start);
+  }
+
+  function start() {
+    krok = 0;
+    policzoneSlowa = 0;
+    wynikQuizu = null;
+    $('s-start').hidden = true;
+    $('s-koniec').hidden = true;
+    $('s-bieg').hidden = false;
+    pokazBlok();
+  }
+
+  /* ── 2. bieg ── */
+
+  function pokazBlok() {
+    if (sprzataj) { sprzataj(); sprzataj = null; }
+
+    const blok = plan.bloki[krok];
+    const scena = $('s-scena');
+    scena.innerHTML = '';
+    delete scena.dataset.lekcja;
+
+    $('s-blok-tytul').textContent = `${IKONY[blok.rodzaj] ?? ''} ${blok.tytul}`.trim();
+    $('s-krok').textContent = `blok ${krok + 1} / ${plan.bloki.length}`;
+    $('s-pasek').style.width = `${(krok / plan.bloki.length) * 100}%`;
+    $('s-dalej').textContent = krok === plan.bloki.length - 1 ? 'Kończymy 💪' : 'Dalej →';
+
+    if (blok.rodzaj === 'slowka') blokSlowka(scena, blok.dane.slowa);
+    else if (blok.rodzaj === 'gramatyka') blokCwiczen(scena, blok.dane.lekcja.id, (d) => d.typ !== 'pisanie');
+    else if (blok.rodzaj === 'pisanie') blokCwiczen(scena, blok.dane.lekcja.id, (d) => d.typ === 'pisanie');
+    else if (blok.rodzaj === 'quiz') blokQuizu(scena, blok.dane);
+
+    startTimer(blok.minuty);
+  }
+
+  $('s-dalej').addEventListener('click', () => {
+    krok += 1;
+    if (krok >= plan.bloki.length) koniec();
+    else { pokazBlok(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+  });
+
+  /* — timer: miekki, nigdy nie przerywa — */
+  function startTimer(minuty) {
+    stopTimer();
+    const cel = minuty * 60;
+    const od = Date.now();
+    const el = $('s-timer');
+    const rysuj = () => {
+      const sek = Math.floor((Date.now() - od) / 1000);
+      const po = sek >= cel;
+      el.classList.toggle('po-czasie', po);
+      el.textContent = po
+        ? `${mmss(sek)} / ${minuty} min · czas minął — kończ w swoim tempie`
+        : `${mmss(sek)} / ${minuty} min`;
+    };
+    rysuj();
+    tik = setInterval(rysuj, 1000);
+  }
+
+  function stopTimer() {
+    if (tik) clearInterval(tik);
+    tik = null;
+  }
+
+  const mmss = (sek) => `${Math.floor(sek / 60)}:${String(sek % 60).padStart(2, '0')}`;
+
+  /* — blok: ćwiczenia z lekcji (gramatyka i pisanie idą tą samą drogą) — */
+  function blokCwiczen(scena, idLekcji, pasuje) {
+    // Silnik pisania szuka id lekcji w [data-lekcja], zeby praca trafila do
+    // zeszytu pod wlasciwa lekcje — tu jest to jedyny taki element na stronie.
+    scena.dataset.lekcja = idLekcji;
+    const bloki = (CWICZENIA[idLekcji] ?? []).filter(pasuje);
+    if (bloki.length === 0) {
+      scena.innerHTML = '<p class="ses-brak">Tu nic nie ma do zrobienia — klikaj dalej.</p>';
+      return;
+    }
+    bloki.forEach((dane) => zbudujZDanych(dane, scena));
+  }
+
+  /* — blok: quiz — */
+  async function blokQuizu(scena, dane) {
+    scena.innerHTML = '<p class="ses-brak">⏳ wczytuję quiz…</p>';
+    const quiz = await wczytajQuiz(dane.quiz);
+    scena.innerHTML = '';
+    if (!quiz) {
+      scena.innerHTML = '<p class="ses-brak">Quiz do tej lekcji zniknął — klikaj dalej.</p>';
+      return;
+    }
+    const root = document.createElement('div');
+    root.className = 'ses-quiz';
+    scena.appendChild(root);
+    // `id` w danych = silnik quizu sam zapisze wynik w chmurze, dokladnie tak
+    // samo jak na /quizy/. Sesji jako calosci jeszcze nie zapisujemy.
+    uruchomQuiz({ id: dane.quiz, ...quiz }, root, {
+      przyWyniku: (w) => { wynikQuizu = w; },
+    });
+  }
+
+  /* — blok: fiszki (ten sam silnik Leitnera co na /slowka/) — */
+  function blokSlowka(scena, slowa) {
+    let i = 0;
+
+    scena.innerHTML = `
+      <div class="ses-fiszka">
+        <div class="ses-f-gora">
+          <span class="ses-f-pudelko" id="f-pudelko"></span>
+          <span class="ses-f-licznik" id="f-licznik"></span>
+        </div>
+        <p class="ses-f-pytanie" id="f-pytanie"></p>
+        <div class="ses-f-tyl" id="f-tyl" hidden>
+          <p class="ses-f-odp" id="f-odp"></p>
+          <p class="ses-f-przyklad" id="f-przyklad"></p>
+          <p class="ses-f-przyklad-ru" id="f-przyklad-ru"></p>
+        </div>
+        <button class="ses-f-pokaz" id="f-pokaz" type="button">Pokaż odpowiedź <kbd>spacja</kbd></button>
+        <div class="ses-f-oceny" id="f-oceny" hidden>
+          <button class="ses-f-ocena f-nie" data-ocena="nie-wiem" type="button">Nie wiem <kbd>1</kbd></button>
+          <button class="ses-f-ocena f-prawie" data-ocena="prawie" type="button">Prawie <kbd>2</kbd></button>
+          <button class="ses-f-ocena f-wiem" data-ocena="wiem" type="button">Wiem <kbd>3</kbd></button>
+        </div>
+        <p class="ses-f-koniec" id="f-koniec" hidden>✓ Słówka na dziś powtórzone. Klikaj „Dalej”.</p>
+      </div>`;
+
+    const pokazFiszke = () => {
+      const s = slowa[i];
+      const st = stanSlowa(stan, s.id);
+      $('f-pudelko').textContent = st.pudelko === 0 ? 'nowe' : `pudełko ${st.pudelko}/${MAX_PUDELKO}`;
+      $('f-licznik').textContent = `${i + 1} / ${slowa.length}`;
+      $('f-pytanie').textContent = s.pl;
+      $('f-odp').textContent = s.ru;
+      $('f-przyklad').textContent = s.przyklad ?? '';
+      $('f-przyklad-ru').textContent = s.przyklad_ru ?? '';
+      $('f-tyl').hidden = true;
+      $('f-oceny').hidden = true;
+      $('f-pokaz').hidden = false;
+    };
+
+    const odkryj = () => {
+      if (i >= slowa.length) return; // talia skonczona — nie ma czego odkrywac
+      $('f-tyl').hidden = false;
+      $('f-oceny').hidden = false;
+      $('f-pokaz').hidden = true;
+    };
+
+    const odpowiedz = (ocena) => {
+      if (i >= slowa.length || $('f-oceny').hidden) return; // najpierw odkryj
+      oceń(stan, slowa[i].id, ocena);
+      policzoneSlowa += 1;
+      i += 1;
+      if (i >= slowa.length) {
+        $('f-pytanie').textContent = '';
+        $('f-tyl').hidden = true;
+        $('f-pokaz').hidden = true;
+        $('f-oceny').hidden = true;
+        $('f-licznik').textContent = `${slowa.length} / ${slowa.length}`;
+        $('f-koniec').hidden = false;
+        return;
+      }
+      pokazFiszke();
+    };
+
+    $('f-pokaz').addEventListener('click', odkryj);
+    scena.querySelectorAll('[data-ocena]').forEach((btn) => {
+      btn.addEventListener('click', () => odpowiedz(btn.dataset.ocena));
+    });
+
+    // Skroty klawiszowe zyja tylko na czas tego bloku — w quizie i pisaniu
+    // spacja i cyfry naleza do pol tekstowych.
+    const klawisz = (e) => {
+      if (e.target.closest('input, textarea')) return;
+      if (e.code === 'Space' || e.key === 'Enter') { e.preventDefault(); odkryj(); return; }
+      if (e.key === '1') odpowiedz('nie-wiem');
+      if (e.key === '2') odpowiedz('prawie');
+      if (e.key === '3') odpowiedz('wiem');
+    };
+    document.addEventListener('keydown', klawisz);
+    sprzataj = () => document.removeEventListener('keydown', klawisz);
+
+    pokazFiszke();
+  }
+
+  /* ── 3. koniec ── */
+
+  function koniec() {
+    stopTimer();
+    if (sprzataj) { sprzataj(); sprzataj = null; }
+    $('s-bieg').hidden = true;
+    $('s-koniec').hidden = false;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Rotacje przesuwamy dopiero na koncu: sesja porzucona w polowie ma sie
+    // powtorzyc, a nie przeskoczyc lekcje przy przypadkowym odswiezeniu.
+    const gramatyka = plan.bloki.find((blok) => blok.rodzaj === 'gramatyka');
+    if (gramatyka) bezpiecznie(() => localStorage.setItem(KLUCZ_OSTATNIA, gramatyka.dane.lekcja.id));
+
+    const czesci = [];
+    czesci.push(policzoneSlowa > 0 ? `Powtórzone słówka: ${policzoneSlowa}` : 'Bez powtórki słówek');
+    if (wynikQuizu) czesci.push(`Quiz: ${wynikQuizu.pct}% (${wynikQuizu.got}/${wynikQuizu.max})`);
+    $('s-podsumowanie').textContent = czesci.join(' · ');
+
+    if (kto) {
+      $('s-zapisane').hidden = false;
+      $('s-zapisane').textContent =
+        `✓ Zalogowany jako ${kto.emoji ?? ''} ${kto.name ?? ''} — wynik quizu i praca pisemna poszły do chmury.`;
+    }
+
+    confetti();
+  }
+
+  $('s-jeszcze').addEventListener('click', () => location.reload());
+</script>
+
+<style>
+  .ses-head { padding-top: 26px; margin-bottom: 24px; }
+  .ses-h1 { font-size: clamp(1.9rem, 6vw, 3rem); font-weight: 800; margin: 0 0 8px; text-transform: uppercase; }
+  .ses-lead { color: var(--text-dim); max-width: 56ch; margin: 0; }
+
+  .ses-start, .ses-pusto, .ses-koniec {
+    padding: 26px 24px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: calc(var(--radius) + 4px);
+  }
+  .ses-pusto h2, .ses-koniec-h2 { font-size: 1.6rem; margin: 0 0 8px; }
+  .ses-pusto p { color: var(--text-dim); margin: 0; }
+
+  .ses-minuty { font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; margin: 0 0 14px; }
+  .ses-plan { list-style: none; margin: 0 0 20px; padding: 0; display: grid; gap: 8px; }
+
+  .ses-anon {
+    color: var(--text-dim); font-size: 0.9rem; margin: 0 0 18px;
+    padding: 10px 14px; border-left: 3px solid var(--amber); background: var(--panel-2);
+    border-radius: 0 8px 8px 0;
+  }
+
+  /* bieg */
+  .ses-nag { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding-top: 4px; }
+  .ses-blok-tytul { font-size: 1.35rem; margin: 0; }
+  .ses-krok { color: var(--text-dim); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.12em; margin: 4px 0 0; }
+  .ses-timer {
+    margin: 0; color: var(--text-dim); font-size: 0.88rem;
+    font-variant-numeric: tabular-nums; text-align: right; white-space: normal; max-width: 22ch;
+  }
+
+  .ses-pasek { height: 6px; background: var(--panel-2); border-radius: 99px; overflow: hidden; margin: 14px 0 22px; }
+  .ses-pasek-fill { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--mak), var(--amber)); transition: width 0.35s ease; }
+
+  .ses-stopka { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 26px; }
+  .ses-stopka-info { color: var(--text-dim); font-size: 0.82rem; }
+
+  /* koniec */
+  .ses-koniec { text-align: center; }
+  .ses-koniec-wynik { font-size: 1.05rem; margin: 0 0 6px; }
+  .ses-koniec-zapis { color: var(--text-dim); font-size: 0.9rem; margin: 0 0 6px; }
+  .ses-koniec-btny { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 18px; }
+  .ses-wroc { padding: 12px 26px; border-radius: 12px; border: 1px solid var(--line); color: var(--text); text-decoration: none; font-weight: 700; }
+  .ses-wroc:hover { border-color: var(--amber); }
+
+  @media (max-width: 560px) {
+    .ses-nag { flex-direction: column; }
+    .ses-timer { text-align: left; max-width: none; }
+  }
+</style>
+
+<style is:global>
+  /* Style dla tresci wstrzykiwanej przez innerHTML — scoped tu nie siega. */
+  .ses-plan-item {
+    display: flex; align-items: baseline; gap: 12px;
+    padding: 10px 14px; background: var(--panel-2);
+    border: 1px solid var(--line); border-radius: 10px;
+  }
+  .ses-plan-ikona { font-size: 1.1rem; }
+  .ses-plan-tytul { font-family: var(--font-display); font-weight: 700; flex: 1; }
+  .ses-plan-min { color: var(--amber); font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  .ses-timer.po-czasie { color: var(--amber); }
+
+  .ses-brak { color: var(--text-dim); font-style: italic; margin: 0; }
+
+  /* fiszka w sesji — te same zasady co na /slowka/, wlasne klasy (innerHTML) */
+  .ses-fiszka {
+    display: flex; flex-direction: column; align-items: center; gap: 12px;
+    min-height: 320px; padding: 26px 22px; text-align: center;
+    background: var(--panel); border: 1px solid var(--line);
+    border-radius: calc(var(--radius) + 4px);
+  }
+  .ses-f-gora { display: flex; justify-content: space-between; width: 100%; gap: 10px; }
+  .ses-f-pudelko, .ses-f-licznik {
+    font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim);
+  }
+  .ses-f-pytanie {
+    font-family: var(--font-display); font-size: clamp(1.8rem, 5.5vw, 2.6rem);
+    font-weight: 800; margin: 20px 0 6px; line-height: 1.2;
+  }
+  .ses-f-tyl { width: 100%; }
+  .ses-f-odp { font-size: clamp(1.25rem, 4vw, 1.6rem); font-weight: 700; color: var(--blekit); margin: 0 0 12px; }
+  .ses-f-przyklad {
+    font-style: italic; margin: 0 0 4px; line-height: 1.5;
+    padding-top: 12px; border-top: 1px solid var(--line);
+  }
+  .ses-f-przyklad-ru { color: var(--text-dim); font-size: 0.9rem; margin: 0; line-height: 1.5; }
+  .ses-f-pokaz {
+    margin-top: auto; padding: 12px 26px; border-radius: 99px; cursor: pointer;
+    background: var(--panel-2); border: 1px solid var(--line); color: var(--text);
+    font-family: var(--font-body); font-size: 1rem; font-weight: 600;
+  }
+  .ses-f-pokaz:hover { border-color: var(--blekit); }
+  .ses-f-oceny { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 100%; margin-top: auto; }
+  .ses-f-ocena {
+    padding: 14px 8px; border-radius: var(--radius); cursor: pointer;
+    font-family: var(--font-body); font-weight: 700; font-size: 0.95rem;
+    border: 1px solid var(--line); background: var(--panel-2); color: var(--text);
+    display: flex; flex-direction: column; gap: 4px; align-items: center;
+    transition: transform 0.14s ease, border-color 0.14s ease;
+  }
+  .ses-f-ocena:hover { transform: translateY(-2px); }
+  .f-nie:hover { border-color: var(--mak); color: var(--mak); }
+  .f-prawie:hover { border-color: var(--amber); color: var(--amber); }
+  .f-wiem:hover { border-color: var(--blekit); color: var(--blekit); }
+  .ses-f-ocena kbd, .ses-f-pokaz kbd {
+    font-family: var(--font-body); font-size: 0.68rem; opacity: 0.55;
+    border: 1px solid currentColor; border-radius: 4px; padding: 0 5px;
+  }
+  .ses-f-koniec { margin: auto 0 0; color: var(--zielony); font-weight: 700; }
+
+  @media (max-width: 560px) {
+    .ses-f-oceny { grid-template-columns: 1fr; }
+  }
+</style>

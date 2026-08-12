@@ -35,7 +35,7 @@ function tasuj(lista) {
 }
 
 // polacz: dwie kolumny przyciskow zamiast listy zdan — stad osobny builder
-function zbudujPolacz(pre, dane) {
+function pudloPolacz(dane) {
   const box = document.createElement('section');
   box.className = 'cw-box';
   box.innerHTML = `
@@ -46,8 +46,7 @@ function zbudujPolacz(pre, dane) {
     <p class="cw-status" hidden></p>
     <button type="button" class="cw-znowu btn" hidden>🔁 Jeszcze raz</button>
   `;
-  pre.replaceWith(box);
-  podepnijPolacz(box, dane);
+  return box;
 }
 
 // Pudlo nie konczy cwiczenia — para wraca do puli, ale wypada z punktacji
@@ -135,9 +134,7 @@ function podepnijPolacz(box, dane) {
   start();
 }
 
-function zbuduj(pre, dane) {
-  if (dane.typ === 'polacz') { zbudujPolacz(pre, dane); return; }
-
+function pudloZdania(dane) {
   const box = document.createElement('section');
   box.className = 'cw-box';
   const zdaniaHtml = dane.zdania.map((z, i) => {
@@ -168,8 +165,28 @@ function zbuduj(pre, dane) {
     <ol class="cw-lista">${zdaniaHtml}</ol>
     ${dol}
   `;
-  pre.replaceWith(box);
-  podepnij(box, dane);
+  return box;
+}
+
+// Jedna droga budowania dla obu wejsc: auto-skanu po DOM (lekcje, czytanie)
+// i gotowych danych (strona /sesja/). Rozni je wylacznie `wstaw` — miejsce,
+// w ktore trafia pudelko. Kolejnosc (najpierw wstaw, potem podepnij) zostaje
+// taka jak byla, zeby handlery zawsze siadaly na elemencie juz w dokumencie.
+function zbuduj(dane, wstaw) {
+  const box = dane.typ === 'polacz' ? pudloPolacz(dane) : pudloZdania(dane);
+  wstaw(box);
+  if (dane.typ === 'polacz') podepnijPolacz(box, dane);
+  else podepnij(box, dane);
+  return box;
+}
+
+/**
+ * Buduje jedno cwiczenie z gotowych (juz sparsowanych) danych i doklada je
+ * na koniec kontenera. Dla stron, ktore nie maja blokow ```cwiczenie w DOM-ie.
+ * @returns {HTMLElement} zbudowane pudelko
+ */
+export function zbudujZDanych(dane, kontener) {
+  return zbuduj(dane, (box) => kontener.appendChild(box));
 }
 
 // pisanie: szkic w localStorage + zapis do zeszytu w chmurze
@@ -312,8 +329,11 @@ function podepnij(box, dane) {
   };
 }
 
+// Auto-skan: samo zaimportowanie modulu zamienia bloki ```cwiczenie w lekcjach
+// i tekstach na interaktywne pudelka. Zostaje jak byl — /sesja/ tylko dokłada
+// druga droge przez zbudujZDanych.
 znajdzBloki().forEach((pre) => {
   const wynik = parsujCwiczenie(pre.textContent);
   if (!wynik.ok) { console.warn('cwiczenie: pomijam zepsuty blok —', wynik.blad); return; }
-  zbuduj(pre, wynik.dane);
+  zbuduj(wynik.dane, (box) => pre.replaceWith(box));
 });

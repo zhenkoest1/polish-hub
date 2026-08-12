@@ -10,6 +10,8 @@ const root = document.getElementById('quiz-root');
 const splash = document.getElementById('quiz-splash');
 const startBtn = document.getElementById('quiz-start');
 
+// Auto-start ze splashu: strony lekcji, quizow i mixu maja #quiz-data
+// oraz #quiz-start i nie potrzebuja niczego wiecej. Zostaje bez zmian.
 if (dataEl && root && startBtn) {
   const quiz = JSON.parse(dataEl.textContent);
   startBtn.addEventListener('click', () => {
@@ -18,6 +20,20 @@ if (dataEl && root && startBtn) {
     new QuizRun(quiz, root).start();
     root.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
+}
+
+/**
+ * Start quizu z gotowych danych w dowolnym kontenerze — bez #quiz-data
+ * i bez przycisku splashu (uzywa tego /sesja/, gdzie quiz jest jednym z blokow).
+ * @param {object} quiz     dane quizu (z `id`, jesli wynik ma isc do chmury)
+ * @param {HTMLElement} root  kontener na pytania
+ * @param {{ przyWyniku?: (w: {got:number,max:number,pct:number}) => void }} opcje
+ * @returns {QuizRun}
+ */
+export function uruchomQuiz(quiz, root, opcje = {}) {
+  const bieg = new QuizRun(quiz, root, opcje);
+  bieg.start();
+  return bieg;
 }
 
 function shuffle(arr) {
@@ -37,9 +53,12 @@ function esc(s) {
 }
 
 class QuizRun {
-  constructor(quiz, root) {
+  constructor(quiz, root, opcje = {}) {
     this.quiz = quiz;
     this.root = root;
+    // opcje.przyWyniku — wolane po kazdym ukonczeniu quizu; auto-start nic
+    // nie podaje, wiec dla stron lekcji/quizow nic sie nie zmienia
+    this.opcje = opcje;
     // spłaszczamy sekcje do listy pytań
     this.items = [];
     quiz.sections.forEach((sec, si) => {
@@ -367,6 +386,7 @@ class QuizRun {
     const got = this.scores.reduce((s, x) => s + x.got, 0);
     const max = this.scores.reduce((s, x) => s + x.max, 0);
     const pct = procent(got, max);
+    this.opcje.przyWyniku?.({ got, max, pct });
     const verdict = pct >= 90 ? '🏆 Mistrzostwo!'
       : pct >= 70 ? '🌟 Bardzo dobrze!'
       : pct >= 50 ? '💪 Nieźle — ale zrób powtórkę.'
@@ -388,7 +408,8 @@ class QuizRun {
       </div>
     `;
     this.root.querySelector('#q-again').addEventListener('click', () => {
-      new QuizRun(this.quiz, this.root).start();
+      // opcje ida dalej — inaczej po „jeszcze raz" znikalby callback z wynikiem
+      new QuizRun(this.quiz, this.root, this.opcje).start();
     });
     this.root.scrollIntoView({ behavior: 'smooth', block: 'start' });
 

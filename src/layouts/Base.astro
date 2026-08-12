@@ -2,7 +2,7 @@
 interface Props {
   title: string;
   description?: string;
-  active?: 'lekcje' | 'reguly' | 'czytanie' | 'quizy' | 'slowka' | 'profil' | '';
+  active?: 'sesja' | 'lekcje' | 'reguly' | 'czytanie' | 'quizy' | 'slowka' | 'profil' | '';
 }
 const { title, description = 'Polski Klub — kurs polskiego dla trzech przyjaciół', active = '' } = Astro.props;
 // BASE_URL bywa z '/' na końcu lub bez — normalizujemy raz i na zawsze
@@ -35,6 +35,7 @@ const href = (p: string) => `${b}/${p.replace(/^\//, '')}`;
         POLSKI<em>KLUB</em>
       </a>
       <div class="nav-links">
+        <a class:list={['nav-link', 'nl-sesja', { on: active === 'sesja' }]} href={href('sesja/')}>Sesja</a>
         <a class:list={['nav-link', 'nl-lekcje', { on: active === 'lekcje' }]} href={href('lekcje/')}>Lekcje</a>
         <a class:list={['nav-link', 'nl-reguly', { on: active === 'reguly' }]} href={href('reguly/')}>Reguły</a>
         <a class:list={['nav-link', 'nl-czytanie', { on: active === 'czytanie' }]} href={href('czytanie/')}>Czytanie</a>
@@ -162,6 +163,7 @@ const href = (p: string) => `${b}/${p.replace(/^\//, '')}`;
     transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
   }
   .nav-link:hover { color: var(--text); }
+  .nl-sesja.on, .nl-sesja:hover { color: var(--amber); border-color: var(--amber); }
   .nl-lekcje.on, .nl-lekcje:hover { color: var(--amber); border-color: var(--amber); }
   .nl-reguly.on, .nl-reguly:hover { color: var(--mak); border-color: var(--mak); }
   .nl-czytanie.on, .nl-czytanie:hover { color: var(--zielony); border-color: var(--zielony); }
