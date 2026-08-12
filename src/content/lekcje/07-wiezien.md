@@ -182,13 +182,42 @@ Obie formy są poprawne.
 
 ## 🗣️ Na spotkaniu — ćwiczenia ustne
 
-*(pisemne ćwiczenia z tej lekcji znajdziecie niżej — w quizie!)*
+*(ćwiczenia pisemne robicie od razu na stronie — w polach niżej; na koniec czeka jeszcze quiz)*
 
 ### 🔥 Rozgrzewka *(5 minut)*
 
-1. Jak po polsku jest: *доверие, предательство, сотрудничество, наказание, прощение*?
-2. Kiedy ostatnio musiałeś / musiałaś komuś zaufać — i czy się opłaciło?
-3. Co byś zrobił, gdyby kolega z pracy doniósł na ciebie szefowi?
+Dwa szybkie ćwiczenia na stronie — każdy wpisuje sam, potem porównujecie wyniki:
+
+```cwiczenie
+{ "typ": "wpisz", "tytul": "Jak to jest po polsku?", "instrukcja": "Wpisz polskie słowo w mianowniku liczby pojedynczej.",
+  "zdania": [
+    { "przed": "доверие → ", "odpowiedz": ["zaufanie"], "po": "", "czemu": "Gdyby zaufali sobie…" },
+    { "przed": "предательство → ", "odpowiedz": ["zdrada"], "po": "", "czemu": "czasownik: zdradzić — lepiej zdradzić niż milczeć?" },
+    { "przed": "сотрудничество → ", "odpowiedz": ["współpraca"], "po": "", "czemu": "Współpraca daje lepszy wynik." },
+    { "przed": "наказание → ", "odpowiedz": ["kara", "ukaranie"], "po": "", "czemu": "z tekstu: wygrywa ten, kto umie i ukarać, i wybaczyć" },
+    { "przed": "прощение → ", "odpowiedz": ["przebaczenie"], "po": "", "czemu": "Przebaczenie po odpowiedzi — nie chowaj urazy." },
+    { "przed": "заключённый → ", "odpowiedz": ["więzień"], "po": "", "czemu": "l.mn. więźniowie" },
+    { "przed": "противник → ", "odpowiedz": ["przeciwnik"], "po": "", "czemu": "Powtarzaj ruch przeciwnika." },
+    { "przed": "ход → ", "odpowiedz": ["ruch"], "po": "", "czemu": "Pierwszy ruch — zaufaj." }
+  ] }
+```
+
+Drugie ćwiczenie to pułapka z *gdyby*. Wszystkie zdania są wzięte z tabel wyżej — jeśli się zawahasz, wróć do nich:
+
+```cwiczenie
+{ "typ": "wybor", "tytul": "Gdyby… to…", "instrukcja": "Wybierz właściwą formę. Pamiętaj: samo «gdyby» już zawiera «by».",
+  "zdania": [
+    { "przed": "Gdyby więźniowie ", "opcje": ["zaufali", "zaufaliby"], "dobra": 0, "po": " sobie, dostaliby po roku.", "czemu": "po «gdyby» stoi zwykły czas przeszły, bez -by-" },
+    { "przed": "Gdyby więźniowie zaufali sobie, ", "opcje": ["dostali", "dostaliby"], "dobra": 1, "po": " po roku.", "czemu": "w drugiej części zdania -by- jest obowiązkowe" },
+    { "przed": "Gdybyśmy się ", "opcje": ["rozbroili", "rozbroilibyśmy"], "dobra": 0, "po": ", żylibyśmy bezpieczniej.", "czemu": "końcówka osobowa siedzi już w «gdybyśmy»" },
+    { "przed": "Gdyby Gorbaczow nie ", "opcje": ["zaryzykował", "zaryzykowałby"], "dobra": 0, "po": ", zimna wojna trwałaby dalej.", "czemu": "po «gdyby» — zwykły czas przeszły; -by- czeka na «trwałaby»" },
+    { "przed": "", "opcje": ["Gdybym", "Gdyby"], "dobra": 0, "po": " był więźniem, zdradziłbym.", "czemu": "ja → gdybym; nigdy «gdybym byłbym»" },
+    { "przed": "Na twoim miejscu ", "opcje": ["zaufałbym", "zaufałem"], "dobra": 0, "po": " koledze.", "czemu": "rada z «na twoim miejscu» wymaga formy z -by-" },
+    { "przed": "Ja ", "opcje": ["bym", "byłbym"], "dobra": 0, "po": " to zrobił.", "czemu": "cząstka -by- potrafi odskoczyć do zaimka: Zrobiłbym to. = Ja bym to zrobił." }
+  ] }
+```
+
+Na koniec ustnie: kiedy ostatnio musiałeś / musiałaś komuś zaufać — i czy się opłaciło? A co byś zrobił, gdyby kolega z pracy doniósł na ciebie szefowi?
 
 ### Pytania do tekstu
 
@@ -203,19 +232,38 @@ Odpowiadajcie po polsku, pełnym zdaniem:
 
 ### Runda — rada z „Na twoim miejscu…”
 
-Każdy dostaje sytuację i udziela rady na głos, pełnym zdaniem:
+Sześć sytuacji, sześć rad. Napisz każdą pełnym zdaniem — na spotkaniu przeczytacie je na głos i porównacie, kto poradził odważniej.
 
-**Osoba A:** 1. *Boję się przyznać żonie, że straciłem pracę.* 2. *Nie wiem, czy zaufać nowemu wspólnikowi.*
-**Osoba B:** 1. *Przyjaciel mnie obraził, ale nie pamiętam, kto zaczął.* 2. *Mam dwie oferty pracy — jedna lepsza finansowo, druga ciekawsza.*
-**Osoba C:** 1. *Sąsiad codziennie hałasuje wieczorem.* 2. *Kolega przypisał sobie mój projekt.*
+```cwiczenie
+{ "typ": "pisanie", "tytul": "Na twoim miejscu…", "instrukcja": "Do każdej sytuacji napisz jedno zdanie z radą. Zacznij od «Na twoim miejscu…» i użyj formy z -by- w pierwszej osobie.",
+  "zdania": [
+    { "przed": "Boję się przyznać żonie, że straciłem pracę.", "po": "", "czemu": "Na twoim miejscu + 1. osoba z -by-: powiedziałbym / powiedziałabym — nie «powiem»" },
+    { "przed": "Nie wiem, czy zaufać nowemu wspólnikowi.", "po": "", "czemu": "pierwszy ruch w Tit-for-Tat to zaufanie — jak to ująć przez «zaufałbym / zaufałabym»?" },
+    { "przed": "Przyjaciel mnie obraził, ale nie pamiętam, kto zaczął.", "po": "", "czemu": "ktoś musi wybaczyć pierwszy: wybaczyłbym / wybaczyłabym" },
+    { "przed": "Mam dwie oferty pracy — jedna lepsza finansowo, druga ciekawsza.", "po": "", "czemu": "dołóż drugie zdanie z «gdybym…, to…» — po gdyby zwykły czas przeszły" },
+    { "przed": "Sąsiad codziennie hałasuje wieczorem.", "po": "", "czemu": "rada + grzeczna prośba: «poprosiłbym go, żeby…»" },
+    { "przed": "Kolega przypisał sobie mój projekt.", "po": "", "czemu": "gra jest długa, nie jednorazowa — jak brzmi rada w duchu Axelroda?" }
+  ] }
+```
 
 ### Runda — grzeczne prośby
 
-Powiedzcie to samo grzeczniej, używając trybu przypuszczającego:
+Te same prośby, tylko uprzejmiej. Rama zdania jest już gotowa — brakuje w niej tylko formy z *-by-*.
 
-**Osoba A:** *Pomóż mi.* · *Powtórz pytanie.* · *Daj mi kawę.*
-**Osoba B:** *Poczekajcie chwilę.* · *Otwórz okno.* · *Chcę zapytać.*
-**Osoba C:** *Zamknij drzwi.* · *Powiedz mi prawdę.* · *Chcemy porozmawiać.*
+```cwiczenie
+{ "typ": "wpisz", "tytul": "Powiedz to grzeczniej", "instrukcja": "Wpisz brakującą formę trybu przypuszczającego. Przyjmowane są obie wersje rodzajowe.",
+  "zdania": [
+    { "przed": "Pomóż mi. → Czy ", "odpowiedz": ["mógłbyś", "mogłabyś"], "po": " mi pomóc?", "czemu": "grzeczna prośba: Czy mógłbyś mi pomóc? (do mężczyzny) / mogłabyś (do kobiety)" },
+    { "przed": "Powtórz pytanie. → Czy ", "odpowiedz": ["mógłbyś", "mogłabyś"], "po": " powtórzyć pytanie?", "czemu": "ty: -łbyś / -łabyś; po formie modalnej zostaje bezokolicznik" },
+    { "przed": "Daj mi kawę. → ", "odpowiedz": ["Chciałbym", "Chciałabym"], "po": " kawę.", "czemu": "życzenie: Chciałbym kawę (mężczyzna) / Chciałabym kawę (kobieta)" },
+    { "przed": "Poczekajcie chwilę. → Czy ", "odpowiedz": ["moglibyście", "mogłybyście"], "po": " chwilę poczekać?", "czemu": "wy: -libyście (m-os.) / -łybyście (nm-os.) — Czy moglibyście trochę poczekać?" },
+    { "przed": "Otwórz okno. → Czy ", "odpowiedz": ["mógłbyś", "mogłabyś"], "po": " otworzyć okno?", "czemu": "ty: -łbyś / -łabyś" },
+    { "przed": "Chcę zapytać. → ", "odpowiedz": ["Chciałbym", "Chciałabym"], "po": " zapytać.", "czemu": "ja: -łbym / -łabym — Chciałabym porozmawiać." },
+    { "przed": "Zamknij drzwi. → Czy ", "odpowiedz": ["mógłbyś", "mogłabyś"], "po": " zamknąć drzwi?", "czemu": "ty: -łbyś / -łabyś" },
+    { "przed": "Powiedz mi prawdę. → Czy ", "odpowiedz": ["mógłbyś", "mogłabyś"], "po": " powiedzieć mi prawdę?", "czemu": "ty: -łbyś / -łabyś" },
+    { "przed": "Chcemy porozmawiać. → ", "odpowiedz": ["Chcielibyśmy", "Chciałybyśmy"], "po": " porozmawiać.", "czemu": "my: -libyśmy (m-os.) / -łybyśmy (nm-os.)" }
+  ] }
+```
 
 ### 💬 Dyskusja *(po 3 minuty na osobę)*
 
@@ -231,9 +279,17 @@ Każdy wybiera jedno pytanie i mówi minimum 5 zdań — **z minimum czterema fo
 
 ### ✍️ Mini-pisanie *(5 minut, potem czytamy na głos)*
 
-Opiszcie sytuację ze swojego życia, która była dylematem więźnia. **Minimum 5 form z -by-.**
+Opisz sytuację ze swojego życia, która była dylematem więźnia. Pisz od razu na stronie — po kliknięciu **Zapisz w zeszycie** tekst trafia do twojego zeszytu w chmurze.
 
-1. Co się stało? *(czas przeszły)* 2. Jakie były opcje? *(„Gdybym… to…”)* 3. Co wybraliście i dlaczego? 4. Co zrobilibyście dzisiaj, wiedząc wszystko?
+```cwiczenie
+{ "typ": "pisanie", "tytul": "Mój dylemat więźnia", "instrukcja": "Cztery odpowiedzi, razem minimum pięć form z -by-. Na spotkaniu czytacie na głos.",
+  "zdania": [
+    { "przed": "Co się stało?", "po": "", "czemu": "czas przeszły, bez -by- — najpierw same fakty" },
+    { "przed": "Jakie były opcje?", "po": "", "czemu": "«Gdybym…, to…» — po gdyby zwykły czas przeszły, -by- dopiero w drugiej części" },
+    { "przed": "Co wybrałeś / wybrałaś i dlaczego?", "po": "", "czemu": "czas przeszły + uzasadnienie; przyda się «bo inaczej…»" },
+    { "przed": "Co zrobiłbyś / zrobiłabyś dzisiaj, wiedząc wszystko?", "po": "", "czemu": "forma z -by- w 1. osobie: zrobiłbym / zrobiłabym" }
+  ] }
+```
 
 ---
 

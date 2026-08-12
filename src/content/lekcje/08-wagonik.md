@@ -157,13 +157,29 @@ Najbardziej dyskusyjna konstrukcja polszczyzny — na niej stoi 80% sporu filozo
 
 ## 🗣️ Na spotkaniu — ćwiczenia ustne
 
-*(pisemne ćwiczenia z tej lekcji znajdziecie niżej — w quizie!)*
+*(ćwiczenia pisemne robicie od razu na stronie — w polach niżej; na koniec czeka jeszcze quiz)*
 
 ### 🔥 Rozgrzewka *(5 minut)*
 
-1. Jak po polsku jest: *рычаг, жертва, моральный, осудить, толкнуть*?
-2. **Co byś zrobił**, gdybyś musiał wybrać: uratować pięć obcych osób kosztem jednej znajomej — czy jedną znajomą kosztem pięciu obcych?
-3. Czy istnieje **uniwersalna** moralność, czy każdy ma swoją?
+Najpierw słownictwo — każdy wpisuje sam, potem porównujecie wyniki:
+
+```cwiczenie
+{ "typ": "wpisz", "tytul": "Jak to jest po polsku?", "instrukcja": "Wpisz polskie słowo w mianowniku liczby pojedynczej.",
+  "zdania": [
+    { "przed": "рычаг → ", "odpowiedz": ["dźwignia"], "po": "", "czemu": "Stoisz przy dźwigni." },
+    { "przed": "тормоз → ", "odpowiedz": ["hamulec"], "po": "", "czemu": "l.mn. hamulce — wagonik nie ma hamulców" },
+    { "przed": "жертва → ", "odpowiedz": ["ofiara", "poświęcenie"], "po": "", "czemu": "ofiara = ten, kto ginie; poświęcenie = sam akt — «poświęcenie jednej osoby»" },
+    { "przed": "столкнуть → ", "odpowiedz": ["zepchnąć"], "po": "", "czemu": "Zepchnąć go z mostu." },
+    { "przed": "уцелеть → ", "odpowiedz": ["ocaleć"], "po": "", "czemu": "Pięć osób ocaleje." },
+    { "przed": "погибнуть → ", "odpowiedz": ["zginąć"], "po": "", "czemu": "On zginie." },
+    { "przed": "пешеход → ", "odpowiedz": ["pieszy"], "po": "", "czemu": "Wybór: pasażer czy pieszy." },
+    { "przed": "орудие, инструмент → ", "odpowiedz": ["narzędzie"], "po": "", "czemu": "Użyć go jako narzędzia." },
+    { "przed": "недопустимый → ", "odpowiedz": ["niedopuszczalny"], "po": "", "czemu": "Niedopuszczalne. Nigdy." },
+    { "przed": "доброволец → ", "odpowiedz": ["ochotnik"], "po": "", "czemu": "Greene włożył ochotników do skanera." }
+  ] }
+```
+
+Na koniec ustnie: **co byś zrobił**, gdybyś musiał wybrać — uratować pięć obcych osób kosztem jednej znajomej, czy jedną znajomą kosztem pięciu obcych? I czy istnieje **uniwersalna** moralność, czy każdy ma swoją?
 
 ### Pytania do tekstu
 
@@ -176,11 +192,19 @@ Najbardziej dyskusyjna konstrukcja polszczyzny — na niej stoi 80% sporu filozo
 
 ### Runda — przerób na formę bezosobową
 
-Powiedzcie to samo bez wskazywania osoby *(trzeba by, należałoby, powinno się, można by)*:
+To samo zdanie, tylko bez wytykania palcem. Bezokolicznik jest już na miejscu — brakuje konstrukcji przed nim. Czasem pasuje więcej niż jedna; przyjmowana jest każda z tabeli.
 
-**Osoba A:** *Powinieneś przeczytać Kanta.* · *Musimy zapytać inżyniera.*
-**Osoba B:** *Możemy zaprogramować to inaczej.* · *Nie wolno traktować człowieka jak narzędzia.*
-**Osoba C:** *Powinniśmy chronić młodszych czy starszych?* · *Musisz najpierw zdefiniować pojęcia.*
+```cwiczenie
+{ "typ": "wpisz", "tytul": "Bez wskazywania osoby", "instrukcja": "Wpisz konstrukcję bezosobową: trzeba by, należałoby, powinno się albo można by.",
+  "zdania": [
+    { "przed": "Powinieneś przeczytać Kanta. → ", "odpowiedz": ["Powinno się", "Należałoby", "Trzeba by"], "po": " przeczytać Kanta.", "czemu": "norma zamiast nacisku na osobę; po każdej z tych konstrukcji stoi bezokolicznik" },
+    { "przed": "Musimy zapytać inżyniera. → ", "odpowiedz": ["Trzeba by", "Należałoby", "Powinno się"], "po": " zapytać inżyniera.", "czemu": "z tabeli: Trzeba by zapytać inżyniera — nigdy «trzeba by zapytał»" },
+    { "przed": "Możemy zaprogramować to inaczej. → ", "odpowiedz": ["Można by"], "po": " zaprogramować to inaczej.", "czemu": "to możliwość, a nie powinność: Można by zaprogramować to inaczej." },
+    { "przed": "Nie wolno traktować człowieka jak narzędzia. → Nie ", "odpowiedz": ["powinno się", "należałoby"], "po": " traktować człowieka jak narzędzia.", "czemu": "w «powinno się» cząstka się jest obowiązkowa — samo «powinno traktować» nie istnieje" },
+    { "przed": "Powinniśmy chronić młodszych czy starszych? → ", "odpowiedz": ["Powinno się", "Należałoby", "Trzeba by"], "po": " chronić młodszych czy starszych?", "czemu": "z tabeli: Powinno się chronić słabszych." },
+    { "przed": "Musisz najpierw zdefiniować pojęcia. → ", "odpowiedz": ["Należałoby", "Trzeba by", "Powinno się"], "po": " najpierw zdefiniować pojęcia.", "czemu": "formalna rada, jak «Należałoby przeanalizować problem»" }
+  ] }
+```
 
 ### 💬 Dyskusja *(15–20 minut — główne ćwiczenie tej lekcji)*
 
@@ -200,9 +224,17 @@ Bierzcie scenariusze po kolei. Każdy odpowiada, potem dwie pozostałe osoby rea
 
 ### ✍️ Mini-pisanie *(5 minut, potem czytamy na głos)*
 
-Napiszcie 6–8 zdań na temat: *„Mój własny dylemat moralny — sytuacja, w której nie wiedziałem, jak postąpić”.*
+Twój własny dylemat moralny — sytuacja, w której nie wiedziałeś / nie wiedziałaś, jak postąpić. Pisz od razu na stronie; po kliknięciu **Zapisz w zeszycie** tekst trafia do twojego zeszytu w chmurze.
 
-Wymagania: minimum **4 formy z -by-** · minimum **1 konstrukcja bezosobowa z by** · minimum **1 forma z poprzednich lekcji** *(biernik, narzędnik, celownik albo dopełniacz)* · 1 zdanie z **„Co by było, gdyby…”**.
+```cwiczenie
+{ "typ": "pisanie", "tytul": "Mój własny dylemat moralny", "instrukcja": "Cztery odpowiedzi, razem 6–8 zdań. Minimum 4 formy z -by-, minimum 1 konstrukcja bezosobowa i minimum 1 forma z poprzednich lekcji (biernik, narzędnik, celownik albo dopełniacz).",
+  "zdania": [
+    { "przed": "Co się stało? Opisz sytuację.", "po": "", "czemu": "czas przeszły; wpleć tu przypadek z poprzednich lekcji — «bez wyjścia» (dopełniacz), «byłem świadkiem» (narzędnik)" },
+    { "przed": "Jakie miałeś / miałaś opcje?", "po": "", "czemu": "«Gdybym…, to…» — po gdyby zwykły czas przeszły, -by- dopiero w drugiej części" },
+    { "przed": "Co powinno się zrobić w takiej sytuacji — ogólnie, nie tylko tobie?", "po": "", "czemu": "konstrukcja bezosobowa: powinno się / trzeba by / należałoby + bezokolicznik" },
+    { "przed": "Co by było, gdybyś wybrał / wybrała inaczej?", "po": "", "czemu": "Co by było, gdyby + zwykły czas przeszły" }
+  ] }
+```
 
 ---
 

@@ -130,13 +130,54 @@ Przymiotniki: męski i nijaki **-ym / -im** *(o kryzysie klimatyczn**ym**)*; że
 
 ## 🗣️ Na spotkaniu — ćwiczenia ustne
 
-*(pisemne ćwiczenia z tej lekcji znajdziecie niżej — w quizie!)*
+*(ćwiczenia pisemne robicie od razu na stronie — w polach niżej; na koniec czeka jeszcze quiz)*
 
 ### 🔥 Rozgrzewka *(3 minuty — bez przeciągania)*
 
-1. Ile stopni jest teraz za oknem? Ile było w zeszłym tygodniu?
-2. Jak po polsku: *жара, тень, потеть, обморок, кондиционер, сгореть*?
-3. Pamiętacie najgorętszy dzień w swoim życiu? Gdzie byliście?
+Zacznijcie ustnie: ile stopni jest teraz za oknem? Ile było w zeszłym tygodniu? I pamiętacie najgorętszy dzień w swoim życiu — gdzie wtedy byliście?
+
+Potem dwa szybkie ćwiczenia na stronie — każdy wpisuje sam:
+
+```cwiczenie
+{ "typ": "wpisz", "tytul": "Jak to jest po polsku?", "instrukcja": "Wpisz polskie słowo albo wyrażenie w mianowniku liczby pojedynczej.",
+  "zdania": [
+    { "przed": "жара → ", "odpowiedz": ["upał", "gorąco"], "po": "", "czemu": "fala upałów; w tekście także «europejska fala gorąca»" },
+    { "przed": "волна жары → ", "odpowiedz": ["fala upałów"], "po": "", "czemu": "Fala upałów nie dotyka wszystkich tak samo." },
+    { "przed": "градус → ", "odpowiedz": ["stopień"], "po": "", "czemu": "l.mn. stopnie — nawet jeden stopień to katastrofa" },
+    { "przed": "кондиционер → ", "odpowiedz": ["klimatyzacja"], "po": "", "czemu": "W Wielkiej Brytanii klimatyzacja jest rzadkością." },
+    { "przed": "сгореть → ", "odpowiedz": ["spłonąć"], "po": "", "czemu": "W Grecji spłonęło 30 tysięcy hektarów." },
+    { "przed": "утонуть → ", "odpowiedz": ["utonąć"], "po": "", "czemu": "We Francji utonęło ponad czterdzieści osób." },
+    { "przed": "прохлада → ", "odpowiedz": ["ochłoda"], "po": "", "czemu": "Szukali ochłody w rzekach." },
+    { "przed": "тепловой удар → ", "odpowiedz": ["udar cieplny"], "po": "", "czemu": "Setki osób z udarem cieplnym." },
+    { "przed": "засуха → ", "odpowiedz": ["susza"], "po": "", "czemu": "Susza, głód, migracja." },
+    { "przed": "голод → ", "odpowiedz": ["głód"], "po": "", "czemu": "Susza, głód, migracja." },
+    { "przed": "уязвимый → ", "odpowiedz": ["wrażliwy"], "po": "", "czemu": "Chronić wrażliwych." },
+    { "przed": "потеря, ущерб → ", "odpowiedz": ["strata"], "po": "", "czemu": "l.mn. straty — dziś rozmawiamy o stratach" }
+  ] }
+```
+
+Drugie ćwiczenie to miejscownik — serce tej powtórki. Wszystkie formy stoją w tabeli wyżej; jeśli się zawahasz, wróć do niej:
+
+```cwiczenie
+{ "typ": "wpisz", "tytul": "Miejscownik — tylko po w, o, na, po, przy", "instrukcja": "Wpisz sam rzeczownik w miejscowniku. Przyimek jest już podany.",
+  "zdania": [
+    { "przed": "miasto → w ", "odpowiedz": ["mieście"], "po": "", "czemu": "twarda spółgłoska → -e z wymianą t → ci" },
+    { "przed": "Kraków → w ", "odpowiedz": ["Krakowie"], "po": "", "czemu": "-e z wymianą; w tekście: w Krakowie 39°C" },
+    { "przed": "stół → na ", "odpowiedz": ["stole"], "po": "", "czemu": "-e z wymianą ł → l" },
+    { "przed": "park → w ", "odpowiedz": ["parku"], "po": "", "czemu": "po k, g, ch zawsze -u" },
+    { "przed": "dach → na ", "odpowiedz": ["dachu"], "po": "", "czemu": "po ch → -u, bez wymiany" },
+    { "przed": "morze → w ", "odpowiedz": ["morzu"], "po": "", "czemu": "rodzaj nijaki po miękkiej → -u" },
+    { "przed": "słońce → na ", "odpowiedz": ["słońcu"], "po": "", "czemu": "po miękkiej → -u" },
+    { "przed": "Warszawa → w ", "odpowiedz": ["Warszawie"], "po": "", "czemu": "żeński po twardej → -e z wymianą w → wi" },
+    { "przed": "Polska → w ", "odpowiedz": ["Polsce"], "po": "", "czemu": "żeński po twardej → -e z wymianą k → c" },
+    { "przed": "woda → w ", "odpowiedz": ["wodzie"], "po": "", "czemu": "wymiana d → dzi" },
+    { "przed": "Francja → we ", "odpowiedz": ["Francji"], "po": "", "czemu": "żeński po miękkiej → -i; we Francji utonęło ponad czterdzieści osób" },
+    { "przed": "noc → w ", "odpowiedz": ["nocy"], "po": "", "czemu": "żeński po miękkiej → -y" },
+    { "przed": "Wielkopolska → w ", "odpowiedz": ["Wielkopolsce"], "po": "", "czemu": "jak Polska: k → c" },
+    { "przed": "miasta (l.mn.) → w ", "odpowiedz": ["miastach"], "po": "", "czemu": "liczba mnoga zawsze -ach, we wszystkich rodzajach" },
+    { "przed": "kraje (l.mn.) → o ", "odpowiedz": ["krajach"], "po": "", "czemu": "liczba mnoga → -ach" }
+  ] }
+```
 
 ### Pytania do tekstu
 
@@ -149,9 +190,19 @@ Przymiotniki: męski i nijaki **-ym / -im** *(o kryzysie klimatyczn**ym**)*; że
 
 ### Runda — o tobie *(odpowiadajcie pełnym zdaniem, w podanej formie)*
 
-**Osoba A:** 1. *(dopełniacz)* Bez czego nie przeżyjesz upalnego lata? 2. *(narzędnik)* Kim byłbyś z zawodu, gdybyś urodził się w innym kraju?
-**Osoba B:** 1. *(celownik)* Komu pomogłeś w tym tygodniu? 2. *(tryb przypuszczający)* Co byś zrobił, gdyby przez cały tydzień było 45°C?
-**Osoba C:** 1. *(miejscownik)* O czym najczęściej myślisz w gorące dni? 2. *(stopniowanie)* Który miesiąc jest twoim najgorszym miesiącem w roku i dlaczego?
+Sześć pytań, sześć przypadków. Napisz odpowiedzi na stronie — na spotkaniu czytacie je na głos i sprawdzacie u sąsiada, czy forma się zgadza.
+
+```cwiczenie
+{ "typ": "pisanie", "tytul": "Sześć pytań, sześć form", "instrukcja": "Odpowiadaj pełnym zdaniem, w formie podanej przy pytaniu. Wróć do panelu przypadków wyżej, jeśli się zawahasz.",
+  "zdania": [
+    { "przed": "Bez czego nie przeżyjesz upalnego lata?", "po": "", "czemu": "dopełniacz — po «bez» zawsze: bez wody, bez klimatyzacji, bez cienia" },
+    { "przed": "Kim byłbyś / byłabyś z zawodu, gdybyś urodził / urodziła się w innym kraju?", "po": "", "czemu": "narzędnik po «być» (byłbym kurierem, nie «kurier») + gdyby ze zwykłym czasem przeszłym" },
+    { "przed": "Komu pomogłeś / pomogłaś w tym tygodniu?", "po": "", "czemu": "celownik — komu? czemu?: sąsiadce, koledze, mamie" },
+    { "przed": "Co byś zrobił / zrobiła, gdyby przez cały tydzień było 45°C?", "po": "", "czemu": "tryb przypuszczający: gdyby + zwykły czas przeszły, -by- w drugiej części" },
+    { "przed": "O czym najczęściej myślisz w gorące dni?", "po": "", "czemu": "miejscownik po «o» i po «w»: o wodzie, o upałach, w mieszkaniu" },
+    { "przed": "Który miesiąc jest twoim najgorszym miesiącem w roku i dlaczego?", "po": "", "czemu": "stopień najwyższy naj- + narzędnik po «być»: moim najgorszym miesiącem" }
+  ] }
+```
 
 ### 💬 Mini-dyskusja *(5–7 minut, wszyscy razem)*
 
@@ -167,9 +218,16 @@ Przymiotniki: męski i nijaki **-ym / -im** *(o kryzysie klimatyczn**ym**)*; że
 
 ### ✍️ Mini-pisanie *(8 minut, jeśli starczy czasu)*
 
-Napiszcie 5–6 zdań na temat: *„Jak zmieni się moje życie, jeśli lata będą jeszcze gorętsze?”*
+*„Jak zmieni się moje życie, jeśli lata będą jeszcze gorętsze?”* — pisz od razu na stronie; po kliknięciu **Zapisz w zeszycie** tekst trafia do twojego zeszytu w chmurze.
 
-Wymagania: minimum 2 różne przypadki *(np. miejscownik + dopełniacz)* · 1 forma trybu przypuszczającego · 1 czasownik modalny.
+```cwiczenie
+{ "typ": "pisanie", "tytul": "Jeśli lata będą jeszcze gorętsze", "instrukcja": "Trzy odpowiedzi, razem 5–6 zdań. Minimum 2 różne przypadki, 1 forma trybu przypuszczającego i 1 czasownik modalny.",
+  "zdania": [
+    { "przed": "Co zmieni się w twoim mieszkaniu i w twoim mieście?", "po": "", "czemu": "miejscownik tylko po w, o, na, po, przy: w mieszkaniu, w mieście, na balkonie" },
+    { "przed": "Czego zabraknie, a co trzeba będzie kupić?", "po": "", "czemu": "dopełniacz po «bez», po «brak» i po przeczeniu: bez wody, nie mam klimatyzacji" },
+    { "przed": "Co byś zrobił / zrobiła, gdyby lipiec wyglądał jak ten z tekstu?", "po": "", "czemu": "gdyby + zwykły czas przeszły, -by- w drugiej części; dołóż modalny: musiałbym / mógłbym / powinienem" }
+  ] }
+```
 
 ---
 
