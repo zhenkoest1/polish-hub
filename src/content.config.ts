@@ -27,4 +27,19 @@ const reguly = defineCollection({
   }),
 });
 
-export const collections = { lekcje, reguly };
+// Teksty do czytania — osobna ścieżka niż lekcje: bez gramatyki i bez quizu,
+// za to z poziomem trudności (1..5) i licznikiem słów, żeby uczeń widział,
+// na co się pisze, zanim kliknie.
+const czytanie = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/czytanie' }),
+  schema: z.object({
+    tytul: z.string(),
+    emoji: z.string(),
+    poziom: z.number().min(1).max(5),
+    slowa: z.number(),
+    temat: z.string(),
+    opis: z.string().optional(),
+  }),
+});
+
+export const collections = { lekcje, reguly, czytanie };

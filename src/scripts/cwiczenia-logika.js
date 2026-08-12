@@ -109,13 +109,16 @@ export function parsujCwiczenie(tekstJson) {
 }
 
 // Kolumny sa tasowane niezaleznie, wiec przyciski nosza indeks ORYGINALNEJ pary.
-// Dopasowanie jest poprawne dokladnie wtedy, gdy oba wskazuja te sama pare.
+// Zwykle dopasowanie jest poprawne, gdy oba wskazuja te sama pare — ALE gdy dwa
+// slowa maja to samo tlumaczenie ("prawie" i "niemal" → "почти"), klikniecie w
+// drugi identyczny napis tez jest poprawne. Bez tego uczen zgaduje 50/50
+// i dostaje czerwone za dobra odpowiedz.
 export function sprawdzPare(dane, iLewej, iPrawej) {
   const pary = dane?.pary;
   if (!Array.isArray(pary)) return false;
   if (!Number.isInteger(iLewej) || iLewej < 0 || iLewej >= pary.length) return false;
   if (!Number.isInteger(iPrawej) || iPrawej < 0 || iPrawej >= pary.length) return false;
-  return iLewej === iPrawej;
+  return iLewej === iPrawej || pary[iLewej][1] === pary[iPrawej][1];
 }
 
 export function sprawdzWybor(zdanie, wybranyIndex) {

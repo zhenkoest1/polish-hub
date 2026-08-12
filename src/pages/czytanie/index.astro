@@ -1,0 +1,98 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const b = import.meta.env.BASE_URL.replace(/\/$/, '');
+const href = (p: string) => `${b}/${p.replace(/^\//, '')}`;
+
+const teksty = (await getCollection('czytanie')).sort(
+  (a, c) => a.data.poziom - c.data.poziom || a.data.slowa - c.data.slowa
+);
+
+const razem = teksty.reduce((s, t) => s + t.data.slowa, 0);
+---
+<Base title="Czytanie — Polski Klub" active="czytanie">
+  <header class="page-head">
+    <p class="kicker" style="color: var(--zielony)">tekst → nowe słowa → pytania → pisanie</p>
+    <h1 class="page-h1">Czytanie</h1>
+    <p class="page-sub">
+      {teksty.length} krótkich tekstów popularnonaukowych po polsku — razem {razem} słów.
+      Poziom 1 czyta się przy śniadaniu, poziom 5 wymaga słownika. Każdy tekst ma listę słów
+      i pytania na zrozumienie.
+    </p>
+  </header>
+
+  <ol class="tekst-lista">
+    {teksty.map((t, i) => (
+      <li class="tekst-karta" style={`animation-delay: ${i * 70}ms`}>
+        <a href={href(`czytanie/${t.id}/`)}>
+          <span class="tekst-emoji" aria-hidden="true">{t.data.emoji}</span>
+          <span class="tekst-body">
+            <span class="tekst-title">{t.data.tytul}</span>
+            {t.data.opis && <span class="tekst-opis">{t.data.opis}</span>}
+            <span class="tekst-meta">
+              <span class={`badge badge-p${t.data.poziom}`}>poziom {t.data.poziom}</span>
+              <span class="tekst-slowa">{t.data.slowa} słów</span>
+              <span class="tekst-temat">#{t.data.temat}</span>
+            </span>
+          </span>
+          <span class="tekst-go" aria-hidden="true">→</span>
+        </a>
+      </li>
+    ))}
+  </ol>
+</Base>
+
+<style>
+  .page-head { padding-top: 30px; }
+  .page-h1 { font-size: clamp(2.2rem, 7vw, 3.4rem); font-weight: 800; margin: 0 0 10px; text-transform: uppercase; }
+  .page-sub { color: var(--text-dim); max-width: 60ch; margin: 0 0 30px; line-height: 1.55; }
+
+  .tekst-lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  .tekst-karta { animation: rise 0.45s both; }
+  .tekst-karta a {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 17px 18px;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+  }
+  .tekst-karta a:hover { transform: translateX(6px); border-color: var(--zielony); background: var(--panel-2); }
+  .tekst-karta a:hover .tekst-go { transform: translateX(4px); color: var(--zielony); }
+
+  .tekst-emoji { font-size: 1.9rem; line-height: 1.2; min-width: 42px; }
+  .tekst-body { flex: 1; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .tekst-title { font-family: var(--font-display); font-weight: 800; font-size: 1.08rem; }
+  .tekst-opis { color: var(--text-dim); font-size: 0.9rem; line-height: 1.5; }
+  .tekst-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 2px; }
+
+  .badge {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    border: 1px solid currentColor;
+    border-radius: 99px;
+    padding: 2px 10px;
+    white-space: nowrap;
+  }
+  .badge-p1, .badge-p2 { color: var(--zielony); }
+  .badge-p3 { color: var(--amber); }
+  .badge-p4, .badge-p5 { color: var(--mak); }
+
+  .tekst-slowa, .tekst-temat {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    font-variant-numeric: tabular-nums;
+  }
+  .tekst-go { font-size: 1.3rem; color: var(--text-dim); transition: transform 0.18s ease, color 0.18s ease; }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>

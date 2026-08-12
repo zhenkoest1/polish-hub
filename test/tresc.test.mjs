@@ -84,6 +84,56 @@ sprawdz('są jakieś lekcje', lekcje.length > 0);
 // widzi mniej niz 20, to zepsul sie walidator (albo lekcje), a nie tresc.
 sprawdz(`ćwiczenia: znaleziono ≥20 bloków (jest ${cwiczeniaRazem})`, cwiczeniaRazem >= 20);
 
+// ——— Czytanie ——————————————————————————————————————————————
+// Teksty do czytania nie mają quizu ani gramatyki, ale mają dwie rzeczy,
+// które łatwo zepsuć po cichu: poziom trudności (steruje sortowaniem listy)
+// i bloki ```cwiczenie z pytaniami na zrozumienie.
+const teksty = pliki('src/content/czytanie', '.md');
+let cwiczeniaCzytanie = 0;
+
+for (const f of teksty) {
+  const tekst = readFileSync(P('src/content/czytanie', f), 'utf-8');
+  const etykieta = `czytanie ${f}`;
+
+  sprawdz(`${etykieta}: zaczyna się frontmatterem`, tekst.startsWith('---'));
+  const fm = tekst.split('---')[1] ?? '';
+
+  for (const klucz of ['tytul', 'emoji', 'poziom', 'slowa', 'temat']) {
+    sprawdz(`${etykieta}: ma ${klucz}`, fm.includes(`${klucz}:`));
+  }
+
+  // poziom poza 1..5 przechodzi przez schemat Astro jako liczba, ale rozwala
+  // klasę badge-pN na liście — więc pilnujemy zakresu tutaj
+  const poziom = Number(fm.match(/poziom:\s*(\d+)/)?.[1]);
+  sprawdz(`${etykieta}: poziom ${poziom} jest w zakresie 1..5`,
+    Number.isInteger(poziom) && poziom >= 1 && poziom <= 5);
+
+  const slowa = Number(fm.match(/slowa:\s*(\d+)/)?.[1]);
+  sprawdz(`${etykieta}: slowa jest liczbą`, Number.isInteger(slowa) && slowa > 0);
+
+  sprawdz(`${etykieta}: bez śmieciowych tagów`, !/<\/(content|invoke|parameter)>/.test(tekst));
+  sprawdz(`${etykieta}: parzyste bloki kodu`, (tekst.match(/```/g) ?? []).length % 2 === 0);
+
+  // \r?\n — na Windows plik w drzewie ma CRLF (patrz komentarz przy lekcjach)
+  const RE_CW = /```cwiczenie\r?\n([\s\S]*?)```/g;
+  let m;
+  let nr = 0;
+  while ((m = RE_CW.exec(tekst)) !== null) {
+    nr += 1;
+    cwiczeniaCzytanie += 1;
+    const w = parsujCwiczenie(m[1]);
+    sprawdz(`${etykieta}: ćwiczenie ${nr} poprawne${w.ok ? '' : ` — ${w.blad}`}`, w.ok);
+  }
+  sprawdz(`${etykieta}: ma co najmniej 2 ćwiczenia (zrozumienie + pisanie)`, nr >= 2);
+
+  sprawdz(`${etykieta}: ma listę nowych słów`, tekst.includes('## 📝 Nowe słowa'));
+  sprawdz(`${etykieta}: ma pytania na zrozumienie`, tekst.includes('## ❓ Zrozumienie'));
+}
+// Prog bezpiecznika, tak jak przy lekcjach: pusty katalog albo zepsuty regex
+// nie moga przejsc jako "zielone".
+sprawdz(`czytanie: znaleziono ≥5 tekstów (jest ${teksty.length})`, teksty.length >= 5);
+sprawdz(`czytanie: znaleziono ≥10 bloków ćwiczeń (jest ${cwiczeniaCzytanie})`, cwiczeniaCzytanie >= 10);
+
 // ——— Quizy ————————————————————————————————————————————————
 const TYPY = new Set(['tf', 'mc', 'typein', 'match', 'tap_fill']);
 
@@ -207,7 +257,9 @@ for (const [kat, zbior] of [['lekcje', idLekcji], ['reguly', reguly]]) {
 }
 
 // ——— Wynik ————————————————————————————————————————————————
-console.log(`lekcje: ${lekcje.length} · słówka: ${wszystkieId.size} · sprawdzeń: ${ok + bledy.length}`);
+console.log(
+  `lekcje: ${lekcje.length} · czytanie: ${teksty.length} · słówka: ${wszystkieId.size} · sprawdzeń: ${ok + bledy.length}`
+);
 if (bledy.length) {
   console.log(`\n${bledy.length} BŁĘDÓW:`);
   for (const b of bledy.slice(0, 40)) console.log('  ✗', b);

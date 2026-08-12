@@ -249,9 +249,15 @@ t('polacz: duplikat lewej strony -> blad', (() => {
   return r.ok === false && r.blad.includes('lewe');
 })());
 
-t('polacz: duplikat prawej strony jest OK', parsujCwiczenie(JSON.stringify({
+t('polacz: duplikat prawej strony przechodzi walidacje', parsujCwiczenie(JSON.stringify({
   typ: 'polacz', pary: [['a', 'x'], ['b', 'x'], ['c', 'y']],
 })).ok === true);
+// Dwa slowa z tym samym tlumaczeniem: klikniecie w KAZDY z identycznych
+// napisow po prawej musi byc poprawne — inaczej uczen zgaduje 50/50.
+const DUPL = { pary: [['prawie', 'почти'], ['niemal', 'почти'], ['zawsze', 'всегда']] };
+t('polacz: duplikat prawej — para wprost', sprawdzPare(DUPL, 0, 0) === true);
+t('polacz: duplikat prawej — drugi identyczny napis tez dobry', sprawdzPare(DUPL, 0, 1) === true);
+t('polacz: duplikat prawej — inne tlumaczenie nadal zle', sprawdzPare(DUPL, 0, 2) === false);
 
 t('polacz: tytul nie-string -> blad',
   parsujCwiczenie(JSON.stringify({ typ: 'polacz', tytul: 42, pary: [['a', 'b'], ['c', 'd'], ['e', 'f']] })).ok === false);

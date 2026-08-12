@@ -1,0 +1,122 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const teksty = await getCollection('czytanie');
+  return teksty.map((t) => ({ params: { id: t.id }, props: { wpis: t } }));
+}
+
+const { wpis } = Astro.props;
+const { Content } = await render(wpis);
+const b = import.meta.env.BASE_URL.replace(/\/$/, '');
+const href = (p: string) => `${b}/${p.replace(/^\//, '')}`;
+
+// prev / next — po poziomie, tak samo jak lista na /czytanie/
+const all = (await getCollection('czytanie')).sort(
+  (a, c) => a.data.poziom - c.data.poziom || a.data.slowa - c.data.slowa
+);
+const idx = all.findIndex((t) => t.id === wpis.id);
+const prev = idx > 0 ? all[idx - 1] : null;
+const next = idx < all.length - 1 ? all[idx + 1] : null;
+
+// Czytanie ~120 słów na minutę przy obcym języku — grubo, ale uczciwie
+const minuty = Math.max(1, Math.round(wpis.data.slowa / 120));
+---
+<Base title={`${wpis.data.tytul} — Czytanie — Polski Klub`} active="czytanie">
+  <article data-czytanie={wpis.id}>
+    <header class="tekst-head">
+      <span class="ghost-poziom" aria-hidden="true">{wpis.data.poziom}</span>
+      <a class="back" href={href('czytanie/')}>← wszystkie teksty</a>
+      <p class="kicker" style="color: var(--zielony)">
+        Czytanie · poziom {wpis.data.poziom} z 5 · #{wpis.data.temat}
+      </p>
+      <h1 class="tekst-h1">{wpis.data.emoji} {wpis.data.tytul}</h1>
+      {wpis.data.opis && <p class="tekst-opis">{wpis.data.opis}</p>}
+      <p class="tekst-fakty">{wpis.data.slowa} słów · około {minuty} min czytania</p>
+    </header>
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    <nav class="tekst-nav">
+      {prev ? (
+        <a class="tnav tnav-prev" href={href(`czytanie/${prev.id}/`)}>
+          <span class="tnav-dir">← łatwiejszy</span>
+          <span class="tnav-title">{prev.data.emoji} {prev.data.tytul}</span>
+        </a>
+      ) : <span />}
+      {next ? (
+        <a class="tnav tnav-next" href={href(`czytanie/${next.id}/`)}>
+          <span class="tnav-dir">trudniejszy →</span>
+          <span class="tnav-title">{next.data.emoji} {next.data.tytul}</span>
+        </a>
+      ) : <span />}
+    </nav>
+  </article>
+
+  <script>
+    // Silnik ćwiczeń sam skanuje DOM w poszukiwaniu bloków ```cwiczenie,
+    // więc tekstom do czytania wystarczy sam import.
+    import '../../scripts/cwiczenia.js';
+  </script>
+</Base>
+
+<style>
+  .tekst-head { position: relative; padding-top: 26px; }
+  .ghost-poziom {
+    position: absolute;
+    top: -30px;
+    right: -20px;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(9rem, 26vw, 17rem);
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(0, 184, 148, 0.13);
+    pointer-events: none;
+    user-select: none;
+    z-index: -1;
+  }
+  .back { color: var(--text-dim); text-decoration: none; font-size: 0.9rem; }
+  .back:hover { color: var(--zielony); }
+  .tekst-head .kicker { margin-top: 22px; }
+  .tekst-h1 { font-size: clamp(1.9rem, 6vw, 3.1rem); font-weight: 800; margin: 0 0 8px; }
+  .tekst-opis { color: var(--text-dim); max-width: 58ch; margin: 0 0 10px; }
+  .tekst-fakty {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
+  .tekst-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 34px;
+  }
+  .tnav {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 14px 16px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .tnav:hover { border-color: var(--zielony); transform: translateY(-2px); }
+  .tnav-next { text-align: right; }
+  .tnav-dir { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-dim); }
+  .tnav-title { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; }
+
+  @media (max-width: 640px) {
+    .tekst-nav { grid-template-columns: 1fr; }
+    .tnav-next { text-align: left; }
+  }
+</style>

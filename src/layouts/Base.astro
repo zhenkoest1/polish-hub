@@ -2,7 +2,7 @@
 interface Props {
   title: string;
   description?: string;
-  active?: 'lekcje' | 'reguly' | 'quizy' | 'slowka' | 'profil' | '';
+  active?: 'lekcje' | 'reguly' | 'czytanie' | 'quizy' | 'slowka' | 'profil' | '';
 }
 const { title, description = 'Polski Klub — kurs polskiego dla trzech przyjaciół', active = '' } = Astro.props;
 // BASE_URL bywa z '/' na końcu lub bez — normalizujemy raz i na zawsze
@@ -37,6 +37,7 @@ const href = (p: string) => `${b}/${p.replace(/^\//, '')}`;
       <div class="nav-links">
         <a class:list={['nav-link', 'nl-lekcje', { on: active === 'lekcje' }]} href={href('lekcje/')}>Lekcje</a>
         <a class:list={['nav-link', 'nl-reguly', { on: active === 'reguly' }]} href={href('reguly/')}>Reguły</a>
+        <a class:list={['nav-link', 'nl-czytanie', { on: active === 'czytanie' }]} href={href('czytanie/')}>Czytanie</a>
         <a class:list={['nav-link', 'nl-slowka', { on: active === 'slowka' }]} href={href('slowka/')}>Słówka</a>
         <a class:list={['nav-link', 'nl-quizy', { on: active === 'quizy' }]} href={href('quizy/')}>Quizy</a>
         <a class:list={['nav-link', 'nl-profil', { on: active === 'profil' }]} href={href('profil/')} id="nav-profil" aria-label="Profil">👤</a>
@@ -163,6 +164,7 @@ const href = (p: string) => `${b}/${p.replace(/^\//, '')}`;
   .nav-link:hover { color: var(--text); }
   .nl-lekcje.on, .nl-lekcje:hover { color: var(--amber); border-color: var(--amber); }
   .nl-reguly.on, .nl-reguly:hover { color: var(--mak); border-color: var(--mak); }
+  .nl-czytanie.on, .nl-czytanie:hover { color: var(--zielony); border-color: var(--zielony); }
   .nl-slowka.on, .nl-slowka:hover { color: var(--blekit); border-color: var(--blekit); }
   .nl-quizy.on, .nl-quizy:hover { color: var(--zielony); border-color: var(--zielony); }
   .nl-profil.on, .nl-profil:hover { color: var(--blekit); border-color: var(--blekit); }
