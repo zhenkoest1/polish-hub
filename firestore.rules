@@ -17,6 +17,12 @@ service cloud.firestore {
         allow create: if jestSwoj() && request.auth.uid == uid;
         allow update, delete: if false;
       }
+      // Zeszyt: prace pisemne czyta i pisze TYLKO autor —
+      // cudzych wypracowan nie oglada nikt (inaczej niz wyniki quizow).
+      match /zeszyt/{wpisId} {
+        allow read, create: if jestSwoj() && request.auth.uid == uid;
+        allow update, delete: if false;
+      }
     }
   }
 }

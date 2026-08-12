@@ -8,6 +8,7 @@ import {
 import {
   initializeFirestore, persistentLocalCache,
   doc, getDoc, setDoc, addDoc, collection, getDocs, serverTimestamp,
+  query, orderBy, limit,
 } from 'firebase/firestore';
 import { firebaseConfig } from './firebase-config.js';
 import { emailOsoby, pinNaHaslo, osobaZeSluga, poprawnyPin } from './konto.js';
@@ -97,6 +98,25 @@ export async function zapiszWynik(quizId, wynik) {
   });
   await Promise.all([p1, p2]);
   return true;
+}
+
+// Zapis pracy pisemnej do zeszytu. true = zapisano, false = nikt niezalogowany.
+export async function zapiszDoZeszytu({ lekcja, zadanie, wpisy }) {
+  const user = auth.currentUser ?? await gotowyUzytkownik();
+  if (!user) return false;
+  await addDoc(collection(db, 'users', user.uid, 'zeszyt'), {
+    lekcja, zadanie, wpisy, ts: serverTimestamp(),
+  });
+  return true;
+}
+
+// Ostatnie prace pisemne zalogowanej osoby (domyslnie 30, od najnowszej).
+export async function pobierzZeszyt(ile = 30) {
+  const user = auth.currentUser ?? await gotowyUzytkownik();
+  if (!user) return [];
+  const q = query(collection(db, 'users', user.uid, 'zeszyt'), orderBy('ts', 'desc'), limit(ile));
+  const snap = await getDocs(q);
+  return snap.docs.map((d) => ({ id: d.id, ...d.data() }));
 }
 
 // Profil zalogowanej osoby (z best) albo null.
