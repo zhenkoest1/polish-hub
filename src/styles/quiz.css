@@ -304,3 +304,27 @@
 .cw-status { margin: 10px 0 0; font-size: 0.9rem; color: var(--text-dim); }
 .cw-status a { color: var(--amber); }
 .cw-zdanie.cw-pisanie-li { line-height: 1.6; }
+
+/* typ "polacz": dwie kolumny do laczenia par */
+.cw-polacz { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 4px 0 2px; }
+.cw-kolumna { display: grid; gap: 8px; align-content: start; }
+.cw-para-item {
+  font: inherit; font-size: 0.95em; padding: 9px 14px; cursor: pointer;
+  width: 100%; text-align: left;
+  background: var(--panel-2); color: var(--text);
+  border: 1.5px solid var(--line); border-radius: 12px;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.cw-para-item.on { border-color: var(--blekit); color: var(--blekit); }
+.cw-para-item.polaczone {
+  border-color: var(--correct); background: var(--correct-bg); color: var(--text);
+  opacity: 0.5; cursor: default;
+}
+.cw-para-item.zla { border-color: var(--incorrect); color: var(--incorrect); background: var(--incorrect-bg); }
+.cw-para-item:disabled { cursor: default; }
+
+@media (max-width: 560px) {
+  .cw-polacz { gap: 7px; }
+  .cw-kolumna { gap: 7px; }
+  .cw-para-item { font-size: 0.85em; padding: 8px 9px; border-radius: 10px; }
+}

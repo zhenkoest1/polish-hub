@@ -8,10 +8,13 @@
 // { "typ": "pisanie", "tytul": "...", "instrukcja": "...",
 //   "zdania": [ { "przed": "1. Co zacząłem i nie skończyłem?", "po": "", "czemu": "ndk, czas przeszły" } ] }
 // (pisanie = wolny tekst do zeszytu — nie ma poprawnej odpowiedzi do sprawdzenia)
+// { "typ": "polacz", "tytul": "...", "instrukcja": "...",
+//   "pary": [ ["czasownik", "co robić?"], ["rzeczownik", "kto? co?"] ] }
+// (polacz = laczenie par w dwoch kolumnach — dane siedza w `pary`, NIE w `zdania`)
 
 import { stripDiacritics, norm } from './tekst.js';
 
-const TYPY = ['wybor', 'wpisz', 'pisanie'];
+const TYPY = ['wybor', 'wpisz', 'pisanie', 'polacz'];
 
 export function parsujCwiczenie(tekstJson) {
   let dane;
@@ -25,7 +28,8 @@ export function parsujCwiczenie(tekstJson) {
     return { ok: false, blad: `nieznany typ: ${dane.typ}` };
   }
 
-  if (!Array.isArray(dane.zdania) || dane.zdania.length === 0) {
+  // polacz trzyma tresc w `pary`, nie w `zdania` — wiec i walidacja idzie innym torem
+  if (dane.typ !== 'polacz' && (!Array.isArray(dane.zdania) || dane.zdania.length === 0)) {
     return { ok: false, blad: 'zdania: pusta lista' };
   }
 
@@ -34,6 +38,31 @@ export function parsujCwiczenie(tekstJson) {
     if (dane[pole] !== undefined && typeof dane[pole] !== 'string') {
       return { ok: false, blad: `${pole}: musi być stringiem` };
     }
+  }
+
+  if (dane.typ === 'polacz') {
+    // ponizej 3 par cwiczenie robi sie trywialne: przy dwoch drugie polaczenie jest darmowe
+    if (!Array.isArray(dane.pary) || dane.pary.length < 3) {
+      return { ok: false, blad: 'pary: min. 3 pary' };
+    }
+
+    for (const [i, p] of dane.pary.entries()) {
+      if (
+        !Array.isArray(p) ||
+        p.length !== 2 ||
+        !p.every((s) => typeof s === 'string' && s.trim().length > 0)
+      ) {
+        return { ok: false, blad: `para ${i + 1}: dokładnie 2 niepuste stringi` };
+      }
+    }
+
+    // duplikat po lewej = dwa rozne dobre dopasowania dla tego samego przycisku;
+    // uczen trafia poprawnie, a silnik liczy pudlo. Po prawej duplikat jest nieszkodliwy.
+    if (new Set(dane.pary.map((p) => p[0])).size !== dane.pary.length) {
+      return { ok: false, blad: 'pary: lewe strony muszą być unikalne' };
+    }
+
+    return { ok: true, dane };
   }
 
   for (const [i, z] of dane.zdania.entries()) {
@@ -77,6 +106,16 @@ export function parsujCwiczenie(tekstJson) {
   }
 
   return { ok: true, dane };
+}
+
+// Kolumny sa tasowane niezaleznie, wiec przyciski nosza indeks ORYGINALNEJ pary.
+// Dopasowanie jest poprawne dokladnie wtedy, gdy oba wskazuja te sama pare.
+export function sprawdzPare(dane, iLewej, iPrawej) {
+  const pary = dane?.pary;
+  if (!Array.isArray(pary)) return false;
+  if (!Number.isInteger(iLewej) || iLewej < 0 || iLewej >= pary.length) return false;
+  if (!Number.isInteger(iPrawej) || iPrawej < 0 || iPrawej >= pary.length) return false;
+  return iLewej === iPrawej;
 }
 
 export function sprawdzWybor(zdanie, wybranyIndex) {

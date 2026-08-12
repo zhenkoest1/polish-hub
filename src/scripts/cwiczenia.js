@@ -1,7 +1,7 @@
 // Silnik cwiczen w lekcjach: znajduje bloki ```cwiczenie (JSON) i zamienia je
 // na interaktywne rundy z przyciskiem Sprawdz. Zepsuty JSON NIE psuje strony —
 // blok zostaje jak byl, a walidator w `npm test` i tak go wylapie.
-import { parsujCwiczenie, sprawdzWybor, sprawdzWpisz } from './cwiczenia-logika.js';
+import { parsujCwiczenie, sprawdzWybor, sprawdzWpisz, sprawdzPare } from './cwiczenia-logika.js';
 
 function esc(s) {
   const d = document.createElement('div');
@@ -23,7 +23,121 @@ function znajdzBloki() {
     .map((c) => c.parentElement);
 }
 
+// Fisher-Yates na kopii — kolumny tasujemy niezaleznie, wiec lista wejsciowa
+// musi przezyc pierwsze tasowanie w nienaruszonym stanie.
+function tasuj(lista) {
+  const a = [...lista];
+  for (let i = a.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+// polacz: dwie kolumny przyciskow zamiast listy zdan — stad osobny builder
+function zbudujPolacz(pre, dane) {
+  const box = document.createElement('section');
+  box.className = 'cw-box';
+  box.innerHTML = `
+    ${dane.tytul ? `<p class="cw-tytul">${esc(dane.tytul)}</p>` : ''}
+    ${dane.instrukcja ? `<p class="cw-instrukcja">${esc(dane.instrukcja)}</p>` : ''}
+    <p class="cw-podpowiedz">👆 Kliknij słowo z lewej, potem pasujące z prawej.</p>
+    <div class="cw-polacz"></div>
+    <p class="cw-status" hidden></p>
+    <button type="button" class="cw-znowu btn" hidden>🔁 Jeszcze raz</button>
+  `;
+  pre.replaceWith(box);
+  podepnijPolacz(box, dane);
+}
+
+// Pudlo nie konczy cwiczenia — para wraca do puli, ale wypada z punktacji
+// „za pierwszym razem". Bez tego wynik zawsze wynosilby 100%, bo do konca
+// mozna dojsc metoda prob i bledow.
+function podepnijPolacz(box, dane) {
+  const pole = box.querySelector('.cw-polacz');
+  const status = box.querySelector('.cw-status');
+  const znowu = box.querySelector('.cw-znowu');
+  const ile = dane.pary.length;
+
+  const start = () => {
+    const pary = dane.pary.map(([lewa, prawa], i) => ({ lewa, prawa, i }));
+    const komorka = (p, strona) =>
+      `<button type="button" class="cw-para-item" data-strona="${strona}" data-pi="${p.i}">${
+        esc(strona === 'l' ? p.lewa : p.prawa)}</button>`;
+    // stary DOM (razem z jego listenerami) znika — restart zaczyna od czystego stanu
+    pole.innerHTML = `
+      <div class="cw-kolumna">${tasuj(pary).map((p) => komorka(p, 'l')).join('')}</div>
+      <div class="cw-kolumna">${tasuj(pary).map((p) => komorka(p, 'p')).join('')}</div>`;
+    status.hidden = true;
+    status.textContent = '';
+    znowu.hidden = true;
+
+    const przyciski = [...pole.querySelectorAll('.cw-para-item')];
+    const wybrane = { l: null, p: null };
+    const pudla = new Set(); // indeksy par, przy ktorych byl blad
+    let zrobione = 0;
+    let czekamy = false; // trwa animacja pudla — klikniecia ignorujemy
+
+    const odznacz = () => {
+      przyciski.forEach((b) => b.classList.remove('on'));
+      wybrane.l = null;
+      wybrane.p = null;
+    };
+
+    const koniec = () => {
+      const trafione = ile - pudla.size;
+      status.hidden = false;
+      status.textContent = trafione === ile
+        ? `✓ Wszystkie ${ile} pary za pierwszym razem!`
+        : `${trafione} / ${ile} par za pierwszym razem.`;
+      znowu.hidden = false;
+    };
+
+    const rozstrzygnij = () => {
+      const a = wybrane.l;
+      const b = wybrane.p;
+      if (sprawdzPare(dane, Number(a.dataset.pi), Number(b.dataset.pi))) {
+        [a, b].forEach((x) => { x.classList.remove('on'); x.classList.add('polaczone'); x.disabled = true; });
+        odznacz();
+        zrobione += 1;
+        if (zrobione === ile) koniec();
+        return;
+      }
+      pudla.add(a.dataset.pi);
+      czekamy = true;
+      [a, b].forEach((x) => x.classList.add('zla', 'shake'));
+      setTimeout(() => {
+        [a, b].forEach((x) => x.classList.remove('zla', 'shake'));
+        odznacz();
+        czekamy = false;
+      }, 600);
+    };
+
+    przyciski.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        if (czekamy || btn.disabled) return;
+        const strona = btn.dataset.strona;
+        // ponowne klikniecie w zaznaczony przycisk = odznaczenie
+        if (wybrane[strona] === btn) {
+          btn.classList.remove('on');
+          wybrane[strona] = null;
+          return;
+        }
+        if (wybrane[strona]) wybrane[strona].classList.remove('on');
+        wybrane[strona] = btn;
+        btn.classList.add('on');
+        if (wybrane.l && wybrane.p) rozstrzygnij();
+      });
+    });
+  };
+
+  znowu.addEventListener('click', start);
+  start();
+}
+
 function zbuduj(pre, dane) {
+  if (dane.typ === 'polacz') { zbudujPolacz(pre, dane); return; }
+
   const box = document.createElement('section');
   box.className = 'cw-box';
   const zdaniaHtml = dane.zdania.map((z, i) => {

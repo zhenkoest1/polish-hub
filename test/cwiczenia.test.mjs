@@ -1,4 +1,4 @@
-import { parsujCwiczenie, sprawdzWybor, sprawdzWpisz } from '../src/scripts/cwiczenia-logika.js';
+import { parsujCwiczenie, sprawdzWybor, sprawdzWpisz, sprawdzPare } from '../src/scripts/cwiczenia-logika.js';
 
 let ok = 0, zle = 0;
 const t = (nazwa, war) => { war ? ok++ : (zle++, console.log('  FAIL:', nazwa)); };
@@ -179,6 +179,99 @@ t('pisanie: przed nie-string -> blad',
   parsujCwiczenie(JSON.stringify({ typ: 'pisanie', zdania: [{ przed: 42, po: '' }] })).ok === false);
 t('pisanie: czemu nie-string -> blad',
   parsujCwiczenie(JSON.stringify({ typ: 'pisanie', zdania: [{ przed: 'a', po: '', czemu: 7 }] })).ok === false);
+
+// typ "polacz" — laczenie par w dwoch kolumnach; dane w `pary`, nie w `zdania`
+const POLACZ_OK = JSON.stringify({
+  typ: 'polacz', tytul: 'Części mowy', instrukcja: 'Połącz nazwę z pytaniem.',
+  pary: [
+    ['czasownik', 'co robić?'],
+    ['rzeczownik', 'kto? co?'],
+    ['przymiotnik', 'jaki?'],
+  ],
+});
+t('polacz: poprawny blok', parsujCwiczenie(POLACZ_OK).ok === true);
+t('polacz: typ zachowany', parsujCwiczenie(POLACZ_OK).dane.typ === 'polacz');
+t('polacz: zdania niepotrzebne', parsujCwiczenie(POLACZ_OK).ok === true);
+t('polacz: pary zachowane', parsujCwiczenie(POLACZ_OK).dane.pary.length === 3);
+
+t('polacz: mniej niz 3 pary -> blad', (() => {
+  const r = parsujCwiczenie(JSON.stringify({
+    typ: 'polacz', pary: [['a', 'b'], ['c', 'd']],
+  }));
+  return r.ok === false && r.blad.includes('pary');
+})());
+
+t('polacz: brak pary -> blad', (() => {
+  const r = parsujCwiczenie(JSON.stringify({ typ: 'polacz', tytul: 'Test' }));
+  return r.ok === false && r.blad.includes('pary');
+})());
+
+t('polacz: para z 1 elementem -> blad', (() => {
+  const r = parsujCwiczenie(JSON.stringify({
+    typ: 'polacz', pary: [['a', 'b'], ['c', 'd'], ['e']],
+  }));
+  return r.ok === false && r.blad.includes('para 3');
+})());
+
+t('polacz: para z 3 elementami -> blad', (() => {
+  const r = parsujCwiczenie(JSON.stringify({
+    typ: 'polacz', pary: [['a', 'b', 'x'], ['c', 'd'], ['e', 'f']],
+  }));
+  return r.ok === false && r.blad.includes('para 1');
+})());
+
+t('polacz: pusty string w parze -> blad', (() => {
+  const r = parsujCwiczenie(JSON.stringify({
+    typ: 'polacz', pary: [['a', 'b'], ['c', ''], ['e', 'f']],
+  }));
+  return r.ok === false && r.blad.includes('para 2');
+})());
+
+t('polacz: same spacje w parze -> blad', (() => {
+  const r = parsujCwiczenie(JSON.stringify({
+    typ: 'polacz', pary: [['a', 'b'], ['   ', 'd'], ['e', 'f']],
+  }));
+  return r.ok === false && r.blad.includes('para 2');
+})());
+
+t('polacz: element nie-string -> blad', (() => {
+  const r = parsujCwiczenie(JSON.stringify({
+    typ: 'polacz', pary: [['a', 'b'], ['c', 7], ['e', 'f']],
+  }));
+  return r.ok === false && r.blad.includes('para 2');
+})());
+
+// duplikat po lewej = dwie poprawne odpowiedzi na to samo -> laczenie niejednoznaczne
+t('polacz: duplikat lewej strony -> blad', (() => {
+  const r = parsujCwiczenie(JSON.stringify({
+    typ: 'polacz', pary: [['a', 'b'], ['a', 'd'], ['e', 'f']],
+  }));
+  return r.ok === false && r.blad.includes('lewe');
+})());
+
+t('polacz: duplikat prawej strony jest OK', parsujCwiczenie(JSON.stringify({
+  typ: 'polacz', pary: [['a', 'x'], ['b', 'x'], ['c', 'y']],
+})).ok === true);
+
+t('polacz: tytul nie-string -> blad',
+  parsujCwiczenie(JSON.stringify({ typ: 'polacz', tytul: 42, pary: [['a', 'b'], ['c', 'd'], ['e', 'f']] })).ok === false);
+t('polacz: instrukcja nie-string -> blad',
+  parsujCwiczenie(JSON.stringify({ typ: 'polacz', instrukcja: [], pary: [['a', 'b'], ['c', 'd'], ['e', 'f']] })).ok === false);
+
+// pozostale typy nadal wymagaja `zdania`, a `pary` ich nie ratuja
+t('wpisz: pary nie zastepuja zdania',
+  parsujCwiczenie(JSON.stringify({ typ: 'wpisz', pary: [['a', 'b'], ['c', 'd'], ['e', 'f']] })).ok === false);
+t('wybor: brak zdania nadal blad',
+  parsujCwiczenie(JSON.stringify({ typ: 'wybor', tytul: 'T' })).blad.includes('zdania'));
+t('pisanie: pary nie sa wymagane',
+  parsujCwiczenie(JSON.stringify({ typ: 'pisanie', zdania: [{ przed: 'a', po: '' }] })).ok === true);
+
+// sprawdzPare — te same indeksy oryginalnych par
+const PARY = { pary: [['a', 'b'], ['c', 'd'], ['e', 'f']] };
+t('sprawdzPare: ta sama para', sprawdzPare(PARY, 0, 0) === true);
+t('sprawdzPare: ta sama para (ostatnia)', sprawdzPare(PARY, 2, 2) === true);
+t('sprawdzPare: rozne pary', sprawdzPare(PARY, 0, 1) === false);
+t('sprawdzPare: indeks poza zakresem', sprawdzPare(PARY, 0, 9) === false);
 
 console.log(`\n${ok} przeszlo, ${zle} nie przeszlo`);
 process.exit(zle ? 1 : 0);
