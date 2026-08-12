@@ -253,7 +253,23 @@ Jeden wyjątek działa tak samo jak po rosyjsku: czasownik dokonany po *nie* to 
 
 ### 🔥 Rozgrzewka *(5 minut)*
 
-Dwa szybkie ćwiczenia na stronie — każdy wpisuje sam, potem porównujecie wyniki:
+Najpierw słowa z tekstu — połącz je w pary:
+
+```cwiczenie
+{ "typ": "polacz", "tytul": "Słowa z tekstu", "instrukcja": "Połącz polskie słowo z rosyjskim znaczeniem.",
+  "pary": [
+    ["kelner", "официант"],
+    ["zamówienie", "заказ"],
+    ["rachunek", "счёт"],
+    ["badaczka", "исследовательница"],
+    ["uczestnik", "участник"],
+    ["przerwać", "прервать"],
+    ["zostawić", "оставить"],
+    ["zapamiętać", "запомнить"]
+  ] }
+```
+
+Potem dwa ćwiczenia na aspekt — każdy wpisuje sam, potem porównujecie wyniki:
 
 ```cwiczenie
 { "typ": "wpisz", "tytul": "Podaj parę dokonaną", "instrukcja": "Wpisz czasownik dokonany z tej samej pary.",
