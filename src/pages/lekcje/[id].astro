@@ -39,7 +39,7 @@ const next = idx < all.length - 1 ? all[idx + 1] : null;
 const nn = String(lekcja.data.numer).padStart(2, '0');
 ---
 <Base title={`Lekcja ${lekcja.data.numer}: ${lekcja.data.tytul} — Polski Klub`} active="lekcje">
-  <article>
+  <article data-lekcja={lekcja.id}>
     <header class="lesson-head">
       <span class="ghost-num" aria-hidden="true">{nn}</span>
       <a class="back" href={href('lekcje/')}>← wszystkie lekcje</a>
